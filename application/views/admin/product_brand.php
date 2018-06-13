@@ -23,7 +23,7 @@
 </head>
 <body>
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 产品管理
-    <span class="c-gray en">&gt;</span> 品牌管理
+    <span class="c-gray en">&gt;</span> 品牌编辑
     <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
 </nav>
 <div class="page-container">
@@ -40,7 +40,6 @@
             <th scope="col" colspan="6">品牌管理</th>
         </tr>
         <tr class="text-c">
-            <th width="25"><input type="checkbox" value="" name=""></th>
             <th width="40">ID</th>
             <th width="200">品牌名称</th>
             <th width="100">是否热门</th>
@@ -50,7 +49,6 @@
         <tbody>
         <?php foreach ($product as $item => $value): ?>
             <tr class="text-c">
-                <td><input type="checkbox" value="" name=""></td>
                 <td><?php echo $value['brand_id']; ?></td>
                 <td><?php echo $value['product_brand']; ?></td>
                 <?php if ($value['status'] == 0): ?>

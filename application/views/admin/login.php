@@ -18,7 +18,6 @@
     <script type="text/javascript" src="/public/admin/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <title>后台登录 - H-ui.admin v3.1</title>
 </head>
 <body>
 <input type="hidden" id="TenantId" name="TenantId" value="" />

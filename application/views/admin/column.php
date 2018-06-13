@@ -40,7 +40,6 @@
             <th scope="col" colspan="6">栏目管理</th>
         </tr>
         <tr class="text-c">
-            <th width="25"><input type="checkbox" value="" name=""></th>
             <th width="40">ID</th>
             <th width="200">栏目名称</th>
             <th width="100">是否热门</th>
@@ -50,7 +49,6 @@
         <tbody>
         <?php foreach ($column as $item => $value): ?>
             <tr class="text-c">
-                <td><input type="checkbox" value="" name=""></td>
                 <td><?php echo $value['column_id']; ?></td>
                 <td><?php echo $value['column_name']; ?></td>
                 <?php if ($value['status'] == 0): ?>

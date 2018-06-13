@@ -39,7 +39,6 @@
             <th scope="col" colspan="6">探索方式管理</th>
         </tr>
         <tr class="text-c">
-            <th width="25"><input type="checkbox" value="" name=""></th>
             <th width="40">ID</th>
             <th width="200">探索方式名称</th>
             <th width="70">操作</th>
@@ -48,7 +47,6 @@
         <tbody>
         <?php foreach ($increase as $item => $value): ?>
             <tr class="text-c">
-                <td><input type="checkbox" value="" name=""></td>
                 <td><?php echo $value['increase_id']; ?></td>
                 <td><?php echo $value['increase_name']; ?></td>
                 <td class="td-manage">

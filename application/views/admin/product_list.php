@@ -42,7 +42,6 @@
         <table class="table table-border table-bordered table-bg table-hover table-sort">
             <thead>
             <tr class="text-c">
-                <th width="40"><input name="" type="checkbox" value=""></th>
                 <th width="40">ID</th>
                 <th width="60">缩略图</th>
                 <th width="100">产品名称</th>
@@ -56,7 +55,6 @@
             <tbody>
             <?php foreach ($list as $key => $value): ?>
                 <tr class="text-c va-m">
-                    <td><input name="" type="checkbox" value=""></td>
                     <td><?php echo $value['id'];?></td>
                     <td>
                         <?php if (!empty($value['image'])): ?>
