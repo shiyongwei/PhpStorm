@@ -26,7 +26,7 @@
 <article class="page-container">
 	<form class="form form-horizontal" id="form-admin-add">
 	<div class="row cl">
-		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>管理员1：</label>
+		<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>管理员：</label>
 		<div class="formControls col-xs-8 col-sm-9">
             <?php if(empty($content)):?>
 			<input type="text" class="input-text" value="" placeholder="用户名" id="adminName" name="adminName">
