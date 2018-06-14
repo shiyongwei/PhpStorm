@@ -11,17 +11,7 @@
 			}
 			public function index(){
 				$rent_list = $this->Product_model->get('');//热门租赁分类
-				$city = $this->City_model->front_cate();
-				//顶级城市
-//				$one_city = array();
-//				for($i=0;$i<count($city);$i++){
-//
-//				}
-//				echo '<pre>';
-//				print_r($city);
-//				echo '</pre>';
-
-
+				$city = $this->City_model->get();
 				$data['rent_list'] = $rent_list;
 				$data['city'] = $city;
 

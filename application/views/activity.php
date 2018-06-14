@@ -11,11 +11,11 @@
                         </li>
 
                         <li class="packages  js-packagesTrigger">
-                            <a href="Javascript:;">摩托车 &amp; 酒店</a>
+                            <a href="Hotels">摩托车 &amp; 酒店</a>
                         </li>
 
                         <li class=" js-toursTrigger">
-                            <a href="Javascript:;">旅游</a>
+                            <a href="Trave">旅游</a>
                         </li>
 
                         <li class="deals">

@@ -13,22 +13,18 @@
                     </li>
 
                     <li class="packages ">
-                        <a href="#">摩托车 &amp; 酒店</a>
+                        <a href="/index.php/Hotels">摩托车 &amp; 酒店</a>
                     </li>
 
                     <li class=" js-toursTrigger">
-                        <a href="Javascript:;">旅游</a>
+                        <a href="/index.php/Trave">旅游</a>
                     </li>
 
                     <li class="deals">
-                        <a href="#">促销特惠</a>
+                        <a href="/index.php/Discounts">促销特惠</a>
                     </li>
 
-                    <li class="membership-tab js-membershipTab">
-                        <a href="#">
-                            会员
-                        </a>
-                    </li>
+                 
                 </ul>
 
                 <div class="clearfix"></div>
@@ -736,7 +732,7 @@
 <hr>
 <div class="container">
     <div class="row table-and-ads">
-        <div class="span8 er-specials js-deals">
+        <div class="span8 er-specials js-deals" style="width: 1170px;">
             <h2>
                 热门折扣
             </h2>
@@ -746,33 +742,17 @@
                     <th>折扣名称</th>
                     <th>价格</th>
                 </tr>
+				<?php foreach ($promotiom as $key=>$promotioms): ?>
                 <tr>
                     <td>
-                        从太平洋到大西洋，从洛杉矶到奥兰多的梦幻骑行之旅
+						<?php echo $promotioms['promtitle']?>
                     </td>
                     <td>
-                        <div class="discount_container"><span class="discount_before" dir="ltr">¥1,323.40/天</span>
-                            <span class="discount_after">¥566.26<small>/天</small></span></div>
+                        <div class="discount_container"><span class="discount_before" dir="ltr"><?php echo $promotioms['worth']?></span>
+                            <span class="discount_after"><?php echo $promotioms['price']?></small></span></div>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        Active Police, Firemen, Military, and Veterans - 5% Off Your Next Rental *Available for USA Residents
-                    </td>
-                    <td>
-                        <div class="discount_container"><span class="discount_percentage">5% <small>折扣</small></span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Get Out and Ride Mid-Week Special
-                    </td>
-                    <td>
-                        <div class="discount_container"><span class="discount_before" dir="ltr">¥1,075.26/天</span>
-                            <span class="discount_after">¥629.89<small>/天</small></span></div>
-                    </td>
-                </tr>
+				<?php endforeach; ?>
                 </tbody>
             </table>
             <div class="section_btns">
@@ -781,21 +761,6 @@
                 </a>
             </div>
             <div class="clearfix"></div>
-        </div>
-
-        <div class="span4 membership-ads js-membershipPromotion">
-            <h2>
-                每个月骑一辆新车
-            </h2>
-
-            <a href="motorcycle-club.html">
-                <img src="/public/image/membership-ad-9112a9cffe4b39259dc87b286c0e1a0b.jpg" />
-                <div class="membership-ad-text">
-                    <h3> Join Club EagleRider</h3>
-                    <p>Only $29 per month (Yearly Term) <span class="right"> Join Today</span></p>
-                </div>
-            </a>
-
         </div>
     </div>
 </div>

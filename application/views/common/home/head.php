@@ -129,12 +129,12 @@ header('Vary: Accept-Encoding');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-
+				<?php foreach ($navigation as $key=>$navigations): ?>
                 <nav class="nav-collapse">
                     <ul class="nav main-nav js-navigation topp">
-                        <li class="dropdown dropdown-bs" >
+                        <li class="dropdown dropdown-bs" id="zulin">
                             <a class="dropdown-toggle js-rentalsLink" data-toggle="dropdown" data-target="#" href="<?php echo site_url('Home'); ?>">
-                                租赁<b class="caret"></b>
+								<?php echo $navigations['navigation_name']?><b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu dropdown-mega-menu" role="menu" aria-labelledby="dLabel">
                                 <li>
@@ -155,14 +155,14 @@ header('Vary: Accept-Encoding');
                         <li class="dropdown">
                             <a href="<?php echo site_url('Hotels'); ?>" title="摩托车 &amp; 酒店"
                                class="">
-                                摩托车 &amp; 酒店
+								<?php echo $navigations['lease_name']?>
                             </a>
                         </li>
 
-                        <li class="dropdown dropdown-bs ">
+                        <li class="dropdown dropdown-bs " id="lvyou">
                             <a class="dropdown-toggle js-toursLink" data-toggle="dropdown"
                                href="<?php echo site_url('Home/trave'); ?>">
-                                摩托车旅游<b class="caret"></b>
+								<?php echo $navigations['hotel_name']?><b class="caret"></b>
                             </a>
 
                             <ul class="dropdown-menu dropdown-mega-menu dropmenu-cat" role="menu" aria-labelledby="dLabel">
@@ -230,30 +230,31 @@ header('Vary: Accept-Encoding');
 
                         <li class="top dropdown">
                             <a href="<?php echo site_url('Discounts'); ?>">
-                                促销特惠
+								<?php echo $navigations['promotions_name']?>
                             </a>
                         </li>
 
                         <li class="dropdown">
                             <a href="<?php echo site_url('Artivity'); ?>">
-                                摩托车活动
+								<?php echo $navigations['activity_name']?>
                             </a>
                         </li>
 
                         <li class="dropdown">
                             <a href="<?php echo site_url('City'); ?>">
-                                城市
+								<?php echo $navigations['city_name']?>
                             </a>
                         </li>
 
 
                         <li class="dropdown">
                             <a href="<?php echo site_url('Reg'); ?>">
-                                网上取车登记
+								<?php echo $navigations['online_name']?>
                             </a>
                         </li>
                     </ul>
                 </nav>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

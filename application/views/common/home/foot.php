@@ -45,7 +45,7 @@
             <div class="span3 titleIt"><p class="anyQuestions">有任何问题？</p></div>
             <div class="needHelpContent span9">
                 <div class="faq">
-                    <a title="Frequent Questions" href="#" class="btn-highlight js-faqTrigger">
+                    <a title="Frequent Questions" href="Problem" class="btn-highlight js-faqTrigger">
                         <span class="icn-faq"></span>常见问题
                     </a>
                 </div>
@@ -244,6 +244,12 @@
 			if(this.href==window.location.href){
 				$this.addClass("selected").siblings().removeClass('selected')
 			}
+		});
+		$('#zulin').click(function() {
+			window.location.href='/index.php/Rent?id=0';
+		});
+		$('#lvyou').click(function() {
+			window.location.href='trave';
 		});
 	});
 </script>

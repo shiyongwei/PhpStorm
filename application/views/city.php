@@ -2481,17 +2481,11 @@
                 <div class="span6" style="width: 100%!important;">
 
 					<?php foreach ($city as $key=>$citys): ?>
-                    <div style="width: 50%;height: 100%;float: left;">
-                        <h3><a href="alabama"><?php echo $citys['cit_name']?></a></h3>
-						<?php if(!isset($citys['child'])){continue;} ?>
-					    <?php foreach ($citys['child'] as $key=>$cityt): ?>
-                            <ul>
-                                <li>
-                                    <a href="Javascript:;" dir="ltr"><?php echo $cityt['cit_name']?></a>
-                                    <span class="js-membershipRelated" style="display: none;"></span>
-                                </li>
-                            </ul>
-						<?php endforeach; ?>
+                    <div style="width: 50%;height: 30px;float: left;">
+                        <li>
+                            <a href="Javascript:;" dir="ltr"><?php echo $citys['cit_name']?></a>
+                            <span class="js-membershipRelated" style="display: none;"></span>
+                        </li>
                     </div>
 					<?php endforeach; ?>
 
