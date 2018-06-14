@@ -64,6 +64,15 @@
                 </ul>
             </dd>
         </dl>
+        <dl id="menu-bottom">
+            <dt><i class="Hui-iconfont">&#xe72d;</i> 底部管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="bottom" data-title="底部编辑" href="javascript:void(0)">底部编辑</a></li>
+                    <li><a data-href="footer" data-title="页尾编辑" href="javascript:void(0)">页尾相关信息编辑</a></li>
+                </ul>
+            </dd>
+        </dl>
         <dl id="menu-product">
             <dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>

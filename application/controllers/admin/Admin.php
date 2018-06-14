@@ -20,6 +20,7 @@ class Admin extends CI_Controller
             $this -> load -> model('admin/Increase_model');
             $this -> load -> model('admin/Explore_model');
             $this -> load -> model('admin/Navigation_model');
+            $this -> load -> model('admin/Bottom_model');
             $this -> load -> helper(array('form', 'url'));
             $this -> load -> library('session');
             $this -> load -> library('pagination');
@@ -491,6 +492,26 @@ class Admin extends CI_Controller
             $data['navigation'] = $this -> Navigation_model -> get_name($result);
 
             $this -> load -> view('admin/navigation_edit',$data);
+
+        }
+        //底部
+        public function bottom ()
+        {
+            $result= '';
+
+            $data['bottom'] = $this -> Bottom_model -> get_name($result);
+
+            $this -> load -> view('admin/bottom',$data);
+
+        }
+
+        public function bottom_edit ()
+        {
+            $result['bottom_id']= $_GET['id'];
+
+            $data['bottom'] = $this -> Bottom_model -> get_name($result);
+
+            $this -> load -> view('admin/bottom_edit',$data);
 
         }
     }

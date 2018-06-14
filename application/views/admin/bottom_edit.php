@@ -27,49 +27,13 @@
 <body>
 <article class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-admin-role-add" onsubmit="return false">
-        <input type="hidden" name="navigation_id" value="<?php echo $navigation['navigation_id'];?>">
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航1：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $navigation['navigation_name'];?>" placeholder="" id="roleName" name="navigation_name">
-			</div>
-		</div>
+        <input type="hidden" name="bottom_id" value="<?php echo $bottom['bottom_id'];?>">
         <div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航2：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $navigation['lease_name'];?>" placeholder=""  name="lease_name">
-			</div>
-		</div>
-        <div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航3：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $navigation['hotel_name'];?>" placeholder=""  name="hotel_name">
-			</div>
-		</div>
-        <div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航4：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $navigation['promotions_name'];?>" placeholder=""  name="promotions_name">
-			</div>
-		</div>
-        <div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航5：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $navigation['activity_name'];?>" placeholder=""  name="activity_name">
-			</div>
-		</div>
-        <div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航6：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $navigation['city_name'];?>" placeholder=""  name="city_name">
-			</div>
-		</div>
-        <div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航7：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $navigation['online_name'];?>" placeholder=""  name="online_name">
-			</div>
-		</div>
+            <label class="form-label col-xs-4 col-sm-2">简介：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <script id="editor" type="text/plain" style="width:100%;height:400px;"><?php echo $bottom['bottom_text'];?></script>
+            <div>
+        <div>
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
 				<button type="submit" class="btn btn-success radius" id="admin-role-save" name="admin-role-save"><i class="icon-ok"></i> 确定</button>
@@ -88,12 +52,17 @@
 <script type="text/javascript" src="/public/admin/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="/public/admin/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/public/admin/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="/public/admin/lib/ueditor/1.4.3/ueditor.config.js"></script>
+<script type="text/javascript" src="/public/admin/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
 <script type="text/javascript">
+    $(function(){
+        var ue = UE.getEditor('editor');
+    });
     $('#admin-role-save').click(function() {
 
         var   str = $("#form-admin-role-add").serialize();
 
-        $.post('/index.php/admin/navigation/navigation_edit',{'str':str},function(data) {
+        $.post('/index.php/admin/bottom/bottom_edit',{'str':str},function(data) {
 
             if(data == 200){
 
