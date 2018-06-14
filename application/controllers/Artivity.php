@@ -8,12 +8,14 @@
 				$this -> load -> model('admin/Product_model');
 				$this -> load -> model('admin/Column_model');
 				$this -> load -> model('admin/Activityedit_model');
+				$this -> load -> model('admin/Navigation_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
 				$rent_list = $this->Product_model->get('');
 				$column = $this->Column_model->get('');
 				$activity = $this->Activityedit_model->get('');
+				$navigation = $this->Navigation_model->get_name('');
 				//所属选项卡
 				if(!empty($_GET['column_id'])){
 					$column_id = $_GET['column_id'];
@@ -29,8 +31,9 @@
 				$data['rent_list'] = $rent_list;
 				$data['column'] = $column;
 				$data['activity'] = $activity;
+				$data['navigation'] = $navigation;
 
-				$this -> load -> view('common/home/head',$data);
+				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('activity',$column,$activity);
 				$this -> load -> view('common/home/foot');
 			}

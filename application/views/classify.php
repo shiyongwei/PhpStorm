@@ -91,7 +91,7 @@
 						<?php foreach ($uriving as $key=>$urivings): ?>
                         <!--one-->
                         <div class="tour span4  js-tourContainer" data-duration="19" style="width: 31%;margin-left: 15px!important;margin-top: 15px;">
-                            <a href="<?php echo site_url('Home/detail'); ?>">
+                            <a href="detail?id=<?php echo $urivings['id']?>">
                                 <div class="img_cont">
                                     <img alt="115th Anniversary Route 66 - 19 Day Tour" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/tours/406/maps/size368c/hd_route66_19_days-1.jpg?1519582492">
                                     <span class="tour_name">

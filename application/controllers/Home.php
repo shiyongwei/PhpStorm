@@ -10,6 +10,7 @@ class Home extends CI_Controller
         $this -> load -> model('admin/Product_model');
         $this -> load -> model('admin/Promotions_model');
         $this -> load -> model('admin/Navigation_model');
+        $this -> load -> model('admin/Bottom_model');
         $this -> load -> helper(array('form', 'url'));
     }
 
@@ -19,16 +20,15 @@ class Home extends CI_Controller
             $rent_list = $this->Product_model->get('');
             $promotiom = $this->Promotions_model->get('');
             $navigation = $this->Navigation_model->get_name('');
+			$bottom = $this->Bottom_model->get_name('');
 
-//            echo '<pre>';
-//            print_r($navigation);
-//            echo '</pre>';
 
             $data['rent_list'] = $rent_list;
             $data['promotiom'] = $promotiom;
             $data['navigation'] = $navigation;
+            $data['bottom'] = $bottom;
             $this -> load -> view('common/home/head',$data,$navigation);
-            $this -> load -> view('home',$promotiom);
+            $this -> load -> view('home',$promotiom,$bottom);
             $this -> load -> view('common/home/foot');
         }
         //酒店

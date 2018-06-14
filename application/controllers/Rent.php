@@ -7,6 +7,7 @@
 				parent ::__construct();
 				$this -> load -> model('admin/List_model');
 				$this -> load -> model('admin/Product_model');
+				$this -> load -> model('admin/Navigation_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			//热门租赁分类
@@ -18,6 +19,7 @@
 				}else{
 					$list = $this->List_model->getInfo($id);
 				}
+				$navigation = $this->Navigation_model->get_name('');
 
 //				echo '<pre>';
 //				print_r($list);
@@ -25,7 +27,9 @@
 
 				$data['rent_list'] = $rent_list;
 				$data['list'] = $list;
-				$this -> load -> view('common/home/head',$data);
+				$data['navigation'] = $navigation;
+
+				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('rent',$list);
 				$this -> load -> view('common/home/foot');
 			}
