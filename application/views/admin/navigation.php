@@ -30,12 +30,18 @@
     <table class="table table-border table-bordered table-hover table-bg">
         <thead>
         <tr>
-            <th scope="col" colspan="6">导航管理</th>
+            <th scope="col" colspan="9">导航管理</th>
         </tr>
         <tr class="text-c">
             <th width="40">ID</th>
-            <th width="200">导航名称</th>
-            <th width="70">操作</th>
+            <th width="50">导航1</th>
+            <th width="50">导航2</th>
+            <th width="50">导航3</th>
+            <th width="50">导航4</th>
+            <th width="50">导航5</th>
+            <th width="50">导航6</th>
+            <th width="50">导航7</th>
+            <th width="50">操作</th>
         </tr>
         </thead>
         <tbody>
@@ -43,8 +49,14 @@
             <tr class="text-c">
                 <td><?php echo $value['navigation_id']; ?></td>
                 <td><?php echo $value['navigation_name']; ?></td>
+                <td><?php echo $value['lease_name']; ?></td>
+                <td><?php echo $value['hotel_name']; ?></td>
+                <td><?php echo $value['promotions_name']; ?></td>
+                <td><?php echo $value['activity_name']; ?></td>
+                <td><?php echo $value['city_name']; ?></td>
+                <td><?php echo $value['online_name']; ?></td>
                 <td class="td-manage">
-                        <a title="编辑" href="javascript:;" onclick="navigation_edit('导航编辑','navigation_edit?id=<?php echo $value['navigation_id']; ?>','1','350','200')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                        <a title="编辑" href="javascript:;" onclick="navigation_edit('导航编辑','navigation_edit?id=<?php echo $value['navigation_id']; ?>','1','550','450')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
                 </td>
             </tr>
         <?php endforeach; ?>

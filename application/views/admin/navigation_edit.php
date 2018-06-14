@@ -31,9 +31,45 @@
 	<form action="" method="post" class="form form-horizontal" id="form-admin-role-add" onsubmit="return false">
         <input type="hidden" name="navigation_id" value="<?php echo $navigation['navigation_id'];?>">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航名称：</label>
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航1：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" value="<?php echo $navigation['navigation_name'];?>" placeholder="" id="roleName" name="navigation_name">
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航2：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="<?php echo $navigation['lease_name'];?>" placeholder=""  name="lease_name">
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航3：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="<?php echo $navigation['hotel_name'];?>" placeholder=""  name="hotel_name">
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航4：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="<?php echo $navigation['promotions_name'];?>" placeholder=""  name="promotions_name">
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航5：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="<?php echo $navigation['activity_name'];?>" placeholder=""  name="activity_name">
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航6：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="<?php echo $navigation['city_name'];?>" placeholder=""  name="city_name">
+			</div>
+		</div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航7：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="<?php echo $navigation['online_name'];?>" placeholder=""  name="online_name">
 			</div>
 		</div>
 		<div class="row cl">

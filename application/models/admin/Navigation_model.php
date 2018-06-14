@@ -23,6 +23,12 @@ class Navigation_model extends CI_Model{
         {
 
             $this -> db -> set('navigation_name', $data['navigation_name']);
+            $this -> db -> set('lease_name', $data['lease_name']);
+            $this -> db -> set('hotel_name', $data['hotel_name']);
+            $this -> db -> set('promotions_name', $data['promotions_name']);
+            $this -> db -> set('activity_name', $data['activity_name']);
+            $this -> db -> set('city_name', $data['city_name']);
+            $this -> db -> set('online_name', $data['online_name']);
 
             $this -> db -> where('navigation_id', $data['navigation_id']);
 

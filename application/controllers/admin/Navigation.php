@@ -14,8 +14,15 @@ class Navigation extends CI_Controller
         {
             parse_str($_POST['str'], $arr);
 
-            $data['navigation_name'] = $arr['navigation_name'];
             $data['navigation_id'] = $arr['navigation_id'];
+            $data['navigation_name'] = $arr['navigation_name'];
+            $data['lease_name'] = $arr['lease_name'];
+            $data['hotel_name'] = $arr['hotel_name'];
+            $data['promotions_name'] = $arr['promotions_name'];
+            $data['activity_name'] = $arr['activity_name'];
+            $data['city_name'] = $arr['city_name'];
+            $data['online_name'] = $arr['online_name'];
+
 
             if($arr['navigation_name'] !== ''){
 
