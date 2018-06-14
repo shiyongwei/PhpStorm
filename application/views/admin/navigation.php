@@ -39,12 +39,12 @@
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($product as $item => $value): ?>
+        <?php foreach ($navigation as $item => $value): ?>
             <tr class="text-c">
-                <td><?php echo $value['brand_id']; ?></td>
-                <td><?php echo $value['product_brand']; ?></td>
+                <td><?php echo $value['navigation_id']; ?></td>
+                <td><?php echo $value['navigation_name']; ?></td>
                 <td class="td-manage">
-                        <a title="编辑" href="javascript:;" onclick="product_brand_edit('角色编辑','product_brand_edit?id=<?php echo $value['brand_id']; ?>','1','350','200')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                        <a title="编辑" href="javascript:;" onclick="navigation_edit('导航编辑','navigation_edit?id=<?php echo $value['navigation_id']; ?>','1','350','200')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -63,75 +63,9 @@
 <script type="text/javascript" src="/public/admin/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 
-    /*品牌-添加*/
-    function product_brand_add (title, url, w, h) {
-        layer_show(title, url, w, h);
-    }
-
     /*品牌-编辑*/
-    function product_brand_edit (title, url, id, w, h) {
+    function navigation_edit (title, url, id, w, h) {
         layer_show(title, url, w, h);
-    }
-
-    /*品牌-删除*/
-    function product_brand_del (obj, id) {
-        layer.confirm('删除须谨慎，确认要删除吗？', function() {
-
-            $.post('/index.php/admin/BrandController/product_del', {'id': id}, function(data) {
-                if(data == 200)
-                {
-                    $(obj).parents("tr").remove();
-                    layer.msg('已删除!', {icon: 1, time: 1000},function() {
-                        location.reload();
-                    });
-                }
-                else
-                {
-                    layer.msg('删除失败!', {icon: 5, time: 1000},);
-                }
-            });
-        });
-    }
-
-    function product_brand_stop (obj, id) {
-        layer.confirm('确认要下热门吗？', function(index) {
-            //此处请求后台程序，下方是成功后的前台处理……
-            $.post('/index.php/admin/BrandController/product_status',{'id':id,'status':1},function (data)
-            {
-                if(data == 200){
-                    $(obj).parents("tr").find(".td-manage").prepend('<a onClick="product_brand_start(this,id)" href="javascript:;" title="热门" style="text-decoration:none"><i class="Hui-iconfont">&#xe615;</i></a>');
-                    $(obj).parents("tr").find(".td-status").html('<span class="label label-default radius">非热门</span>');
-                    $(obj).remove();
-                    layer.msg('已下热门!', {icon: 6, time: 1000},function() {
-                        location.reload();
-                    });
-                }else{
-                    layer.msg('修改失败!', {icon: 5, time: 1000});
-                }
-            });
-
-
-        });
-    }
-
-    function product_brand_start(obj,id){
-        layer.confirm('确认要热门吗？',function(index){
-            //此处请求后台程序，下方是成功后的前台处理……
-            $.post('/index.php/admin/BrandController/product_status',{'id':id,'status':0},function (data)
-            {
-                if(data == 200){
-                    $(obj).parents("tr").find(".td-manage").prepend('<a onClick="product_brand_stop(this,id)" href="javascript:;" title="非热门" style="text-decoration:none"><i class="Hui-iconfont">&#xe631;</i></a>');
-                    $(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">热门</span>');
-                    $(obj).remove();
-                    layer.msg('已热门!', {icon: 1,time:1000});
-                }else{
-                    layer.msg('修改失败!', {icon: 5, time: 1000});
-                }
-
-            });
-
-
-        });
     }
 </script>
 </body>

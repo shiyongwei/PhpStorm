@@ -19,6 +19,7 @@ class Admin extends CI_Controller
             $this -> load -> model('admin/Topic_model');
             $this -> load -> model('admin/Increase_model');
             $this -> load -> model('admin/Explore_model');
+            $this -> load -> model('admin/Navigation_model');
             $this -> load -> helper(array('form', 'url'));
             $this -> load -> library('session');
             $this -> load -> library('pagination');
@@ -460,6 +461,7 @@ class Admin extends CI_Controller
             }else{
 
                 $id = $_GET['id'];
+
                 $result= '';
 
                 $data['explore'] = $this -> Explore_model -> get($id);
@@ -469,6 +471,26 @@ class Admin extends CI_Controller
                 $this -> load -> view('admin/explore_add',$data);
 
             }
+
+        }
+        //导航
+        public function navigation ()
+        {
+            $result= '';
+
+            $data['navigation'] = $this -> Navigation_model -> get_name($result);
+
+            $this -> load -> view('admin/navigation',$data);
+
+        }
+
+        public function navigation_edit ()
+        {
+            $result['navigation_id']= $_GET['id'];
+
+            $data['navigation'] = $this -> Navigation_model -> get_name($result);
+
+            $this -> load -> view('admin/navigation_edit',$data);
 
         }
     }
