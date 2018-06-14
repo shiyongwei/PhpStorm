@@ -56,6 +56,14 @@
 </header>
 <aside class="Hui-aside">
     <div class="menu_dropdown bk_2">
+        <dl id="menu-navigation">
+            <dt><i class="Hui-iconfont">&#xe72d;</i> 导航管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="navigation" data-title="导航编辑" href="javascript:void(0)">导航编辑</a></li>
+                </ul>
+            </dd>
+        </dl>
         <dl id="menu-product">
             <dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
@@ -96,6 +104,15 @@
         </dl>
         <dl id="menu-activity">
             <dt><i class="Hui-iconfont">&#xe72b;</i> 活动管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="column" data-title="活动栏目" href="javascript:void(0)">活动栏目</a></li>
+                    <li><a data-href="activityedit" data-title="活动编辑" href="javascript:void(0)">活动编辑</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-destination">
+            <dt><i class="Hui-iconfont">&#xe64d;</i> 精选目的地<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
                     <li><a data-href="column" data-title="活动栏目" href="javascript:void(0)">活动栏目</a></li>
