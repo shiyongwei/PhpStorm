@@ -34,6 +34,7 @@
         </tr>
         <tr class="text-c">
             <th width="40">ID</th>
+            <th width="50">所属底部</th>
             <th width="300">描述</th>
             <th width="50">操作</th>
         </tr>
@@ -42,6 +43,7 @@
         <?php foreach ($bottom as $item => $value): ?>
             <tr class="text-c">
                 <td><?php echo $value['bottom_id']; ?></td>
+                <td><?php echo $value['navigation_name']; ?></td>
                 <td><?php echo $value['bottom_text']; ?></td>
                 <td class="td-manage">
                         <a title="编辑" href="javascript:;" onclick="bottom_edit('导航编辑','bottom_edit?id=<?php echo $value['bottom_id']; ?>','1','1000','800')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>

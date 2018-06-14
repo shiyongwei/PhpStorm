@@ -23,6 +23,7 @@ class Bottom_model extends CI_Model{
         {
 
             $this -> db -> set('bottom_text', $data['bottom_text']);
+            $this -> db -> set('navigation_name', $data['navigation_name']);
 
             $this -> db -> where('bottom_id', $data['bottom_id']);
 

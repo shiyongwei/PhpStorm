@@ -29,6 +29,12 @@
 	<form action="" method="post" class="form form-horizontal" id="form-admin-role-add" onsubmit="return false">
         <input type="hidden" name="bottom_id" value="<?php echo $bottom['bottom_id'];?>">
         <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>所属底部：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="<?php echo $bottom['navigation_name'];?>" placeholder="" id="" name="navigation_name">
+            </div>
+        </div>
+        <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">简介：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <script id="editor" type="text/plain" style="width:100%;height:400px;"><?php echo $bottom['bottom_text'];?></script>

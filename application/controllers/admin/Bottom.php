@@ -16,6 +16,7 @@ class Bottom extends CI_Controller
 
             $data['bottom_id'] = $arr['bottom_id'];
             $data['bottom_text'] = $arr['editorValue'];
+            $data['navigation_name'] = $arr['navigation_name'];
 
             if($data['bottom_text'] !== ''){
 
