@@ -61,6 +61,7 @@
             <dd>
                 <ul>
                     <li><a data-href="navigation" data-title="导航编辑" href="javascript:void(0)">导航编辑</a></li>
+                    <li><a data-href="background" data-title="导航背景" href="javascript:void(0)">导航背景</a></li>
                 </ul>
             </dd>
         </dl>
