@@ -246,7 +246,7 @@
 			}
 		});
 		$('#zulin').click(function() {
-			window.location.href='/index.php/Rent?id=0';
+			window.location.href='/index.php/home';
 		});
 		$('#lvyou').click(function() {
 			window.location.href='trave';
