@@ -18,10 +18,27 @@
 				$text = $team[0]['schedule'];
 
 
-//								echo '<pre>';
-//								var_dump($text);
-//								echo '</pre>';
+                $text =  str_replace('<br/>','',$text);
 
+
+                $data = _regex_select($text, '@<p.*?>(.*?)<\/p>@');
+
+                $data = array_filter($data);
+
+                $i=1;
+
+                $date = array();
+
+                foreach(array_chunk($data, 5) as $val)
+                {
+
+                    $date[$i] = $val;
+
+                    $i++;
+
+                }
+                var_dump($date);
+                exit;
 				$data['rent_list'] = $rent_list;
 				$data['team'] = $team;
 				$data['navigation'] = $navigation;
@@ -33,7 +50,47 @@
 			}
 		}
 
+            function _regex_select ($html, $selector, $remove = false)
+            {
+                if (@preg_match_all($selector, $html, $out) === false)
+                {
+                    return false;
+                }
+                $count = count($out);
+                $result = array();
+                // 一个都没有匹配到
+                if ($count == 0)
+                {
+                    return false;
+                }
+                // 只匹配一个，就是只有一个 ()
+                else if ($count == 2)
+                {
+                    // 删除的话取匹配到的所有内容
+                    if ($remove)
+                    {
+                        $result = $out[0];
+                    }
+                    else
+                    {
+                        $result = $out[1];
+                    }
+                }
+                else
+                {
+                    for ($i = 1; $i < $count; $i++)
+                    {
+                        // 如果只有一个元素，就直接返回好了
+                        $result[] = count($out[$i]) > 1 ? $out[$i] : $out[$i][0];
+                    }
+                }
+                if (empty($result))
+                {
+                    return false;
+                }
 
+                return count($result) > 1 ? $result : $result[0];
+            }
 
 
 
