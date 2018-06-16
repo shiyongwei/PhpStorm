@@ -105,20 +105,10 @@
                                         所有旅行都会提供Chinese／英语导游
                                     </div>
                                     <div class="field-block">
-                                        <label>旅行起始日期</label>
-
-                                        <div class="">
-                                            <div class="dateTime">
-                                                <div class="DepDate">
-                                                    <input class="js-pickupDate hasDatepicker" id="motorcycle_tour_reservation_pickup_date" name="motorcycle_tour_reservation[pickup_date]" type="text" value="05/30/2018">
-                                                    <span class="icn-Calendar js-calendarIcon"></span>
-                                                </div>
-                                            </div>
+                                        <label for="">旅行起始日期</label>
+                                        <div class="dateTime">
+                                            <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
                                         </div>
-                                        <p class="widget_error_container">
-
-
-                                        </p>
                                     </div>
 
                                     <p class="widget_error_container"></p>

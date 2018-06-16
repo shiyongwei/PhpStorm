@@ -672,9 +672,9 @@
                         </div>
                     </div>
                     <div class="field_half control-group">
-                        <label>取车时间 <span class="required">*</span></label>
-                        <input value="" name="lookup[pickup_time]" class="left js-date hasDatepicker" type="text" required="" id="dp1527153726939">
-                        <span class="icn-Calendar js-dateTrigger" style="margin-top: 7px;float: right;margin-right: 7px;"></span>
+                        <div class="dateTime" style="    margin-top: 30px;">
+                            <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                        </div>
                     </div>
 
                     <div class="buttons_con">

@@ -10,6 +10,7 @@
 				$this -> load -> model('admin/Team_model');
 				$this -> load -> model('admin/Navigation_model');
 				$this -> load -> model('admin/Bottom_model');
+				$this -> load -> model('admin/City_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
@@ -18,6 +19,7 @@
 				$team = $this->Team_model->get('');
 				$navigation = $this->Navigation_model->get_name('');
 				$bottom = $this->Bottom_model->get_name('');
+				$city = $this->City_model->get();
 
 //              	echo '<pre>';
 //				print_r($uriving);
@@ -29,9 +31,10 @@
 				$data['team'] = $team;
 				$data['navigation'] = $navigation;
 				$data['bottom'] = $bottom;
+				$data['city'] = $city;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
-				$this -> load -> view('hotels',$uriving,$team,$bottom);
+				$this -> load -> view('hotels',$uriving,$team,$bottom,$city);
 				$this -> load -> view('common/home/foot');
 			}
 		}

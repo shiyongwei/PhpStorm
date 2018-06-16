@@ -80,36 +80,11 @@
                                     <option value="" selected=&quot;selected&quot;>
                                         取车城市
                                     </option>
-                                    <optgroup label="澳大利亚">
-                                        <option value="199"
-                                        >
-                                            Cairns
+									<?php foreach ($city as $key=>$citys): ?>
+                                        <option value="">
+											<?php echo $citys['cit_name']?>
                                         </option>
-                                        <option value="221"
-                                        >
-                                            Melbourne
-                                        </option>
-                                        <option value="87"
-                                        >
-                                            布里斯班门店
-                                        </option>
-                                        <option value="190"
-                                        >
-                                            悉尼门店
-                                        </option>
-                                    </optgroup>
-                                    <optgroup label="英国">
-                                        <option value="301"
-                                        >
-                                            Silverstone
-                                        </option>
-                                    </optgroup>
-                                    <optgroup label="荷兰">
-                                        <option value="60"
-                                        >
-                                            荷兰门店
-                                        </option>
-                                    </optgroup>
+									<?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="field-block dropoff-location">
@@ -120,6 +95,11 @@
                                             selected=&quot;selected&quot;>
                                         与取车城市相同
                                     </option>
+									<?php foreach ($city as $key=>$citys): ?>
+                                        <option value="">
+											<?php echo $citys['cit_name']?>
+                                        </option>
+									<?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="field-block">

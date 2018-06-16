@@ -1076,84 +1076,19 @@
                                         </div>
                                         <div class="tour-filters-widget">
                                             <div class="row-fluid">
-                                                <div class="span6">
-                                                    <label for="">国家</label>
-                                                    <div class="select2-container selectWithSearch js-searchableSelect" id="s2id_country_id" style="">
-                                                        <a href="javascript:void(0)" class="select2-choice" tabindex="-1">
-                                                            <span class="select2-chosen" id="select2-chosen-9">所有国家</span><abbr class="select2-search-choice-close"></abbr>
-                                                            <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen9" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-9" id="s2id_autogen9">
-                                                        <div class="select2-drop select2-display-none select2-with-searchbox">
-                                                            <div class="select2-search">
-                                                                <label for="s2id_autogen9_search" class="select2-offscreen"></label>
-                                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-9" id="s2id_autogen9_search" placeholder="">
-                                                            </div>
-                                                            <ul class="select2-results" role="listbox" id="select2-results-9"></ul>
-                                                        </div>
-                                                    </div>
-                                                    <select class="selectWithSearch js-searchableSelect" id="country_id" name="country_id" tabindex="-1" title="" style="display: none;">
-                                                        <option value="">所有国家</option>
-                                                        <option value="13">澳大利亚</option>
-                                                        <option value="38">加拿大</option>
-                                                        <option value="105">India</option>
-                                                        <option value="157">墨西哥</option>
-                                                        <option value="198">新加坡</option>
-                                                        <option value="233">美国</option>
-                                                    </select>
-                                                </div>
-                                                <div class="span6">
-                                                    <label for="">城市</label>
-                                                    <div class="select2-container selectWithSearch js-searchableSelect" id="s2id_start_location_id">
-                                                        <a href="javascript:void(0)" class="select2-choice" tabindex="-1">
-                                                            <span class="select2-chosen" id="select2-chosen-10">所有城市</span><abbr class="select2-search-choice-close"></abbr>
-                                                            <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen10" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-10" id="s2id_autogen10">
-                                                        <div class="select2-drop select2-display-none select2-with-searchbox">
-                                                            <div class="select2-search">
-                                                                <label for="s2id_autogen10_search" class="select2-offscreen"></label>
-                                                                <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-10" id="s2id_autogen10_search" placeholder="">
-                                                            </div>
-                                                            <ul class="select2-results" role="listbox" id="select2-results-10"></ul>
-                                                        </div>
-                                                    </div>
-                                                    <select class="selectWithSearch js-searchableSelect" id="start_location_id" name="start_location_id" tabindex="-1" title="" style="display: none;">
-                                                        <option value="">所有城市</option>
-                                                        <option value="2">旧金山门店</option>
-                                                        <option value="14">达拉斯门店</option>
-                                                        <option value="8">棕榈泉门店</option>
-                                                        <option value="197">芝加哥门店</option>
-                                                        <option value="10">丹佛门店</option>
-                                                        <option value="16">华盛顿门店</option>
-                                                        <option value="78">凤凰城门店</option>
-                                                        <option value="9">圣地亚哥门店</option>
-                                                        <option value="5">奥兰多机场门店</option>
-                                                        <option value="1">洛杉矶机场门店</option>
-                                                        <option value="6">拉斯维加斯门店</option>
-                                                        <option value="11">迈阿密门店</option>
-                                                        <option value="15">盐湖城门店</option>
-                                                        <option value="17">杰克逊镇门店</option>
-                                                        <option value="81">新奥尔良门店</option>
-                                                        <option value="305">Belgrade</option>
-                                                        <option value="38">弗拉格斯塔夫门店</option>
-                                                        <option value="20">西雅图门店</option>
-                                                        <option value="12">曼彻斯特门店</option>
-                                                        <option value="35">温哥华门店</option>
-                                                        <option value="64">科苏梅尔门店</option>
-                                                        <option value="74">波特兰门店</option>
-                                                        <option value="87">布里斯班门店</option>
-                                                        <option value="190">悉尼门店</option>
-                                                        <option value="199">Cairns</option>
-                                                        <option value="40">阿尔伯克基门店</option>
-                                                        <option value="219">Pensacola</option>
-                                                        <option value="13">那什维尔门店</option>
-                                                        <option value="221">Melbourne</option>
-                                                        <option value="226">Calgary</option>
-                                                        <option value="256">Milwaukee</option>
-                                                        <option value="26">劳德代尔堡门店</option>
-                                                        <option value="18">比林斯门店</option>
-                                                        <option value="79">新加坡门店</option>
-                                                        <option value="263">Boswell's Harley-Davidson</option>
-                                                        <option value="218">New Delhi</option>
-                                                    </select>
-                                                </div>
+
+
+                                                <select name="reservation[pickup_location_id]" data-fieldtype="pickup_location" class="selectWithSearch js-locationsSelect" style="width: 97%;margin-top: 66px;">
+                                                    <option value="" selected="&quot;selected&quot;">
+                                                        取车城市
+                                                    </option>
+													<?php foreach ($city as $key=>$citys): ?>
+                                                    <option value="" >
+														<?php echo $citys['cit_name']?>
+                                                    </option>
+													<?php endforeach; ?>
+                                                </select>
+
                                                 <div class="span12">
                                                     <label for="">旅游套餐名字</label>
                                                     <div class="select2-container selectWithSearch js-searchableSelect" id="s2id_tour_id">

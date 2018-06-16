@@ -9,6 +9,7 @@
 				$this -> load -> model('admin/Column_model');
 				$this -> load -> model('admin/Activityedit_model');
 				$this -> load -> model('admin/Navigation_model');
+				$this -> load -> model('admin/City_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
@@ -16,6 +17,7 @@
 				$column = $this->Column_model->get('');
 				$activity = $this->Activityedit_model->get('');
 				$navigation = $this->Navigation_model->get_name('');
+				$city = $this->City_model->get();
 				//所属选项卡
 				if(!empty($_GET['column_id'])){
 					$column_id = $_GET['column_id'];
@@ -32,9 +34,10 @@
 				$data['column'] = $column;
 				$data['activity'] = $activity;
 				$data['navigation'] = $navigation;
+				$data['city'] = $city;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
-				$this -> load -> view('activity',$column,$activity);
+				$this -> load -> view('activity',$column,$activity,$city);
 				$this -> load -> view('common/home/foot');
 			}
 		}
