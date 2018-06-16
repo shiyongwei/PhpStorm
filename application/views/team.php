@@ -14,57 +14,20 @@
 				<div class="search_bar js-searchContainer">
 					<div class="btn-group">
 						<button id="search-country-select" data-toggle="dropdown" class="btn-highlight dropdown-toggle">
-							所有国家
+							所有城市
 						</button>
 
 						<span class="arrow"><span class="arrow"></span></span>
 
 						<ul class="dropdown-menu" data-text-for-selector="#search-country-select">
+
+							<?php foreach ($city as $key=>$citys): ?>
 							<li class="search-dropdown-select-option">
-								<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8">
-									所有国家
+								<a href="#">
+									<?php echo $citys['cit_name']?>
 								</a>
 							</li>
-							<li class="search-dropdown-select-option">
-								<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8/united-states">
-									美国
-								</a>
-							</li>
-							<li class="search-dropdown-select-option">
-								<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8/australia">
-									澳大利亚
-								</a>
-							</li>
-							<li class="search-dropdown-select-option">
-								<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8/canada">
-									加拿大
-								</a>
-							</li>
-							<li class="search-dropdown-select-option">
-								<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8/india">
-									India
-								</a>
-							</li>
-							<li class="search-dropdown-select-option">
-								<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8/united-states-minor-outlying-islands">
-									United States Minor Outlying Islands
-								</a>
-							</li>
-							<li class="search-dropdown-select-option">
-								<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8/south-africa">
-									南非
-								</a>
-							</li>
-							<li class="search-dropdown-select-option">
-								<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8/mexico">
-									墨西哥
-								</a>
-							</li>
-							<li class="search-dropdown-select-option">
-								<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8/singapore">
-									新加坡
-								</a>
-							</li>
+							<?php endforeach; ?>
 						</ul>
 					</div>
 

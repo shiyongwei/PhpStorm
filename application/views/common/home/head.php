@@ -67,55 +67,6 @@ header('Vary: Accept-Encoding');
         <div class="container" style="position: relative;">
             <div class="row">
                 <div class="offset1 span3"></div>
-
-                <!--                <div class="span8">-->
-                <!--                    <div class="dropdown login_box pull-right">-->
-                <!--                        <a data-toggle="dropdown" class="btn-highlight dropdown-toggle" href="Javascript:;">-->
-                <!--                            加入我们！ /-->
-                <!--                            登录 <b class="caret"></b>-->
-                <!--                        </a>-->
-                <!---->
-                <!--                        <div class="dropdown-menu">-->
-                <!--                            <form accept-charset="UTF-8" action="" class="js-authenticationForm" method="post">-->
-                <!--                                <div style="margin:0;padding:0;display:inline">-->
-                <!--                                    <input name="utf8" type="hidden" value="&#x2713;" />-->
-                <!--                                </div>-->
-                <!--                                <label for="user_email">-->
-                <!--                                    邮件-->
-                <!--                                </label>-->
-                <!--                                <input id="user_email" type="text" name="user[email]" size="30" />-->
-                <!---->
-                <!--                                <label for="user_password">-->
-                <!--                                    密码-->
-                <!--                                </label>-->
-                <!--                                <input id="user_password" type="password" name="user[password]" size="30" />-->
-                <!---->
-                <!--                                <div class="control-group remember-check">-->
-                <!--                                    <input class="js-custom" id="remember_me" name="user[remember_me]" type="checkbox" value="1" />-->
-                <!--                                    <label for="remember_me">记住我</label>-->
-                <!--                                </div>-->
-                <!--                                <input class="btn-highlight" type="submit" name="commit"-->
-                <!--                                       value="登录" />-->
-                <!---->
-                <!--                                <a href="" class="forgot_pass js-forgetPasswordTrigger" rel="nofollow">-->
-                <!--                                    忘记密码？-->
-                <!--                                </a>-->
-                <!---->
-                <!--                                <span>-->
-                <!--                                    还不是会员？-->
-                <!--                                    <a href="#">-->
-                <!--                                    加入我们！-->
-                <!--                                    </a>-->
-                <!--                                    </span>-->
-                <!--                                <div class="socialauth">-->
-                <!--                                    <a class="social_auth_btn fbauth" rel="nofollow" href="#">-->
-                <!--                                        用facebook帐号登录-->
-                <!--                                    </a>-->
-                <!--                                </div>-->
-                <!--                            </form>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
             </div>
             <a class="brand top-brand" href="#"><img src="/public/image/logo-732570a503b57eea5ffa859c1839ad68.png"></a>
         </div>

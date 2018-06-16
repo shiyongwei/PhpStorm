@@ -102,22 +102,12 @@
     text-align: center;">
 											所有旅行都会提供Chinese／英语导游
 										</div>
-										<div class="field-block">
-											<label>旅行起始日期</label>
-
-											<div class="">
-												<div class="dateTime">
-													<div class="DepDate">
-														<input class="js-pickupDate hasDatepicker" id="motorcycle_tour_reservation_pickup_date" name="motorcycle_tour_reservation[pickup_date]" type="text" value="05/30/2018">
-														<span class="icn-Calendar js-calendarIcon" style="background-image: url('/public/image/Calendar_icon-aa77fa064febf5f3bb73e8d9af00a4b5.png');)"></span>
-													</div>
-												</div>
-											</div>
-											<p class="widget_error_container">
-
-
-											</p>
-										</div>
+                                        <div class="field-block">
+                                            <label for="">旅行起始日期</label>
+                                            <div class="dateTime">
+                                                <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                                            </div>
+                                        </div>
 
 										<p class="widget_error_container"></p>
 
@@ -304,10 +294,10 @@
 							<div class="needHelpContent">
 								<div class="contact_us_help">
 									<div class="email_us">
-										<a title="Frequent Questions" href="/faqs/%E6%91%A9%E6%89%98%E8%BD%A6%E5%87%BA%E7%A7%9F" class="btn-highlight">
+										<a title="Frequent Questions" href="Problem" class="btn-highlight">
 											<span class="icn-faq"></span>常见问题
 										</a>
-										<a title="Email Us" href="/contact_us_help.js?contact_info%5Bcategory_id%5D=2" class="btn-highlight js-captureLeadTrigger" rel="nofollow">
+										<a title="Email Us" href="" class="btn-highlight js-captureLeadTrigger" rel="nofollow">
 											<span class="icn-email"></span>联系我们！
 										</a>
 
@@ -352,22 +342,18 @@
 
 						<div class="accordion" id="tour_iten">
 
-
+	                        <?php foreach ($date as $key =>$dates): ?>
                             <div class="accordion-group">
                                 <div class="accordion-heading">
                                     <a href="#collapse-1" class="accordion-toggle" data-parent="#tour_iten" data-toggle="collapse">
-                                        <span class="day">第一天</span>
-                                        <span class="location">Chicago, IL - Arrival</span>
+                                        <span class="day"><?php echo $dates['0'];?></span>
+                                        <span class="location"><?php echo $dates['1'];?></span>
                                         <span class="miles" dir="ltr">
                                           <span>
-                                            0.0 英里
-                                          </span>
-                                          <span>/</span>
-                                          <span>
-                                            0.0 公里
+                                           <?php echo $dates['2']?>
                                           </span>
                                         </span>
-                                        <span class="toggle_icon">关闭 / 打开</span>
+<!--                                        <span class="toggle_icon">关闭 / 打开</span>-->
                                     </a>
                                     <div class="clearfix"></div>
                                 </div>
@@ -376,12 +362,12 @@
                                     <div class="accordion-inner">
                                         <div class="row-fluid">
                                             <div class="span5 day-gallery">
-                                                <div class="modal-body">
+                                                <div class="modal-body" style="padding: 0 0!important;">
                                                     <div id="carousel-549" class="event_gallery carousel slide js-carousel">
                                                         <!-- Carousel items -->
                                                         <div class="carousel-inner">
                                                             <div class="active item">
-                                                                <img alt="Location Image" src="/public/image/er-tours-daily_0000s_0001_shutterstock_84639565.jpg">
+                                                               <?php echo $dates['3'];?>
                                                             </div>
                                                         </div>
 
@@ -390,7 +376,7 @@
                                             </div>
 
                                             <div class="span7 day-data">
-                                                <div class="tour_day_details">You arrive at Chicago International Airport and transfer on your own to your hotel. In Chicago you are in the biggest and most exciting of the Great Lake cities. Chicago has a skyline to rival any city – an amazing selection of top rated museums, restaurants, cafes, bars and nightclubs pay homage to the city’s strong jazz and blues heritage.</div>
+                                                <div class="tour_day_details"><?php echo $dates['4'];?></div>
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>
@@ -398,7 +384,8 @@
                                 </div>
                             </div>
 
-							<div class="sep"></div>
+<!--							<div class="sep"></div>-->
+							<?php endforeach; ?>
 <!--							-->
 
 						</div>

@@ -37,16 +37,19 @@
                     $i++;
 
                 }
-                var_dump($date);
-                exit;
+//				echo '<pre>';
+//				print_r($date[1]);
+//				exit;
+//				echo '</pre>';
+
 				$data['rent_list'] = $rent_list;
 				$data['team'] = $team;
 				$data['navigation'] = $navigation;
-//				$data['team_route'] = $team_route;
+				$data['date'] = $date;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
-				$this -> load -> view('team_detail',$team);
-				$this -> load -> view('common/home/foot');
+				$this -> load -> view('team_detail',$team,$date);
+				$this -> load -> view('common/home/foot',$rent_list);
 			}
 		}
 
