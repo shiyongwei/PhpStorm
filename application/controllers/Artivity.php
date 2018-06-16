@@ -38,7 +38,7 @@
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('activity',$column,$activity,$city);
-				$this -> load -> view('common/home/foot');
+				$this -> load -> view('common/home/foot',$rent_list);
 			}
 		}
 

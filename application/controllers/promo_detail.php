@@ -33,7 +33,7 @@
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('promo_detail',$promotion,$promotiont);
-				$this -> load -> view('common/home/foot');
+				$this -> load -> view('common/home/foot',$rent_list);
 			}
 		}
 

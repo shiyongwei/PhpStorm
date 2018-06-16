@@ -47,7 +47,7 @@
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('detail',$uriving,$date);
-				$this -> load -> view('common/home/foot');
+				$this -> load -> view('common/home/foot',$rent_list);
 			}
 		}
 				function _regex_select ($html, $selector, $remove = false)

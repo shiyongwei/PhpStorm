@@ -32,7 +32,7 @@ class Home extends CI_Controller
 			$data['city'] = $city;
             $this -> load -> view('common/home/head',$data,$navigation);
             $this -> load -> view('home',$promotiom,$bottom,$city);
-            $this -> load -> view('common/home/foot');
+            $this -> load -> view('common/home/foot',$rent_list);
         }
         //酒店
         public function hotels ()

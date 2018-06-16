@@ -31,7 +31,7 @@
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('rent',$list);
-				$this -> load -> view('common/home/foot');
+				$this -> load -> view('common/home/foot',$rent_list);
 			}
 
 

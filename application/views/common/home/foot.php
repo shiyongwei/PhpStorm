@@ -91,15 +91,11 @@
 
                 <div class="linksBox">
                     <ul class="navVertical">
+						<?php foreach ($rent_list as $key=>$rent_lists): ?>
                         <li dir="ltr">
-                            <a href="#">哈雷租赁</a>
+                            <a href="/index.php/Rent?id=<?php echo $rent_lists['brand_id']?>"><?php echo $rent_lists['product_brand']?></a>
                         </li>
-                        <li dir="ltr">
-                            <a href="#">印第安摩托车租赁</a>
-                        </li>
-                        <li dir="ltr">
-                            <a href="#">摩托车租赁</a>
-                        </li>
+						<?php endforeach; ?>
                     </ul>
                 </div>
             </div><!-- column -->
@@ -110,16 +106,16 @@
                 <div class="linksBox">
                     <ul class="navVertical">
                         <li>
-                            <a href="#">摩托车旅游</a>
+                            <a href="trave">摩托车旅游</a>
                         </li>
                         <li>
-                            <a href="#">摩托车团队游</a>
+                            <a href="team">摩托车团队游</a>
                         </li>
                         <li>
-                            <a href="#">摩托车自驾游</a>
+                            <a href="classify">摩托车自驾游</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="hot_trave">
                                 热门摩托车旅行
                             </a>
                         </li>

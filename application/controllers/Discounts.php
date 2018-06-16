@@ -30,7 +30,7 @@
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('discounts',$promotion,$city);
-				$this -> load -> view('common/home/foot');
+				$this -> load -> view('common/home/foot',$rent_list);
 			}
 		}
 

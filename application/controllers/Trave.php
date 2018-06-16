@@ -22,7 +22,7 @@ class Trave extends CI_Controller{
 
         $this -> load -> view('common/home/head',$data,$navigation);
         $this -> load -> view('trave',$city);
-        $this -> load -> view('common/home/foot');
+        $this -> load -> view('common/home/foot',$rent_list);
     }
 }
 
