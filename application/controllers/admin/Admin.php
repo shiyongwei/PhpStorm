@@ -21,6 +21,7 @@ class Admin extends CI_Controller
             $this -> load -> model('admin/Explore_model');
             $this -> load -> model('admin/Navigation_model');
             $this -> load -> model('admin/Bottom_model');
+            $this -> load -> model('admin/Background_model');
             $this -> load -> helper(array('form', 'url'));
             $this -> load -> library('session');
             $this -> load -> library('pagination');
@@ -512,6 +513,26 @@ class Admin extends CI_Controller
             $data['bottom'] = $this -> Bottom_model -> get_name($result);
 
             $this -> load -> view('admin/bottom_edit',$data);
+
+        }
+        //底部
+        public function background ()
+        {
+            $result= '';
+
+            $data['background'] = $this -> Background_model -> get_name($result);
+
+            $this -> load -> view('admin/background',$data);
+
+        }
+
+        public function background_edit ()
+        {
+            $result['id']= $_GET['id'];
+
+            $data['background'] = $this -> Background_model -> get_name($result);
+
+            $this -> load -> view('admin/background_edit',$data);
 
         }
     }

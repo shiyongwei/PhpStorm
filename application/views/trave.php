@@ -24,7 +24,7 @@
                                 </li>
 
                                 <li class="deals">
-                                    <a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E7%89%B9%E6%83%A0">促销特惠</a>
+                                    <a href="Javascript:;">促销特惠</a>
                                 </li>
 
 

@@ -34,29 +34,35 @@
         </tr>
         <tr class="text-c">
             <th width="40">ID</th>
-            <th width="50">导航1</th>
-            <th width="50">导航2</th>
-            <th width="50">导航3</th>
-            <th width="50">导航4</th>
-            <th width="50">导航5</th>
-            <th width="50">导航6</th>
-            <th width="50">导航7</th>
+            <th width="40">所属背景</th>
+            <th width="50">标题</th>
+            <th width="50">描述</th>
+            <th width="50">描述</th>
+            <th width="50">描述</th>
+            <th width="50">价格</th>
+            <th width="50">图片</th>
             <th width="50">操作</th>
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($navigation as $item => $value): ?>
+        <?php foreach ($background as $item => $value): ?>
             <tr class="text-c">
-                <td><?php echo $value['navigation_id']; ?></td>
-                <td><?php echo $value['navigation_name']; ?></td>
-                <td><?php echo $value['lease_name']; ?></td>
-                <td><?php echo $value['hotel_name']; ?></td>
-                <td><?php echo $value['promotions_name']; ?></td>
-                <td><?php echo $value['activity_name']; ?></td>
-                <td><?php echo $value['city_name']; ?></td>
-                <td><?php echo $value['online_name']; ?></td>
+                <td><?php echo $value['id']; ?></td>
+                <td><?php echo $value['belongs']; ?></td>
+                <td><?php echo $value['price']; ?></td>
+                <td><?php echo $value['title']; ?></td>
+                <td><?php echo $value['head']; ?></td>
+                <td><?php echo $value['central']; ?></td>
+                <td><?php echo $value['foot']; ?></td>
+                <td>
+                    <?php if (!empty($value['image'])): ?>
+                        <a onClick="product_list_show('<?php echo $value['title'];?>','product_list_show?image=<?php echo $value['image'];?>','10001','1200','800')" href="javascript:;"><img width="60" class="product-thumb" src="<?php echo $value['image'];?>"></a>
+                    <?php else: ?>
+                        <a href="javascript:;"></a>
+                    <?php endif; ?>
+                </td>
                 <td class="td-manage">
-                        <a title="编辑" href="javascript:;" onclick="navigation_edit('导航编辑','navigation_edit?id=<?php echo $value['navigation_id']; ?>','1','550','450')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                        <a title="编辑" href="javascript:;" onclick="name_edit('导航编辑','background_edit?id=<?php echo $value['id']; ?>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -74,10 +80,26 @@
 <script type="text/javascript" src="/public/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="/public/admin/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
+    /*产品-查看*/
+    function product_list_show (title, url, id,w,h) {
+        layer.open({
+            type: 2,
+            area: [w+'px', h +'px'],
+            fix: false, //不固定
+            maxmin: true,
+            shade:0.4,
+            title: title,
+            content: url,
+        });
+    }
 
-    /*品牌-编辑*/
-    function navigation_edit (title, url, id, w, h) {
-        layer_show(title, url, w, h);
+    function name_edit (title, url, id) {
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
     }
 </script>
 </body>

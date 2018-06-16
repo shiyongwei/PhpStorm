@@ -36,7 +36,7 @@
         <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜产品</button>
     </div>
     <div class="cl pd-5 bg-1 bk-gray mt-20">
-        <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="product_list_add('添加产品','product_list_add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加产品</a></span>
+        <span class="l"><a class="btn btn-primary radius" onclick="product_list_add('添加产品','product_list_add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加产品</a></span>
         <span class="r">共有数据：<strong><?php echo count($list);?></strong> 条</span></div>
     <div class="mt-20">
         <table class="table table-border table-bordered table-bg table-hover table-sort">
@@ -62,7 +62,6 @@
                         <?php else: ?>
                             <a href="javascript:;"></a>
                         <?php endif; ?>
-
                     </td>
                     <td class="text-l">
                         <a style="text-decoration:none" onClick="product_list_details('<?php echo $value['productitle'];?>','product_list_details?id=<?php echo $value['id'];?>','10001','800','650')" href="javascript:;"><?php echo $value['productitle'];?></a></td>

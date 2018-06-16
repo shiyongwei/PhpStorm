@@ -58,16 +58,7 @@ class List_model extends CI_Model
             return $this -> db -> delete(self::TBL_LIST, array('id' => $data));
 
         }
-//更新
-        public function update_category ($id, $data)
-        {
-            $this -> db -> set('category_name', $data['category_name']);
 
-            $this -> db -> where('id', $id);
-
-            return $this -> db -> update(self::TBL_LIST);
-
-        }
 
 
         public function update_status ($data)
@@ -91,20 +82,6 @@ class List_model extends CI_Model
             $this -> db -> where('id', $data['id']);
 
             return $this -> db -> update(self::TBL_LIST);
-        }
-
-        public function list_page()
-        {
-            return $this->db->count_all(self::TBL_LIST);
-        }
-
-    #获取分页数据
-        public function page_list($limit,$offset){
-
-            $query = $this->db->limit($limit,$offset)->join('product_category_add','product_list_add.category=product_category_add.category_id')
-                ->join('product_brand_add','product_list_add.brand=product_brand_add.brand_id')->get(self::TBL_LIST);
-
-            return $query->result_array();
         }
 
     }
