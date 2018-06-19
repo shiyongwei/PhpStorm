@@ -16,6 +16,7 @@
 				$uriving = $this->Uriving_model->get('');
 				$navigation = $this->Navigation_model->get_name('');
 				$city = $this->City_model->get();
+				$get_limit = $this->City_model->get_limit();
 
 //				echo '<pre>';
 //				print_r($uriving);
@@ -24,11 +25,11 @@
 				$data['rent_list'] = $rent_list;
 				$data['uriving'] = $uriving;
 				$data['navigation'] = $navigation;
-				$data['city'] = $city;
+				$data['get_limit'] = $get_limit;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('classify',$uriving,$city);
-				$this -> load -> view('common/home/foot',$rent_list);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
 			}
 		}
 

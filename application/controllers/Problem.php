@@ -6,22 +6,25 @@
 				parent ::__construct();
 				$this -> load -> model('admin/List_model');
 				$this -> load -> model('admin/Product_model');
+				$this -> load -> model('admin/City_model');
 				$this -> load -> model('admin/Navigation_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
 				$rent_list = $this->Product_model->get('');//热门租赁分类
 				$navigation = $this->Navigation_model->get_name('');
+				$get_limit = $this->City_model->get_name('');
 
 
 
 
 				$data['rent_list'] = $rent_list;
 				$data['navigation'] = $navigation;
+				$data['get_limit'] = $get_limit;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('problem');
-				$this -> load -> view('common/home/foot',$rent_list);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
 			}
 		}
 

@@ -16,6 +16,7 @@
 				$promotion = $this->Promotions_model->get('');
 				$navigation = $this->Navigation_model->get_name('');
 				$city = $this->City_model->get();
+				$get_limit = $this->City_model->get_limit();
 //				echo '<pre>';
 //				print_r($promotion);
 //				echo '</pre>';
@@ -27,6 +28,7 @@
 				$data['promotion'] = $promotion;
 				$data['navigation'] = $navigation;
 				$data['city'] = $city;
+				$data['get_limit'] = $get_limit;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('discounts',$promotion,$city);

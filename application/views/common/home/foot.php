@@ -128,49 +128,17 @@
 
                 <div class="genericBox linksBox">
                     <ul class="navVertical">
+						<?php foreach ($get_limit as $key=>$get_limits): ?>
                         <li>
                             <a href="#">
-                                洛杉矶机场门店
+								<?php echo $get_limits['cit_name']?>
                             </a>
                         </li>
+						<?php endforeach; ?>
                         <li>
-                            <a href="#">
-                                拉斯维加斯门店
+                            <a href="City">
+								更多城市
                             </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                丹佛门店
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                奥兰多机场门店
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                芝加哥门店
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                迈阿密门店
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                劳德代尔堡门店
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                旧金山门店
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">更多城市</a>
                         </li>
                     </ul>
                 </div>

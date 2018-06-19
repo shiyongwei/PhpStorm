@@ -1,7 +1,7 @@
 <link href="/public/css/hotels.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="/public/js/jquery-1.9.1.min.js"></script>
 <div class="fullscrn homescrn hotel-home">
-    <img class="imgBG" src="https://d56b293rhv8dp.cloudfront.net/languages/8/hotels_cover_images/original/Bike_Hotel_Aug_2016.jpg?1471455114">
+    <img class="imgBG" src="<?php echo $text[1]['image']?>">
     <div class="container ">
         <div class="row">
             <div class="span6 widget-container">
@@ -1031,14 +1031,14 @@
             </div>
 
             <div class="span5 offset1 right hotel-display">
-                <small class="starting_price">Starting At</small>
+                <small class="starting_price"><?php echo $text[1]['title']?></small>
                 <div class="package-price">
 
-                    =&nbsp;&nbsp;¥1,242.38/天
+					<?php echo $text[1]['price']?>
                     <span class="icons-hotel-package"></span>
                 </div>
                 <p>
-                    同时预订摩托车和酒店，最高可节省<b> ¥1,274.24／天 </b>
+					<?php echo $text[1]['head']?><b><?php echo $text[1]['foot']?></b>
                 </p>
                 <div>
                     <a href="#more" class="btn js-learn-more">更多信息</a>

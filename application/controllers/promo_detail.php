@@ -8,6 +8,7 @@
 				$this -> load -> model('admin/Product_model');
 				$this -> load -> model('admin/Promotions_model');
 				$this -> load -> model('admin/Navigation_model');
+				$this -> load -> model('admin/City_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
@@ -17,6 +18,7 @@
 				$promotion = $this->Promotions_model->get($id);
 				$promotiont = $this->Promotions_model->get('');
 				$navigation = $this->Navigation_model->get_name('');
+				$get_limit = $this->City_model->get_limit('');
 
 //				echo '<pre>';
 //				print_r($promotion);
@@ -29,11 +31,12 @@
 				$data['promotion'] = $promotion;
 				$data['promotiont'] = $promotiont;
 				$data['navigation'] = $navigation;
+				$data['get_limit'] = $get_limit;
 
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('promo_detail',$promotion,$promotiont);
-				$this -> load -> view('common/home/foot',$rent_list);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
 			}
 		}
 

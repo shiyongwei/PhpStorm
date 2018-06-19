@@ -1,8 +1,10 @@
 <link href="/public/css/index.css" type="text/css" rel="stylesheet" />
 <div class="fullscrn homescrn js-fullScreen">
-    <img class="imgBG" src="/public/image/China-2b.jpg">
+
+    <img class="imgBG" src="<?php echo $text[0]['image']?>">
+
     <header class="er_reservation">
-        <p class="homeTitle"><em>Live More. Ride More!</em></p>
+        <p class="homeTitle"><em><?php echo $text[0]['title']?></em></p>
 
         <div class="reservation js-combinedWidget">
 

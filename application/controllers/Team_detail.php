@@ -7,11 +7,13 @@
 				$this -> load -> model('admin/List_model');
 				$this -> load -> model('admin/Product_model');
 				$this -> load -> model('admin/Team_model');
+				$this -> load -> model('admin/City_model');
 				$this -> load -> model('admin/Navigation_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
 				$rent_list = $this->Product_model->get('');
+				$get_limit = $this->Product_model->get_limit('');
 				$id = $_GET['id'];
 				$team = $this->Team_model->get($id);
 				$navigation = $this->Navigation_model->get_name('');
@@ -46,10 +48,11 @@
 				$data['team'] = $team;
 				$data['navigation'] = $navigation;
 				$data['date'] = $date;
+				$data['get_limit'] = $get_limit;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('team_detail',$team,$date);
-				$this -> load -> view('common/home/foot',$rent_list);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
 			}
 		}
 

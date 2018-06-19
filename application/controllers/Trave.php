@@ -14,15 +14,17 @@ class Trave extends CI_Controller{
         $rent_list = $this->Product_model->get('');//热门租赁分类
 		$navigation = $this->Navigation_model->get_name('');
 		$city = $this->City_model->get();
+		$get_limit = $this->City_model->get_limit();
 
 
         $data['rent_list'] = $rent_list;
 		$data['navigation'] = $navigation;
 		$data['city'] = $city;
+		$data['get_limit'] = $get_limit;
 
         $this -> load -> view('common/home/head',$data,$navigation);
         $this -> load -> view('trave',$city);
-        $this -> load -> view('common/home/foot',$rent_list);
+        $this -> load -> view('common/home/foot',$rent_list,$get_limit);
     }
 }
 

@@ -12,6 +12,7 @@ class Home extends CI_Controller
         $this -> load -> model('admin/Navigation_model');
         $this -> load -> model('admin/Bottom_model');
 		$this -> load -> model('admin/City_model');
+		$this -> load -> model('admin/Background_model');
         $this -> load -> helper(array('form', 'url'));
     }
 
@@ -23,6 +24,12 @@ class Home extends CI_Controller
             $navigation = $this->Navigation_model->get_name('');
 			$bottom = $this->Bottom_model->get_name('');
 			$city = $this->City_model->get();
+			$get_limit = $this->City_model->get_limit();
+			$text = $this->Background_model->get_name('');
+
+//			echo  '<pre>';
+//			print_r($text);
+//			echo  '<pre>';
 
 
             $data['rent_list'] = $rent_list;
@@ -30,9 +37,11 @@ class Home extends CI_Controller
             $data['navigation'] = $navigation;
             $data['bottom'] = $bottom;
 			$data['city'] = $city;
+			$data['text'] = $text;
+			$data['get_limit'] = $get_limit;
             $this -> load -> view('common/home/head',$data,$navigation);
-            $this -> load -> view('home',$promotiom,$bottom,$city);
-            $this -> load -> view('common/home/foot',$rent_list);
+            $this -> load -> view('home',$promotiom,$bottom,$city,$text);
+            $this -> load -> view('common/home/foot',$rent_list,$city,$get_limit);
         }
         //酒店
         public function hotels ()
