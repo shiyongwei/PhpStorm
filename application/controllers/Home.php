@@ -120,5 +120,13 @@ class Home extends CI_Controller
             $this -> load -> view('hot_trave');
             $this -> load -> view('common/home/foot');
         }
+		//底部信息
+		public function bottom_info ()
+		{
+			$this -> load -> view('common/home/head');
+			$this -> load -> view('bottom_info');
+			$this -> load -> view('common/home/foot');
+		}
+
 
     }

@@ -826,16 +826,7 @@
                 <div class="span7">
                     <h1 class="bold left">摩托车活动</h1>
                 </div>
-                <div class="search_bar right span5">
-                    <div action="" class="res_form">
-                        <div class="clearfix" style="background: white;">
 
-                    </div>
-                    </form>
-<!--                    <div class="clearfix"></div>-->
-                </div>
-
-            </div>
 
             <div class="clearfix"></div>
 

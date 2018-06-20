@@ -738,7 +738,7 @@
                 </tbody>
             </table>
             <div class="section_btns">
-                <a href='#' class="btn-darkHighlight">
+                <a href='Discounts' class="btn-darkHighlight">
                     查看促销特惠<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span>
                 </a>
             </div>

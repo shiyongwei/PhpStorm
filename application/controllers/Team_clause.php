@@ -1,6 +1,6 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
-	class Problem extends CI_Controller{
+	class Team_clause extends CI_Controller{
 			public function __construct ()
 			{
 				parent ::__construct();
@@ -23,7 +23,7 @@
 				$data['get_limit'] = $get_limit;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
-				$this -> load -> view('problem');
+				$this -> load -> view('team_clause');
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
 			}
 		}
