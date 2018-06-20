@@ -16,6 +16,13 @@ class CityController extends CI_Controller
             parse_str($_POST['str'], $arr);
 
             $data['cit_name'] = $arr['cit_name'];
+            $data['logo'] = $arr['image'];
+            $data['address'] = $arr['address'];
+            $data['information'] = $arr['information'];
+            $data['time'] = $arr['time'];
+            $data['status'] = $arr['status'];
+            $data['valder'] = $arr['editorValue'];
+            $data['text'] = $arr['text'];
 
 
             if ($arr['cit_name'] !== '')
@@ -56,6 +63,17 @@ class CityController extends CI_Controller
 
             $cit_id = $arr['id'];
 
+            $data['cit_name'] = $arr['cit_name'];
+            $data['address'] = $arr['address'];
+            $data['information'] = $arr['information'];
+            $data['time'] = $arr['time'];
+            $data['status'] = $arr['status'];
+            $data['valder'] = $arr['editorValue'];
+            $data['text'] = $arr['text'];
+
+            if(!empty($arr['image'])){
+                $data['logo'] = $arr['image'];
+            }
 
             # 进行更新
             if ($arr['cit_name'] !== '')
@@ -91,5 +109,19 @@ class CityController extends CI_Controller
                 echo 404;
             }
 
+        }
+
+        public function city_status()
+        {
+            $data['id'] = $_POST['id'];
+            $data['status'] = $_POST['status'];
+            if($this->City_model->update_status($data))
+            {
+                echo 200;
+
+            }else{
+
+                echo 404;
+            }
         }
     }

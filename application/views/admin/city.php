@@ -19,7 +19,7 @@
     <script type="text/javascript" src="/public/admin/lib/DD_belatedPNG_0.0.8a-min.js"></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <title>品牌管理</title>
+    <title>城市编辑</title>
 </head>
 <body>
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 城市管理
@@ -29,7 +29,7 @@
 <div class="page-container">
     <div class="cl pd-5 bg-1 bk-gray">
         <span class="l">
-            <a class="btn btn-primary radius" href="javascript:;" onclick="city_add('添加城市','city_add','350','200')">
+            <a class="btn btn-primary radius" href="javascript:;" onclick="city_add('添加城市','city_add')">
                 <i class="Hui-iconfont">&#xe600;</i> 添加城市</a>
         </span>
         <span class="r">共有数据：<strong><?php echo count($cites); ?></strong> 条</span>
@@ -37,11 +37,17 @@
     <table class="table table-border table-bordered table-hover table-bg">
         <thead>
         <tr>
-            <th scope="col" colspan="6">城市管理</th>
+            <th scope="col" colspan="9">城市管理</th>
         </tr>
         <tr class="text-c">
             <th width="40">ID</th>
-            <th width="200">城市名称</th>
+            <th width="60">缩略图</th>
+            <th width="50">城市名称</th>
+            <th width="50">地址</th>
+            <th width="50">联系方式</th>
+            <th width="50">营业时间</th>
+            <th width="100">简介</th>
+            <th width="50">发布状态</th>
             <th width="70">操作</th>
         </tr>
         </thead>
@@ -50,10 +56,39 @@
             <tr class="text-c">
                 <td><?php echo $item['cit_id'];?></td>
                 <td>
+                    <?php if (!empty($item['logo'])): ?>
+                        <a onClick="product_list_show('<?php echo $item['cit_name'];?>','product_list_show?image=<?php echo $item['logo'];?>','10001','240','200')" href="javascript:;"><img width="60" class="product-thumb" src="<?php echo $item['logo'];?>"></a>
+                    <?php else: ?>
+                        <a href="javascript:;"></a>
+                    <?php endif; ?>
+                </td>
+                <td>
                     <?php echo $item['cit_name']; ?>
                 </td>
+                <td>
+                    <?php echo $item['address']; ?>
+                </td>
+                <td>
+                    <?php echo $item['information']; ?>
+                </td>
+                <td>
+                    <?php echo $item['time']; ?>
+                </td>
+                <td>
+                    <?php echo $item['text']; ?>
+                </td>
+                <?php if ($item['status'] == 0): ?>
+                    <td class="td-status"><span class="label label-default radius">普通</span></td>
+                <?php else: ?>
+                    <td class="td-status"><span class="label label-success radius">广告</span></td>
+                <?php endif; ?>
                 <td class="td-manage">
-                        <a title="编辑" href="javascript:;" onclick="city_edit('城市编辑','city_edit?id=<?php echo $item['cit_id']; ?>','1','350','200')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                        <?php if ($item['status'] == 0): ?>
+                            <a style="text-decoration:none" onClick="team_start(this,'<?php echo $item['cit_id'];?>')" href="javascript:;" title="广告"><i class="Hui-iconfont">&#xe603;</i></a>
+                        <?php else: ?>
+                            <a style="text-decoration:none" onClick="team_stop(this,'<?php echo $item['cit_id'];?>')" href="javascript:;" title="普通"><i class="Hui-iconfont">&#xe6de;</i></a>
+                        <?php endif; ?>
+                        <a title="编辑" href="javascript:;" onclick="city_edit('城市编辑','city_edit?id=<?php echo $item['cit_id']; ?>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
                         <a title="删除" href="javascript:;" onclick="city_del(this,'<?php echo $item['cit_id']; ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
                 </td>
             </tr>
@@ -74,12 +109,22 @@
 
     /*城市-添加*/
     function city_add (title, url, w, h) {
-        layer_show(title, url, w, h);
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
     }
 
     /*城市-编辑*/
     function city_edit (title, url, id, w, h) {
-        layer_show(title, url, w, h);
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
     }
 
     /*城市-删除*/
@@ -93,14 +138,68 @@
                     layer.msg('已删除!', {icon: 1, time: 1000},function() {
                         location.reload();
                     });
-                }else if(data == 500){
-                    layer.msg('不允许删除带子集的分类!', {icon: 5, time: 2000},);
                 }
                 else
                 {
                     layer.msg('删除失败!', {icon: 5, time: 2000},);
                 }
             });
+        });
+    }
+    /*产品-查看*/
+    function product_list_show (title, url, id,w,h) {
+        layer.open({
+            type: 2,
+            area: [w+'px', h +'px'],
+            fix: false, //不固定
+            maxmin: true,
+            shade:0.4,
+            title: title,
+            content: url,
+        });
+    }
+    /*产品-下架*/
+    function team_stop (obj, id) {
+        layer.confirm('确认要下架吗？', function(index) {
+            $.post('/index.php/admin/CityController/city_status', {'id': id, 'status': 1}, function(data) {
+                if(data == 200)
+                {
+                    $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="team_start(this,id)" href="javascript:;" title="广告"><i class="Hui-iconfont">&#xe603;</i></a>');
+                    $(obj).parents("tr").find(".td-status").html('<span class="label label-default radius">普通</span>');
+                    $(obj).remove();
+                    layer.msg('普通!', {icon: 5, time: 1000}, function() {
+                        location.reload();
+                    });
+                }
+                else
+                {
+                    layer.msg('下架失败!', {icon: 5, time: 1000});
+                }
+            });
+
+        });
+    }
+
+    /*产品-发布*/
+    function team_start (obj, id) {
+        layer.confirm('确认要发布吗？', function(index) {
+            $.post('/index.php/admin/CityController/city_status', {'id': id, 'status': 0}, function(data) {
+                if(data == 200)
+                {
+                    $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="team_stop(this,id)" href="javascript:;" title="普通"><i class="Hui-iconfont">&#xe6de;</i></a>');
+                    $(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">广告</span>');
+                    $(obj).remove();
+                    layer.msg('已发布广告!', {icon: 6, time: 1000}, function() {
+                        location.reload();
+                    });
+                }
+                else
+                {
+                    layer.msg('下架为普通!', {icon: 5, time: 1000});
+                }
+
+            });
+
         });
     }
 </script>

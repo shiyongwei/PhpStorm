@@ -90,6 +90,8 @@
             <dd>
                 <ul>
                     <li><a data-href="city" data-title="城市管理" href="javascript:void(0)">城市编辑</a></li>
+                    <li><a data-href="city" data-title="城市自驾游" href="javascript:void(0)">城市自驾游</a></li>
+                    <li><a data-href="city" data-title="特价摩托" href="javascript:void(0)">城市特价摩托</a></li>
                 </ul>
             </dd>
         </dl>

@@ -84,6 +84,20 @@ class City_model extends CI_Model{
             $condition['cit_id'] = $cat_id;
             return $this->db->where($condition)->update(self::TBL_CITY,$data);
         }
+        public function update_status ($data)
+        {
+            if($data['status'] == 0){
+                $this -> db -> set('status', 1);
+                $this -> db -> where('cit_id', $data['id']);
+            }else{
+                $this -> db -> set('status', 0);
+                $this -> db -> where('cit_id', $data['id']);
+            }
+
+
+            return $this -> db -> update(self::TBL_CITY);
+
+        }
 
     #删除
         public function del_city($cat_id){
