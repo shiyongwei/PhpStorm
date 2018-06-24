@@ -71,7 +71,8 @@
             <dd>
                 <ul>
                     <li><a data-href="bottom" data-title="底部编辑" href="javascript:void(0)">底部编辑</a></li>
-                    <li><a data-href="footer" data-title="页尾编辑" href="javascript:void(0)">页尾相关信息编辑</a></li>
+                    <li><a data-href="theme" data-title="页尾编辑" href="javascript:void(0)">页尾相关信息编辑</a></li>
+                    <li><a data-href="text" data-title="相关信息详情页" href="javascript:void(0)">相关信息详情页</a></li>
                 </ul>
             </dd>
         </dl>
