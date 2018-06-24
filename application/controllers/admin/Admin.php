@@ -23,6 +23,8 @@ class Admin extends CI_Controller
             $this -> load -> model('admin/Bottom_model');
             $this -> load -> model('admin/Background_model');
             $this -> load -> model('admin/Side_model');
+            $this -> load -> model('admin/Theme_model');
+            $this -> load -> model('admin/Text_model');
             $this -> load -> helper(array('form', 'url'));
             $this -> load -> library('session');
             $this -> load -> library('pagination');
@@ -549,6 +551,46 @@ class Admin extends CI_Controller
             $data['side'] = $this -> Side_model -> get_name($result);
 
             $this -> load -> view('admin/side_edit',$data);
+
+        }
+    //底部
+        public function theme ()
+        {
+            $result= '';
+
+            $data['theme'] = $this -> Theme_model -> get_name($result);
+
+            $this -> load -> view('admin/theme',$data);
+
+        }
+
+        public function theme_edit ()
+        {
+            $result['id']= $_GET['id'];
+
+            $data['theme'] = $this -> Theme_model -> get_name($result);
+
+            $this -> load -> view('admin/theme_edit',$data);
+
+        }
+    //底部
+        public function text ()
+        {
+            $result= '';
+
+            $data['text'] = $this -> Text_model -> get_name($result);
+
+            $this -> load -> view('admin/text',$data);
+
+        }
+
+        public function text_edit ()
+        {
+            $result['id']= $_GET['id'];
+
+            $data['text'] = $this -> Text_model -> get_name($result);
+
+            $this -> load -> view('admin/text_edit',$data);
 
         }
     }
