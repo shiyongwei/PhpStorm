@@ -632,7 +632,7 @@
         <ul class="thumbnails span12">
             <li class="span3">
 
-                <a class="thumbnail" title="Los Angeles" href="#">
+                <a class="thumbnail" title="Los Angeles" href="jingxuan_detail">
                     <img src="/public/image/lax.jpg" alt="Los Angeles">
                     <p>
                         Los Angeles

@@ -845,7 +845,7 @@
 					<div class="span3" style="margin-left: 0;">
 						<div class="link-container" style="height: 130px;margin: 0 auto;border: none;display: table;padding: 5px;font-weight: bold;color: #555;">
 
-							<a href="dent_clause" style="border-radius: 100px;display: table-cell;vertical-align: middle;text-align: center;font-size: 15px;line-height: 18px;color: #555;text-decoration: none !important;opacity: 0.85;">
+							<a href="rent_clause" style="border-radius: 100px;display: table-cell;vertical-align: middle;text-align: center;font-size: 15px;line-height: 18px;color: #555;text-decoration: none !important;opacity: 0.85;">
 								<img src="/public/image/jiazhao.jpg">
 								<i class="icn-stuff icn-license" style="margin: 0 auto 10px;text-align: center;line-height: 37px;display: block;"></i>租赁购买条款
 							</a>
