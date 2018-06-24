@@ -44,6 +44,7 @@
                 <th width="100">公里数</th>
                 <th width="60">季节</th>
                 <th width="60">温度</th>
+                <th width="60">是否城市</th>
                 <th width="60">发布状态</th>
                 <th width="100">操作</th>
             </tr>
@@ -65,6 +66,11 @@
                     <td class="text-l"><?php echo $value['kilometers'];?></td>
                     <td><?php echo $value['season'];?></td>
                     <td><?php echo $value['temperature'];?></td>
+                    <?php if ($value['cit_id'] == 0): ?>
+                    <td><?php echo '否';?></td>
+                     <?php else: ?>
+                    <td><?php echo '是';?></td>
+                     <?php endif; ?>
                     <?php if ($value['status'] == 0): ?>
                         <td class="td-status"><span class="label label-default radius">普通</span></td>
                     <?php else: ?>

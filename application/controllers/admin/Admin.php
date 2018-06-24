@@ -1,4 +1,4 @@
-<?php
+        <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller
@@ -173,15 +173,10 @@ class Admin extends CI_Controller
         public function product_list_add ()
         {
             $result= '';
-
-            $category = $this -> Category_model -> get($result);
-
-            $brand = $this -> Product_model -> get($result);
-
-            $data['brand'] = $brand;
-
-            $data['category'] = $category;
-
+            $data['category'] = $this -> Category_model -> get($result);
+            $data['brand'] = $this -> Product_model -> get($result);
+            $data['city'] = $this -> City_model -> get($result);
+        
             $this -> load -> view('admin/product_list_add',$data);
 
         }
@@ -211,18 +206,12 @@ class Admin extends CI_Controller
 
             $result= '';
 
-            $list = $this -> List_model -> get($id);
+            $data['list'] = $this -> List_model -> get($id);
+            $data['category'] = $this -> Category_model -> get($result);
+            $data['brand'] = $this -> Product_model -> get($result);
+            $data['city'] = $this -> City_model -> get($result);
 
-            $category = $this -> Category_model -> get($result);
-
-            $brand = $this -> Product_model -> get($result);
-
-            $data['brand'] = $brand;
-
-            $data['category'] = $category;
-
-            $data['list'] = $list;
-
+    
             $this -> load -> view('admin/product_list_edit',$data);
 
         }
@@ -264,7 +253,7 @@ class Admin extends CI_Controller
         public function promotions_add ()
         {
 
-            $this -> load -> view('admin/promotions_add',$data);
+            $this -> load -> view('admin/promotions_add');
 
         }
 
@@ -350,16 +339,19 @@ class Admin extends CI_Controller
         }
         public function uriving_add ()
         {
+            $result= '';
+            $data['city'] = $this -> City_model -> get($result);
 
-            $this -> load -> view('admin/uriving_add');
+            $this -> load -> view('admin/uriving_add',$data);
 
         }
 
         public function uriving_edit ()
         {
             $id = $_GET['id'];
-
+            $result= '';
             $data['uriving'] = $this -> Uriving_model -> get($id);
+            $data['city'] = $this -> City_model -> get($result);
 
             $this -> load -> view('admin/uriving_edit',$data);
         }
@@ -367,29 +359,31 @@ class Admin extends CI_Controller
         public function team ()
         {
             $result= '';
-
             $data['team'] = $this -> Team_model -> get($result);
 
             $this -> load -> view('admin/team',$data);
 
         }
         public function team_add ()
-        {
-
-            $this -> load -> view('admin/team_add');
+        {   
+            $result= '';
+            $data['city'] = $this -> City_model -> get($result);
+            $this -> load -> view('admin/team_add',$data);
 
         }
 
         public function team_edit ()
         {
             $id = $_GET['id'];
-
             $data['team'] = $this -> Team_model -> get($id);
+
+            $result= '';
+            $data['city'] = $this -> City_model -> get($result);
 
             $this -> load -> view('admin/team_edit',$data);
         }
 
-        //团队游管理
+     
         public function topic ()
         {
             $result= '';

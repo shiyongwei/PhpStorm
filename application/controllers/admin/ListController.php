@@ -30,6 +30,9 @@ class ListController extends CI_Controller
             $data['windshield'] = $arr['windshield'];
             $data['image'] = $arr['img'];
             $data['text'] = $arr['text'];
+            $data['cit_id'] = $arr['cit_id'];
+            $data['day_price'] = $arr['day_price'];
+            $data['week_price'] = $arr['week_price'];
             $data['time'] = date('Y-m-d H:i:s');
             if($arr['productitle'] !== '' && $arr['img'] !==''){
                 if($this->List_model->add_list($data))
@@ -97,6 +100,9 @@ class ListController extends CI_Controller
             $data['capacity'] = $arr['capacity'];
             $data['windshield'] = $arr['windshield'];
             $data['text'] = $arr['text'];
+            $data['cit_id'] = $arr['cit_id'];
+            $data['day_price'] = $arr['day_price'];
+            $data['week_price'] = $arr['week_price'];
             $data['time'] = date('Y-m-d H:i:s');
             if(!empty($arr['img'])){
                 $data['image'] = $arr['img'];

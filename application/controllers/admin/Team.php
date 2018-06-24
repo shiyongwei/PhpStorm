@@ -16,6 +16,7 @@ class Team extends CI_Controller
 
             $data['teamtitle'] = $arr['teamtitle'];
             $data['day'] = $arr['day'];
+            $data['cit_id'] = $arr['cit_id'];
             $data['season'] = $arr['season'];
             $data['price'] = $arr['price'];
             $data['text'] = $arr['text'];
@@ -80,6 +81,7 @@ class Team extends CI_Controller
             $data['id'] = $arr['id'];
             $data['teamtitle'] = $arr['teamtitle'];
             $data['day'] = $arr['day'];
+            $data['cit_id'] = $arr['cit_id'];
             $data['price'] = $arr['price'];
             $data['text'] = $arr['text'];
             $data['season'] = $arr['season'];

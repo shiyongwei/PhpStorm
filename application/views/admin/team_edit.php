@@ -39,6 +39,24 @@
 				<input type="text" class="input-text" value="<?php echo $team[0]['teamtitle'];?>" placeholder="" id="" name="teamtitle">
 			</div>
 		</div>
+          <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>城市：</label>
+            <?php if (empty($city)): ?>
+                <div class="formControls col-xs-8 col-sm-9">
+                    <input type="text" class="input-text" value="请先添加城市" readonly>
+                </div>
+            <?php else: ?>
+                <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+                <select name="cit_id" class="select">
+                    <option value="0">默认</option>
+                    <?php foreach ($city as $key): ?>              
+                        <option value="<?php echo $key['cit_id'];?>"<?php echo $key['cit_id'] == $team[0]['cit_id'] ? 'selected' : '';?>><?php echo $key['cit_name'];?></option>
+                    <?php endforeach; ?>
+                </select>
+                </span>
+                </div>
+            <?php endif; ?>
+        </div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">价格:</label>
 			<div class="formControls col-xs-8 col-sm-9">

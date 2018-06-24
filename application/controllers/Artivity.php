@@ -25,12 +25,7 @@
 					//所属选项卡数据
 					$activity = $this -> Activityedit_model -> art_option_get($column_id);
 				}
-
-
-
-
-
-
+				
 				$data['rent_list'] = $rent_list;
 				$data['column'] = $column;
 				$data['activity'] = $activity;

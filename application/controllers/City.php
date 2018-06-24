@@ -16,10 +16,6 @@
 				$get_limit = $this->City_model->get_limit();
 				$navigation = $this->Navigation_model->get_name('');
 
-//				echo '<pre>';
-//				print_r($get_limit);
-//				echo '</pre>';
-
 				$data['rent_list'] = $rent_list;
 				$data['city'] = $city;
 				$data['get_limit'] = $get_limit;

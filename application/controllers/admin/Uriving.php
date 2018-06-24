@@ -18,6 +18,7 @@ class Uriving extends CI_Controller
             $data['day'] = $arr['day'];
             $data['season'] = $arr['season'];
             $data['price'] = $arr['price'];
+            $data['cit_id'] = $arr['cit_id'];
             $data['text'] = $arr['text'];
             $data['temperature'] = $arr['temperature'];
             $data['schedule'] = $arr['editorValue'];
@@ -81,6 +82,7 @@ class Uriving extends CI_Controller
             $data['urivingtitle'] = $arr['urivingtitle'];
             $data['day'] = $arr['day'];
             $data['price'] = $arr['price'];
+            $data['cit_id'] = $arr['cit_id'];
             $data['text'] = $arr['text'];
             $data['season'] = $arr['season'];
             $data['temperature'] = $arr['temperature'];
