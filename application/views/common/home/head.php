@@ -139,14 +139,14 @@ header('Vary: Accept-Encoding');
 
                                                 <ul>
                                                     <li>
-                                                        <a href="<?php echo site_url('classify'); ?>">
+                                                        <a href="<?php echo site_url('classify'); ?>" style="margin-top: 10px;">
                                                             摩托车自驾游
                                                         </a>
                                                     </li>
                                                 </ul>
                                             </div>
 
-                                            <div class="#" style="width: 23%;float: left">
+                                            <div class="#" style="width: 23%;float: left;" >
                                                 <b>热门路线</b>
 
                                                 <ul>
