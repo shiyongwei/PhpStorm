@@ -13,7 +13,7 @@
 			}
 			public function index(){
 				$rent_list = $this->Product_model->get('');
-				$get_limit = $this->Product_model->get_limit('');
+				$get_limit = $this->City_model->get_limit('');
 				$id = $_GET['id'];
 				$team = $this->Team_model->get($id);
 				$navigation = $this->Navigation_model->get_name('');

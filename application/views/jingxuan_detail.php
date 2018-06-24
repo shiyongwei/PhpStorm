@@ -15,15 +15,15 @@
 						</li>
 
 						<li class="packages ">
-							<a href="/hotels">摩托车 &amp; 酒店</a>
+							<a href="hotels">摩托车 &amp; 酒店</a>
 						</li>
 
 						<li class=" js-toursTrigger">
-							<a href="Javascript:;">旅游</a>
+							<a href="trave">旅游</a>
 						</li>
 
 						<li class="deals">
-							<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E7%89%B9%E6%83%A0">促销特惠</a>
+							<a href="Discounts">促销特惠</a>
 						</li>
 
 
@@ -2168,7 +2168,7 @@
 		<div class="container psection" id="js-viewMore detail_for">
 			<div class="row wrapperSeparate" id="detail_5">
 				<div class="span12 topMotor" id="detail_6">
-					<a class="js-viewAllTrigger" href="#" id="detail_7" style="background: rgba(248,202,62,0.4);">
+					<a class="js-viewAllTrigger" href="Rent?id=0" id="detail_7" style="background: rgba(248,202,62,0.4);">
 						<h2 class="secTitle" id="detail_8">
 							<span class="bold" style="font-weight: bold;">摩托车出租</span>
 							在 拉斯维加斯门店
@@ -2180,69 +2180,20 @@
 						<section class="available_rides" style="display: block;">
 							<div class="row" style="margin-left: -15px;">
 
-
-                                <div class="rideList promotionBox js-motorcycle" data-equalizer-watch="" data-bookurl="/%E7%A7%9F%E8%B5%81/11/reservation?location_id=6" id="detail_11">
-									<div class="imageContainer" id="detail_12">
-			                            <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/11/images/size202c/2018_hd_heritage_softail.jpg?1524526670" alt="哈雷 HERITAGE SOFTAIL® CLASSIC（经典版继承者）">
-									</div>
-									<h3 class="ride_title bold js-name js-bookTrigger" id="detail_13">哈雷 HERITAGE SOFTAIL® CLASSIC（经典版继承者）</h3>
-									<div class="ratesWrapper" dir="ltr" style="    padding: 3px 0 5px 0;">
-                                        <span class="rate" id="detail_14">每天:<em class="bold" dir="ltr" id="detail_15"> ¥966.22</em>/天</span>
-                                        <span class="rate"  id="detail_17">每周:<em class="bold" dir="ltr" id="detail_16">¥836.53</em>/天</span>
-									</div>
-									<span class="bike-class" id="detail_18">Class: <em class="bold" id="detail_19">经典车型</em></span>
-								</div>
-
+								<?php foreach ($rentinfo as $key=>$rentinfos): ?>
 
                                 <div class="rideList promotionBox js-motorcycle" data-equalizer-watch="" data-bookurl="/%E7%A7%9F%E8%B5%81/11/reservation?location_id=6" id="detail_11">
                                     <div class="imageContainer" id="detail_12">
-                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/11/images/size202c/2018_hd_heritage_softail.jpg?1524526670" alt="哈雷 HERITAGE SOFTAIL® CLASSIC（经典版继承者）">
+                                        <img src="<?php echo $rentinfos['image']?>" alt="<?php echo $rentinfos['productitle']?>">
                                     </div>
-                                    <h3 class="ride_title bold js-name js-bookTrigger" id="detail_13">哈雷 HERITAGE SOFTAIL® CLASSIC（经典版继承者）</h3>
+                                    <h3 class="ride_title bold js-name js-bookTrigger" id="detail_13"><?php echo $rentinfos['productitle']?></h3>
                                     <div class="ratesWrapper" dir="ltr" style="    padding: 3px 0 5px 0;">
-                                        <span class="rate" id="detail_14">每天:<em class="bold" dir="ltr" id="detail_15"> ¥966.22</em>/天</span>
-                                        <span class="rate"  id="detail_17">每周:<em class="bold" dir="ltr" id="detail_16">¥836.53</em>/天</span>
+                                        <span class="rate" id="detail_14">每天:<em class="bold" dir="ltr" id="detail_15"> <?php echo $rentinfos['day_price']?></span>
+                                        <span class="rate"  id="detail_17">每周:<em class="bold" dir="ltr" id="detail_16"><?php echo $rentinfos['week_price']?></span>
                                     </div>
-                                    <span class="bike-class" id="detail_18">Class: <em class="bold" id="detail_19">经典车型</em></span>
+<!--                                    <span class="bike-class" id="detail_18">Class: <em class="bold" id="detail_19">经典车型</em></span>-->
                                 </div>
-
-
-                                <div class="rideList promotionBox js-motorcycle" data-equalizer-watch="" data-bookurl="/%E7%A7%9F%E8%B5%81/11/reservation?location_id=6" id="detail_11">
-                                    <div class="imageContainer" id="detail_12">
-                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/11/images/size202c/2018_hd_heritage_softail.jpg?1524526670" alt="哈雷 HERITAGE SOFTAIL® CLASSIC（经典版继承者）">
-                                    </div>
-                                    <h3 class="ride_title bold js-name js-bookTrigger" id="detail_13">哈雷 HERITAGE SOFTAIL® CLASSIC（经典版继承者）</h3>
-                                    <div class="ratesWrapper" dir="ltr" style="    padding: 3px 0 5px 0;">
-                                        <span class="rate" id="detail_14">每天:<em class="bold" dir="ltr" id="detail_15"> ¥966.22</em>/天</span>
-                                        <span class="rate"  id="detail_17">每周:<em class="bold" dir="ltr" id="detail_16">¥836.53</em>/天</span>
-                                    </div>
-                                    <span class="bike-class" id="detail_18">Class: <em class="bold" id="detail_19">经典车型</em></span>
-                                </div>
-
-
-                                <div class="rideList promotionBox js-motorcycle" data-equalizer-watch="" data-bookurl="/%E7%A7%9F%E8%B5%81/11/reservation?location_id=6" id="detail_11">
-                                    <div class="imageContainer" id="detail_12">
-                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/11/images/size202c/2018_hd_heritage_softail.jpg?1524526670" alt="哈雷 HERITAGE SOFTAIL® CLASSIC（经典版继承者）">
-                                    </div>
-                                    <h3 class="ride_title bold js-name js-bookTrigger" id="detail_13">哈雷 HERITAGE SOFTAIL® CLASSIC（经典版继承者）</h3>
-                                    <div class="ratesWrapper" dir="ltr" style="    padding: 3px 0 5px 0;">
-                                        <span class="rate" id="detail_14">每天:<em class="bold" dir="ltr" id="detail_15"> ¥966.22</em>/天</span>
-                                        <span class="rate"  id="detail_17">每周:<em class="bold" dir="ltr" id="detail_16">¥836.53</em>/天</span>
-                                    </div>
-                                    <span class="bike-class" id="detail_18">Class: <em class="bold" id="detail_19">经典车型</em></span>
-                                </div>
-
-                                <div class="rideList promotionBox js-motorcycle" data-equalizer-watch="" data-bookurl="/%E7%A7%9F%E8%B5%81/11/reservation?location_id=6" id="detail_11">
-                                    <div class="imageContainer" id="detail_12">
-                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/11/images/size202c/2018_hd_heritage_softail.jpg?1524526670" alt="哈雷 HERITAGE SOFTAIL® CLASSIC（经典版继承者）">
-                                    </div>
-                                    <h3 class="ride_title bold js-name js-bookTrigger" id="detail_13">哈雷 HERITAGE SOFTAIL® CLASSIC（经典版继承者）</h3>
-                                    <div class="ratesWrapper" dir="ltr" style="    padding: 3px 0 5px 0;">
-                                        <span class="rate" id="detail_14">每天:<em class="bold" dir="ltr" id="detail_15"> ¥966.22</em>/天</span>
-                                        <span class="rate"  id="detail_17">每周:<em class="bold" dir="ltr" id="detail_16">¥836.53</em>/天</span>
-                                    </div>
-                                    <span class="bike-class" id="detail_18">Class: <em class="bold" id="detail_19">经典车型</em></span>
-                                </div>
+								<?php endforeach; ?>
 
 
 
@@ -2264,110 +2215,29 @@
 				<h2 class="secTitle"><span class="bold">摩托车旅游</span> 在 拉斯维加斯门店</h2>
 
 				<div class="tours_list row">
+
+
+					<?php foreach ($teaminfo as $key=>$teaminfos): ?>
 					<div class="js-tourContainer tour span3 " style="width: 259px!important;">
 
-						<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8/wild-west-guided-motorcycle-tour-ii">
+						<a href="Team_detail?id=<?php echo $teaminfos['id']?>">
 							<div class="img_cont">
-								<img class="tour_image" alt="Wild West II Motorcycle Tour" src="https://d56b293rhv8dp.cloudfront.net/tours/60/maps/size268c/433x315_wild_west2.jpg?1415916554">
+								<img class="tour_image" alt="Route 66 West: Albuquerque to Los Angeles Motorcycle Tour" src="<?php echo $teaminfos['image']?>" style="height: 120px;">
 								<span class="tour_name">
-            <span>Wild West II Motorcycle Tour</span>
-            <span class="tour_type">团队游</span>
-          </span>
-							</div>
-							<span class="tour_dest">
-          Las Vegas, NV
-          <em class="bold" dir="ltr">9 天 / 8 晚</em>
-        </span>
-							<div class="actions">
-								<div class="tour_price">
-									<div class="starting_info">
-										<span class="title">起始价格</span>
-										<em class="bold">
-											¥16,341.44
-										</em>
-									</div>
-									<span class="btn-highlight">查看旅游线路</span>
-								</div>
-							</div>
-
-						</a>
-					</div>
-					<div class="js-tourContainer tour span3 " style="width: 259px!important;">
-
-						<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E8%87%AA%E9%A9%BE%E6%B8%B8/las-vegas-zion-national-park-motorcycle-tour">
-							<div class="img_cont">
-								<img class="tour_image" alt="Las Vegas / Zion National Park Motorcycle Tour" src="https://d56b293rhv8dp.cloudfront.net/tours/20/maps/size268c/433x315_las_zion_park.jpg?1415922348">
-								<span class="tour_name">
-            <span>Las Vegas / Zion National Park Motorcycle Tour</span>
-            <span class="tour_type">自驾游</span>
-          </span>
-							</div>
-							<span class="tour_dest">
-          Las Vegas, NV
-          <em class="bold" dir="ltr">8 天 / 7 晚</em>
-        </span>
-							<div class="actions">
-								<div class="tour_price">
-									<div class="starting_info">
-										<span class="title">起始价格</span>
-										<em class="bold">
-											¥8,527.38
-										</em>
-									</div>
-									<span class="btn-highlight">查看旅游线路</span>
-								</div>
-							</div>
-
-						</a>
-					</div>
-					<div class="js-tourContainer tour span3 " style="width: 259px!important;">
-
-						<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E8%87%AA%E9%A9%BE%E6%B8%B8/national-parks-motorcycle-tour">
-							<div class="img_cont">
-								<img class="tour_image" alt="National Parks Motorcycle Tour" src="https://d56b293rhv8dp.cloudfront.net/tours/54/maps/size268c/open-uri20140226-7216-idwu04?1393411944">
-								<span class="tour_name">
-            <span>National Parks Motorcycle Tour</span>
-            <span class="tour_type">自驾游</span>
-          </span>
-							</div>
-							<span class="tour_dest">
-          Las Vegas, NV
-          <em class="bold" dir="ltr">8 天 / 7 晚</em>
-        </span>
-							<div class="actions">
-								<div class="tour_price">
-									<div class="starting_info">
-										<span class="title">起始价格</span>
-										<em class="bold">
-											¥8,559.80
-										</em>
-									</div>
-									<span class="btn-highlight">查看旅游线路</span>
-								</div>
-							</div>
-
-						</a>
-					</div>
-					<div class="js-tourContainer tour span3 " style="width: 259px!important;">
-
-						<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8/route-66-motorcycle-tour-albuquerque">
-							<div class="img_cont">
-								<img class="tour_image" alt="Route 66 West: Albuquerque to Los Angeles Motorcycle Tour" src="https://d56b293rhv8dp.cloudfront.net/tours/284/maps/size268c/Route_66_West_Map.jpg?1453918669">
-								<span class="tour_name">
-            <span>Route 66 West: Albuquerque to Los Angeles Motorcycle Tour</span>
-            <span class="tour_type">团队游</span>
+            <span><?php echo $teaminfos['teamtitle']?></span>
+<!--            <span class="tour_type">团队游</span>-->
           </span>
 							</div>
 							<span class="tour_dest">
           Albuquerque, NM
-          <em class="bold" dir="ltr">9 天 / 8 晚</em>
+          <em class="bold" dir="ltr"><?php echo $teaminfos['day']?></em>
         </span>
 							<div class="actions">
 								<div class="tour_price">
 									<div class="starting_info">
 										<span class="title">起始价格</span>
 										<em class="bold">
-											¥16,341.44
+											<?php echo $teaminfos['price']?>
 										</em>
 									</div>
 									<span class="btn-highlight">查看旅游线路</span>
@@ -2376,9 +2246,11 @@
 
 						</a>
 					</div>
+					<?php endforeach; ?>
+
 				</div>
 
-				<a class="btn-highlight" href="/%E6%91%A9%E6%89%98%E8%BD%A6%E6%97%85%E6%B8%B8/las-vegas-main-depot">
+				<a class="btn-highlight" href="trave">
 					查看所有旅行项目<span class="icn-arrowWhiteRight"></span>
 				</a>
 
@@ -2501,115 +2373,39 @@
 
 	<div class="grayBG wrapperSeparate">
 		<div class="container map_container">
+
 			<div class="row">
 				<div class="about_location span6 pull-right">
 					<div class="row-fluid directions_result js-aboutUsSection" id="js-about-wrapper">
-						<h2 class="secTitle">
-							<span class="bold">鹰骑 拉斯维加斯门店</span>
-						</h2>
-
-
-						<p>欢迎来到鹰骑拉斯维加斯门店！如果您和大多数朋友一样喜欢骑行，那么，在开始您的旅程之前，陪伴您的只有拉斯维加斯的纸醉金迷。幸运的是，鹰骑拉斯维加斯门店可以帮您尽快开启您的旅行。</p><p>鹰骑拉斯维加斯门店距离McCarran国际机场和拉斯维加斯大道只有10分钟车程。在这里，有上百辆完美维护的摩托车供您选择，还是多个旅程的始发地，如：大峡谷、锡安国家公园、布莱斯峡谷、66号公路及美国西南部的上百个著名景点。</p><p>如您只打算在拉斯维加斯周边旅行，我们也提供GPS团队一日游至胡佛水坝、红岩峡谷、火焰谷。鹰骑的免费班车可以到达大部分大道上的酒店，为您省去交通上的麻烦。</p><p>鹰骑拉斯维加斯门店，和北美的其它70多家门店一样，都提供DOT认证的摩托车头盔给驾驶员和乘客。您也可以在我们的摩托车用品商店购买最新款的头盔、定制皮手套、夹克、T恤、靴子等等。</p><br><p><strong>门店特色：</strong></p>
-						<ul>
-							<li>从机场或从酒店（10英里以内）的免费班车接送，仅对租车在三日以上的顾客</li>
-							<li>带锁的行李储存柜</li>
-							<li>摩托车服务</li>
-							<li>摩托车服饰和配件</li>
-							<li>单程租赁</li>
-						</ul>
-					</div>
-
-
-
-					<div class="row-fluid locationHomeReviewWrapper reviews js-reviewsSection" id="reviews">
-						<div class="rev_head">
-							<span class="no_reviews">50</span>
-
-							<span>用户评价</span>
-
-							<span class="view_all">(<a href="/las-vegas-main-depot/reviews">查看所有</a>)</span>
-
-							<a href="Javascript:;" class="btn-highlight js-updateReviewTrigger">
-								添加评论<span class="add_icon"></span>
-							</a>
-
-							<div class="clearfix"></div>
-						</div>
-
-						<div class="user_review js-review" data-reviewid="684">
-							<div class="rev_body">
-								<div class="rev_data">
-        <span class="user_thumb">
-          <img class="img-circle" src="/assets/defaults/user/avatar/default.png">
-        </span>
-
-									<span class="username">Jeremy Husok</span>
-									<span class="date_time">June 3, 2018 07:31 pm</span>
-									<div class="ratingWrapper js-rating" data-score="5.0"></div>
-
-									<div class="clearfix"></div>
-								</div>
-
-								<h2>Great experience start to finish!</h2>
-
-								<div class="js-body">
-									<p>I recently rented a couple Ultra’s from the Las Vegas EagleRider to ride out to the Grand Canyon and Lake Havasu, the bikes worked out great.  Leann Newland was our rental agent, she had us in and out in no time. She has a great attention to detail and an awesome personality.  Leann is who you need to go and EagleRider is where you need to go to for your rental needs!</p>
-								</div>
-
-								<div class="actions">
-
-									<input type="submit" class="like  js-likeTrigger" value="Like">
-
-									<span class="positive rank js-rank">0</span>
-
-									<input type="submit" class="dislike  js-dislikeTrigger" value="Dislike">
-
-									<div class="clearfix"></div>
-								</div>
-							</div>
-						</div>
-
-
-
+						<?php echo $cityinfo['valder']?>
 					</div>
 				</div>
 
-				<div class="find_location span6 pull-left">
+				<div class="find_location span6 pull-left" >
 					<div class="row-fluid direction_result">
 						<div class="span4">
 							<h3><span class="icn-map-pin"></span> 地址</h3>
 							<p>
-								<b></b><br>
-								7660 Dean Martin Drive<br>
-
-
-								Las Vegas, 内华达州, 89139
+								<?php echo $cityinfo['address']?>
 							</p>
 						</div>
 
 						<div class="span4">
 							<h3><span class="icn-orange-phone"></span> 联系方式</h3>
 							<p>
-								<a href="tel:+1 (702) 876-8687">+1 (702) 876-8687</a><br>
+								<a href="tel:+1 (702) 876-8687"><?php echo $cityinfo['information']?></a><br>
 
 
 								<br>
-								<a class="btn-highlight email_button js-captureLeadTrigger left" href="/contact_us_help.js?contact_info%5Blead_type_id%5D=21">
-									发邮件给我们
-								</a>
 							</p>
 						</div>
 
 						<div class="span4">
 							<h3><span class="icn-clock"></span> 营业时间</h3>
 							<p>
-								从星期天到星期六 从 从09:00 am到06:00 pm
+								<?php echo $cityinfo['time']?>
 							</p>
-							<p class="comment">
-								<em>
-									<b>注意： </b> Closed on Thanksgiving, Christmas and New Year's Day.
-								</em>
-							</p>
+
 						</div>
 					</div>
 					<div class="findUs">
@@ -2618,7 +2414,7 @@
 						</div>
 					</div>
 
-					<br><p><strong>从拉斯维加斯国际机场出发：</strong>在I-215上往西行驶，然后换至I-15往北行驶，从Russel Road出口出来后左转至Russel Road，然后右转至S. Arville。 </p><p>拉斯维加斯机场到鹰骑门店的出租车费用约为17美元。</p>
+					<br><p><?php echo $cityinfo['text']?>。</p>
 				</div>
 			</div>
 		</div>

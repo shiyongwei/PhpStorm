@@ -47,10 +47,17 @@ class List_model extends CI_Model
         
         public function getAll($data){
 
-            $query = $this -> db -> where($data) -> get(self::TBL_USER);
+            $query = $this -> db -> where($data) -> get(self::TBL_LIST);
 
-            return $query -> row_array();
+            return $query -> result_array();
         }
+
+		public function get_limit($data){
+
+			$query = $this -> db ->limit(5) -> where($data) -> get(self::TBL_LIST);
+
+			return $query -> result_array();
+		}
 //删除
         public function edit_category ($data)
         {

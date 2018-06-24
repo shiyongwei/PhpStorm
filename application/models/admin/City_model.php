@@ -57,8 +57,18 @@ class City_model extends CI_Model{
 
             return $query -> result_array();
         }
+
 		public function get_limit(){
 			$this->db->limit(8);
+
+			$query = $this -> db -> get(self::TBL_CITY);
+
+
+			return $query -> result_array();
+		}
+
+		public function get_limits(){
+			$this->db->where('status',1)->limit(8);
 
 			$query = $this -> db -> get(self::TBL_CITY);
 

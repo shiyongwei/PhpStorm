@@ -25,7 +25,6 @@
                     <li class="deals">
                         <a href="/index.php/Discounts">促销特惠</a>
                     </li>
-
                  
                 </ul>
 
@@ -630,82 +629,21 @@
         </h2>
 
         <ul class="thumbnails span12">
+			<?php foreach ($get_limits as $key=>$get_limit): ?>
             <li class="span3">
 
-                <a class="thumbnail" title="Los Angeles" href="jingxuan_detail">
-                    <img src="/public/image/lax.jpg" alt="Los Angeles">
+                <a class="thumbnail" title="Los Angeles" href="index.php/jingxuan_detail?id=<?php echo $get_limit['cit_id']?>">
+                    <img style="height: 320px;" src="<?php echo $get_limit['logo']?>" alt="Los Angeles">
                     <p>
-                        Los Angeles
+						<?php echo $get_limit['cit_name']?>
                     </p>
                 </a>
             </li>
-            <li class="span3">
-
-                <a class="thumbnail" title="Las Vegas" href="#">
-                    <img src="/public/image/las.jpg" alt="Las Vegas">
-                    <p>
-                        Las Vegas
-                    </p>
-                </a>
-            </li>
-            <li class="span3">
-
-                <a class="thumbnail" title="Route 66" href="#">
-                    <img src="/public/image/route66.jpg" alt="Route 66">
-                    <p>
-                        Route 66
-                    </p>
-                </a>
-            </li>
-            <li class="span3">
-
-                <a class="thumbnail" title="Orlando" href="#">
-                    <img src="/public/image/orlando.jpg" alt="Orlando">
-                    <p>
-                        Orlando
-                    </p>
-                </a>
-            </li>
-            <li class="span3">
-
-                <a class="thumbnail" title="Miami" href="#">
-                    <img src="/public/image/miami.jpg" alt="Miami">
-                    <p>
-                        Miami
-                    </p>
-                </a>
-            </li>
-            <li class="span3">
-
-                <a class="thumbnail" title="San Francisco" href="#">
-                    <img src="/public/image/sfo.jpg" alt="San Francisco">
-                    <p>
-                        San Francisco
-                    </p>
-                </a>
-            </li>
-            <li class="span3">
-
-                <a class="thumbnail" title="Chicago" href="#">
-                    <img src="/public/image/chicago.jpg" alt="Chicago">
-                    <p>
-                        Chicago
-                    </p>
-                </a>
-            </li>
-            <li class="span3">
-
-                <a class="thumbnail" title="Wild West" href="#">
-                    <img src="/public/image/3-cf53a568f2a44442f967e4d9627e7e49.jpg" alt="Wild West">
-                    <p>
-                        Wild West
-                    </p>
-                </a>
-            </li>
+			<?php endforeach; ?>
         </ul>
 
         <div class="section_btns">
-            <a href="#" class="btn-highlight">
+            <a href="index.php/city" class="btn-highlight">
                 更多目的地<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span>
             </a>
         </div>
@@ -738,7 +676,7 @@
                 </tbody>
             </table>
             <div class="section_btns">
-                <a href='Discounts' class="btn-darkHighlight">
+                <a href='index.php/Discounts' class="btn-darkHighlight">
                     查看促销特惠<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span>
                 </a>
             </div>

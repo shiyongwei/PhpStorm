@@ -134,7 +134,7 @@ header('Vary: Accept-Encoding');
                                                 </ul>
                                             </div>
 
-                                            <div class="column" style="width: 23%;float: left">
+                                            <div class="" style="width: 23%;float: left">
                                                 <b>自驾旅行</b>
 
                                                 <ul>
@@ -154,7 +154,7 @@ header('Vary: Accept-Encoding');
                                                     </li>
 
                                                     <li>
-                                                        <a href="<?php echo site_url('hot_trave'); ?>">
+                                                        <a href="<?php echo site_url('hot_trave'); ?>" style="margin-top: 10px;">
                                                             热门摩托车旅行
                                                         </a>
                                                     </li>
@@ -166,7 +166,7 @@ header('Vary: Accept-Encoding');
 
                                                 <ul>
                                                     <li>
-                                                        <a href="<?php echo site_url('trave'); ?>">
+                                                        <a href="<?php echo site_url('trave'); ?>" style="margin-top: 10px;">
                                                             摩托车旅游
                                                         </a>
                                                     </li>
