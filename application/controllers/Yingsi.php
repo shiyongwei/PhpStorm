@@ -1,6 +1,6 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
-	class Team_clause extends CI_Controller{
+	class Yingsi extends CI_Controller{
 			public function __construct ()
 			{
 				parent ::__construct();
@@ -29,7 +29,7 @@
 				$data['bottom_info'] = $bottom_info;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
-				$this -> load -> view('team_clause',$bottom_info);
+				$this -> load -> view('yingsi',$bottom_info);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
 			}
 		}
