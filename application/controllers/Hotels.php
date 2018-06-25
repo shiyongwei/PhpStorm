@@ -43,7 +43,7 @@
 				$data['bottom_info'] = $bottom_info;
 				$data['bottom_info_all'] = $bottom_info_all;
 
-				$this -> load -> view('common/home/head',$data,$navigation);
+				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
 				$this -> load -> view('hotels',$uriving,$team,$bottom,$city,$text);
 				$this -> load -> view('common/home/foot',$get_limit,$bottom_info,$bottom_info_all);
 			}

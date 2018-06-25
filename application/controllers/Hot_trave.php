@@ -32,7 +32,7 @@ class Hot_trave extends CI_Controller{
 		$data['bottom_info_all'] = $bottom_info_all;
 
 
-        $this -> load -> view('common/home/head',$data,$navigation);
+        $this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
         $this -> load -> view('hot_trave',$topic);
         $this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all);
     }

@@ -150,7 +150,7 @@
                 <div class="genericBox linksBox">
                     <ul class="navVertical">
                         <li>
-                            <a href="Bottom_info">
+                            <a href="/index.php/Bottom_info">
 								<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
 									<?php echo $bottom_infos['title']?> <br>
 								<?php endforeach; ?>
@@ -168,7 +168,7 @@
             <div class="row-fluid">
                 <div class="span2">
                     <a class="brand" href="Javascript:;">
-                        <img src="<?php echo $bottom_info_all[7]['image']?>">
+                        <img src="<?php echo $bottom_info_all[7]['image']?>" style="width: 60px;">
                     </a>
                 </div>
 

@@ -68,7 +68,7 @@ header('Vary: Accept-Encoding');
             <div class="row">
                 <div class="offset1 span3"></div>
             </div>
-            <a class="brand top-brand" href="#"><img src="/public/image/logo-732570a503b57eea5ffa859c1839ad68.png"></a>
+            <a class="brand top-brand" href="#"><img src="<?php echo $bottom_info_all[7]['image']?>" style="width: 90px;margin-top: -11px;"></a>
         </div>
     </div>
 
