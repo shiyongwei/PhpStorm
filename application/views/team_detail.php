@@ -53,18 +53,7 @@
 								</a>
 								<div class="clearfix"></div>
 							</div>
-
-							<a href="Javascript:;" class="light_btn btn-highlight js-playTrigger" data-youtube-vid="http://www.youtube.com/embed/KC38ELJF-k4?autoplay=1" style="float: none;padding: 3px;background-color: #D13634;margin-top: 5px;text-align: left;color: #fff;">
-								播放旅行视频
-								<span class="play_icon icon_decor"></span>
-							</a>
-
-							<a href="Javascript:;" data-url="/%E6%91%A9%E6%89%98%E8%BD%A6%E6%97%85%E6%B8%B8/80/gallery" class="light_btn btn-highlight js-galleryTrigger" style="float: none;padding: 3px;background-color: #D13634;margin-top: 5px;text-align: left;color: #fff;">
-								查看旅行照片
-								<span class="galery_icon icon_decor"></span>
-							</a>
 						</div>
-
 						<div class="promotion-box">
 							<span class="icons-orange-star"></span>
 							<span class="icons-orange-star"></span>
