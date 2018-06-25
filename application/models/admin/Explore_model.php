@@ -18,17 +18,13 @@ class Explore_model extends CI_Model
         {
             if ($data == '')
             {
-             return $this->db
-                    ->join('increase','increase.increase_id=explore.increase_id')
-                    ->get(self::TBL_LIST)->result_array();
+             return $this->db->get(self::TBL_LIST)->result_array();
             }
             else
             {
                 $condition['explore_id'] = $data;
 
-                return $this->db->where($condition)
-                    ->join('increase','increase.increase_id=explore.increase_id')
-                    ->get(self::TBL_LIST)->result_array();
+                return $this->db->where($condition) ->get(self::TBL_LIST)->result_array();
             }
 
         }

@@ -71,8 +71,7 @@
             <dd>
                 <ul>
                     <li><a data-href="bottom" data-title="底部编辑" href="javascript:void(0)">底部编辑</a></li>
-                    <li><a data-href="theme" data-title="页尾编辑" href="javascript:void(0)">页尾相关信息编辑</a></li>
-                    <li><a data-href="text" data-title="相关信息详情页" href="javascript:void(0)">相关信息详情页</a></li>
+                    <li><a data-href="text" data-title="相关信息详情页" href="javascript:void(0)">底部相关信息编辑</a></li>
                 </ul>
             </dd>
         </dl>
@@ -99,7 +98,6 @@
             <dd>
                 <ul>
                     <li><a data-href="topic" data-title="旅游主题" href="javascript:void(0)">旅游主题编辑</a></li>
-                    <li><a data-href="increase" data-title="探索方式" href="javascript:void(0)">探索方式添加</a></li>
                     <li><a data-href="explore" data-title="探索方式" href="javascript:void(0)">探索方式编辑</a></li>
                     <li><a data-href="uriving" data-title="自驾游编辑" href="javascript:void(0)">自驾游编辑</a></li>
                     <li><a data-href="team" data-title="团队游编辑" href="javascript:void(0)">团队游编辑</a></li>

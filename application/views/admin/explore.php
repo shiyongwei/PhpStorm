@@ -28,7 +28,6 @@
 </nav>
 <div class="page-container"></div>
     <div class="cl pd-5 bg-1 bk-gray mt-20">
-        <span class="l"><a class="btn btn-primary radius" onclick="explore_add('添加探索方式','explore_add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加探索方式</a></span>
         <span class="r">共有数据：<strong><?php echo count($explore);?></strong> 条</span></div>
     <div class="mt-20">
         <table class="table table-border table-bordered table-bg table-hover table-sort">
@@ -48,7 +47,6 @@
                     <td><?php echo $value['price'];?></td>
                     <td class="td-manage">
                         <a style="text-decoration:none" class="ml-5" onClick="explore_edit('探索方式编辑','explore_add?id=<?php echo $value['explore_id'];?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-                        <a style="text-decoration:none" class="ml-5" onClick="explore_del(this,'<?php echo $value['explore_id'];?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
                     </td>
                 </tr>
             <?php endforeach; ?>

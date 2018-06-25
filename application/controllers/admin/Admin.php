@@ -17,13 +17,11 @@ class Admin extends CI_Controller
             $this -> load -> model('admin/Uriving_model');
             $this -> load -> model('admin/Team_model');
             $this -> load -> model('admin/Topic_model');
-            $this -> load -> model('admin/Increase_model');
             $this -> load -> model('admin/Explore_model');
             $this -> load -> model('admin/Navigation_model');
             $this -> load -> model('admin/Bottom_model');
             $this -> load -> model('admin/Background_model');
             $this -> load -> model('admin/Side_model');
-            $this -> load -> model('admin/Theme_model');
             $this -> load -> model('admin/Text_model');
             $this -> load -> helper(array('form', 'url'));
             $this -> load -> library('session');
@@ -410,33 +408,6 @@ class Admin extends CI_Controller
 
             $this -> load -> view('admin/topic_edit',$data);
         }
-        //探索方式管理
-        public function increase ()
-        {
-            $result= '';
-
-            $data['increase'] = $this -> Increase_model -> get($result);
-
-            $this -> load -> view('admin/increase',$data);
-
-        }
-        public function increase_add ()
-        {
-            if (empty($_GET['id']))
-            {
-                $this -> load -> view('admin/increase_add');
-
-            }else{
-
-                $id = $_GET['id'];
-
-                $data['increase'] = $this -> Increase_model -> get($id);
-
-                $this -> load -> view('admin/increase_add',$data);
-
-            }
-
-        }
         //探索方式
         public function explore ()
         {
@@ -449,28 +420,15 @@ class Admin extends CI_Controller
         }
         public function explore_add ()
         {
-            if (empty($_GET['id']))
-            {
-                $result= '';
-
-                $data['increase'] = $this -> Increase_model -> get($result);
-
-                $this -> load -> view('admin/explore_add',$data);
-
-            }else{
-
                 $id = $_GET['id'];
 
                 $result= '';
 
                 $data['explore'] = $this -> Explore_model -> get($id);
 
-                $data['increase'] = $this -> Increase_model -> get($result);
+
 
                 $this -> load -> view('admin/explore_add',$data);
-
-            }
-
         }
         //导航
         public function navigation ()
@@ -551,26 +509,6 @@ class Admin extends CI_Controller
             $data['side'] = $this -> Side_model -> get_name($result);
 
             $this -> load -> view('admin/side_edit',$data);
-
-        }
-    //底部
-        public function theme ()
-        {
-            $result= '';
-
-            $data['theme'] = $this -> Theme_model -> get_name($result);
-
-            $this -> load -> view('admin/theme',$data);
-
-        }
-
-        public function theme_edit ()
-        {
-            $result['id']= $_GET['id'];
-
-            $data['theme'] = $this -> Theme_model -> get_name($result);
-
-            $this -> load -> view('admin/theme_edit',$data);
 
         }
     //底部

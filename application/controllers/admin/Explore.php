@@ -16,7 +16,7 @@ class Explore extends CI_Controller
 
             if (empty($arr['id']))
             {
-                $data['increase_id'] = $arr['increase_id'];
+                $data['increase_name'] = $arr['increase_name'];
                 $data['motorcycle'] = $arr['motorcycle'];
                 $data['friendly'] = $arr['friendly'];
                 $data['customize'] = $arr['customize'];
@@ -57,7 +57,7 @@ class Explore extends CI_Controller
             else
             {
                 $data['explore_id'] = $arr['id'];
-                $data['increase_id'] = $arr['increase_id'];
+                $data['increase_name'] = $arr['increase_name'];
                 $data['motorcycle'] = $arr['motorcycle'];
                 $data['friendly'] = $arr['friendly'];
                 $data['customize'] = $arr['customize'];
@@ -73,6 +73,7 @@ class Explore extends CI_Controller
                 $data['banquet'] = $arr['banquet'];
                 $data['farewell'] = $arr['farewell'];
                 $data['price'] = $arr['price'];
+                $data['text'] = $arr['editorValue'];
                 $data['time'] = date('Y-m-d H:i:s');
 
                 if ($this -> Explore_model -> update_edit($data))
