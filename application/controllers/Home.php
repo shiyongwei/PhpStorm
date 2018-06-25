@@ -13,6 +13,7 @@ class Home extends CI_Controller
         $this -> load -> model('admin/Bottom_model');
 		$this -> load -> model('admin/City_model');
 		$this -> load -> model('admin/Background_model');
+		$this -> load -> model('admin/Side_model');
         $this -> load -> helper(array('form', 'url'));
     }
 
@@ -25,10 +26,12 @@ class Home extends CI_Controller
 			$bottom = $this->Bottom_model->get_name('');
 			$city = $this->City_model->get();
 			$get_limit = $this->City_model->get_limit();
+			$get_limits = $this->City_model->get_limit();
 			$text = $this->Background_model->get_name('');
+			$side = $this->Side_model->get_name('');
 
 //			echo  '<pre>';
-//			print_r($text);
+//			print_r($get_limits);
 //			echo  '<pre>';
 
 
@@ -39,8 +42,12 @@ class Home extends CI_Controller
 			$data['city'] = $city;
 			$data['text'] = $text;
 			$data['get_limit'] = $get_limit;
+			$data['get_limits'] = $get_limits;
+			$data['side'] = $side;
+
+
             $this -> load -> view('common/home/head',$data,$navigation);
-            $this -> load -> view('home',$promotiom,$bottom,$city,$text);
+            $this -> load -> view('home',$promotiom,$bottom,$city,$text,$side,$get_limits);
             $this -> load -> view('common/home/foot',$rent_list,$city,$get_limit);
         }
         //酒店
