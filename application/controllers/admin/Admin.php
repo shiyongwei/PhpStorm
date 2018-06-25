@@ -509,7 +509,7 @@ class Admin extends CI_Controller
         {
             $result= '';
 
-            $data['text'] = $this -> Text_model -> get_name($result);
+            $data['text'] = $this -> Text_model -> get_name_all($result);
 
             $this -> load -> view('admin/text',$data);
 
