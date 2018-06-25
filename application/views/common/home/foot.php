@@ -150,7 +150,7 @@
                 <div class="genericBox linksBox">
                     <ul class="navVertical">
                         <li>
-                            <a href="Bottom_info">
+                            <a href="/index.php/Bottom_info">
                                 关于鹰骑 <br>
                                 求职 <br>
                                 保险 <br>

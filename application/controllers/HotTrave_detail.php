@@ -23,13 +23,19 @@
 				$hotreave_detail = $this->Topic_model->getAll($id);
 				$team_limit = $this->Team_model->get_limit();
 				$uriving_limit = $this->Uriving_model->get_limit();
-				$exone_id['explore_id'] =1;
-				$explor_one = $this->Explore_model->getAll($exone_id);
+				$exone_one['explore_id'] =1;
+				$data['one'] = $this->Explore_model->getAll($exone_one);
+				$exone_two['explore_id'] =2;
+                $data['two'] = $this->Explore_model->getAll($exone_two);
+				$exone_three['explore_id'] =3;
+                $data['three'] = $this->Explore_model->getAll($exone_three);
+				$exone_four['explore_id'] =4;
+                $data['four'] = $this->Explore_model->getAll($exone_four);
 
 
 
 //				echo "<pre>";
-//				print_r($explor_one);exit();
+//				print_r($exone_four);exit();
 //				echo "</pre>";
 
 				$data['rent_list'] = $rent_list;
@@ -39,10 +45,10 @@
 				$data['hotreave_detail'] = $hotreave_detail;
 				$data['team_limit'] = $team_limit;
 				$data['uriving_limit'] = $uriving_limit;
-				$data['explor_one'] = $explor_one;
+
 
 				$this -> load -> view('common/home/head',$data,$navigation);
-				$this -> load -> view('hotTrave_detail',$city,$hotreave_detail,$team_limit,$uriving_limit,$explor_one);
+				$this -> load -> view('hotTrave_detail',$city,$hotreave_detail,$team_limit,$uriving_limit);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
 			}
 		}

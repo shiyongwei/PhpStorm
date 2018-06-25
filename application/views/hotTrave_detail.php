@@ -89,16 +89,16 @@
 					<thead>
 					<tr>
 						<td dir="ltr">
-							<b>团队旅行</b>
+							<b><?php echo $four['increase_name'];?></b>
 						</td>
 						<td dir="ltr">
-							<b>自驾旅行</b>
+							<b><?php echo $three['increase_name'];?></b>
 						</td>
 						<td dir="ltr">
-							<b>摩托车＋酒店</b>
+							<b><?php echo $two['increase_name'];?></b>
 						</td>
 						<td dir="ltr">
-							<b>只有摩托车</b>
+							<b><?php echo $one['increase_name'];?></b>
 						</td>
 
 						<td></td>
@@ -107,162 +107,446 @@
 
 					<tbody>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
+                        <?php if ($four['motorcycle'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['motorcycle'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['motorcycle'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['motorcycle'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 
 						<td>最新型的摩托车租赁</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-
+                        <?php if ($four['friendly'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['friendly'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['friendly'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['friendly'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 						<td>摩托车友好酒店</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-
+                        <?php if ($four['customize'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['customize'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['customize'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['customize'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 						<td>可以定制属于自己的旅行路线</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
+                        <?php if ($four['routes'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['routes'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['routes'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['routes'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 
 						<td>最佳摩托车旅行路线</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
+                        <?php if ($four['eaglerider'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['eaglerider'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['eaglerider'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['eaglerider'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 
 						<td>EagleRider旅行攻略</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
-
+                        <?php if ($four['support'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['support'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['support'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['support'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 						<td>运送行李的支持车辆</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
+                        <?php if ($four['spare'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['spare'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['spare'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['spare'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 
 						<td>备用摩托车</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
+                        <?php if ($four['professional'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['professional'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['professional'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['professional'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 
 						<td>专业支持车驾驶员</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
+                        <?php if ($four['bilingual'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['bilingual'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['bilingual'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['bilingual'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 
 						<td>专业双语导游</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
-
+                        <?php if ($four['experience'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['experience'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['experience'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['experience'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 						<td>团队旅行体验</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
+                        <?php if ($four['breakfast'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['breakfast'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['breakfast'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['breakfast'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 
 						<td>每天提供丰盛早餐</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
+                        <?php if ($four['gasolin'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['gasolin'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['gasolin'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['gasolin'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 
 						<td>骑行时所需的汽油</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
+                        <?php if ($four['banquet'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['banquet'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['banquet'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['banquet'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 
 						<td>欢迎晚宴</td>
 					</tr>
 					<tr>
-						<td>
-							<img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
+                        <?php if ($four['farewell'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($three['farewell'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($two['farewell'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($one['farewell'] == 2): ?>
+                            <td></td>
+                        <?php else: ?>
+                            <td>
+                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                            </td>
+                        <?php endif; ?>
 
 						<td>EagleRider欢送派对</td>
 					</tr>
@@ -273,7 +557,7 @@
 						<td dir="ltr">
 							<span class="starting-at">起始价格</span>
 							<span class="price-box">
-            $349/day
+            <?php echo $four['price']?>
           </span>
 							<span class="book-btn js-guidedBookTrigger">
               <a href="#start-adventure" class="btn-highlight small">立即预订</a>
@@ -282,7 +566,7 @@
 						<td dir="ltr">
 							<span class="starting-at">起始价格</span>
 							<span class="price-box">
-            $229/day
+            <?php echo $three['price']?>
           </span>
 							<span class="book-btn js-selfDriveBookTrigger">
               <a href="#start-adventure" class="btn-highlight small">立即预订</a>
@@ -291,7 +575,7 @@
 						<td dir="ltr">
 							<span class="starting-at">起始价格</span>
 							<span class="price-box">
-            $179/天
+           <?php echo $two['price']?>
           </span>
 							<span class="book-btn">
               <a href="/hotels" class="btn-highlight small">立即预订</a>
@@ -300,7 +584,7 @@
 						<td dir="ltr">
 							<span class="starting-at">起始价格</span>
 							<span class="price-box">
-            <?php echo $explor_one['price']?>
+            <?php echo $one['price']?>
           </span>
 							<span class="book-btn js-rentalBookTrigger">
               <a href="#start-adventure" class="btn-highlight small">立即预订</a>
