@@ -28,9 +28,10 @@
 				$data['get_limit'] = $get_limit;
 				$data['bottom_info'] = $bottom_info;
 
+
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('classify_clause',$bottom_info);
-				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info);
 			}
 		}
 

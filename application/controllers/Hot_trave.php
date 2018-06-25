@@ -9,6 +9,7 @@ class Hot_trave extends CI_Controller{
         $this -> load -> model('admin/Topic_model');
 		$this -> load -> model('admin/Navigation_model');
 		$this -> load -> model('admin/City_model');
+		$this -> load -> model('admin/Text_model');
         $this -> load -> helper(array('form', 'url'));
     }
     public function index(){
@@ -16,6 +17,7 @@ class Hot_trave extends CI_Controller{
         $topic = $this->Topic_model->get('');
 		$get_limit = $this->City_model->get_limit('');
 		$navigation = $this->Navigation_model->get_name('');
+		$bottom_info = $this->Text_model->get_name('');
 
 //		echo "<pre>";
 //		print_r($topic);
@@ -25,10 +27,12 @@ class Hot_trave extends CI_Controller{
         $data['topic'] = $topic;
 		$data['navigation'] = $navigation;
 		$data['get_limit'] = $get_limit;
+		$data['bottom_info'] = $bottom_info;
+
 
         $this -> load -> view('common/home/head',$data,$navigation);
         $this -> load -> view('hot_trave',$topic);
-        $this -> load -> view('common/home/foot',$rent_list,$get_limit);
+        $this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info);
     }
 }
 

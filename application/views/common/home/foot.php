@@ -151,14 +151,9 @@
                     <ul class="navVertical">
                         <li>
                             <a href="Bottom_info">
-                                关于鹰骑 <br>
-                                求职 <br>
-                                保险 <br>
-                                摩托车驾照要求 <br>
-                                隐私权政策 <br>
-                                常见问题 <br>
-                                购买条款 <br>
-                                联系我们 <br>
+								<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
+									<?php echo $bottom_infos['title']?> <br>
+								<?php endforeach; ?>
                                 更多信息
                             </a>
                         </li>

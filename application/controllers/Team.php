@@ -9,6 +9,7 @@
 				$this -> load -> model('admin/Team_model');
 				$this -> load -> model('admin/Navigation_model');
 				$this -> load -> model('admin/City_model');
+				$this -> load -> model('admin/Text_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
@@ -17,6 +18,7 @@
 				$navigation = $this->Navigation_model->get_name('');
 				$city = $this->City_model->get();
 				$get_limit = $this->City_model->get_limit();
+				$bottom_info = $this->Text_model->get_name('');
 
 //								echo '<pre>';
 //								print_r($team);
@@ -27,10 +29,11 @@
 				$data['navigation'] = $navigation;
 				$data['city'] = $city;
 				$data['get_limit'] = $get_limit;
+				$data['bottom_info'] = $bottom_info;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('team',$team,$city);
-				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info);
 			}
 		}
 

@@ -13,6 +13,7 @@
 				$this -> load -> model('admin/Team_model');
 				$this -> load -> model('admin/Uriving_model');
 				$this -> load -> model('admin/Explore_model');
+				$this -> load -> model('admin/Text_model');
 			}
 			public function index(){
 				$rent_list = $this->Product_model->get('');//热门租赁分类
@@ -25,6 +26,7 @@
 				$uriving_limit = $this->Uriving_model->get_limit();
 				$exone_id['explore_id'] =1;
 				$explor_one = $this->Explore_model->getAll($exone_id);
+				$bottom_info = $this->Text_model->get_name('');
 
 
 
@@ -40,10 +42,11 @@
 				$data['team_limit'] = $team_limit;
 				$data['uriving_limit'] = $uriving_limit;
 				$data['explor_one'] = $explor_one;
+				$data['bottom_info'] = $bottom_info;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('hotTrave_detail',$city,$hotreave_detail,$team_limit,$uriving_limit,$explor_one);
-				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info);
 			}
 		}
 
