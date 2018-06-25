@@ -75,6 +75,14 @@ class City_model extends CI_Model{
 
 			return $query -> result_array();
 		}
+		public function get_limit_four(){
+			$this->db->where('status',1)->limit(4);
+
+			$query = $this -> db -> get(self::TBL_CITY);
+
+
+			return $query -> result_array();
+		}
 
     #添加分类信息
         public function add_city($data){

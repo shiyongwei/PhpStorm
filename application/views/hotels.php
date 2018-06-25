@@ -1052,106 +1052,37 @@
     <h1>精选目的地 <span class="icons-hotel-package-dark"></span></h1>
 
     <div class="row-fluid  destination tours_list">
-        <div class="tour span3 js-location" data-id="1">
-            <a class="js-bookTrigger" href="Javascript:;">
-                <div class="img_cont">
-                    <img class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/locations/1/cover_images/size287c/EagleRider_LosAngeles.jpg?1514481840" alt="洛杉矶机场门店">
-                </div>
 
-                <span class="tour_dest">洛杉矶机场门店</span>
 
-                <div class="actions">
-                    <div class="tour_price">
-                        <div class="starting_info">
-                      <span class="title">
-                        ¥2,408.31
-                      </span>
-
-                            <em class="bold">
-                                ¥1,242.38 /晚
-                            </em>
-                        </div>
-
-                        <span class="btn-highlight">立即预订</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="tour span3 js-location" data-id="2">
-            <a class="js-bookTrigger" href="Javascript:;">
-                <div class="img_cont">
-                    <img class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/locations/2/cover_images/size287c/shutterstock_114083809.jpg?1470842358" alt="旧金山门店">
-                </div>
-
-                <span class="tour_dest">旧金山门店</span>
-
-                <div class="actions">
-                    <div class="tour_price">
-                        <div class="starting_info">
-                      <span class="title">
-                        ¥2,535.74
-                      </span>
-
-                            <em class="bold">
-                                ¥1,459 /晚
-                            </em>
-                        </div>
-
-                        <span class="btn-highlight">立即预订</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="tour span3 js-location" data-id="6">
-            <a class="js-bookTrigger" href="Javascript:;">
-                <div class="img_cont">
-                    <img class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/locations/6/cover_images/size287c/eaglerider.ride.2.23.2014-9885.jpg?1470842365" alt="拉斯维加斯门店">
-                </div>
-
-                <span class="tour_dest">拉斯维加斯门店</span>
-
-                <div class="actions">
-                    <div class="tour_price">
-                        <div class="starting_info">
-                      <span class="title">
-                        ¥2,408.31
-                      </span>
-
-                            <em class="bold">
-                                ¥1,242.38 /晚
-                            </em>
-                        </div>
-
-                        <span class="btn-highlight">立即预订</span>
-                    </div>
-                </div>
-            </a>
-        </div>
+		<?php foreach ($get_limit_four as $key=>$get_limit_fours): ?>
         <div class="tour span3 js-location" data-id="197">
-            <a class="js-bookTrigger" href="Javascript:;">
+            <a class="js-bookTrigger" href="jingxuan_detail?id=<?php echo $get_limit_fours['cit_id']?>">
                 <div class="img_cont">
-                    <img class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/locations/197/cover_images/size287c/shutterstock_84639565.jpg?1470842511" alt="芝加哥门店">
+                    <img class="tour_image" src="<?php echo $get_limit_fours['logo']?>" alt="<?php echo $get_limit_fours['cit_name']?>">
                 </div>
 
-                <span class="tour_dest">芝加哥门店</span>
+                <span class="tour_dest"><?php echo $get_limit_fours['cit_name']?></span>
 
                 <div class="actions">
                     <div class="tour_price">
-                        <div class="starting_info">
-                      <span class="title">
-                        ¥2,408.31
-                      </span>
-
-                            <em class="bold">
-                                ¥1,242.38 /晚
-                            </em>
-                        </div>
-
-                        <span class="btn-highlight">立即预订</span>
+<!--                        <div class="starting_info">-->
+<!--                      <span class="title">-->
+<!---->
+<!--                      </span>-->
+<!---->
+<!--                            <em class="bold">-->
+<!--								-->
+<!--                            </em>-->
+<!--                        </div>-->
+<!---->
+<!--                        <span class="btn-highlight">立即预订</span>-->
                     </div>
                 </div>
             </a>
         </div>
+		<?php endforeach; ?>
+
+
     </div><!-- .row-fluid -->
 </div>
 <div class="bot_section psection hotel-home js-popular-routes" id="js-popular-routes">
