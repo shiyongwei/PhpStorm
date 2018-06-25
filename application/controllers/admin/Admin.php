@@ -30,20 +30,15 @@ class Admin extends CI_Controller
         //注册页面
         public function index ()
         {
-            //$this -> load -> view('common/header');
             $this -> load -> view('admin/login');
-            //$this -> load -> view('common/footer');
         }
 
         public function login ()
         {
             $user = $this->session->userdata('user');
-
             $data['username']=$user['username'];
 
-            //$this -> load -> view('common/header');
             $this -> load -> view('admin/index',$data);
-            //$this -> load -> view('common/footer');
         }
         //首页
         public function welcome ()
@@ -54,9 +49,7 @@ class Admin extends CI_Controller
         public function admin_list ()
         {
             $data_add = '';
-
             $add_list = $this->User_model->get($data_add);
-
             $data['list'] = $add_list;
 
             $this -> load -> view('admin/admin_list',$data);

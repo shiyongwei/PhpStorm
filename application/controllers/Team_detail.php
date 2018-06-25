@@ -27,22 +27,25 @@
 
                 $data = array_filter($data);
 
-                $i=1;
+               if((count($data) % 5) == 0){
+                   $i=1;
 
-                $date = array();
+                   $date = array();
 
-                foreach(array_chunk($data, 5) as $val)
-                {
+                   foreach(array_chunk($data, 5) as $val)
+                   {
 
-                    $date[$i] = $val;
+                       $date[$i] = $val;
 
-                    $i++;
+                       $i++;
 
-                }
-//				echo '<pre>';
-//				print_r($date[1]);
-//				exit;
-//				echo '</pre>';
+                   }
+               }else{
+
+                   $date = null;
+
+               }
+
 
 				$data['rent_list'] = $rent_list;
 				$data['team'] = $team;

@@ -126,7 +126,7 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">旅游行程：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
+                <script id="editor" type="text/plain" style="width:100%;height:400px;"><p style="white-space: normal;">按照下列格式填写,否则页面显示失效</p><p style="white-space: normal;">第一天</p><p style="white-space: normal;">兴宁<br/></p><p style="white-space: normal;">0.0英里/0.0英里<br/></p><p style="white-space: normal;"><img src="http://yxbt.local/public/uploads/20180625/1529894373831784.jpg" title="1529894373831784.jpg" alt="Day_1.jpg"/></p><p style="white-space: normal;"><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Welcome to Milwaukee, the birthplace of Harley-Davidson, and one of our favorite Great Lakes cities. Head over to your Hotel, and once you are settled, you could head over to the House of Harley-Davidson to do a little shopping and some fun.</span></p><p><br/></p></script>
                 </div>
          </div>
 		<div class="row cl">

@@ -341,7 +341,7 @@
 
 
 						<div class="accordion" id="tour_iten">
-
+                            <?php if (!empty($date)): ?>
 	                        <?php foreach ($date as $key =>$dates): ?>
                             <div class="accordion-group">
                                 <div class="accordion-heading">
@@ -387,7 +387,7 @@
 <!--							<div class="sep"></div>-->
 							<?php endforeach; ?>
 <!--							-->
-
+                            <?php endif; ?>
 						</div>
 
 					</div>
