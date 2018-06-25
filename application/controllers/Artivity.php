@@ -21,6 +21,7 @@
 				$city = $this->City_model->get();
 				$get_limit = $this->City_model->get_limit();
 				$bottom_info = $this->Text_model->get_name('');
+				$bottom_info_all = $this->Text_model->get_name_all('');
 				//所属选项卡
 				if(!empty($_GET['column_id'])){
 					$column_id = $_GET['column_id'];
@@ -35,10 +36,11 @@
 				$data['city'] = $city;
 				$data['get_limit'] = $get_limit;
 				$data['bottom_info'] = $bottom_info;
+				$data['bottom_info_all'] = $bottom_info_all;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('activity',$column,$activity,$city);
-				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all);
 			}
 		}
 

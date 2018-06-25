@@ -18,6 +18,7 @@ class Hot_trave extends CI_Controller{
 		$get_limit = $this->City_model->get_limit('');
 		$navigation = $this->Navigation_model->get_name('');
 		$bottom_info = $this->Text_model->get_name('');
+		$bottom_info_all = $this->Text_model->get_name_all('');
 
 //		echo "<pre>";
 //		print_r($topic);
@@ -28,11 +29,12 @@ class Hot_trave extends CI_Controller{
 		$data['navigation'] = $navigation;
 		$data['get_limit'] = $get_limit;
 		$data['bottom_info'] = $bottom_info;
+		$data['bottom_info_all'] = $bottom_info_all;
 
 
         $this -> load -> view('common/home/head',$data,$navigation);
         $this -> load -> view('hot_trave',$topic);
-        $this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info);
+        $this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all);
     }
 }
 

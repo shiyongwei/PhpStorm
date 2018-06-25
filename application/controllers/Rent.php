@@ -17,6 +17,7 @@
 				$rent_list = $this->Product_model->get('');
 				$get_limit = $this->City_model->get_limit('');
 				$bottom_info = $this->Text_model->get_name('');
+				$bottom_info_all = $this->Text_model->get_name_all('');
 				$id = $_GET['id'];
 				if($id==0){
 					$list = $this->List_model->get('');
@@ -34,10 +35,11 @@
 				$data['get_limit'] = $get_limit;
 				$data['navigation'] = $navigation;
 				$data['bottom_info'] = $bottom_info;
+				$data['bottom_info_all'] = $bottom_info_all;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('rent',$list);
-				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all);
 			}
 
 

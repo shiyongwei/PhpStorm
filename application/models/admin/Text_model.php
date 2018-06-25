@@ -48,6 +48,24 @@ class Text_model extends CI_Model{
 
         }
 
+		public function get_name_all ($data)
+		{
+
+			if ($data == '')
+			{
+				$query = $this -> db-> get(self::TBL_NAME);
+
+				return $query -> result_array();
+			}
+			else
+			{
+				$query = $this -> db ->limit(7) -> where($data) -> get(self::TBL_NAME);
+
+				return $query -> row_array();
+			}
+
+		}
+
     //倒序排序
         public function get_desc ()
         {

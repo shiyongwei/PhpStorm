@@ -19,6 +19,7 @@
 				$team = $this->Team_model->get($id);
 				$navigation = $this->Navigation_model->get_name('');
 				$bottom_info = $this->Text_model->get_name('');
+				$bottom_info_all = $this->Text_model->get_name_all('');
 				$text = $team[0]['schedule'];
 
 
@@ -55,10 +56,11 @@
 				$data['date'] = $date;
 				$data['get_limit'] = $get_limit;
 				$data['bottom_info'] = $bottom_info;
+				$data['bottom_info_all'] = $bottom_info_all;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('team_detail',$team,$date);
-				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all);
 			}
 		}
 

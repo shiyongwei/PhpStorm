@@ -168,14 +168,14 @@
             <div class="row-fluid">
                 <div class="span2">
                     <a class="brand" href="Javascript:;">
-                        <img src="/public/image/logo-732570a503b57eea5ffa859c1839ad68.png">
+                        <img src="<?php echo $bottom_info_all[7]['image']?>">
                     </a>
                 </div>
 
                 <div class="span4 contacts">
                     <div class="footer_contacts_con">
                         <p class="cr">
-                            版权 &copy; 2018 鹰骑.
+							<?php echo $bottom_info_all[7]['title']?>
                         </p>
                     </div>
                     <div class="gts_container" id="gts_container"></div>

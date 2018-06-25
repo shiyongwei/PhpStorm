@@ -25,6 +25,7 @@
 				$get_limit = $this->City_model->get_limit();
 				$text = $this->Background_model->get_name('');
 				$bottom_info = $this->Text_model->get_name('');
+				$bottom_info_all = $this->Text_model->get_name_all('');
 
 //              	echo '<pre>';
 //				print_r($uriving);
@@ -40,10 +41,11 @@
 				$data['get_limit'] = $get_limit;
 				$data['text'] = $text;
 				$data['bottom_info'] = $bottom_info;
+				$data['bottom_info_all'] = $bottom_info_all;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('hotels',$uriving,$team,$bottom,$city,$text);
-				$this -> load -> view('common/home/foot',$get_limit,$bottom_info);
+				$this -> load -> view('common/home/foot',$get_limit,$bottom_info,$bottom_info_all);
 			}
 		}
 
