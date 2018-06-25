@@ -12,6 +12,7 @@
 				$this -> load -> model('admin/Bottom_model');
 				$this -> load -> model('admin/City_model');
 				$this -> load -> model('admin/Background_model');
+				$this -> load -> model('admin/Text_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
@@ -23,6 +24,7 @@
 				$city = $this->City_model->get();
 				$get_limit = $this->City_model->get_limit();
 				$text = $this->Background_model->get_name('');
+				$bottom_info = $this->Text_model->get_name('');
 
 //              	echo '<pre>';
 //				print_r($uriving);
@@ -37,10 +39,11 @@
 				$data['city'] = $city;
 				$data['get_limit'] = $get_limit;
 				$data['text'] = $text;
+				$data['bottom_info'] = $bottom_info;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('hotels',$uriving,$team,$bottom,$city,$text);
-				$this -> load -> view('common/home/foot',$get_limit);
+				$this -> load -> view('common/home/foot',$get_limit,$bottom_info);
 			}
 		}
 

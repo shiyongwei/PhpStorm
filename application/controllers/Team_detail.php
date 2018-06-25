@@ -9,6 +9,7 @@
 				$this -> load -> model('admin/Team_model');
 				$this -> load -> model('admin/City_model');
 				$this -> load -> model('admin/Navigation_model');
+				$this -> load -> model('admin/Text_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
@@ -17,6 +18,7 @@
 				$id = $_GET['id'];
 				$team = $this->Team_model->get($id);
 				$navigation = $this->Navigation_model->get_name('');
+				$bottom_info = $this->Text_model->get_name('');
 				$text = $team[0]['schedule'];
 
 
@@ -52,10 +54,11 @@
 				$data['navigation'] = $navigation;
 				$data['date'] = $date;
 				$data['get_limit'] = $get_limit;
+				$data['bottom_info'] = $bottom_info;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('team_detail',$team,$date);
-				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info);
 			}
 		}
 

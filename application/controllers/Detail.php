@@ -9,6 +9,7 @@
 				$this -> load -> model('admin/Uriving_model');
 				$this -> load -> model('admin/Navigation_model');
 				$this -> load -> model('admin/City_model');
+				$this -> load -> model('admin/Text_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
@@ -16,6 +17,7 @@
 				$get_limit = $this->City_model->get_limit();
 				$id = $_GET['id'];
 				$uriving = $this->Uriving_model->get($id);
+				$bottom_info = $this->Text_model->get_name('');
 				$navigation = $this->Navigation_model->get_name('');
 				$text = $uriving[0]['schedule'];
 
@@ -47,10 +49,11 @@
 				$data['navigation'] = $navigation;
 				$data['date'] = $date;
 				$data['get_limit'] = $get_limit;
+				$data['bottom_info'] = $bottom_info;
 
 				$this -> load -> view('common/home/head',$data,$navigation);
 				$this -> load -> view('detail',$uriving,$date);
-				$this -> load -> view('common/home/foot',$rent_list,$get_limit);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info);
 			}
 		}
 				function _regex_select ($html, $selector, $remove = false)
