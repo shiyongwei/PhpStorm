@@ -29,6 +29,13 @@ class Topic_model extends CI_Model
 
         }
 
+		public function getAll($data){
+
+			$query = $this -> db -> where($data) -> get(self::TBL_NAME);
+
+			return $query -> row_array();
+		}
+
 //删除
         public function edit_topic ($data)
         {

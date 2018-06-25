@@ -41,7 +41,7 @@ class Explore_model extends CI_Model
 
         public function getAll($data){
 
-            $query = $this -> db -> where($data) -> get(self::TBL_USER);
+            $query = $this -> db -> where($data) -> get(self::TBL_LIST);
 
             return $query -> row_array();
         }

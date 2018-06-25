@@ -2708,6 +2708,23 @@
         </div>
     </div>
 
+
+
+    <script>
+
+		// $(".icons-container a").mouseover(function(){
+		// 	$(this).css("background-color","#ee7c13");
+		// });
+		$(".icons-container a").mouseout(function() {
+			$(this).css("background-color","#30303");
+		});
+
+		$(".icons-container a").hover(function(){
+			$(this).css("backgroundColor","#ee7c13");
+		});
+
+    </script>
+
     <!-- guided_tours -->
     <div class="row featured-tours guided_tours js-guidedTours" style="display: block;margin-top: 25px;">
         <div class="span8" style="padding-left: 10px;">

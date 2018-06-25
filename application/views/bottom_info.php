@@ -22,7 +22,6 @@
 							<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E7%89%B9%E6%83%A0">促销特惠</a>
 						</li>
 
-
 					</ul>
 
 					<div class="clearfix">
@@ -819,56 +818,21 @@
 
 		</div>
 
-		<div class="main_cont span9 motuo" >
+		<div class="main_cont span9 motuo">
 
 			<div class="eaglerider-stuff-container" style="width: 95%;margin: 30px auto 0;">
 				<div class="row-fluid" style="width: 100%;">
-
+					<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
 					<div class="span3" style="margin-left: 0;">
 						<div class="link-container" style="height: 130px;margin: 0 auto;border: none;display: table;padding: 5px;font-weight: bold;color: #555;">
 
-							<a href="Drive_request" style="border-radius: 100px;display: table-cell;vertical-align: middle;text-align: center;font-size: 15px;line-height: 18px;color: #555;text-decoration: none !important;opacity: 0.85;">
-								<img src="/public/image/jiazhao.jpg">
-								<i class="icn-stuff icn-license" style="margin: 0 auto 10px;text-align: center;line-height: 37px;display: block;"></i>摩托车驾照要求
+							<a href="<?php echo $bottom_infos['url']?>" style="border-radius: 100px;display: table-cell;vertical-align: middle;text-align: center;font-size: 15px;line-height: 18px;color: #555;text-decoration: none !important;opacity: 0.85;">
+								<img src="<?php echo $bottom_infos['image']?>">
+								<i class="icn-stuff icn-license" style="margin: 0 auto 10px;text-align: center;line-height: 37px;display: block;"></i><?php echo $bottom_infos['title']?>
 							</a>
 						</div>
 					</div>
-					<div class="span3" style="margin-left: 0;">
-						<div class="link-container" style="height: 130px;margin: 0 auto;border: none;display: table;padding: 5px;font-weight: bold;color: #555;">
-
-							<a href="Problem" style="border-radius: 100px;display: table-cell;vertical-align: middle;text-align: center;font-size: 15px;line-height: 18px;color: #555;text-decoration: none !important;opacity: 0.85;">
-								<img src="/public/image/jiazhao.jpg">
-								<i class="icn-stuff icn-license" style="margin: 0 auto 10px;text-align: center;line-height: 37px;display: block;"></i>常见问题
-							</a>
-						</div>
-					</div>
-					<div class="span3" style="margin-left: 0;">
-						<div class="link-container" style="height: 130px;margin: 0 auto;border: none;display: table;padding: 5px;font-weight: bold;color: #555;">
-
-							<a href="rent_clause" style="border-radius: 100px;display: table-cell;vertical-align: middle;text-align: center;font-size: 15px;line-height: 18px;color: #555;text-decoration: none !important;opacity: 0.85;">
-								<img src="/public/image/jiazhao.jpg">
-								<i class="icn-stuff icn-license" style="margin: 0 auto 10px;text-align: center;line-height: 37px;display: block;"></i>租赁购买条款
-							</a>
-						</div>
-					</div>
-					<div class="span3" style="margin-left: 0;">
-						<div class="link-container" style="height: 130px;margin: 0 auto;border: none;display: table;padding: 5px;font-weight: bold;color: #555;">
-
-							<a href="Team_clause" style="border-radius: 100px;display: table-cell;vertical-align: middle;text-align: center;font-size: 15px;line-height: 18px;color: #555;text-decoration: none !important;opacity: 0.85;">
-								<img src="/public/image/jiazhao.jpg">
-								<i class="icn-stuff icn-license" style="margin: 0 auto 10px;text-align: center;line-height: 37px;display: block;"></i>团队旅行购买条款
-							</a>
-						</div>
-					</div>
-					<div class="span3" style="margin-left: 0;">
-						<div class="link-container" style="height: 130px;margin: 0 auto;border: none;display: table;padding: 5px;font-weight: bold;color: #555;">
-
-							<a href="Classify_clause" style="border-radius: 100px;display: table-cell;vertical-align: middle;text-align: center;font-size: 15px;line-height: 18px;color: #555;text-decoration: none !important;opacity: 0.85;">
-								<img src="/public/image/jiazhao.jpg">
-								<i class="icn-stuff icn-license" style="margin: 0 auto 10px;text-align: center;line-height: 37px;display: block;"></i>自驾游购买条款
-							</a>
-						</div>
-					</div>
+					<?php endforeach; ?>
 
 
 					</div>

@@ -35,6 +35,11 @@ class Uriving_model extends CI_Model
 
 			return $query -> result_array();
 		}
+		public function get_limit(){
+			$this->db->limit(4);
+			$query = $this -> db ->where('status',1) -> order_by('id', 'DESC') -> get(self::TBL_NAME);
+			return $query -> result_array();
+		}
 
 //删除
         public function edit_uriving ($data)

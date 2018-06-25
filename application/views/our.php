@@ -820,9 +820,9 @@
 
 		</div>
 
-        <div class="main_cont span9" style="margin-top: 35px">
-			<?php echo $bottom_info[6]['text']?>
-        </div>
+		<div class="main_cont span9" style="margin-top: 35px">
+			<?php echo $bottom_info[5]['text']?>
+		</div>
 
 
 	</div>
