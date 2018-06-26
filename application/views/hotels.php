@@ -1057,11 +1057,11 @@
 		<?php foreach ($get_limit_four as $key=>$get_limit_fours): ?>
         <div class="tour span3 js-location" data-id="197">
             <a class="js-bookTrigger" href="jingxuan_detail?id=<?php echo $get_limit_fours['cit_id']?>">
-                <div class="img_cont">
+                <div class="img_cont" style="border: 0!important;">
                     <img class="tour_image" src="<?php echo $get_limit_fours['logo']?>" alt="<?php echo $get_limit_fours['cit_name']?>">
                 </div>
 
-                <span class="tour_dest"><?php echo $get_limit_fours['cit_name']?></span>
+                <span class="tour_dest" style="text-align: center"><?php echo $get_limit_fours['cit_name']?></span>
 
                 <div class="actions">
                     <div class="tour_price">
