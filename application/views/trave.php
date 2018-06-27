@@ -967,7 +967,7 @@
                                     </div>
 
                                     <div class="widget_btns">
-                                        <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                        <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                     </div>
                                 </form>
                             </div>
@@ -1259,7 +1259,7 @@
                                     </div>
 
                                     <div class="widget_btns">
-                                        <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                        <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                     </div>
 
                                 </form>
@@ -2489,7 +2489,7 @@
                                     </div>
 
                                     <div class="widget_btns">
-                                        <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                        <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                     </div>
                                 </form>
                             </div>
@@ -2532,14 +2532,7 @@
                         </p>
                     </a>
                 </div>
-                <div class="tour span3 js-tourContainer slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1" style="width: 270px;">
-                    <a href="/coast-to-coast-motorcycle-tours" class="thumbnail" tabindex="-1">
-                        <img alt="从太平洋到大西洋" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/4/cover_images/original/coast2coast.jpg?1519418874">
-                        <p class="tour_name">
-                            <span>从太平洋到大西洋</span>
-                        </p>
-                    </a>
-                </div>
+
                 <div class="tour span3 js-tourContainer slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 270px;">
                     <a href="/northwest-and-the-rockies-motorcycle-tours" class="thumbnail" tabindex="-1">
                         <img alt="美国西北部和洛基山脉" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/5/cover_images/original/north_west.jpg?1519418908">
@@ -2564,30 +2557,8 @@
                         </p>
                     </a>
                 </div>
-                <div class="tour span3 js-tourContainer slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 270px;">
-                    <a href="/southwest-motorcycle-tours" class="thumbnail" tabindex="0">
-                        <img alt="美国西部" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/2/cover_images/original/south_west_cover0.jpg?1487186247">
-                        <p class="tour_name">
-                            <span>美国西部</span>
-                        </p>
-                    </a>
-                </div>
-                <div class="tour span3 js-tourContainer slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 270px;">
-                    <a href="/baja-motorcycle-tours" class="thumbnail" tabindex="0">
-                        <img alt="巴哈" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/3/cover_images/original/baja_explore.jpg?1519418738">
-                        <p class="tour_name">
-                            <span>巴哈</span>
-                        </p>
-                    </a>
-                </div>
-                <div class="tour span3 js-tourContainer slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 270px;">
-                    <a href="/coast-to-coast-motorcycle-tours" class="thumbnail" tabindex="0">
-                        <img alt="从太平洋到大西洋" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/4/cover_images/original/coast2coast.jpg?1519418874">
-                        <p class="tour_name">
-                            <span>从太平洋到大西洋</span>
-                        </p>
-                    </a>
-                </div>
+
+
                 <div class="tour span3 js-tourContainer slick-slide slick-active" data-slick-index="4" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide04" style="width: 270px;">
                     <a href="/northwest-and-the-rockies-motorcycle-tours" class="thumbnail" tabindex="0">
                         <img alt="美国西北部和洛基山脉" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/5/cover_images/original/north_west.jpg?1519418908">
@@ -2596,70 +2567,25 @@
                         </p>
                     </a>
                 </div>
+
+				<?php foreach ($classifyinfo as $key=>$classifyinfos): ?>
                 <div class="tour span3 js-tourContainer slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide05" style="width: 270px;">
                     <a href="/southeast-motorcycle-tours" class="thumbnail" tabindex="-1">
-                        <img alt="美国东南部" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/6/cover_images/original/south_east.jpg?1519419012">
+                        <img alt="美国东南部" class="tour_image" src="<?php echo $classifyinfos['image']?>" style="height: 180px;">
                         <p class="tour_name">
                             <span>美国东南部</span>
                         </p>
                     </a>
                 </div>
-                <div class="tour span3 js-tourContainer slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 270px;">
-                    <a href="/route-66-motorcycle-tours" class="thumbnail" tabindex="-1">
-                        <img alt="66号公路" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/1/cover_images/original/route_66.jpg?1519418808">
-                        <p class="tour_name">
-                            <span>66号公路</span>
-                        </p>
-                    </a>
-                </div>
-                <div class="tour span3 js-tourContainer slick-slide slick-cloned" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 270px;">
-                    <a href="/southwest-motorcycle-tours" class="thumbnail" tabindex="-1">
-                        <img alt="美国西部" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/2/cover_images/original/south_west_cover0.jpg?1487186247">
-                        <p class="tour_name">
-                            <span>美国西部</span>
-                        </p>
-                    </a>
-                </div>
-                <div class="tour span3 js-tourContainer slick-slide slick-cloned" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 270px;">
-                    <a href="/baja-motorcycle-tours" class="thumbnail" tabindex="-1">
-                        <img alt="巴哈" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/3/cover_images/original/baja_explore.jpg?1519418738">
-                        <p class="tour_name">
-                            <span>巴哈</span>
-                        </p>
-                    </a>
-                </div>
-                <div class="tour span3 js-tourContainer slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 270px;">
-                    <a href="/coast-to-coast-motorcycle-tours" class="thumbnail" tabindex="-1">
-                        <img alt="从太平洋到大西洋" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/experience_pages/4/cover_images/original/coast2coast.jpg?1519418874">
-                        <p class="tour_name">
-                            <span>从太平洋到大西洋</span>
-                        </p>
-                    </a>
-                </div>
+				<?php endforeach; ?>
+
+
+
             </div>
         </div>
 
 
-        <ul class="slick-dots" style="display: block;" role="tablist">
-            <li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00">
-                <button type="button" data-role="none" role="button" aria-required="false" tabindex="0">1</button>
-            </li>
-            <li aria-hidden="false" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01" class="slick-active">
-                <button type="button" data-role="none" role="button" aria-required="false" tabindex="0">2</button>
-            </li>
-            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation02" id="slick-slide02" class="">
-                <button type="button" data-role="none" role="button" aria-required="false" tabindex="0">3</button>
-            </li>
-            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation03" id="slick-slide03" class="">
-                <button type="button" data-role="none" role="button" aria-required="false" tabindex="0">4</button>
-            </li>
-            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation04" id="slick-slide04" class="">
-                <button type="button" data-role="none" role="button" aria-required="false" tabindex="0">5</button>
-            </li>
-            <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation05" id="slick-slide05" class="">
-                <button type="button" data-role="none" role="button" aria-required="false" tabindex="0">6</button>
-            </li>
-        </ul>
+
 
     </div>
 </div>

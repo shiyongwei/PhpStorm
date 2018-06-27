@@ -2171,7 +2171,7 @@
 					<a class="js-viewAllTrigger" href="Rent?id=0" id="detail_7" style="background: rgba(248,202,62,0.4);">
 						<h2 class="secTitle" id="detail_8">
 							<span class="bold" style="font-weight: bold;">摩托车出租</span>
-							在 拉斯维加斯门店
+							在 <?php echo $cityinfo['cit_name']?>
 						</h2>
 						<div class="disclaimer" id="detail_9">
 							<span id="detail_10">所有价格都是基于当前城市及当前日期，价格可能根据不同的取车时间及城市有所改变</span>
@@ -2212,7 +2212,7 @@
 	<div class="container psection">
 		<div class="locationToursWrapper row">
 			<div class="span12 js-toursSection toursSection">
-				<h2 class="secTitle"><span class="bold">摩托车旅游</span> 在 拉斯维加斯门店</h2>
+				<h2 class="secTitle"><span class="bold">摩托车旅游</span> 在 <?php echo $cityinfo['cit_name']?></h2>
 
 				<div class="tours_list row">
 

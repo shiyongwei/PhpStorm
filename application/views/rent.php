@@ -936,7 +936,7 @@
                                 </div>
 
                                 <div class="widget_btns">
-                                    <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                    <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                 </div>
                             </form>
                         </div>
@@ -1234,7 +1234,7 @@
                                 </div>
 
                                 <div class="widget_btns">
-                                    <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                    <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                 </div>
 
                             </form>
@@ -2437,7 +2437,7 @@
                                 </div>
 
                                 <div class="widget_btns">
-                                    <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                    <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                 </div>
                             </form>
                         </div>

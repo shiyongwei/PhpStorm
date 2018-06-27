@@ -9,6 +9,7 @@
 				$this -> load -> model('admin/Navigation_model');
 				$this -> load -> model('admin/City_model');
 				$this -> load -> model('admin/Team_model');
+				$this -> load -> model('admin/Uriving_model');
 				$this -> load -> model('admin/Text_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
@@ -25,7 +26,7 @@
 				$bottom_info_all = $this->Text_model->get_name_all('');
 
 //				echo  '<pre>';
-//				print_r($teaminfo);
+//				print_r($cityinfo);
 //				echo  '<pre>';
 
 				$data['rent_list'] = $rent_list;
