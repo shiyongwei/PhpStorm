@@ -2573,7 +2573,15 @@
                     <a href="/southeast-motorcycle-tours" class="thumbnail" tabindex="-1">
                         <img alt="美国东南部" class="tour_image" src="<?php echo $classifyinfos['image']?>" style="height: 180px;">
                         <p class="tour_name">
-                            <span>美国东南部</span>
+                            <span>
+								<?php
+                                    for ($i=0;$i<count($city);$i++){
+                                        if ($city[$i]['cit_id'] ==  $classifyinfos['cit_id']){
+                                            echo $city[$i]['cit_name'];
+                                        }
+                                    }
+                                ?>
+                            </span>
                         </p>
                     </a>
                 </div>
@@ -2607,7 +2615,7 @@
 
     <div class="row icons">
         <div class="span12 icons-container">
-            <a href="Javascript:;" class="js-guidedTrigger" style="float: left;width: 25%;background: #303030;margin-left: 8px;">
+            <a href="Javascript:;" class="js-guidedTrigger coinActive" style="float: left;background: #303030;width: 25%;margin-left: 8px;">
                 <svg>
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.eaglerider.com/assets/v2/dest/dest-a869bb21a4d43da79e8ac8d2de38ffdd.svg#GUIDED-TOURS"></use>
                 </svg>
@@ -2635,24 +2643,22 @@
     </div>
 
 
-
+    <style>
+        .coinActive{
+            background: #ee7c13!important;
+        }
+    </style>
     <script>
 
-		// $(".icons-container a").mouseover(function(){
-		// 	$(this).css("background-color","#ee7c13");
-		// });
-		$(".icons-container a").mouseout(function() {
-			$(this).css("background-color","#30303");
-		});
-
-		$(".icons-container a").hover(function(){
-			$(this).css("backgroundColor","#ee7c13");
+		$('.icons-container a').click(function () {
+			$(this).addClass('coinActive').siblings().removeClass('coinActive');
+			$(this).parents().find(".new_text").eq($(this).index()).show().siblings('.new_text').hide();
 		});
 
     </script>
 
     <!-- guided_tours -->
-    <div class="row featured-tours guided_tours js-guidedTours" style="display: block;margin-top: 25px;">
+    <div class="row featured-tours guided_tours js-guidedTours new_text" style="display: block;margin-top: 25px;">
         <div class="span8" style="padding-left: 10px;">
             <h2>
                 摩托车跟团游
@@ -2683,7 +2689,7 @@
     </div>
 
     <!-- self_drive -->
-    <div class="row featured-tours guided_tours js-guidedTours" style="display: block;margin-top: 25px;display: none;" >
+    <div class="row featured-tours guided_tours js-guidedTours new_text" style="display: block;margin-top: 25px;display: none;" >
         <div class="span8" style="padding-left: 10px;">
             <h2>
                 摩托车自驾游
@@ -2711,7 +2717,7 @@
     </div>
 
     <!-- road_trip -->
-    <div class="row featured-tours guided_tours js-guidedTours" style="display: block;margin-top: 25px;display: none;">
+    <div class="row featured-tours guided_tours js-guidedTours new_text" style="display: block;margin-top: 25px;display: none;">
         <div class="span8" style="padding-left: 10px;">
             <h2>
                 摩托车 + 酒店
@@ -2738,7 +2744,7 @@
         </div>
     </div>
     <!-- bike-hotel -->
-    <div class="row featured-tours guided_tours js-guidedTours" style="display: block;margin-top: 25px;display: none;">
+    <div class="row featured-tours guided_tours js-guidedTours new_text" style="display: block;margin-top: 25px;display: none;">
         <div class="span8" style="padding-left: 10px;">
             <h2>
                 只有摩托车

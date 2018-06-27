@@ -24,7 +24,7 @@ class Trave extends CI_Controller{
 		$bottom_info_all = $this->Text_model->get_name_all('');
 
 //						echo  '<pre>';
-//						print_r($classifyinfo);
+//						print_r($city);
 //						echo  '<pre>';
 
         $data['rent_list'] = $rent_list;
