@@ -1643,7 +1643,7 @@
                 <div class="needHelpContent">
                     <div class="contact_us_help">
                         <div class="email_us">
-                            <a title="Frequent Questions" href="/faqs/%E6%91%A9%E6%89%98%E8%BD%A6%E5%87%BA%E7%A7%9F" class="btn-highlight">
+                            <a title="Frequent Questions" href="/index.php/Bottom_info" class="btn-highlight">
                                 <span class="icn-faq"></span><?php echo $side[0]['head'] ?>
                             </a>
 

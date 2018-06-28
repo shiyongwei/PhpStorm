@@ -2360,60 +2360,7 @@
 	</div>
 
 
-	<div class="allEventsRides">
-		<div class="container">
-			<h2 class="orange align-center bold">
-				拉斯维加斯门店 的摩托车骑行路线和摩托车活动
-			</h2>
-			<div class="allEventsRides_list row-fluid">
-				<div class="allEvents span6">
-					<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E6%B4%BB%E5%8A%A8/las-vegas-main-depot" title="查看所有摩托车活动">
-						<div class="wrapperSeparateSmall boxed ">
-							<div class="row-fluid">
-								<div class="allEventsRidesItem span6">
-									<div class="img_cont">
-										<img class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/events/4/images/size270/er-events_0012_Las_Vegas_BikeFest_.jpg?1418945023" alt="">
-										<p><span>拉斯维加斯摩托车节</span></p>
-									</div>
-								</div>
-								<div class="allEventsRidesItem span6">
-									<div class="img_cont">
-										<img class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/events/9/images/size270/er-events_0004_LAUGHLIN_RIVER_RUN__.jpg?1418945033" alt="">
-										<p><span>拉夫林（Laughlin）河边赛</span></p>
-									</div>
-								</div>
-							</div>
-							<span class="btn-darkHighlight">
-                      查看所有摩托车活动 <span class="icn-arrowWhiteRight"></span>
-                    </span>
-						</div>
-					</a>
-				</div>
 
-				<div class="allRides span6">
-					<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E9%AA%91%E8%A1%8C%E7%BA%BF%E8%B7%AF/las-vegas-main-depot" title="查看所有摩托车骑行路线">
-						<div class="wrapperSeparateSmall boxed ">
-							<div class="row-fluid">
-								<div class="allEventsRidesItem span6">
-									<div class="img_cont">
-										<img class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/attractions/183/thumbnails/size275/ride-map-small_0062_LASB.Valley_of_Fire.jpg?1419455385" alt="">
-										<p><span>火焰谷州立公园</span></p>
-									</div>
-								</div>
-								<div class="allEventsRidesItem span6">
-									<div class="img_cont">
-										<img class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/attractions/184/thumbnails/size275/ride-map-small_0064_LASB.Red_Rock_Canyon.jpg?1419455438" alt="">
-										<p><span>Red Rock Canyon</span></p>
-									</div>
-								</div>
-							</div>
-							<span class="btn-darkHighlight">
-                      查看所有摩托车骑行路线 <span class="icn-arrowWhiteRight"></span>
-                    </span>
-						</div>
-					</a>
-				</div>
-			</div>
 		</div>
 	</div>
 

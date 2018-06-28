@@ -13,6 +13,7 @@ class Trave extends CI_Controller{
 		$this -> load -> model('admin/Uriving_model');
 		$this -> load -> model('admin/Explore_model');
 		$this -> load -> model('admin/Side_model');
+		$this -> load -> model('admin/Topic_model');
         $this -> load -> helper(array('form', 'url'));
     }
     public function index(){
@@ -24,11 +25,12 @@ class Trave extends CI_Controller{
 		$classifyinfo = $this->Uriving_model->get_limit('');
 		$explode = $this->Explore_model->get('');
 		$side = $this->Side_model->get_name('');
+		$topic = $this->Topic_model->get('');
 
 		$bottom_info_all = $this->Text_model->get_name_all('');
 
 //						echo  '<pre>';
-//						print_r($explode);
+//						print_r($topic);
 //						echo  '<pre>';
 
         $data['rent_list'] = $rent_list;
@@ -40,10 +42,11 @@ class Trave extends CI_Controller{
 		$data['classifyinfo'] = $classifyinfo;
 		$data['explode'] = $explode;
 		$data['side'] = $side;
+		$data['topic'] = $topic;
 
 
         $this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
-        $this -> load -> view('trave',$city,$classifyinfo,$explode);
+        $this -> load -> view('trave',$city,$classifyinfo,$explode,$topic);
         $this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
     }
 }

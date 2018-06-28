@@ -12,15 +12,15 @@
                             </li>
 
                             <li class="packages  js-packagesTrigger">
-                                <a href="Javascript:;">摩托车 &amp; 酒店</a>
+                                <a href="/index.php/Hotels">摩托车 &amp; 酒店</a>
                             </li>
 
                             <li class=" js-toursTrigger">
-                                <a href="Javascript:;">旅游</a>
+                                <a href="/index.php/Trave">旅游</a>
                             </li>
 
                             <li class="deals">
-                                <a href="Javascript:;">促销特惠</a>
+                                <a href="/index.php/Discounts">促销特惠</a>
                             </li>
 
 
@@ -2472,7 +2472,7 @@
                     <div class="needHelpContent">
                         <div class="contact_us_help">
                             <div class="email_us">
-                                <a title="Frequent Questions" href="/faqs/%E6%91%A9%E6%89%98%E8%BD%A6%E5%87%BA%E7%A7%9F" class="btn-highlight">
+                                <a title="Frequent Questions" href="/index.php/Bottom_info" class="btn-highlight">
                                     <span class="icn-faq"></span><?php echo $side[0]['head'] ?>
                                 </a>
 

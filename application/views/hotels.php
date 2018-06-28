@@ -1101,9 +1101,6 @@
                         <p>
 							<?php echo $teams['text']?>
                         </p>
-<!--                        <p class="tags">-->
-<!--                            Chicago , Springfield, Rolla, Tulsa, Clinton, Amarillo, Santa Fe, Santa Fe, Gallup, Flagstaff, Williams, Laughlin, Victorville, Los Angeles-->
-<!--                        </p>-->
                     </div>
 
                     <div class="span2 route_cta">
@@ -1112,21 +1109,13 @@
                 </span>
 
 
-                        <a href="Javascript:;" class="btn-highlight js-bookTrigger">立即预订</a>
+                        <a href="/index.php/team_detail?id=<?php echo $teams['id']?>" class="btn-highlight js-bookTrigger">立即查看</a>
                     </div>
                 </div>
             </div>
         </div>
 		<?php endforeach; ?>
 
-
-        <div class="popular_route_links">
-            <a class="btn-highlight js-customTripTrigger" href="Javascript:;">
-                定制您的摩托车旅行
-            </a>
-
-            <a class="btn-highlight js-loadMoreRoutes" href="Javascript:;">加载更多</a>
-        </div>
     </div>
 </div>
 <div class="green-area">

@@ -2568,18 +2568,18 @@
                     </a>
                 </div>
 
-				<?php foreach ($classifyinfo as $key=>$classifyinfos): ?>
+				<?php foreach ($topic as $key=>$topics): ?>
                 <div class="tour span3 js-tourContainer slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide05" style="width: 270px;">
-                    <a href="/southeast-motorcycle-tours" class="thumbnail" tabindex="-1">
-                        <img alt="美国东南部" class="tour_image" src="<?php echo $classifyinfos['image']?>" style="height: 180px;">
+                    <a href="/index.php/hotTrave_detail?id=<?php echo $topics['topic_id']?>" class="thumbnail" tabindex="-1">
+                        <img alt="<?php echo $topics['topictitle'];?>" class="tour_image" src="<?php echo $topics['image']?>" style="height: 180px;">
                         <p class="tour_name">
                             <span>
 								<?php
-                                    for ($i=0;$i<count($city);$i++){
-                                        if ($city[$i]['cit_id'] ==  $classifyinfos['cit_id']){
-                                            echo $city[$i]['cit_name'];
-                                        }
-                                    }
+//                                    for ($i=0;$i<count($city);$i++){
+//                                        if ($city[$i]['cit_id'] ==  $classifyinfos['cit_id']){
+                                            echo $topics['topictitle'];
+//                                        }
+//                                    }
                                 ?>
                             </span>
                         </p>
