@@ -2444,58 +2444,7 @@
                     </div>
 
                 </div>
-                <div class="barblock res_summary">
-                    <div class="header">
-                        <h3>骑行更久，优惠更多</h3>
-                        <a class="max-min-btn visible-tablet" href="Javascript:;"><b class="caret"></b></a>
-                    </div>
 
-                    <div class="details">
-                        <dl class="detail">
-                            <dt> 平均折扣价格 </dt>
-
-                            <dd>1-3天
-                                <i class="pull-right">标准价格</i>
-                            </dd>
-                            <dd>4 - 6 天
-                                <i class="pull-right">12% Off</i>
-                            </dd>
-                            <dd>14-20天
-                                <i class="pull-right">18% Off</i>
-                            </dd>
-                            <dd>14 - 20 天
-                                <i class="pull-right">24% Off</i>
-                            </dd>
-                            <dd>21天以上
-                                <i class="pull-right">30% Off</i>
-                            </dd>
-                        </dl>
-
-                        <dl class="detail">
-                            <dt>
-                                <span href="Javascript:;" style="text-transform: none;" class="orange-text orange">租赁天数越多享受的优惠越多噢！</span>
-                            </dt>
-                            <dd>＊折扣将会自动显示在价格中</dd>
-                        </dl>
-                    </div>
-                    <div class="ride_more_footer">
-                        <div class="row-fluid">
-                            <div class="span3"><span class="icons-loudspeaker"></span></div>
-                            <div class="span9">Seasonal and Multi-Day Discounts are Applied Automatically when Applicable</div>
-                        </div>
-
-
-                    </div>
-                    <div class="widget_btns ride_more_btn">
-                        <a class="btn-highlight" data-toggle="modal" role="button" href="#add_days">
-                            <span class="btn-decor"></span>
-                            添加租赁天数
-                            <span class="icn-arrowWhiteRight"></span>
-                        </a>
-                    </div>
-
-                    <div class="clearfix"></div>
-                </div>
 
                 <!-- Button to trigger modal -->
 
@@ -2516,7 +2465,7 @@
                 </div>
 
                 <div class="barblock needHelp ">
-                    <img src="https://d1y9jrrtx2baf.cloudfront.net/assets/desktop/layout/need_help-69e7631247308fb6cb28fa1719efe3ff.jpg" alt="鹰骑帮助">
+                    <img src="<?php echo $side[0]['image'] ?>" alt="鹰骑帮助">
                     <span class="need_help_text">
     需要<strong>帮助？ </strong>
   </span>
@@ -2524,17 +2473,15 @@
                         <div class="contact_us_help">
                             <div class="email_us">
                                 <a title="Frequent Questions" href="/faqs/%E6%91%A9%E6%89%98%E8%BD%A6%E5%87%BA%E7%A7%9F" class="btn-highlight">
-                                    <span class="icn-faq"></span>常见问题
+                                    <span class="icn-faq"></span><?php echo $side[0]['head'] ?>
                                 </a>
-                                <a title="Email Us" href="/contact_us_help.js" class="btn-highlight js-captureLeadTrigger" rel="nofollow">
-                                    <span class="icn-email"></span>联系我们！
-                                </a>
+
 
                                 <div class="clearfix"></div>
                             </div>
 
                             <p class="phon_numbers">
-                                <a href="tel:+1 310-321-3180">+1 310-321-3180</a>
+                                <a href="tel:+1 310-321-3180"><?php echo $side[0]['foot'] ?></a>
                             </p>
                         </div>
                     </div>

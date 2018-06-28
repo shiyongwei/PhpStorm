@@ -14,22 +14,17 @@
                         </li>
 
                         <li class="packages  js-packagesTrigger">
-                            <a href="Javascript:;">摩托车 &amp; 酒店</a>
+                            <a href="/index.php/Hotels">摩托车 &amp; 酒店</a>
                         </li>
 
                         <li class=" js-toursTrigger">
-                            <a href="Javascript:;">旅游</a>
+                            <a href="/index.php/Trave">旅游</a>
                         </li>
 
                         <li class="deals">
-                            <a href="Javascript:;">促销特惠</a>
+                            <a href="/index.php/Discounts">促销特惠</a>
                         </li>
 
-                        <li class="membership-tab js-membershipTab">
-                            <a href="/motorcycle-club">
-                                会员
-                            </a>
-                        </li>
                     </ul>
 
                     <div class="clearfix"></div>
@@ -1641,7 +1636,7 @@
 
 
             <div class="barblock needHelp ">
-                <img src="https://d1y9jrrtx2baf.cloudfront.net/assets/desktop/layout/need_help-69e7631247308fb6cb28fa1719efe3ff.jpg" alt="鹰骑帮助">
+                <img src="<?php echo $side[0]['image'] ?>" alt="鹰骑帮助">
                 <span class="need_help_text">
     需要<strong>帮助？ </strong>
   </span>
@@ -1649,17 +1644,14 @@
                     <div class="contact_us_help">
                         <div class="email_us">
                             <a title="Frequent Questions" href="/faqs/%E6%91%A9%E6%89%98%E8%BD%A6%E5%87%BA%E7%A7%9F" class="btn-highlight">
-                                <span class="icn-faq"></span>常见问题
-                            </a>
-                            <a title="Email Us" href="/contact_us_help.js" class="btn-highlight js-captureLeadTrigger" rel="nofollow">
-                                <span class="icn-email"></span>联系我们！
+                                <span class="icn-faq"></span><?php echo $side[0]['head'] ?>
                             </a>
 
                             <div class="clearfix"></div>
                         </div>
 
                         <p class="phon_numbers">
-                            <a href="tel:+1 310-321-3180">+1 310-321-3180</a>
+                            <a href="tel:+1 310-321-3180"><?php echo $side[0]['foot'] ?></a>
                         </p>
                     </div>
                 </div>
@@ -1682,16 +1674,14 @@
             <div class="row-fluid locationContent wrapperSeparate boxed">
 
                 <div class="span6" style="width: 100%!important;">
-
 					<?php foreach ($city as $key=>$citys): ?>
                     <div style="width: 50%;height: 30px;float: left;">
                         <li>
-                            <a href="Javascript:;" dir="ltr"><?php echo $citys['cit_name']?></a>
+                            <a href="jingxuan_detail?id=<?php echo $citys['cit_id']?>" dir="ltr"><?php echo $citys['cit_name']?></a>
                             <span class="js-membershipRelated" style="display: none;"></span>
                         </li>
                     </div>
 					<?php endforeach; ?>
-
                 </div>
             </div>
                 </div>

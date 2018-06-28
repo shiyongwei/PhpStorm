@@ -42,23 +42,16 @@
 <div class="homeHelp needHelp ">
     <div class="container">
         <div class="row">
-            <div class="span3 titleIt"><p class="anyQuestions">有任何问题？</p></div>
+            <div class="span3 titleIt"><p class="anyQuestions"><?php echo $side[0]['title'] ?></p></div>
             <div class="needHelpContent span9">
                 <div class="faq">
-                    <a title="Frequent Questions" href="Problem" class="btn-highlight js-faqTrigger">
-                        <span class="icn-faq"></span>常见问题
-                    </a>
-                </div>
-
-                <div class="emails">
-                    <a title="Email Us" href="#"
-                       class="btn-highlight js-captureLeadTrigger" rel="nofollow">
-                        <span class="icn-email"></span>发邮件给我们
+                    <a title="Frequent Questions" href="/index.php/Bottom_info" class="btn-highlight js-faqTrigger">
+                        <span class="icn-faq"></span><?php echo $side[0]['head'] ?>
                     </a>
                 </div>
 
                 <div class="phones">
-                    <a class="btn-highlight" href="tel:+1 310-321-3180"><span class="icn-phone"></span>+1 310-321-3180</a>
+                    <a class="btn-highlight" href="tel:+1 310-321-3180"><span class="icn-phone"></span><?php echo $side[0]['foot'] ?></a>
                 </div>
             </div>
         </div>

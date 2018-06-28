@@ -643,7 +643,7 @@
         </ul>
 
         <div class="section_btns">
-            <a href="index.php/city" class="btn-highlight">
+            <a href="/index.php/city" class="btn-highlight">
                 更多目的地<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span>
             </a>
         </div>

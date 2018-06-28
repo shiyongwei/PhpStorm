@@ -11,6 +11,7 @@
 				$this -> load -> model('admin/Team_model');
 				$this -> load -> model('admin/Uriving_model');
 				$this -> load -> model('admin/Text_model');
+				$this -> load -> model('admin/Promotions_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
@@ -24,9 +25,10 @@
 				$teaminfo = $this->Team_model->getAll($cit_id);
 				$bottom_info = $this->Text_model->get_name('');
 				$bottom_info_all = $this->Text_model->get_name_all('');
+				$promotion = $this->Promotions_model->get_status('');
 
 //				echo  '<pre>';
-//				print_r($cityinfo);
+//				print_r($promotion);
 //				echo  '<pre>';
 
 				$data['rent_list'] = $rent_list;
@@ -38,9 +40,10 @@
 				$data['teaminfo'] = $teaminfo;
 				$data['bottom_info'] = $bottom_info;
 				$data['bottom_info_all'] = $bottom_info_all;
+				$data['promotion'] = $promotion;
 
 				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
-				$this -> load -> view('jingxuan_detail',$city,$cityinfo,$rentinfo,$teaminfo);
+				$this -> load -> view('jingxuan_detail',$city,$cityinfo,$rentinfo,$teaminfo,$promotion);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all);
 			}
 		}

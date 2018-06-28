@@ -28,6 +28,22 @@ class Promotions_model extends CI_Model
             }
 
         }
+
+		public function get_status ($data)
+		{
+			if ($data == '')
+			{
+				return $this->db ->where('status',1)->get(self::TBL_NAMR)->result_array();
+			}
+			else
+			{
+				$condition['id'] = $data;
+
+				return $this->db->where($condition)->get(self::TBL_NAMR)->result_array();
+			}
+
+		}
+
         public function getAll($data){
 
             $query = $this -> db -> where($data) -> get(self::TBL_NAMR);
