@@ -632,7 +632,7 @@
 			<?php foreach ($get_limits as $key=>$get_limit): ?>
             <li class="span3">
 
-                <a class="thumbnail" title="Los Angeles" href="index.php/jingxuan_detail?id=<?php echo $get_limit['cit_id']?>">
+                <a class="thumbnail" title="Los Angeles" href="/index.php/jingxuan_detail?id=<?php echo $get_limit['cit_id']?>">
                     <img style="height: 320px;" src="<?php echo $get_limit['logo']?>" alt="Los Angeles">
                     <p>
 						<?php echo $get_limit['cit_name']?>

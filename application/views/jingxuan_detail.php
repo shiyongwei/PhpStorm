@@ -2168,7 +2168,7 @@
 		<div class="container psection" id="js-viewMore detail_for">
 			<div class="row wrapperSeparate" id="detail_5">
 				<div class="span12 topMotor" id="detail_6">
-					<a class="js-viewAllTrigger" href="Rent?id=0" id="detail_7" style="background: rgba(248,202,62,0.4);">
+					<a class="js-viewAllTrigger" href="Rent_city?id=<?php echo $cityinfo['cit_id']?>" id="detail_7" style="background: rgba(248,202,62,0.4);">
 						<h2 class="secTitle" id="detail_8">
 							<span class="bold" style="font-weight: bold;">摩托车出租</span>
 							在 <?php echo $cityinfo['cit_name']?>
