@@ -14,79 +14,37 @@ class Explore extends CI_Controller
         {
             parse_str($_POST['str'], $arr);
 
-            if (empty($arr['id']))
+            $data['explore_id'] = $arr['id'];
+            $data['increase_name'] = $arr['increase_name'];
+            $data['motorcycle'] = $arr['motorcycle'];
+            $data['friendly'] = $arr['friendly'];
+            $data['customize'] = $arr['customize'];
+            $data['routes'] = $arr['routes'];
+            $data['eaglerider'] = $arr['eaglerider'];
+            $data['support'] = $arr['support'];
+            $data['spare'] = $arr['spare'];
+            $data['professional'] = $arr['professional'];
+            $data['bilingual'] = $arr['bilingual'];
+            $data['experience'] = $arr['experience'];
+            $data['breakfast'] = $arr['breakfast'];
+            $data['gasolin'] = $arr['gasolin'];
+            $data['banquet'] = $arr['banquet'];
+            $data['farewell'] = $arr['farewell'];
+            $data['price'] = $arr['price'];
+            $data['text'] = $arr['editorValue'];
+            $data['time'] = date('Y-m-d H:i:s');
+
+            if ($this -> Explore_model -> update_edit($data))
             {
-                $data['increase_name'] = $arr['increase_name'];
-                $data['motorcycle'] = $arr['motorcycle'];
-                $data['friendly'] = $arr['friendly'];
-                $data['customize'] = $arr['customize'];
-                $data['routes'] = $arr['routes'];
-                $data['eaglerider'] = $arr['eaglerider'];
-                $data['support'] = $arr['support'];
-                $data['spare'] = $arr['spare'];
-                $data['professional'] = $arr['professional'];
-                $data['bilingual'] = $arr['bilingual'];
-                $data['experience'] = $arr['experience'];
-                $data['breakfast'] = $arr['breakfast'];
-                $data['gasolin'] = $arr['gasolin'];
-                $data['banquet'] = $arr['banquet'];
-                $data['farewell'] = $arr['farewell'];
-                $data['price'] = $arr['price'];
-                $data['time'] = date('Y-m-d H:i:s');
+                echo 200;
 
-                if ($arr['price'] !== '')
-                {
-
-                    if ($this -> Explore_model -> add_explore($data))
-                    {
-                        echo 200;
-
-                    }
-                    else
-                    {
-
-                        echo 300;
-
-                    }
-                }
-                else
-                {
-                    echo 300;
-                }
             }
             else
             {
-                $data['explore_id'] = $arr['id'];
-                $data['increase_name'] = $arr['increase_name'];
-                $data['motorcycle'] = $arr['motorcycle'];
-                $data['friendly'] = $arr['friendly'];
-                $data['customize'] = $arr['customize'];
-                $data['routes'] = $arr['routes'];
-                $data['eaglerider'] = $arr['eaglerider'];
-                $data['support'] = $arr['support'];
-                $data['spare'] = $arr['spare'];
-                $data['professional'] = $arr['professional'];
-                $data['bilingual'] = $arr['bilingual'];
-                $data['experience'] = $arr['experience'];
-                $data['breakfast'] = $arr['breakfast'];
-                $data['gasolin'] = $arr['gasolin'];
-                $data['banquet'] = $arr['banquet'];
-                $data['farewell'] = $arr['farewell'];
-                $data['price'] = $arr['price'];
-                $data['text'] = $arr['editorValue'];
-                $data['time'] = date('Y-m-d H:i:s');
 
-                if ($this -> Explore_model -> update_edit($data))
-                {
-                    echo 200;
-
-                }
-                else
-                {
-
-                    echo 404;
-                }
+                echo 404;
             }
+
         }
 
         public function explore_del()

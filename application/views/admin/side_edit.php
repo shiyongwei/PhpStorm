@@ -45,15 +45,9 @@
                 </div>
             </div>
             <div class="row cl">
-                <label class="form-label col-xs-4 col-sm-2">描述中部：</label>
-                <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" name="foot" id="" placeholder="" value="<?php echo $side['foot'];?>" class="input-text">
-                </div>
-            </div>
-            <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">描述底部：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" name="central" id="" placeholder="" value="<?php echo $side['central'];?>" class="input-text">
+                    <input type="text" name="foot" id="" placeholder="" value="<?php echo $side['foot'];?>" class="input-text">
                 </div>
             </div>
         <div class="row cl">

@@ -18,7 +18,7 @@ class Side extends CI_Controller
             $data['title'] = $arr['title'];
             $data['head'] = $arr['head'];
             $data['foot'] = $arr['foot'];
-            $data['central'] = $arr['central'];
+
 
             if(!empty($arr['image'])){
 

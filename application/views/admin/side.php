@@ -37,7 +37,6 @@
             <th width="50">标题</th>
             <th width="50">描述</th>
             <th width="50">描述</th>
-            <th width="50">描述</th>
             <th width="50">图片</th>
             <th width="50">操作</th>
         </tr>
@@ -48,7 +47,6 @@
                 <td><?php echo $value['id']; ?></td>
                 <td><?php echo $value['title']; ?></td>
                 <td><?php echo $value['head']; ?></td>
-                <td><?php echo $value['central']; ?></td>
                 <td><?php echo $value['foot']; ?></td>
                 <td>
                     <?php if (!empty($value['image'])): ?>
