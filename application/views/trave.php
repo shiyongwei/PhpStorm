@@ -12,11 +12,11 @@
                         <div class="options js-options">
                             <ul class="optionsblk widgetTabs">
                                 <li class=" js-rentalTrigger">
-                                    <a href="Javascript:;">租赁</a>
+                                    <a href="/index.php/Home">租赁</a>
                                 </li>
 
                                 <li class="packages ">
-                                    <a href="/hotels">摩托车 &amp; 酒店</a>
+                                    <a href="/index.php/Hotels">摩托车 &amp; 酒店</a>
                                 </li>
 
                                 <li class="selected js-toursTrigger">
@@ -24,7 +24,7 @@
                                 </li>
 
                                 <li class="deals">
-                                    <a href="Javascript:;">促销特惠</a>
+                                    <a href="/index.php/Discounts">促销特惠</a>
                                 </li>
 
 
@@ -2619,25 +2619,25 @@
                 <svg>
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.eaglerider.com/assets/v2/dest/dest-a869bb21a4d43da79e8ac8d2de38ffdd.svg#GUIDED-TOURS"></use>
                 </svg>
-                <span style="margin-bottom: 10px;text-align: center;display: block;color: white;">团队旅行</span>
+                <span style="margin-bottom: 10px;text-align: center;display: block;color: white;"><?php echo $explode[3]['increase_name'] ?></span>
             </a>
             <a href="Javascript:;" class="js-selfDriveTrigger active" style="float: left;width: 24%;background: #303030;margin-left: 8px;">
                 <svg>
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.eaglerider.com/assets/v2/dest/dest-a869bb21a4d43da79e8ac8d2de38ffdd.svg#SELF-DRIVE-TOURS"></use>
                 </svg>
-                <span style="margin-bottom: 10px;text-align: center;display: block;color: white;">自驾旅行</span>
+                <span style="margin-bottom: 10px;text-align: center;display: block;color: white;"><?php echo $explode[2]['increase_name'] ?></span>
             </a>
             <a href="Javascript:;" class="js-bikeAndHotelTrigger" style="float: left;width: 24%;background: #303030;margin-left: 8px;">
                 <svg>
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.eaglerider.com/assets/v2/dest/dest-a869bb21a4d43da79e8ac8d2de38ffdd.svg#BIKE+HOTEL"></use>
                 </svg>
-                <span style="margin-bottom: 10px;text-align: center;display: block;color: white;">摩托车 + 酒店</span>
+                <span style="margin-bottom: 10px;text-align: center;display: block;color: white;"><?php echo $explode[1]['increase_name'] ?></span>
             </a>
             <a href="Javascript:;" class="js-bikeOnlyTrigger" style="float: left;width: 24%;background: #303030;margin-left: 8px;">
                 <svg>
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.eaglerider.com/assets/v2/dest/dest-a869bb21a4d43da79e8ac8d2de38ffdd.svg#BIKE-ONLY"></use>
                 </svg>
-                <span style="margin-bottom: 10px;text-align: center;display: block;color: white;">只有摩托车</span>
+                <span style="margin-bottom: 10px;text-align: center;display: block;color: white;"><?php echo $explode[0]['increase_name'] ?></span>
             </a>
         </div>
     </div>
@@ -2660,26 +2660,12 @@
     <!-- guided_tours -->
     <div class="row featured-tours guided_tours js-guidedTours new_text" style="display: block;margin-top: 25px;">
         <div class="span8" style="padding-left: 10px;">
-            <h2>
-                摩托车跟团游
-            </h2>
-            <p>我们的团队旅行为您考虑到了旅行的方方面面，将为您提供最完善的旅行服务。旅行中我们为您的团队配备了专业的导游和一辆载有备用摩托车的支持车辆。当您和您的团队完成整个旅行时，相信您还会遇上很多志同道合的朋友们呢。</p>
-
-            <div class="row">
-                <div class="list-group clearfix" style="width: 75%;
-    margin: 0 auto;">
-
-                    <img src="/public/image/gentuan.png">
-                </div>
-            </div>
+			<?php echo $explode[3]['text'] ?>
         </div>
 
         <div class="span4 featuredTours" style="margin-top: 15px;width: 355px !important;">
-            <a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8" class="btn-highlight" style="width: auto;text-align: left;margin: 5px 0;clear: both;">
+            <a href="/index.php/team" class="btn-highlight" style="width: auto;text-align: left;margin: 5px 0;clear: both;">
                 查看所有团队旅行
-            </a>
-            <a class="btn-highlight" href="/%E6%91%A9%E6%89%98%E8%BD%A6%E6%97%85%E6%B8%B8/2018-motorcycle-tours" style="width: auto;text-align: left;margin: 5px 0;clear: both;">
-                团队旅行日历
             </a>
 
             <a class="btn-highlight js-readMore" href="Javascript:;" style="width: auto;text-align: left;margin: 5px 0;clear: both;">
@@ -2691,22 +2677,11 @@
     <!-- self_drive -->
     <div class="row featured-tours guided_tours js-guidedTours new_text" style="display: block;margin-top: 25px;display: none;" >
         <div class="span8" style="padding-left: 10px;">
-            <h2>
-                摩托车自驾游
-            </h2>
-            <p>自驾游旅行包含了一辆最新型的摩托车租赁，高标准的酒店住宿，详细的每日行程安排和酒店与EagleRider门店间的免费接送服务。每条路线都是由我们的专业旅行团队精心策划安排的，它将带领您领略沿途最美丽的风景。您可以从上百条路线中选择最适合您骑行的路线，或者您也可以选择由我们的专业人员为您量身定制您的“梦想之旅”！</p>
-
-            <div class="row">
-                <div class="list-group clearfix" style="width: 75%;
-    margin: 0 auto;">
-
-                    <img src="/public/image/zijia.png">
-                </div>
-            </div>
+			<?php echo $explode[2]['text'] ?>
         </div>
 
         <div class="span4 featuredTours" style="margin-top: 15px;width: 355px !important;">
-            <a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8" class="btn-highlight ccc" style="width: auto;text-align: left;margin: 5px 0;clear: both;">
+            <a href="/index.php/classify" class="btn-highlight ccc" style="width: auto;text-align: left;margin: 5px 0;clear: both;">
                 查看所有自驾旅行线路
             </a>
 
@@ -2719,22 +2694,11 @@
     <!-- road_trip -->
     <div class="row featured-tours guided_tours js-guidedTours new_text" style="display: block;margin-top: 25px;display: none;">
         <div class="span8" style="padding-left: 10px;">
-            <h2>
-                摩托车 + 酒店
-            </h2>
-            <p>每个人对于如何体验摩托车旅行有着自己独有的方式。有人喜欢和团队一起享受骑行的乐趣，也有人则只需要一辆车就可以直接开始旅行。不管是哪种方式，每位骑行者都需要在旅途中安排合适的酒店，让您在完成一天的骑行后可以在舒适的房间里休息。</p>
-
-            <div class="row">
-                <div class="list-group clearfix" style="width: 75%;
-    margin: 0 auto;">
-
-                    <img src="/public/image/mt.jpg">
-                </div>
-            </div>
+			<?php echo $explode[1]['text'] ?>
         </div>
 
         <div class="span4 featuredTours" style="margin-top: 15px;width: 355px !important;">
-            <a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8" class="btn-highlight" style="width: auto;text-align: left;margin: 5px 0;clear: both;">
+            <a href="/index.php/hotels" class="btn-highlight" style="width: auto;text-align: left;margin: 5px 0;clear: both;">
                 查看所有摩托车＋酒店套餐
             </a>
 
@@ -2746,22 +2710,11 @@
     <!-- bike-hotel -->
     <div class="row featured-tours guided_tours js-guidedTours new_text" style="display: block;margin-top: 25px;display: none;">
         <div class="span8" style="padding-left: 10px;">
-            <h2>
-                只有摩托车
-            </h2>
-            <p>我们的摩托车队伍数量非常庞大，并且每辆摩托车都由专业人员精心维护。在这里，您可以租到哈雷、印第安、凯旋、宝马和本田等品牌的摩托车，不仅如此，我们还提供ATV（全地形摩托车）、轻型摩托车以及踏板摩托车的出租。另外，我们在全球范围内拥有100多家摩托车租赁门店，您可以选择在任意门店取车或者还车。很多门店会为您提供其他服务，包括酒店的接送服务，免费停车以及行李存储等。</p>
-
-            <div class="row">
-                <div class="list-group clearfix" style="width: 75%;
-    margin: 0 auto;">
-
-                    <img src="/public/image/one.png">
-                </div>
-            </div>
+			<?php echo $explode[0]['text'] ?>
         </div>
 
         <div class="span4 featuredTours" style="margin-top: 15px;width: 355px !important;">
-            <a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8" class="btn-highlight" style="width: auto;text-align: left;margin: 5px 0;clear: both;">
+            <a href="/index.php/rent?id=0" class="btn-highlight" style="width: auto;text-align: left;margin: 5px 0;clear: both;">
 
                 查看所有摩托车套餐
 

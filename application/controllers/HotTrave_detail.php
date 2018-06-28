@@ -14,12 +14,14 @@
 				$this -> load -> model('admin/Uriving_model');
 				$this -> load -> model('admin/Explore_model');
 				$this -> load -> model('admin/Text_model');
+				$this -> load -> model('admin/Side_model');
 			}
 			public function index(){
 				$rent_list = $this->Product_model->get('');//热门租赁分类
 				$city = $this->City_model->get();
 				$get_limit = $this->City_model->get_limit();
 				$bottom_info = $this->Text_model->get_name('');
+				$side = $this->Side_model->get_name('');
 				$bottom_info_all = $this->Text_model->get_name_all('');
 				$navigation = $this->Navigation_model->get_name('');
 				$id['topic_id'] = $_GET['id'];
@@ -50,11 +52,12 @@
 				$data['uriving_limit'] = $uriving_limit;
 				$data['bottom_info'] = $bottom_info;
 				$data['bottom_info_all'] = $bottom_info_all;
+				$data['side'] = $side;
 
 
 				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
 				$this -> load -> view('hotTrave_detail',$city,$hotreave_detail,$team_limit,$uriving_limit);
-				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all);
+				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
 			}
 		}
 

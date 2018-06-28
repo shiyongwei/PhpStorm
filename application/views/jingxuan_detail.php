@@ -2269,7 +2269,7 @@
 						<div class="bot_section span12 featured_deals js-dealsSection">
 							<h2>
 								<span class="bold">特价摩托车</span>
-								在 拉斯维加斯门店
+								在 <?php echo $cityinfo['cit_name']?>
 							</h2>
 
 							<table class="table specialsTable">
@@ -2279,78 +2279,17 @@
 									<th>价值</th>
 								</tr>
 
+								<?php foreach ($promotion as $key=>$promotions): ?>
 								<tr>
 									<td>
-										<span>2017骑往斯特吉斯</span>
+										<span><?php echo $promotions['promtitle']?></span>
 									</td>
 
 									<td>
-										<div class="discount_container"><span class="discount_before" dir="ltr">¥1,031.72/天</span> <span class="discount_after">¥642.39<small>/天</small></span> </div>
+										<div class="discount_container"><span class="discount_before" dir="ltr"><?php echo $promotions['worth']?></span> <span class="discount_after"><?php echo $promotions['price']?></small></span> </div>
 									</td>
 								</tr>
-								<tr>
-									<td>
-										<span>Active Police, Firemen, Military, and Veterans - 5% Off Your Next Rental *Available for USA Residents</span>
-									</td>
-
-									<td>
-										<div class="discount_container"><span class="discount_percentage">5% <small>折扣</small></span> </div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>AMA会员租赁摩托车可享95折优惠——仅使用于美国居民</span>
-									</td>
-
-									<td>
-										<div class="discount_container"><span class="discount_percentage">5% <small>折扣</small></span> </div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>ONE WAY SPECIALS FROM LAS VEGAS TO JACKSON HOLE</span>
-									</td>
-
-									<td>
-										<div class="discount_container"><span class="discount_before" dir="ltr">¥1,031.72/天</span> <span class="discount_after">¥577.50<small>/天</small></span> </div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>ONE WAY SPECIALS FROM LAS VEGAS TO JACKSON HOLE</span>
-									</td>
-
-									<td>
-										<div class="discount_container"><span class="discount_before" dir="ltr">¥1,031.72/天</span> <span class="discount_after">¥577.50<small>/天</small></span> </div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>One Way Specials from Las Vegas to Jackson Hole on Harley-Davidson® Heritage Softail®</span>
-									</td>
-
-									<td>
-										<div class="discount_container"><span class="discount_before" dir="ltr">¥966.83/天</span> <span class="discount_after">¥577.50<small>/天</small></span> </div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>One Way Specials from Las Vegas to Jackson Hole on Harley-Davidson® Road Glide®</span>
-									</td>
-
-									<td>
-										<div class="discount_container"><span class="discount_before" dir="ltr">¥1,031.72/天</span> <span class="discount_after">¥577.50<small>/天</small></span> </div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<span>One Way Specials from Las Vegas to Jackson Hole on Harley-Davidson® Street Glide®</span>
-									</td>
-
-									<td>
-										<div class="discount_container"><span class="discount_before" dir="ltr">¥1,031.72/天</span> <span class="discount_after">¥577.50<small>/天</small></span> </div>
-									</td>
-								</tr>
+								<?php endforeach; ?>
 								</tbody>
 							</table>
 

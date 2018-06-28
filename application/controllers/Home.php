@@ -22,7 +22,7 @@ class Home extends CI_Controller
         public function index ()
         {
             $rent_list = $this->Product_model->get('');
-            $promotiom = $this->Promotions_model->get('');
+            $promotiom = $this->Promotions_model->get_status('');
             $navigation = $this->Navigation_model->get_name('');
 			$bottom = $this->Bottom_model->get_name('');
 			$city = $this->City_model->get();
@@ -35,7 +35,7 @@ class Home extends CI_Controller
 
 
 //			echo  '<pre>';
-//			print_r($bottom_info_all[7]);
+//			print_r($side);
 //			echo  '<pre>';
 
 
@@ -53,7 +53,7 @@ class Home extends CI_Controller
 
             $this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
             $this -> load -> view('home',$promotiom,$bottom,$city,$text,$side,$get_limits);
-            $this -> load -> view('common/home/foot',$rent_list,$city,$get_limit,$bottom_info,$bottom_info_all);
+            $this -> load -> view('common/home/foot',$rent_list,$city,$get_limit,$bottom_info,$bottom_info_all,$side);
         }
         //酒店
         public function hotels ()

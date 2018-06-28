@@ -11,6 +11,8 @@ class Trave extends CI_Controller{
 		$this -> load -> model('admin/Text_model');
 		$this -> load -> model('admin/Team_model');
 		$this -> load -> model('admin/Uriving_model');
+		$this -> load -> model('admin/Explore_model');
+		$this -> load -> model('admin/Side_model');
         $this -> load -> helper(array('form', 'url'));
     }
     public function index(){
@@ -20,11 +22,13 @@ class Trave extends CI_Controller{
 		$get_limit = $this->City_model->get_limit();
 		$bottom_info = $this->Text_model->get_name('');
 		$classifyinfo = $this->Uriving_model->get_limit('');
+		$explode = $this->Explore_model->get('');
+		$side = $this->Side_model->get_name('');
 
 		$bottom_info_all = $this->Text_model->get_name_all('');
 
 //						echo  '<pre>';
-//						print_r($city);
+//						print_r($explode);
 //						echo  '<pre>';
 
         $data['rent_list'] = $rent_list;
@@ -34,11 +38,13 @@ class Trave extends CI_Controller{
 		$data['bottom_info'] = $bottom_info;
 		$data['bottom_info_all'] = $bottom_info_all;
 		$data['classifyinfo'] = $classifyinfo;
+		$data['explode'] = $explode;
+		$data['side'] = $side;
 
 
         $this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
-        $this -> load -> view('trave',$city,$classifyinfo);
-        $this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all);
+        $this -> load -> view('trave',$city,$classifyinfo,$explode);
+        $this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
     }
 }
 
