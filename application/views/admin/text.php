@@ -49,7 +49,6 @@
                 </td>
                 <td class="td-manage">
                         <a title="编辑" href="javascript:;" onclick="name_edit('文章','text_edit?id=<?php echo $item['id']; ?>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                        <a title="删除" href="javascript:;" onclick="name_del(this,'<?php echo $item['id']; ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
                 </td>
             </tr>
         <?php endforeach; ?>
