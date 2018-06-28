@@ -40,14 +40,14 @@
         </div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">
-                <span class="c-red">*</span>最新型的摩托车租赁：</label>
+                <span class="c-red">*</span>摩托车租赁：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-1"  name="motorcycle" value="1" <?php $explore[0]['motorcycle'] == 1 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-1"  name="motorcycle" value="1" <?php echo $explore[0]['motorcycle'] == 1 ? 'checked' : '';?>>
                             <label for="radio-1">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-1" value="2" name="motorcycle" <?php echo $explore[0]['motorcycle'] == 2 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-2" value="2" name="motorcycle" <?php echo $explore[0]['motorcycle'] == 2 ? 'checked' : '';?>>
                             <label for="radio-1">NO</label>
                         </div>
                 </div>
