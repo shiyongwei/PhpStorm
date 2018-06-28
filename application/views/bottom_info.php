@@ -792,25 +792,22 @@
 
 
 			<div class="barblock needHelp ">
-				<img src="https://d1y9jrrtx2baf.cloudfront.net/assets/desktop/layout/need_help-69e7631247308fb6cb28fa1719efe3ff.jpg" alt="鹰骑帮助">
+				<img src="<?php echo $side[0]['image'] ?>" alt="鹰骑帮助">
 				<span class="need_help_text">
     需要<strong>帮助？ </strong>
   </span>
 				<div class="needHelpContent">
 					<div class="contact_us_help">
 						<div class="email_us">
-							<a title="Frequent Questions" href="/faqs/%E6%91%A9%E6%89%98%E8%BD%A6%E5%87%BA%E7%A7%9F" class="btn-highlight">
-								<span class="icn-faq"></span>常见问题
-							</a>
-							<a title="Email Us" href="/contact_us_help.js" class="btn-highlight js-captureLeadTrigger" rel="nofollow">
-								<span class="icn-email"></span>联系我们！
+							<a title="Frequent Questions" href="/index.php/Bottom_info" class="btn-highlight">
+								<span class="icn-faq"></span><?php echo $side[0]['head'] ?>
 							</a>
 
 							<div class="clearfix"></div>
 						</div>
 
 						<p class="phon_numbers">
-							<a href="tel:+1 310-321-3180">+1 310-321-3180</a>
+							<a href="tel:+1 310-321-3180"><?php echo $side[0]['foot'] ?></a>
 						</p>
 					</div>
 				</div>
