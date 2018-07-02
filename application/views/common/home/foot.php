@@ -151,11 +151,12 @@
                             </a>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </div><!-- row-fluid -->
     </div><!-- footer links -->
-
+    <div style="display: none;"><?php echo $bottom_info_all[8]['text'];?></div>
     <div class="footerSummary">
         <div class="container">
             <div class="row-fluid">

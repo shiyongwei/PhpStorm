@@ -22,9 +22,7 @@
 				$side = $this->Side_model->get_name('');
 
 
-//				echo '<pre>';
-//				print_r($bottom_info);
-//				echo '</pre>';
+
 
 
 				$data['rent_list'] = $rent_list;
