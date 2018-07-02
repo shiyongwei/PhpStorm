@@ -10,7 +10,6 @@
 				$this -> load -> model('admin/City_model');
 				$this -> load -> model('admin/Text_model');
 				$this -> load -> model('admin/Side_model');
-				$this -> load -> model('admin/Side_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){

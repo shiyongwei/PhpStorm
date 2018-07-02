@@ -2294,7 +2294,7 @@
 							</table>
 
 							<div class="section_btns">
-								<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E7%89%B9%E6%83%A0/las-vegas-main-depot" class="btn-darkHighlight">
+								<a href="/index.php/Discounts" class="btn-darkHighlight">
 									更多促销特惠
 
 									<span class="btn-decor"></span>
