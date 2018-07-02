@@ -27,7 +27,7 @@ class Home extends CI_Controller
 			$bottom = $this->Bottom_model->get_name('');
 			$city = $this->City_model->get();
 			$get_limit = $this->City_model->get_limit();
-			$get_limits = $this->City_model->get_limit();
+			$get_limits = $this->City_model->get_limits();
 			$text = $this->Background_model->get_name('');
 			$side = $this->Side_model->get_name('');
 			$bottom_info = $this->Text_model->get_name('');
@@ -35,7 +35,7 @@ class Home extends CI_Controller
 
 
 //			echo  '<pre>';
-//			print_r($side);
+//			print_r($get_limit);
 //			echo  '<pre>';
 
 
