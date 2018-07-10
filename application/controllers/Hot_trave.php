@@ -10,7 +10,10 @@ class Hot_trave extends CI_Controller{
 		$this -> load -> model('admin/Navigation_model');
 		$this -> load -> model('admin/City_model');
 		$this -> load -> model('admin/Text_model');
+        $this -> load -> model('admin/Explore_model');
 		$this -> load -> model('admin/Side_model');
+        $this -> load -> model('admin/Team_model');
+        $this -> load -> model('admin/Uriving_model');
         $this -> load -> helper(array('form', 'url'));
     }
     public function index(){
@@ -39,6 +42,32 @@ class Hot_trave extends CI_Controller{
         $this -> load -> view('hot_trave',$topic);
         $this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
     }
+
+        public function mobile_hot_trave(){
+
+
+            $data['topic'] = $this->Topic_model->get('');
+
+            $this -> load -> view('mobile/mobile_hot_trave',$data);
+
+        }
+        public function mobile_hotTrave_detail(){
+
+            $id['topic_id'] = $_GET['id'];
+
+            $data['topic'] = $this->Topic_model->getAll($id);
+            $exone_one['explore_id'] =1;
+            $data['one'] = $this->Explore_model->getAll($exone_one);
+            $exone_three['explore_id'] =3;
+            $data['three'] = $this->Explore_model->getAll($exone_three);
+            $exone_four['explore_id'] =4;
+            $data['four'] = $this->Explore_model->getAll($exone_four);
+
+            $data['team_limit'] = $this->Team_model->get_limit();
+            $data['uriving_limit'] = $this->Uriving_model->get_limit();
+            $this -> load -> view('mobile/mobile_hotTrave_detail',$data);
+
+        }
 }
 
 

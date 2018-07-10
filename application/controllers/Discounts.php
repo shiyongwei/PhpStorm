@@ -42,7 +42,25 @@
 				$this -> load -> view('discounts',$promotion,$city);
 				$this -> load -> view('common/home/foot',$rent_list,$bottom_info,$bottom_info_all,$side);
 			}
-		}
+            public function mobile_Discount(){
+
+                $data['city'] = $this->City_model->get();
+
+                $data['promotion'] = $this->Promotions_model->get('');
+
+                $this -> load -> view('mobile/mobile_Discounts',$data);
+
+            }
+            public function mobile_Discount_info(){
+
+			    $id = $_GET['id'];
+
+                $data['promotion'] = $this->Promotions_model->get($id);
+
+                $this -> load -> view('mobile/mobile_Discounts_info',$data);
+
+            }
+	}
 
 
 

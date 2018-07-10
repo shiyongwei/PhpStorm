@@ -45,6 +45,25 @@
 				$this -> load -> view('activity',$column,$activity,$city,$side);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
 			}
+
+            public function mobile_Artivity(){
+
+
+                $data['column'] =  $this->Column_model->get('');
+                $data['city'] = $this->City_model->get();
+                if(!empty($_GET['column_id'])){
+                    $id = $_GET['column_id'];
+                    $column_get =  $this->Column_model->get($id);
+                    $data['column_name'] = $column_get[0]['column_name'];
+
+                    $data['activity'] = $this->Activityedit_model->get($id);
+                }else{
+                    $data['activity'] = $this->Activityedit_model->get('');
+                }
+                $this -> load -> view('mobile/mobile_Artivity',$data);
+
+            }
+
 		}
 
 

@@ -33,6 +33,14 @@
 				$this -> load -> view('city',$city,$side);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
 			}
+
+            public function mobile_City(){
+
+                $data['city'] = $this->City_model->get();
+
+                $this -> load -> view('mobile/mobile_City',$data);
+
+            }
 		}
 
 

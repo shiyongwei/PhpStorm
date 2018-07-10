@@ -52,7 +52,7 @@
 
 	<div class="experience_gallery">
 		<div class="row" id="gallery">
-			<h2 class="span12">66号公路 图片集锦</h2>
+			<h2 class="span12"><?php echo $hotreave_detail['topictitle']?> 图片集锦</h2>
 		</div>
 
 		<div class="row-fluid">
@@ -80,7 +80,7 @@
 		</div>
 		<div class="row">
 			<div class="span12">
-				<p>EagleRider为您提供了许多不同的方式来探索66号公路！</p>
+				<p>EagleRider为您提供了许多不同的方式来探索<?php echo $hotreave_detail['topictitle']?>！</p>
 			</div>
 		</div>
 		<div class="row">
@@ -111,28 +111,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['motorcycle'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['motorcycle'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['motorcycle'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 
@@ -143,28 +143,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['friendly'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['friendly'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['friendly'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 						<td>摩托车友好酒店</td>
@@ -174,28 +174,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['customize'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['customize'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['customize'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 						<td>可以定制属于自己的旅行路线</td>
@@ -205,28 +205,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['routes'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['routes'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['routes'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 
@@ -237,28 +237,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['eaglerider'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['eaglerider'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['eaglerider'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 
@@ -269,28 +269,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['support'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['support'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['support'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 						<td>运送行李的支持车辆</td>
@@ -300,28 +300,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['spare'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['spare'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['spare'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 
@@ -332,28 +332,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['professional'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['professional'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['professional'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 
@@ -364,28 +364,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['bilingual'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['bilingual'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['bilingual'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 
@@ -396,28 +396,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['experience'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['experience'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['experience'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 						<td>团队旅行体验</td>
@@ -427,28 +427,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['breakfast'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['breakfast'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['breakfast'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 
@@ -459,28 +459,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['gasolin'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['gasolin'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['gasolin'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 
@@ -491,28 +491,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['banquet'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['banquet'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['banquet'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 
@@ -523,28 +523,28 @@
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($three['farewell'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($two['farewell'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
                         <?php if ($one['farewell'] == 2): ?>
                             <td></td>
                         <?php else: ?>
                             <td>
-                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png">
+                                <img class="" src="/public/image/ok-244c1473b45f64723154233498465e27.png">
                             </td>
                         <?php endif; ?>
 
@@ -613,7 +613,7 @@
                     <div class="tour span3 js-tourContainer slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 270px;">
 						<a href="team_detail?id=<?php echo $team_limits['id']?>" tabindex="0">
 							<div class="img_cont">
-								<img alt="Route 66 West: Chicago to Albuquerque Motorcycle Tour" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/tours/285/maps/size368c/Route_66_East_Map.jpg?1453918800">
+								<img alt="Route 66 West: Chicago to Albuquerque Motorcycle Tour" class="tour_image" src="/public/image/Route_66_East_Map.jpg">
 								<span class="tour_name">
                   <span><?php echo $team_limits['teamtitle']?></span>
                   <span class="tour_type">团队游</span>
@@ -654,7 +654,7 @@
                         <div class="tour span3 js-tourContainer slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 270px;">
                             <a href="detail?id=<?php echo $uriving_limits['id']?>" tabindex="0">
                                 <div class="img_cont">
-                                    <img alt="Route 66 West: Chicago to Albuquerque Motorcycle Tour" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/tours/285/maps/size368c/Route_66_East_Map.jpg?1453918800">
+                                    <img alt="Route 66 West: Chicago to Albuquerque Motorcycle Tour" class="tour_image" src="/public/image/Route_66_East_Map.jpg">
                                     <span class="tour_name">
                   <span><?php echo $uriving_limits['urivingtitle']?></span>
                   <span class="tour_type">团队游</span>

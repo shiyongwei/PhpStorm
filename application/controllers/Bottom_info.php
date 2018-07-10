@@ -35,6 +35,25 @@
 				$this -> load -> view('bottom_info',$bottom_info,$side);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
 			}
+
+
+            public function mobile_Bottom_info(){
+
+                $data['text'] = $this->Text_model->get_name('');
+
+                $this -> load -> view('mobile/mobile_Bottom_info',$data);
+
+            }
+            public function mobile_Bottom(){
+
+                $id['id']=$_GET['id'];
+
+                $data['text'] = $this->Text_model->get_name($id);
+
+                $this -> load -> view('mobile/mobile_Bottom',$data);
+
+            }
+
 		}
 
 
