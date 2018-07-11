@@ -26,6 +26,8 @@ class Trave extends CI_Controller{
 		$explode = $this->Explore_model->get('');
 		$side = $this->Side_model->get_name('');
 		$topic = $this->Topic_model->get('');
+		$team = $this->Team_model->get('');
+		$uriving = $this->Uriving_model->get('');
 
 		$bottom_info_all = $this->Text_model->get_name_all('');
 
@@ -43,12 +45,51 @@ class Trave extends CI_Controller{
 		$data['explode'] = $explode;
 		$data['side'] = $side;
 		$data['topic'] = $topic;
+		$data['team'] = $team;
+		$data['uriving'] = $uriving;
+
 
 
         $this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
         $this -> load -> view('trave',$city,$classifyinfo,$explode,$topic);
         $this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
     }
+
+		public function mobile_Trave(){
+			$rent_list = $this->Product_model->get('');//热门租赁分类
+			$navigation = $this->Navigation_model->get_name('');
+			$city = $this->City_model->get();
+			$get_limit = $this->City_model->get_limit();
+			$bottom_info = $this->Text_model->get_name('');
+			$classifyinfo = $this->Uriving_model->get_limit('');
+			$explode = $this->Explore_model->get('');
+			$side = $this->Side_model->get_name('');
+			$topic = $this->Topic_model->get('');
+			$team = $this->Team_model->get('');
+			$uriving = $this->Uriving_model->get('');
+
+			$bottom_info_all = $this->Text_model->get_name_all('');
+
+			//						echo  '<pre>';
+			//						print_r($topic);
+			//						echo  '<pre>';
+
+			$data['rent_list'] = $rent_list;
+			$data['navigation'] = $navigation;
+			$data['city'] = $city;
+			$data['get_limit'] = $get_limit;
+			$data['bottom_info'] = $bottom_info;
+			$data['bottom_info_all'] = $bottom_info_all;
+			$data['classifyinfo'] = $classifyinfo;
+			$data['explode'] = $explode;
+			$data['side'] = $side;
+			$data['topic'] = $topic;
+			$data['team'] = $team;
+			$data['uriving'] = $uriving;
+
+			$this -> load -> view('mobile/all-trave',$data);
+		}
+
 }
 
 

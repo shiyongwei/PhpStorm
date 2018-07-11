@@ -51,10 +51,62 @@ class Home extends CI_Controller
 			$data['bottom_info'] = $bottom_info;
 			$data['bottom_info_all'] = $bottom_info_all;
 
+
+
             $this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
             $this -> load -> view('home',$promotiom,$bottom,$city,$text,$side,$get_limits);
             $this -> load -> view('common/home/foot',$rent_list,$city,$get_limit,$bottom_info,$bottom_info_all,$side);
         }
+
+		public function mobile_Home(){
+			$rent_list = $this->Product_model->get('');
+			$promotiom = $this->Promotions_model->get_status('');
+			$navigation = $this->Navigation_model->get_name('');
+			$bottom = $this->Bottom_model->get_name('');
+			$city = $this->City_model->get();
+			$get_limit = $this->City_model->get_limit();
+			$get_limits = $this->City_model->get_limits();
+			$text = $this->Background_model->get_name('');
+			$side = $this->Side_model->get_name('');
+			$bottom_info = $this->Text_model->get_name('');
+			$bottom_info_all = $this->Text_model->get_name_all('');
+
+
+			//			echo  '<pre>';
+			//			print_r($get_limit);
+			//			echo  '<pre>';
+
+
+			$data['rent_list'] = $rent_list;
+			$data['promotiom'] = $promotiom;
+			$data['navigation'] = $navigation;
+			$data['bottom'] = $bottom;
+			$data['city'] = $city;
+			$data['text'] = $text;
+			$data['get_limit'] = $get_limit;
+			$data['get_limits'] = $get_limits;
+			$data['side'] = $side;
+			$data['bottom_info'] = $bottom_info;
+			$data['bottom_info_all'] = $bottom_info_all;
+
+			$this -> load -> view('mobile/home',$data);
+
+
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
         //酒店
         public function hotels ()
         {
