@@ -91,4 +91,27 @@ class Promotions_model extends CI_Model
 
             return $this -> db -> update(self::TBL_NAMR);
         }
+
+        public function get_set_all ()
+
+        {
+
+            return  $this -> db->count_all(self::TBL_NAMR);
+
+        }
+
+
+        public function get_all ($limit,$offset)
+
+        {
+
+            $query = $this -> db->order_by('id', 'DESC')->limit($limit,$offset) -> get(self::TBL_NAMR);
+
+
+
+            return $query -> result_array();
+
+
+
+        }
     }
