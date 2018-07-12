@@ -52,11 +52,11 @@
 
     <ul>
         <li>
-            <a href="javascript:;">租赁
+            <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">租赁
             </a>
         </li>
         <li>
-            <a href="javascript:;">旅游
+            <a href="/index.php/Trave/mobile_Trave">旅游
             </a>
         </li>
         <li>
@@ -72,7 +72,7 @@
             </a>
         </li>
         <li>
-            <a href="javascript:;">网上取车登记</a>
+            <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
         </li>
     </ul>
 </nav><!-- // site nav -->
@@ -96,7 +96,7 @@
                         <ul class="list-links js-locations">
                             <?php foreach ($city as $key=>$citys): ?>
                                 <li>
-                                    <a href="javasctipt:;" class="linkTitleHeader">
+                                    <a href="/index.php/jingxuan_detail/mobile_jingxuan_detail?id=<?php echo $citys['cit_id']?>" class="linkTitleHeader">
                                         <strong><?php echo $citys['cit_name']?></strong>
                                     </a>
                                 </li>

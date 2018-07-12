@@ -45,10 +45,46 @@
 				$data['promotion'] = $promotion;
 				$data['side'] = $side;
 
+
 				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
 				$this -> load -> view('jingxuan_detail',$city,$cityinfo,$rentinfo,$teaminfo,$promotion);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
 			}
+
+			public function mobile_Jingxuan_detail(){
+				$rent_list = $this->Product_model->get('');//热门租赁分类
+				$navigation = $this->Navigation_model->get_name('');
+				$get_limit = $this->City_model->get_limit('');
+				$city = $this->City_model->get();
+				$cit_id['cit_id'] = $_GET['id'];
+				$cityinfo = $this->City_model->getAll($cit_id);
+				$rentinfo = $this->List_model->get_limit($cit_id);
+				$teaminfo = $this->Team_model->getAll($cit_id);
+				$bottom_info = $this->Text_model->get_name('');
+				$bottom_info_all = $this->Text_model->get_name_all('');
+				$promotion = $this->Promotions_model->get_status('');
+				$side = $this->Side_model->get_name('');
+
+				//				echo  '<pre>';
+				//				print_r($promotion);
+				//				echo  '<pre>';
+
+				$data['rent_list'] = $rent_list;
+				$data['navigation'] = $navigation;
+				$data['get_limit'] = $get_limit;
+				$data['city'] = $city;
+				$data['cityinfo'] = $cityinfo;
+				$data['rentinfo'] = $rentinfo;
+				$data['teaminfo'] = $teaminfo;
+				$data['bottom_info'] = $bottom_info;
+				$data['bottom_info_all'] = $bottom_info_all;
+				$data['promotion'] = $promotion;
+				$data['side'] = $side;
+
+				$this -> load -> view('mobile/jingxuan-detail',$data);
+			}
+
+
 		}
 
 
