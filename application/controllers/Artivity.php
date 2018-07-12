@@ -47,10 +47,9 @@
 			}
 
             public function mobile_Artivity(){
-
+                $data['city'] = $this->City_model->get();
 
                 $data['column'] =  $this->Column_model->get('');
-                $data['city'] = $this->City_model->get();
                 if(!empty($_GET['column_id'])){
                     $id = $_GET['column_id'];
                     $column_get =  $this->Column_model->get($id);

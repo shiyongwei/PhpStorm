@@ -163,35 +163,10 @@
                         <?php endforeach; ?>
                     </ul>
                 </div>
+
                 <div class="wrap-fullwidth">
                     <nav class="pagination pagination-large pagination-right">
-                        <ul>
-
-
-                            <li class="page active">
-                                <a href="javascript:;">1</a>
-                            </li>
-
-                            <li class="page">
-                                <a href="javascript:;" rel="next">2</a>
-                            </li>
-
-                            <li class="page">
-                                <a href="javascript:;">3</a>
-                            </li>
-
-                            <li class="page">
-                                <a href="javascript:;">4</a>
-                            </li>
-
-                            <li class="next">
-                                <a href="javascript:;" rel="next">&gt;</a>
-                            </li>
-
-                            <li class="last">
-                                <a href="javascript:;">&gt;&gt;</a>
-                            </li>
-                        </ul>
+                        <?php echo $pageinfo;?>
                     </nav>
                 </div>
             </form>
