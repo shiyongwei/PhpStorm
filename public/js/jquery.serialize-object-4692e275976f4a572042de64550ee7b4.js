@@ -1,0 +1,1 @@
+!function(e){var t={setValue:function(e,n,r){if(e.length){var u=e.shift();return u?(r[u]=t.setValue(e,n,r[u]||{}),r):r.push?(r.push(n),r):[n]}return n}};e.fn.serializeObject=function(){var n={},r=this.serializeArray(),u=null;return e.each(r,function(){u=this.name.replace(/\]/g,"").split(/\[/),t.setValue(u,this.value,n)}),n}}(jQuery);
