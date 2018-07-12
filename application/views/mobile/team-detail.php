@@ -273,17 +273,35 @@
                                     <h3 class="text-center">Itinerary</h3>
                                 </div>
 
-                                <div class="numbers"></div>
+                                <div class="numbers"><div class="active">1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div></div>
 
                                 <div class="frame featured-slider js-featured-slider" id="frame2" style="overflow: hidden;">
                                     <ul class="slides" >
+										<?php if (!empty($date)): ?>
+										<?php foreach ($date as $key =>$dates): ?>
                                         <li>
-                                            <div class="day">
-                                                <div class="row" style="margin-left: 18%;">
-													<?php echo $teams['schedule']?>
+                                            <div class="day" style="margin-left: 6%;">
+                                                <div class="row">
+                                                    <div class="small-12 card-title">
+                                                        <div class="columns">
+                                                            <h4><?php echo $dates['0'];?>
+                                                                <small class="right km">
+																	<?php echo $dates['1'];?>
+                                                                </small>
+                                                            </h4>
+                                                            <span class="tour-destination"><?php echo $dates['2']?></span>
+                                                        </div>
+
+														<?php echo $dates['3'];?>
+                                                    </div>
+                                                    <div class="small-12 columns description">
+                                                        <p><?php echo $dates['4'];?></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </li>
+                                        <?php endforeach; ?>
+										<?php endif; ?>
 
 
                                     </ul>
@@ -616,11 +634,11 @@
 
     <div class="row">
         <div class="small-6 columns">
-            <a href="https://www.eaglerider.cn/%E6%91%A9%E6%89%98%E8%BD%A6%E8%87%AA%E9%A9%BE%E6%B8%B8/southwest-ii-motorcycle-tour#" class="button secondary expanded">Cancel</a>
+            <a href="" class="button secondary expanded">Cancel</a>
         </div>
 
         <div class="small-6 columns">
-            <a href="https://www.eaglerider.cn/%E6%91%A9%E6%89%98%E8%BD%A6%E8%87%AA%E9%A9%BE%E6%B8%B8/southwest-ii-motorcycle-tour#" class="button expanded">Submit</a>
+            <a href="" class="button expanded">Submit</a>
         </div>
     </div>
 

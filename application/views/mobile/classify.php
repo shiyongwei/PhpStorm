@@ -274,7 +274,7 @@
 											</div>
 										</div>
 										<div class="card-image">
-											<img class="activator" src="<?php echo $urivings['image']?>">
+											<img class="activator" src="<?php echo $urivings['image']?>" style="height: 150px;">
 										</div>
 										<div class="card-content">
 											<ul class="menu align-left">
