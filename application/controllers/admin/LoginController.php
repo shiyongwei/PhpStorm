@@ -12,6 +12,9 @@ class LoginController extends CI_Controller
 
         public function login ()
         {
+
+
+
             #登录动作
             parse_str($_POST['str'], $arr);
 

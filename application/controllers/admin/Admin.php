@@ -35,8 +35,32 @@ class Admin extends CI_Controller
 
         public function login ()
         {
+
+			if(is_array($_GET)&&count($_GET)>0){//判断是否有Get参数
+				if(isset($_GET["lang"])){//判断所需要的参数是否存在，isset用来检测变量是否设置，返回true or false
+					$lang=$_GET["lang"];//存在
+				}
+			}else{
+				$lang = 'cn';
+			}
+
+			if ($lang == 'cn'){
+				$language = 'chinese';
+			}else{
+				$language = 'english';
+			}
+			$this -> lang ->load($lang,$language);
+
+
             $user = $this->session->userdata('user');
             $data['username']=$user['username'];
+            $data['lang']=$lang;
+			$data['content'] = $this->lang->line("content");
+
+//			echo '<pre>';
+//			print_r($data) ;exit;
+
+
 
             $this -> load -> view('admin/index',$data);
         }
@@ -426,6 +450,9 @@ class Admin extends CI_Controller
         //导航
         public function navigation ()
         {
+
+
+//        	var_dump($_GET['url']);
             $result= '';
 
             $data['navigation'] = $this -> Navigation_model -> get_name($result);

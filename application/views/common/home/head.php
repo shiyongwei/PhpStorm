@@ -1,11 +1,11 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+	defined('BASEPATH') OR exit('No direct script access allowed');
 
-header('X-Powered-By: Prod-domProjects.com');
-header('X-XSS-Protection: 1');
-header('X-Frame-Options: SAMEORIGIN');
-header('X-Content-Type-Options: nosniff');
-header('Vary: Accept-Encoding');
+	header('X-Powered-By: Prod-domProjects.com');
+	header('X-XSS-Protection: 1');
+	header('X-Frame-Options: SAMEORIGIN');
+	header('X-Content-Type-Options: nosniff');
+	header('Vary: Accept-Encoding');
 
 ?>
 <!doctype html>
@@ -31,7 +31,7 @@ header('Vary: Accept-Encoding');
     <meta content="authenticity_token" name="csrf-param" />
     <meta content="uoBkSjlEoO8tDe9al9spagB1IopTw8zocxUuavi/CmM=" name="csrf-token" />
     <link rel="shortcut icon" href="/public/image/favicon-e32d32b2d8dcbc0d4e921a2f74dd32f0.ico">
-<!--    <script src="/public/js/style.js"></script>-->
+    <!--    <script src="/public/js/style.js"></script>-->
 
     <script type="text/javascript" src="/public/DatePicker/WdatePicker.js"></script>
     <link href="/public/DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css" />
@@ -68,7 +68,7 @@ header('Vary: Accept-Encoding');
             <div class="row">
                 <div class="offset1 span3"></div>
             </div>
-            <a class="brand top-brand" href="#"><img src="<?php echo $bottom_info_all[7]['image']?>" style="width: 90px;margin-top: -11px;"></a>
+            <a class="brand top-brand" href="#"><img src="<?php echo $bottom_info_all[7]['image'] ?>" style="width: 90px;margin-top: -11px;"></a>
         </div>
     </div>
 
@@ -80,132 +80,156 @@ header('Vary: Accept-Encoding');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-				<?php foreach ($navigation as $key=>$navigations): ?>
-                <nav class="nav-collapse">
-                    <ul class="nav main-nav js-navigation topp">
-                        <li class="dropdown dropdown-bs" id="zulin">
-                            <a class="dropdown-toggle js-rentalsLink" data-toggle="dropdown" data-target="#" href="<?php echo site_url('Home'); ?>">
-								<?php echo $navigations['navigation_name']?><b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu dropdown-mega-menu" role="menu" aria-labelledby="dLabel">
-                                <li>
-                                    <div class="container">
-                                        <b class="menu-heading">热门摩托车租赁</b>
-                                        <ul class="dropmenu-uncat">
-											<?php foreach ($rent_list as $rent_lists): ?>
-                                            <li>
-                                                <a class="classify" href="/index.php/Rent?id=<?php echo $rent_lists['brand_id']?>"><?php echo $rent_lists['product_brand']?></a>
-                                            </li>
-											<?php endforeach; ?>
-                                            <li><a href="/index.php/Rent?id=<?php echo 0;?>">所有车型</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="<?php echo site_url('Hotels'); ?>" title="摩托车 &amp; 酒店"
-                               class="">
-								<?php echo $navigations['lease_name']?>
-                            </a>
-                        </li>
-
-                        <li class="dropdown dropdown-bs " id="lvyou">
-                            <a class="dropdown-toggle js-toursLink" data-toggle="dropdown"
-                               href="<?php echo site_url('Home/trave'); ?>">
-								<?php echo $navigations['hotel_name']?><b class="caret"></b>
-                            </a>
-
-                            <ul class="dropdown-menu dropdown-mega-menu dropmenu-cat" role="menu" aria-labelledby="dLabel">
-                                <li>
-                                    <div class="container">
-
-                                        <div class="dropmenu-content">
-                                            <div class="column" style="width: 23%;float: left">
-                                                <b>团队旅行</b>
-
-                                                <ul>
+				<?php foreach ($navigation as $key => $navigations): ?>
+                    <nav class="nav-collapse">
+                        <ul class="nav main-nav js-navigation topp">
+                            <li class="dropdown dropdown-bs" id="zulin">
+                                <a class="dropdown-toggle js-rentalsLink" data-toggle="dropdown" data-target="#" href="<?php echo site_url('Home'); ?>">
+									<?php echo $navigations['navigation_name'] ?><b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-mega-menu" role="menu" aria-labelledby="dLabel">
+                                    <li>
+                                        <div class="container">
+                                            <b class="menu-heading">热门摩托车租赁</b>
+                                            <ul class="dropmenu-uncat">
+												<?php foreach ($rent_list as $rent_lists): ?>
                                                     <li>
-                                                        <a href="<?php echo site_url('team'); ?>">
-                                                            摩托车团队游
-                                                        </a>
+                                                        <a class="classify" href="/index.php/Rent?id=<?php echo $rent_lists['brand_id'] ?>"><?php echo $rent_lists['product_brand'] ?></a>
                                                     </li>
-
-                                                </ul>
-                                            </div>
-
-                                            <div class="" style="width: 23%;float: left">
-                                                <b>自驾旅行</b>
-
-                                                <ul>
-                                                    <li>
-                                                        <a href="<?php echo site_url('classify'); ?>" style="margin-top: 10px;">
-                                                            摩托车自驾游
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="#" style="width: 23%;float: left;" >
-                                                <b>热门路线</b>
-
-                                                <ul>
-                                                    <li>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="<?php echo site_url('hot_trave'); ?>" style="margin-top: 10px;">
-                                                            热门摩托车旅行
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="#" style="width: 23%;float: left">
-                                                <b>所有旅行项目</b>
-
-                                                <ul>
-                                                    <li>
-                                                        <a href="<?php echo site_url('trave'); ?>" style="margin-top: 10px;">
-                                                            摩托车旅游
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+												<?php endforeach; ?>
+                                                <li><a href="/index.php/Rent?id=<?php echo 0; ?>">所有车型</a></li>
+                                            </ul>
                                         </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="<?php echo site_url('Hotels'); ?>" title="摩托车 &amp; 酒店"
+                                   class="">
+									<?php echo $navigations['lease_name'] ?>
+                                </a>
+                            </li>
 
-                                    </div>
+                            <li class="dropdown dropdown-bs " id="lvyou">
+                                <a class="dropdown-toggle js-toursLink" data-toggle="dropdown"
+                                   href="<?php echo site_url('Home/trave'); ?>">
+									<?php echo $navigations['hotel_name'] ?><b class="caret"></b>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-mega-menu dropmenu-cat" role="menu" aria-labelledby="dLabel">
+                                    <li>
+                                        <div class="container">
+
+                                            <div class="dropmenu-content">
+                                                <div class="column" style="width: 23%;float: left">
+                                                    <b>团队旅行</b>
+
+                                                    <ul>
+                                                        <li>
+                                                            <a href="<?php echo site_url('team'); ?>">
+                                                                摩托车团队游
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+                                                <div class="" style="width: 23%;float: left">
+                                                    <b>自驾旅行</b>
+
+                                                    <ul>
+                                                        <li>
+                                                            <a href="<?php echo site_url('classify'); ?>" style="margin-top: 10px;">
+                                                                摩托车自驾游
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="#" style="width: 23%;float: left;">
+                                                    <b>热门路线</b>
+
+                                                    <ul>
+                                                        <li>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="<?php echo site_url('hot_trave'); ?>" style="margin-top: 10px;">
+                                                                热门摩托车旅行
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="#" style="width: 23%;float: left">
+                                                    <b>所有旅行项目</b>
+
+                                                    <ul>
+                                                        <li>
+                                                            <a href="<?php echo site_url('trave'); ?>" style="margin-top: 10px;">
+                                                                摩托车旅游
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="top dropdown">
+                                <a href="<?php echo site_url('Discounts'); ?>">
+									<?php echo $navigations['promotions_name'] ?>
+                                </a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="<?php echo site_url('Artivity'); ?>">
+									<?php echo $navigations['activity_name'] ?>
+                                </a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="<?php echo site_url('City'); ?>">
+									<?php echo $navigations['city_name'] ?>
+                                </a>
+                            </li>
+
+
+                            <li class="dropdown">
+                                <a href="<?php echo site_url('Reg'); ?>">
+									<?php echo $navigations['online_name'] ?>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown localisation js-countriesContainer">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <span class="js-current" data-countrycode="cn" style="font-weight:bold">
+                                    切换语言
+                                </span>
+
+                                <b class="caret"></b>
+                            </a>
+
+                            <ul class="dropdown-menu pull-right" style="min-width: 100px!important;">
+                               <li>
+                                    <a class="js-changeCountryTrigger cn">
+                                        中文版
+                                    </a>
+                               </li>
+                                <li>
+                                    <a class="js-changeCountryTrigger en" data-countryid="77" data-languagecode="en" title="英国">
+                                        英文版
+                                    </a>
                                 </li>
+
                             </ul>
-                        </li>
-
-                        <li class="top dropdown">
-                            <a href="<?php echo site_url('Discounts'); ?>">
-								<?php echo $navigations['promotions_name']?>
-                            </a>
-                        </li>
-
-                        <li class="dropdown">
-                            <a href="<?php echo site_url('Artivity'); ?>">
-								<?php echo $navigations['activity_name']?>
-                            </a>
-                        </li>
-
-                        <li class="dropdown">
-                            <a href="<?php echo site_url('City'); ?>">
-								<?php echo $navigations['city_name']?>
-                            </a>
-                        </li>
-
-
-                        <li class="dropdown">
-                            <a href="<?php echo site_url('Reg'); ?>">
-								<?php echo $navigations['online_name']?>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <?php endforeach; ?>
+                        </div>
+                    </nav>
+				<?php endforeach; ?>
             </div>
         </div>
     </div>
