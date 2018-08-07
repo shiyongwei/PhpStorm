@@ -121,15 +121,6 @@
                 </ul>
             </dd>
         </dl>
-        <dl id="menu-destination">
-            <dt><i class="Hui-iconfont">&#xe64d;</i> 精选目的地<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-            <dd>
-                <ul>
-                    <li><a data-href="column" data-title="活动栏目" href="javascript:void(0)">活动栏目</a></li>
-                    <li><a data-href="activityedit" data-title="活动编辑" href="javascript:void(0)">活动编辑</a></li>
-                </ul>
-            </dd>
-        </dl>
         <dl id="menu-admin">
             <dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
