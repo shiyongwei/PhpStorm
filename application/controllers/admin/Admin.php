@@ -35,8 +35,32 @@ class Admin extends CI_Controller
 
         public function login ()
         {
+
+			if(is_array($_GET)&&count($_GET)>0){//判断是否有Get参数
+				if(isset($_GET["lang"])){//判断所需要的参数是否存在，isset用来检测变量是否设置，返回true or false
+					$lang=$_GET["lang"];//存在
+				}
+			}else{
+				$lang = 'cn';
+			}
+
+			if ($lang == 'cn'){
+				$language = 'chinese';
+			}else{
+				$language = 'english';
+			}
+			$this -> lang ->load($lang,$language);
+
+
             $user = $this->session->userdata('user');
             $data['username']=$user['username'];
+            $data['lang']=$lang;
+			$data['content'] = $this->lang->line("content");
+
+//			echo '<pre>';
+//			print_r($data) ;exit;
+
+
 
             $this -> load -> view('admin/index',$data);
         }
@@ -427,9 +451,19 @@ class Admin extends CI_Controller
         public function navigation ()
         {
             $result= '';
-
-            $data['navigation'] = $this -> Navigation_model -> get_name($result);
-
+            if(isset($_GET['lang'])){
+                $navResult = $this -> Navigation_model -> get_name($result);
+                $data['navigation'][0]['navigation_id'] = $navResult[0]['navigation_id'];
+                $data['navigation'][0]['navigation_name'] = $navResult[0]['navigation_name_en'];
+                $data['navigation'][0]['lease_name'] = $navResult[0]['lease_name_en'];
+                $data['navigation'][0]['hotel_name'] = $navResult[0]['hotel_name_en'];
+                $data['navigation'][0]['promotions_name'] = $navResult[0]['promotions_name_en'];
+                $data['navigation'][0]['activity_name'] = $navResult[0]['activity_name_en'];
+                $data['navigation'][0]['city_name'] = $navResult[0]['city_name_en'];
+                $data['navigation'][0]['online_name'] = $navResult[0]['online_name_en'];
+            }else{
+                $data['navigation'] = $this -> Navigation_model -> get_name($result);
+            }
             $this -> load -> view('admin/navigation',$data);
 
         }

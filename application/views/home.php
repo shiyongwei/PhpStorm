@@ -32,6 +32,14 @@
 			document.location.href = '/index.php/Home/mobile_Home';
 		}
 	});
+
+	$('.en').click(function() {
+        window.location.href='/index.php/Home?lang=en';
+	});
+	$('.cn').click(function() {
+		window.location.href='/index.php/Home?lang=cn';
+	});
+
 </script>
 
 <link href="/public/css/index.css" type="text/css" rel="stylesheet" />
