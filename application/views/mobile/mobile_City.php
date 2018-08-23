@@ -40,10 +40,17 @@
           <span class="flag-zh"></span>
         </span>
                 <select class="languageList styled js-custom js-countriesSelect hasCustomSelect" style="width: 100px; position: absolute; opacity: 0; height: 23px; font-size: 12px;">
-                    <option value="233" data-languagecode="en">
-                        United States of America
+
+                    <option value="233" data-languagecode="en" class="en">
+                        English
                     </option>
-                </select><span class="customSelect languageList styled js-custom js-countriesSelect" style="display: inline-block;"><span class="customSelectInner" style="width: 100px; display: inline-block;">
+                    <option value="233" data-languagecode="en" class="cn">
+                        China
+                    </option>
+
+                </select>
+
+                <span class="customSelect languageList styled js-custom js-countriesSelect" style="display: inline-block;"><span class="customSelectInner" style="width: 100px; display: inline-block;">
               中国
             </span></span>
             </a>

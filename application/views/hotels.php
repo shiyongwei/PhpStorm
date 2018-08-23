@@ -1,3 +1,46 @@
+<script>
+	$(function(){
+		var MobileUA = (function() {
+			var ua = navigator.userAgent.toLowerCase();
+
+			var mua = {
+				IOS: /ipod|iphone|ipad/.test(ua), //iOS
+				IPHONE: /iphone/.test(ua), //iPhone
+				IPAD: /ipad/.test(ua), //iPad
+				ANDROID: /android/.test(ua), //Android Device
+				WINDOWS: /windows/.test(ua), //Windows Device
+				TOUCH_DEVICE: ('ontouchstart' in window) || /touch/.test(ua), //Touch Device
+				MOBILE: /mobile/.test(ua), //Mobile Device (iPad)
+				ANDROID_TABLET: false, //Android Tablet
+				WINDOWS_TABLET: false, //Windows Tablet
+				TABLET: false, //Tablet (iPad, Android, Windows)
+				SMART_PHONE: false //Smart Phone (iPhone, Android)
+			};
+
+			mua.ANDROID_TABLET = mua.ANDROID && !mua.MOBILE;
+			mua.WINDOWS_TABLET = mua.WINDOWS && /tablet/.test(ua);
+			mua.TABLET = mua.IPAD || mua.ANDROID_TABLET || mua.WINDOWS_TABLET;
+			mua.SMART_PHONE = mua.MOBILE && !mua.TABLET;
+
+			return mua;
+		}());
+
+		//SmartPhone
+		if (MobileUA.SMART_PHONE) {
+			// 移动端链接地址
+
+			document.location.href = '/index.php/Home/mobile_Home';
+		}
+	});
+
+	$('.en').click(function() {
+		var url = window.location.href;
+		window.location.href='/index.php/hotels?lang=en';
+	});
+	$('.cn').click(function() {
+		window.location.href='/index.php/hotels';
+	});
+</script>
 <link href="/public/css/hotels.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="/public/js/jquery-1.9.1.min.js"></script>
 <div class="fullscrn homescrn hotel-home">
@@ -912,10 +955,10 @@
                                 </div>
                             </div>
                         </div>
-
+						<?php if(isset($_GET["lang"])): ?>
                         <div class="js-packagesSearch" style="">
                             <div class="header js-header">
-                                <p class="form_title">定制个人行程 </p>
+                                <p class="form_title">BUILD YOUR CUSTOM TRIP </p>
                                 <a class="max-min-btn visible-tablet js-toggle" href="Javascript:;"><b class="caret"></b></a>
 
                                 <div class="clearfix"></div>
@@ -938,7 +981,7 @@
 
 
                                         <div class="field-block fullWidth headblk js-numberSelection">
-                                            <label for="">需要几辆摩托车</label>
+                                            <label for="">How many Motorcycles</label>
                                             <ul class="optionsblk motorNum">
                                                 <li>
                                                     <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="1" class="js-numberCheckbox" id="vehicles_count_1_2" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -955,7 +998,7 @@
                                                 <li>
                                                     <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="" class="js-numberCheckbox" id="vehicles_count_other_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                     <label class="radio fieldIF js-label" for="vehicles_count_other_2">
-                                                        其他
+                                                        Other
                                                     </label>
                                                     <input type="text" title="Type number of motorcycles here" name="reservation[vehicles_count]" class="fieldIFinput js-numberField" value="" style="display: none;">
                                                 </li>
@@ -967,15 +1010,15 @@
                                         <input type="hidden" name="reservation[route_id]" value="custom">
 
                                         <div class="field-block pickup-location">
-                                            <label for="">行驶出发城市</label>
+                                            <label for="">Where are you riding from?</label>
                                             <select name="reservation[pickup_location_id]" data-fieldType="pickup_location"
                                                     class="selectWithSearch js-locationsSelect">
                                                 <option value="" selected=&quot;selected&quot;>
-                                                    取车城市
+                                                    Choose Pickup Location
                                                 </option>
 												<?php foreach ($city as $key=>$citys): ?>
                                                     <option value="">
-														<?php echo $citys['cit_name']?>
+														<?php echo $citys['cit_name_en']?>
                                                     </option>
 												<?php endforeach; ?>
                                             </select>
@@ -984,28 +1027,28 @@
 
 
                                         <div class="field-block dropoff-location">
-                                            <label>行驶终点城市</label>
+                                            <label>Where are you riding to?</label>
                                             <select name="reservation[dropoff_location_id]" data-fieldType="dropoff_location"
                                                     class="selectWithSearch js-locationsSelect">
                                                 <option value="similar_to_pl"
                                                         selected=&quot;selected&quot;>
-                                                    与取车城市相同
+                                                    Same as Pick Up Location
                                                 </option>
 												<?php foreach ($city as $key=>$citys): ?>
                                                     <option value="">
-														<?php echo $citys['cit_name']?>
+														<?php echo $citys['cit_name_en']?>
                                                     </option>
 												<?php endforeach; ?>
                                             </select>
                                         </div>
                                         <div class="field-block">
-                                            <label for="">出发日期/时间</label>
+                                            <label for="">Departure Date/Time</label>
                                             <div class="dateTime">
                                                 <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
                                             </div>
                                         </div>
                                         <div class="field-block returning-date">
-                                            <label for="">返还日期/时间</label>
+                                            <label for="">Returning Date/Time</label>
                                             <div class="dateTime">
 
                                                 <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
@@ -1020,48 +1063,184 @@
                                     </div>
 
                                     <div class="widget_btns">
-                                        <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                        <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">SEARCH NOW<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                     </div>
                                 </form>
                             </div>
                         </div>
+						<?php endif; ?>
+						<?php if(empty($_GET["lang"])): ?>
+                            <div class="js-packagesSearch" style="">
+                                <div class="header js-header">
+                                    <p class="form_title">定制个人行程 </p>
+                                    <a class="max-min-btn visible-tablet js-toggle" href="Javascript:;"><b class="caret"></b></a>
 
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="js-reservationFormContainer">
+                                    <form action="/reservation_widget" method="post" class="res_widget" target="_blank">
+                                        <input type="hidden" name="authenticity_token" value="x/t/BD/WNINoEiboXKiN2DvJ9yB72Lo4kLtPRMHN5tA=">
+                                        <input type="hidden" name="reservation[reservation_type_id]" value="2">
+
+
+
+
+
+
+                                        <div class="form_bot">
+                                            <div class="loader js-loading" style="display:none;">
+                                                <span><span><img src="https://d1y9jrrtx2baf.cloudfront.net/assets/rentals/layout/Loading-023da9421c5001dc2879575217b0add0.gif"></span></span>
+                                            </div>
+
+
+                                            <div class="field-block fullWidth headblk js-numberSelection">
+                                                <label for="">需要几辆摩托车</label>
+                                                <ul class="optionsblk motorNum">
+                                                    <li>
+                                                        <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="1" class="js-numberCheckbox" id="vehicles_count_1_2" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                        <label class="radio" for="vehicles_count_1_2">1</label>
+                                                    </li>
+                                                    <li>
+                                                        <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="2" class="js-numberCheckbox" id="vehicles_count_2_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                        <label class="radio" for="vehicles_count_2_2">2</label>
+                                                    </li>
+                                                    <li>
+                                                        <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="3" class="js-numberCheckbox" id="vehicles_count_3_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                        <label class="radio" for="vehicles_count_3_2">3</label>
+                                                    </li>
+                                                    <li>
+                                                        <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="" class="js-numberCheckbox" id="vehicles_count_other_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                        <label class="radio fieldIF js-label" for="vehicles_count_other_2">
+                                                            其他
+                                                        </label>
+                                                        <input type="text" title="Type number of motorcycles here" name="reservation[vehicles_count]" class="fieldIFinput js-numberField" value="" style="display: none;">
+                                                    </li>
+                                                </ul>
+
+
+                                            </div>
+
+                                            <input type="hidden" name="reservation[route_id]" value="custom">
+
+                                            <div class="field-block pickup-location">
+                                                <label for="">行驶出发城市</label>
+                                                <select name="reservation[pickup_location_id]" data-fieldType="pickup_location"
+                                                        class="selectWithSearch js-locationsSelect">
+                                                    <option value="" selected=&quot;selected&quot;>
+                                                        取车城市
+                                                    </option>
+													<?php foreach ($city as $key=>$citys): ?>
+                                                        <option value="">
+															<?php echo $citys['cit_name']?>
+                                                        </option>
+													<?php endforeach; ?>
+                                                </select>
+                                            </div>
+
+
+
+                                            <div class="field-block dropoff-location">
+                                                <label>行驶终点城市</label>
+                                                <select name="reservation[dropoff_location_id]" data-fieldType="dropoff_location"
+                                                        class="selectWithSearch js-locationsSelect">
+                                                    <option value="similar_to_pl"
+                                                            selected=&quot;selected&quot;>
+                                                        与取车城市相同
+                                                    </option>
+													<?php foreach ($city as $key=>$citys): ?>
+                                                        <option value="">
+															<?php echo $citys['cit_name']?>
+                                                        </option>
+													<?php endforeach; ?>
+                                                </select>
+                                            </div>
+                                            <div class="field-block">
+                                                <label for="">出发日期/时间</label>
+                                                <div class="dateTime">
+                                                    <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                                                </div>
+                                            </div>
+                                            <div class="field-block returning-date">
+                                                <label for="">返还日期/时间</label>
+                                                <div class="dateTime">
+
+                                                    <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="clearfix"></div>
+
+
+                                            <div class="clearfix"></div>
+                                        </div>
+
+                                        <div class="widget_btns">
+                                            <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+						<?php endif; ?>
                     </div>
                 </header>
             </div>
-
+			<?php if(isset($_GET["lang"])): ?>
             <div class="span5 offset1 right hotel-display">
-                <small class="starting_price"><?php echo $text[1]['title']?></small>
+                <small class="starting_price"><?php echo $text[1]['title_en']?></small>
                 <div class="package-price">
 
-					<?php echo $text[1]['price']?>
+					<?php echo $text[1]['price_en']?>
                     <span class="icons-hotel-package"></span>
                 </div>
                 <p>
-					<?php echo $text[1]['head']?><b><?php echo $text[1]['foot']?></b>
+					<?php echo $text[1]['head_en']?><b><?php echo $text[1]['foot_en']?></b>
                 </p>
                 <div>
-                    <a href="#more" class="btn js-learn-more">更多信息</a>
-                    <a href="#hot" class="btn js-popular-routes">热门旅行路线</a>
+                    <a href="#more" class="btn js-learn-more">learn</a>
+                    <a href="#hot" class="btn js-popular-routes">save on popular routes</a>
                 </div>
             </div>
+			<?php endif; ?>
+			<?php if(empty($_GET["lang"])): ?>
+                <div class="span5 offset1 right hotel-display">
+                    <small class="starting_price"><?php echo $text[1]['title']?></small>
+                    <div class="package-price">
+
+						<?php echo $text[1]['price']?>
+                        <span class="icons-hotel-package"></span>
+                    </div>
+                    <p>
+						<?php echo $text[1]['head']?><b><?php echo $text[1]['foot']?></b>
+                    </p>
+                    <div>
+                        <a href="#more" class="btn js-learn-more">更多信息</a>
+                        <a href="#hot" class="btn js-popular-routes">热门旅行路线</a>
+                    </div>
+                </div>
+
+			<?php endif; ?>
+
         </div>
     </div>
 </div>
 <div class="midSection psection container js-featuredDestinations hotel-home">
-    <h1>精选目的地 <span class="icons-hotel-package-dark"></span></h1>
-
+	<?php if(isset($_GET["lang"])): ?>
+    <h1>FEATURED DESTINATIONS <span class="icons-hotel-package-dark"></span></h1>
     <div class="row-fluid  destination tours_list">
 
 
 		<?php foreach ($get_limit_four as $key=>$get_limit_fours): ?>
         <div class="tour span3 js-location" data-id="197">
             <a class="js-bookTrigger" href="jingxuan_detail?id=<?php echo $get_limit_fours['cit_id']?>">
+
+
                 <div class="img_cont" style="border: 0!important;">
-                    <img class="tour_image" src="<?php echo $get_limit_fours['logo']?>" alt="<?php echo $get_limit_fours['cit_name']?>">
+                    <img class="tour_image" src="<?php echo $get_limit_fours['logo']?>" alt="<?php echo $get_limit_fours['cit_name_en']?>">
                 </div>
 
-                <span class="tour_dest" style="text-align: center"><?php echo $get_limit_fours['cit_name']?></span>
+                <span class="tour_dest" style="text-align: center"><?php echo $get_limit_fours['cit_name_en']?></span>
 
                 <div class="actions">
                     <div class="tour_price">
@@ -1083,13 +1262,55 @@
 		<?php endforeach; ?>
 
 
-    </div><!-- .row-fluid -->
+    </div>
+	<?php endif; ?>
+	<?php if(empty($_GET["lang"])): ?>
+        <h1>精选目的地 <span class="icons-hotel-package-dark"></span></h1>
+        <div class="row-fluid  destination tours_list">
+
+
+			<?php foreach ($get_limit_four as $key=>$get_limit_fours): ?>
+                <div class="tour span3 js-location" data-id="197">
+                    <a class="js-bookTrigger" href="jingxuan_detail?id=<?php echo $get_limit_fours['cit_id']?>">
+                        <div class="img_cont" style="border: 0!important;">
+                            <img class="tour_image" src="<?php echo $get_limit_fours['logo']?>" alt="<?php echo $get_limit_fours['cit_name']?>">
+                        </div>
+
+                        <span class="tour_dest" style="text-align: center"><?php echo $get_limit_fours['cit_name']?></span>
+
+                        <div class="actions">
+                            <div class="tour_price">
+                                <!--                        <div class="starting_info">-->
+                                <!--                      <span class="title">-->
+                                <!---->
+                                <!--                      </span>-->
+                                <!---->
+                                <!--                            <em class="bold">-->
+                                <!--								-->
+                                <!--                            </em>-->
+                                <!--                        </div>-->
+                                <!---->
+                                <!--                        <span class="btn-highlight">立即预订</span>-->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+			<?php endforeach; ?>
+
+
+        </div>
+	<?php endif; ?>
+
+
+    <!-- .row-fluid -->
 </div>
 <div class="bot_section psection hotel-home js-popular-routes" id="js-popular-routes">
     <div class="container">
-        <h1 id="hot">热门旅行路线 <span class="icons-hotel-package-dark"></span></h1>
+		<?php if(isset($_GET["lang"])): ?>
+        <h1 id="hot">SAVE ON POPULAR ROUTES <span class="icons-hotel-package-dark"></span></h1>
 		<?php foreach ($team as $key=>$teams): ?>
         <div class="row popular_route js-route" data-id="6" style="display: block;">
+
             <div class="span12 route_wraper">
                 <div class="row">
                     <div class="span3">
@@ -1097,46 +1318,83 @@
                     </div>
 
                     <div class="span7 route_details">
-                        <h3><?php echo $teams['teamtitle']?></h3>
+                        <h3><?php echo $teams['teamtitle_en']?></h3>
                         <p>
-							<?php echo $teams['text']?>
+							<?php echo $teams['text_en']?>
                         </p>
                     </div>
 
                     <div class="span2 route_cta">
                 <span class="details">
+                   <?php echo $teams['day_en']?>
+                </span>
+
+
+                        <a href="/index.php/team_detail?id=<?php echo $teams['id']?>" class="btn-highlight js-bookTrigger">book now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+		<?php endforeach; ?>
+		<?php endif; ?>
+		<?php if(empty($_GET["lang"])): ?>
+            <h1 id="hot">热门旅行路线 <span class="icons-hotel-package-dark"></span></h1>
+			<?php foreach ($team as $key=>$teams): ?>
+                <div class="row popular_route js-route" data-id="6" style="display: block;">
+                    <div class="span12 route_wraper">
+                        <div class="row">
+                            <div class="span3">
+                                <img class="tour_image js-bookTrigger" src="https://d56b293rhv8dp.cloudfront.net/routes/6/images/size287c/route_66.jpg?1513640813" alt="66号公路旅行：芝加哥到洛杉矶 12天/12晚">
+                            </div>
+
+                            <div class="span7 route_details">
+                                <h3><?php echo $teams['teamtitle']?></h3>
+                                <p>
+									<?php echo $teams['text']?>
+                                </p>
+                            </div>
+
+                            <div class="span2 route_cta">
+                <span class="details">
                    <?php echo $teams['day']?>
                 </span>
 
 
-                        <a href="/index.php/team_detail?id=<?php echo $teams['id']?>" class="btn-highlight js-bookTrigger">立即查看</a>
+                                <a href="/index.php/team_detail?id=<?php echo $teams['id']?>" class="btn-highlight js-bookTrigger">立即查看</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-		<?php endforeach; ?>
-
+			<?php endforeach; ?>
+		<?php endif; ?>
     </div>
 </div>
 <div class="green-area">
-    <p>“EagleRider保证提供最优惠的价格”</p>
+	<?php if(isset($_GET["lang"])): ?>
+        <p>“EagleRider guarantees the lowest prices on Bike + Hotel”</p>
+	<?php endif; ?>
+	<?php if(empty($_GET["lang"])): ?>
+        <p>“EagleRider保证提供最优惠的价格”</p>
+	<?php endif; ?>
 </div>
 <div class="bot_section psection hotel-home" id="js-learn-more">
     <div class="container">
         <div class="row">
             <div class="span12 er-about">
+				<?php if(isset($_GET["lang"])): ?>
                 <div class="row">
                     <div class="span7" id="more">
-						<?php echo $bottom[1]['bottom_text']?>
+						<?php echo $bottom[1]['bottom_text_en']?>
                     </div>
 
                     <div class="span5 featured-partners">
-                        <h1>合作酒店</h1>
+                        <h1>FEATURED PARTNERS</h1>
 
                         <table>
                             <tbody><tr>
-                                <th>豪华型</th>
-                                <th>经济型</th>
+                                <th>Upgraded</th>
+                                <th>Economy</th>
                             </tr>
                             <tr>
                                 <td><span class="icons-hotels-logos"></span></td>
@@ -1145,6 +1403,29 @@
                             </tbody></table>
                     </div>
                 </div>
+				<?php endif; ?>
+				<?php if(empty($_GET["lang"])): ?>
+                    <div class="row">
+                        <div class="span7" id="more">
+							<?php echo $bottom[1]['bottom_text']?>
+                        </div>
+
+                        <div class="span5 featured-partners">
+                            <h1>合作酒店</h1>
+
+                            <table>
+                                <tbody><tr>
+                                    <th>豪华型</th>
+                                    <th>经济型</th>
+                                </tr>
+                                <tr>
+                                    <td><span class="icons-hotels-logos"></span></td>
+                                    <td><span class="icons-motels-logos"></span></td>
+                                </tr>
+                                </tbody></table>
+                        </div>
+                    </div>
+				<?php endif; ?>
             </div>
         </div>
     </div>

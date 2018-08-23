@@ -55,7 +55,7 @@
 				$data['bottom_info_all'] = $bottom_info_all;
 				$data['side'] = $side;
 
-				$this -> load -> view('mobile/reg');
+				$this -> load -> view('mobile/reg',$data);
 			}
 
 

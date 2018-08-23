@@ -68,7 +68,12 @@
             <div class="row">
                 <div class="offset1 span3"></div>
             </div>
-            <a class="brand top-brand" href="#"><img src="<?php echo $bottom_info_all[7]['image'] ?>" style="width: 90px;margin-top: -11px;"></a>
+			<?php if(isset($_GET["lang"])): ?>
+                <a class="brand top-brand" href="#" style="z-index: 2003;position: absolute;top: 40px;left: -80px;"><img src="<?php echo $bottom_info_all[7]['image'] ?>" style="width: 90px;margin-top: -11px;"></a>
+			<?php endif; ?>
+			<?php if(empty($_GET["lang"])): ?>
+                <a class="brand top-brand" href="#"><img src="<?php echo $bottom_info_all[7]['image'] ?>" style="width: 90px;margin-top: -11px;"></a>
+			<?php endif; ?>
         </div>
     </div>
 
@@ -82,7 +87,150 @@
                 </a>
 				<?php foreach ($navigation as $key => $navigations): ?>
                     <nav class="nav-collapse">
-                        <ul class="nav main-nav js-navigation topp">
+
+<!--                       存在-->
+						<?php if(isset($_GET["lang"])): ?>
+                            <ul class="nav main-nav js-navigation topp" style="margin-left: 55px !important;">
+                                <li class="dropdown dropdown-bs" id="zulin">
+                                    <a class="dropdown-toggle js-rentalsLink" data-toggle="dropdown" data-target="#" href="<?php echo site_url('Home'); ?>">
+										<?php echo $navigations['navigation_name_en'] ?><b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-mega-menu" role="menu" aria-labelledby="dLabel">
+                                        <li>
+                                            <div class="container">
+                                                <b class="menu-heading">Popular motorcycle rental</b>
+                                                <ul class="dropmenu-uncat">
+													<?php foreach ($rent_list as $rent_lists): ?>
+                                                        <li>
+                                                            <a class="classify" href="/index.php/Rent?id=<?php echo $rent_lists['brand_id'] ?>&&lang=en"><?php echo $rent_lists['product_brand_en'] ?></a>
+                                                        </li>
+													<?php endforeach; ?>
+                                                    <li><a href="/index.php/Rent?id=<?php echo 0; ?>&&lang=en">All motorcycle type</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <script>
+									$('#zulin').click(function() {
+										window.location.href='/index.php/home?lang=en';
+									});
+                                </script>
+                                <li class="dropdown">
+                                    <a href="<?php echo site_url('Hotels'); ?>?lang=en" title="motorcycle &amp; hotels"
+                                       class="">
+										<?php echo $navigations['lease_name_en'] ?>
+                                    </a>
+                                </li>
+
+                                <li class="dropdown dropdown-bs " id="lvyou">
+                                    <a class="dropdown-toggle js-toursLink" data-toggle="dropdown"
+                                       href="<?php echo site_url('Home/trave'); ?>">
+										<?php echo $navigations['hotel_name_en'] ?><b class="caret"></b>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-mega-menu dropmenu-cat" role="menu" aria-labelledby="dLabel">
+                                        <li>
+                                            <div class="container">
+
+                                                <div class="dropmenu-content">
+                                                    <div class="column" style="width: 23%;float: left">
+                                                        <b>The team travel</b>
+
+                                                        <ul>
+                                                            <li>
+                                                                <a href="<?php echo site_url('team'); ?>?lang=en">
+                                                                    Motorcycle tour
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="" style="width: 23%;float: left">
+                                                        <b>Road trip</b>
+
+                                                        <ul>
+                                                            <li>
+                                                                <a href="<?php echo site_url('classify'); ?>?lang=en" style="margin-top: 10px;">
+                                                                    Motorcycle trip
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="#" style="width: 23%;float: left;">
+                                                        <b>Hot line</b>
+
+                                                        <ul>
+                                                            <li>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="<?php echo site_url('hot_trave'); ?>?lang=en" style="margin-top: 10px;">
+                                                                    Popular motorcycle Tours
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="#" style="width: 23%;float: left">
+                                                        <b>All travel items</b>
+
+                                                        <ul>
+                                                            <li>
+                                                                <a href="<?php echo site_url('trave'); ?>?lang=en" style="margin-top: 10px;">
+                                                                    Motorcycle tour
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <script>
+									$('#lvyou').click(function() {
+										window.location.href='/index.php/trave?lang=en';
+									});
+                                </script>
+
+                                <li class="top dropdown">
+                                    <a href="<?php echo site_url('Discounts'); ?>?lang=en">
+										<?php echo $navigations['promotions_name_en'] ?>
+                                    </a>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="<?php echo site_url('Artivity'); ?>?lang=en">
+										<?php echo $navigations['activity_name_en'] ?>
+                                    </a>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="<?php echo site_url('City'); ?>?lang=en">
+										<?php echo $navigations['city_name_en'] ?>
+                                    </a>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="<?php echo site_url('Reg'); ?>">
+										<?php echo $navigations['news_en'] ?>
+                                    </a>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="<?php echo site_url('Reg'); ?>?lang=en">
+										<?php echo $navigations['online_name_en'] ?>
+                                    </a>
+                                </li>
+                            </ul>
+						<?php endif; ?>
+						<?php if(empty($_GET["lang"])): ?>
+                            <ul class="nav main-nav js-navigation topp">
                             <li class="dropdown dropdown-bs" id="zulin">
                                 <a class="dropdown-toggle js-rentalsLink" data-toggle="dropdown" data-target="#" href="<?php echo site_url('Home'); ?>">
 									<?php echo $navigations['navigation_name'] ?><b class="caret"></b>
@@ -103,6 +251,11 @@
                                     </li>
                                 </ul>
                             </li>
+                                <script>
+									$('#zulin').click(function() {
+										window.location.href='/index.php/home';
+									});
+                                </script>
                             <li class="dropdown">
                                 <a href="<?php echo site_url('Hotels'); ?>" title="摩托车 &amp; 酒店"
                                    class="">
@@ -179,6 +332,11 @@
                                     </li>
                                 </ul>
                             </li>
+                                <script>
+									$('#lvyou').click(function() {
+										window.location.href='/index.php/trave';
+									});
+                                </script>
 
                             <li class="top dropdown">
                                 <a href="<?php echo site_url('Discounts'); ?>">
@@ -198,13 +356,50 @@
                                 </a>
                             </li>
 
+                                <li class="dropdown">
+                                    <a href="<?php echo site_url('Reg'); ?>">
+										<?php echo $navigations['news'] ?>
+                                    </a>
+                                </li>
 
                             <li class="dropdown">
                                 <a href="<?php echo site_url('Reg'); ?>">
 									<?php echo $navigations['online_name'] ?>
                                 </a>
                             </li>
+
+
                         </ul>
+						<?php endif; ?>
+
+
+
+						<?php if(isset($_GET["lang"])): ?>
+                        <div class="dropdown localisation js-countriesContainer">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <span class="js-current" data-countrycode="cn" style="font-weight:bold">
+                                    change language
+                                </span>
+
+                                <b class="caret"></b>
+                            </a>
+
+                            <ul class="dropdown-menu pull-right" style="min-width: 100px!important;">
+                               <li>
+                                    <a class="js-changeCountryTrigger cn">
+                                        Chinese
+                                    </a>
+                               </li>
+                                <li>
+                                    <a class="js-changeCountryTrigger en" data-countryid="77" data-languagecode="en" title="英国">
+                                        English
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+						<?php endif; ?>
+						<?php if(empty($_GET["lang"])): ?>
                         <div class="dropdown localisation js-countriesContainer">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                 <span class="js-current" data-countrycode="cn" style="font-weight:bold">
@@ -215,11 +410,11 @@
                             </a>
 
                             <ul class="dropdown-menu pull-right" style="min-width: 100px!important;">
-                               <li>
+                                <li>
                                     <a class="js-changeCountryTrigger cn">
                                         中文版
                                     </a>
-                               </li>
+                                </li>
                                 <li>
                                     <a class="js-changeCountryTrigger en" data-countryid="77" data-languagecode="en" title="英国">
                                         英文版
@@ -228,6 +423,12 @@
 
                             </ul>
                         </div>
+						<?php endif; ?>
+
+
+
+
+
                     </nav>
 				<?php endforeach; ?>
             </div>
