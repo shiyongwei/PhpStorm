@@ -29,11 +29,14 @@
 <body>
 <article class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-admin-role-add" onsubmit="return false">
-        <input type="hidden" value="<?php echo $column[0]['column_id']; ?>" name="column_id">
+        <input type="hidden" value="<?php echo $column['column_id']; ?>" name="column_id">
+        <?php if (isset($column['lang'])): ?>
+            <input type="hidden" name="lang" value="<?php echo $column['lang'];?>">
+        <?php endif; ?>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>栏目名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $column[0]['column_name']; ?>" placeholder="" id="roleName" name="column_name">
+				<input type="text" class="input-text" value="<?php echo $column['column_name']; ?>" placeholder="" id="roleName" name="column_name">
 			</div>
 		</div>
         <div class="row cl">
@@ -41,8 +44,8 @@
             <div class="formControls col-xs-8 col-sm-9">
                 <span class="select-box" style="width:150px;">
                     <select class="select" name="status" size="1">
-                        <option value="0" <?php echo $column[0]['status'] == 0 ? 'selected' : '';?>>非热门</option>
-                        <option value="1" <?php echo $column[0]['status'] == 1 ? 'selected' : '';?>>热门</option>
+                        <option value="0" <?php echo $column['status'] == 0 ? 'selected' : '';?>>非热门</option>
+                        <option value="1" <?php echo $column['status'] == 1 ? 'selected' : '';?>>热门</option>
                     </select>
 			    </span>
             </div>

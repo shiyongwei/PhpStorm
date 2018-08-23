@@ -18,12 +18,11 @@ class Bottom_model extends CI_Model{
             return $this -> db -> delete(self::TBL_NAME, $data);
 
         }
-        //修改
+    //修改
         public function edit_name ($data)
         {
 
-            $this -> db -> set('bottom_text', $data['bottom_text']);
-            $this -> db -> set('navigation_name', $data['navigation_name']);
+            $this -> db -> set($data);
 
             $this -> db -> where('bottom_id', $data['bottom_id']);
 

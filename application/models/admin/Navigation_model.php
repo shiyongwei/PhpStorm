@@ -21,15 +21,23 @@ class Navigation_model extends CI_Model{
         //修改
         public function edit_name ($data)
         {
-
-            $this -> db -> set('navigation_name', $data['navigation_name']);
-            $this -> db -> set('lease_name', $data['lease_name']);
-            $this -> db -> set('hotel_name', $data['hotel_name']);
-            $this -> db -> set('promotions_name', $data['promotions_name']);
-            $this -> db -> set('activity_name', $data['activity_name']);
-            $this -> db -> set('city_name', $data['city_name']);
-            $this -> db -> set('online_name', $data['online_name']);
-
+            if(!isset($data['lang'])){
+                $this -> db -> set('navigation_name', $data['navigation_name']);
+                $this -> db -> set('lease_name', $data['lease_name']);
+                $this -> db -> set('hotel_name', $data['hotel_name']);
+                $this -> db -> set('promotions_name', $data['promotions_name']);
+                $this -> db -> set('activity_name', $data['activity_name']);
+                $this -> db -> set('city_name', $data['city_name']);
+                $this -> db -> set('online_name', $data['online_name']);
+            }else{
+                $this -> db -> set('navigation_name_en', $data['navigation_name_en']);
+                $this -> db -> set('lease_name_en', $data['lease_name_en']);
+                $this -> db -> set('hotel_name_en', $data['hotel_name_en']);
+                $this -> db -> set('promotions_name_en', $data['promotions_name_en']);
+                $this -> db -> set('activity_name_en', $data['activity_name_en']);
+                $this -> db -> set('city_name_en', $data['city_name_en']);
+                $this -> db -> set('online_name_en', $data['online_name_en']);
+            }
             $this -> db -> where('navigation_id', $data['navigation_id']);
 
             return $this -> db -> update(self::TBL_NAME);

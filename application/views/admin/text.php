@@ -47,9 +47,15 @@
                 <td>
                     <?php echo $item['time']; ?>
                 </td>
-                <td class="td-manage">
+                <?php if (!isset($item['lang'])): ?>
+                    <td class="td-manage">
                         <a title="编辑" href="javascript:;" onclick="name_edit('文章','text_edit?id=<?php echo $item['id']; ?>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                </td>
+                    </td>
+                <?php else: ?>
+                    <td class="td-manage">
+                        <a title="编辑" href="javascript:;" onclick="name_edit('文章','text_edit?id=<?php echo $item['id']; ?>&lang=<?php echo $item['lang'];?>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    </td>
+                <?php endif; ?>
             </tr>
         <?php endforeach; ?>
         </tbody>

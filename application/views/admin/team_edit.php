@@ -32,11 +32,14 @@
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
         <input type="hidden" name="image" value="" id="image">
-        <input type="hidden" name="id" value="<?php echo $team[0]['id'];?>">
+        <input type="hidden" name="id" value="<?php echo $team['id'];?>">
+        <?php if (isset($team['lang'])): ?>
+            <input type="hidden" name="lang" value="<?php echo $team['lang'];?>">
+        <?php endif; ?>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>自驾游标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $team[0]['teamtitle'];?>" placeholder="" id="" name="teamtitle">
+				<input type="text" class="input-text" value="<?php echo $team['teamtitle'];?>" placeholder="" id="" name="teamtitle">
 			</div>
 		</div>
           <div class="row cl">
@@ -50,7 +53,7 @@
                 <select name="cit_id" class="select">
                     <option value="0">默认</option>
                     <?php foreach ($city as $key): ?>              
-                        <option value="<?php echo $key['cit_id'];?>"<?php echo $key['cit_id'] == $team[0]['cit_id'] ? 'selected' : '';?>><?php echo $key['cit_name'];?></option>
+                        <option value="<?php echo $key['cit_id'];?>"<?php echo $key['cit_id'] == $team['cit_id'] ? 'selected' : '';?>><?php echo $key['cit_name'];?></option>
                     <?php endforeach; ?>
                 </select>
                 </span>
@@ -60,46 +63,46 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">价格:</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="price" id="" placeholder="" value="<?php echo $team[0]['price'];?>" class="input-text">
+				<input type="text" name="price" id="" placeholder="" value="<?php echo $team['price'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">天数:</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="day" id="" placeholder="" value="<?php echo $team[0]['day'];?>" class="input-text">
+				<input type="text" name="day" id="" placeholder="" value="<?php echo $team['day'];?>" class="input-text">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">公里数：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="kilometers" id="" placeholder="" value="<?php echo $team[0]['kilometers'];?>" class="input-text">
+				<input type="text" name="kilometers" id="" placeholder="" value="<?php echo $team['kilometers'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">季节：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="season" id="" placeholder="" value="<?php echo $team[0]['season'];?>" class="input-text">
+				<input type="text" name="season" id="" placeholder="" value="<?php echo $team['season'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">温度：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="temperature" id="" placeholder="" value="<?php echo $team[0]['temperature'];?>" class="input-text">
+				<input type="text" name="temperature" id="" placeholder="" value="<?php echo $team['temperature'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">是否广告：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <select class="select" name="status" size="1">
-                    <option value="0" <?php echo $team[0]['status'] == 0 ? 'selected' : '';?>>普通</option>
-                    <option value="1" <?php echo $team[0]['status'] == 1 ? 'selected' : '';?>>广告</option>
+                    <option value="0" <?php echo $team['status'] == 0 ? 'selected' : '';?>>普通</option>
+                    <option value="1" <?php echo $team['status'] == 1 ? 'selected' : '';?>>广告</option>
                 </select>
             </div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">活动介绍：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <textarea name="text" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo $team[0]['text'];?></textarea>
+                <textarea name="text" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo $team['text'];?></textarea>
                 <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
             </div>
         </div>
@@ -107,7 +110,7 @@
             <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <div class="uploader-thum-container">
-                    <img src="<?php echo $team[0]['image'];?>" alt="" style="width: 200px;height: 200px;">
+                    <img src="<?php echo $team['image'];?>" alt="" style="width: 200px;height: 200px;">
                 </div>
             </div>
         </div>
@@ -135,7 +138,7 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">旅游行程：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <script id="editor" type="text/plain" style="width:100%;height:400px;"><?php echo $team[0]['schedule'];?></script>
+                <script id="editor" type="text/plain" style="width:100%;height:400px;"><?php echo $team['schedule'];?></script>
                 </div>
          </div>
 		<div class="row cl">

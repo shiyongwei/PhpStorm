@@ -13,9 +13,7 @@ class Explore extends CI_Controller
         public function explore_add ()
         {
             parse_str($_POST['str'], $arr);
-
             $data['explore_id'] = $arr['id'];
-            $data['increase_name'] = $arr['increase_name'];
             $data['motorcycle'] = $arr['motorcycle'];
             $data['friendly'] = $arr['friendly'];
             $data['customize'] = $arr['customize'];
@@ -30,9 +28,17 @@ class Explore extends CI_Controller
             $data['gasolin'] = $arr['gasolin'];
             $data['banquet'] = $arr['banquet'];
             $data['farewell'] = $arr['farewell'];
-            $data['price'] = $arr['price'];
-            $data['text'] = $arr['editorValue'];
             $data['time'] = date('Y-m-d H:i:s');
+            if(!isset($arr['lang'])){
+                $data['increase_name'] = $arr['increase_name'];
+                $data['price'] = $arr['price'];
+                $data['text'] = $arr['editorValue'];
+            }else{
+                $data['increase_name_en'] = $arr['increase_name'];
+                $data['price_en'] = $arr['price'];
+                $data['text_en'] = $arr['editorValue'];
+            }
+
 
             if ($this -> Explore_model -> update_edit($data))
             {

@@ -33,6 +33,9 @@
     <form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
         <input type="hidden" name="image" value="" id="image">
         <input type="hidden" name="id" value="<?php echo $cite_edit['cit_id'];?>">
+        <?php if (isset($cite_edit['lang'])): ?>
+            <input type="hidden" name="lang" value="<?php echo $cite_edit['lang'];?>">
+        <?php endif; ?>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>城市名称：</label>
             <div class="formControls col-xs-8 col-sm-9">

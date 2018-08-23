@@ -24,7 +24,7 @@ class Explore_model extends CI_Model
             {
                 $condition['explore_id'] = $data;
 
-                return $this->db->where($condition) ->get(self::TBL_LIST)->result_array();
+                return $this->db->where($condition) ->get(self::TBL_LIST)->row_array();
             }
 
         }

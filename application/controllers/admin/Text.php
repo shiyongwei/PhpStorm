@@ -13,19 +13,18 @@ class Text extends CI_Controller
         public function text_edit ()
         {
             parse_str($_POST['str'], $arr);
-
             $data['id'] = $arr['id'];
-
-            $data['title'] = $arr['title'];
-
-            $data['text'] = $arr['editorValue'];
-
             $data['time'] = date('Y-m-d H:i:s');
-
+            if(!isset($arr['lang'])){
+                $data['title'] = $arr['title'];
+                $data['text'] = $arr['editorValue'];
+            }else{
+                $data['title_en'] = $arr['title'];
+                $data['text_en'] = $arr['editorValue'];
+            }
             if(!empty($arr['image'])){
                 $data['image'] = $arr['image'];
             }
-
             if ($arr['title'] !== '')
             {
 

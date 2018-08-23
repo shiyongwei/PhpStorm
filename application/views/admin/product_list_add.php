@@ -103,12 +103,6 @@
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">排序值：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="0" placeholder="" id="" name="sorting">
-			</div>
-		</div>
-		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">内径×行程:</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" name="stroke" id="" placeholder="" value="" class="input-text">

@@ -31,11 +31,14 @@
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
         <input type="hidden" name="img" value="" id="image">
-        <input type="hidden" name="id" value="<?php echo $list[0]['id']; ?>" >
+        <input type="hidden" name="id" value="<?php echo $list['id']; ?>" >
+        <?php if (isset($list['lang'])): ?>
+            <input type="hidden" name="lang" value="<?php echo $list['lang'];?>">
+        <?php endif; ?>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $list[0]['productitle'];?>" placeholder="" id="" name="productitle">
+				<input type="text" class="input-text" value="<?php echo $list['productitle'];?>" placeholder="" id="" name="productitle">
 			</div>
 		</div>
         <div class="row cl">
@@ -47,10 +50,9 @@
             <?php else: ?>
                 <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
                   <select name="brand" class="select">
-				          <option value="<?php echo $list[0]['brand_id']; ?>"><?php echo $list[0]['product_brand']; ?></option>
+				          <option value="<?php echo $list['brand_id']; ?>"><?php echo $list['product_brand']; ?></option>
                       <?php foreach ($brand as $key): ?>
-
-                          <?php if ($key['brand_id'] == $list[0]['brand_id']): ?>
+                          <?php if ($key['brand_id'] == $list['brand_id']): ?>
                               continue;
                           <?php else: ?>
                               <option value="<?php echo $key['brand_id']; ?>"><?php echo $key['product_brand']; ?></option>
@@ -70,9 +72,9 @@
             <?php else: ?>
                 <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
 				<select name="category" class="select">
-                    <option value="<?php echo  $list[0]['category_id'];?>"><?php echo $list[0]['category_name'] ;?></option>
+                    <option value="<?php echo  $list['category_id'];?>"><?php echo $list['category_name'] ;?></option>
                     <?php foreach ($category as $key): ?>
-                    <?php if ($key['category_id'] == $list[0]['category_id']): ?>
+                    <?php if ($key['category_id'] == $list['category_id']): ?>
                         continue;
                     <?php else: ?>
                             <option value="<?php echo $key['category_id'];?>"><?php echo $key['category_name'];?></option>
@@ -94,7 +96,7 @@
 				<select name="cit_id" class="select">
 					<option value="0">默认</option>
                     <?php foreach ($city as $key): ?>              
-                        <option value="<?php echo $key['cit_id'];?>"<?php echo $key['cit_id'] == $list[0]['cit_id'] ? 'selected' : '';?>><?php echo $key['cit_name'];?></option>
+                        <option value="<?php echo $key['cit_id'];?>"<?php echo $key['cit_id'] == $list['cit_id'] ? 'selected' : '';?>><?php echo $key['cit_name'];?></option>
                     <?php endforeach; ?>
 				</select>
 				</span>
@@ -104,86 +106,80 @@
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">每天价格</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $list[0]['day_price'];?>" placeholder="城市摩托车出租" id="" name="day_price">
+				<input type="text" class="input-text" value="<?php echo $list['day_price'];?>" placeholder="城市摩托车出租" id="" name="day_price">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">每周价格</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $list[0]['week_price'];?>" placeholder="城市摩托车出租" id="" name="week_price">
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">排序值：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $list[0]['sorting'];?>" placeholder="sorting" id="" name="sorting">
+				<input type="text" class="input-text" value="<?php echo $list['week_price'];?>" placeholder="城市摩托车出租" id="" name="week_price">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">内径×行程:</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="stroke" id="" placeholder="" value="<?php echo $list[0]['stroke'];?>" class="input-text">
+				<input type="text" name="stroke" id="" placeholder="" value="<?php echo $list['stroke'];?>" class="input-text">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">排量：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="displacement" id="" placeholder="" value="<?php echo $list[0]['displacement'];?>" class="input-text">
+				<input type="text" name="displacement" id="" placeholder="" value="<?php echo $list['displacement'];?>" class="input-text">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">后轮胎：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="reartyre" id="" placeholder="" value="<?php echo $list[0]['reartyre'];?>" class="input-text">
+				<input type="text" name="reartyre" id="" placeholder="" value="<?php echo $list['reartyre'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">前轮胎：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="fronttire" id="" placeholder="" value="<?php echo $list[0]['fronttire'];?>" class="input-text">
+				<input type="text" name="fronttire" id="" placeholder="" value="<?php echo $list['fronttire'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">后制动器：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="rearbrake" id="" placeholder="" value="<?php echo $list[0]['rearbrake'];?>" class="input-text">
+				<input type="text" name="rearbrake" id="" placeholder="" value="<?php echo $list['rearbrake'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">前刹车：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="frontbrake" id="" placeholder="" value="<?php echo $list[0]['frontbrake'];?>" class="input-text">
+				<input type="text" name="frontbrake" id="" placeholder="" value="<?php echo $list['frontbrake'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">座位高度：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="seatheight" id="" placeholder="" value="<?php echo $list[0]['seatheight'];?>" class="input-text">
+				<input type="text" name="seatheight" id="" placeholder="" value="<?php echo $list['seatheight'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">压缩比：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="compression" id="" placeholder="" value="<?php echo $list[0]['compression'];?>" class="input-text">
+				<input type="text" name="compression" id="" placeholder="" value="<?php echo $list['compression'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">油箱容量：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="capacity" id="" placeholder="" value="<?php echo $list[0]['capacity'];?>" class="input-text">
+				<input type="text" name="capacity" id="" placeholder="" value="<?php echo $list['capacity'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">挡风玻璃：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="windshield" id="" placeholder="" value="<?php echo $list[0]['windshield'];?>" class="input-text">
+				<input type="text" name="windshield" id="" placeholder="" value="<?php echo $list['windshield'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <div class="uploader-thum-container">
-                    <img src="<?php echo $list[0]['image'];?>" alt="" style="width: 200px;height: 200px;">
+                    <img src="<?php echo $list['image'];?>" alt="" style="width: 200px;height: 200px;">
                 </div>
             </div>
         </div>
@@ -211,7 +207,7 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">产品摘要：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <textarea name="text" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo $list[0]['text'];?></textarea>
+                <textarea name="text" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo $list['text'];?></textarea>
                 <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
             </div>
         </div>

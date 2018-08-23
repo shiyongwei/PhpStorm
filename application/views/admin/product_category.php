@@ -29,8 +29,11 @@
 <div class="page-container">
     <div class="cl pd-5 bg-1 bk-gray">
         <span class="l">
+            <?php if (!isset($category[0]['lang'])): ?>
             <a class="btn btn-primary radius" href="javascript:;" onclick="category_role_add('添加类型','product_category_add','350','180')">
-                <i class="Hui-iconfont">&#xe600;</i> 添加类型</a> </span>
+                <i class="Hui-iconfont">&#xe600;</i> 添加类型</a>
+            <?php endif; ?>
+        </span>
         <span class="r">共有数据：<strong><?php echo count($category);?></strong> 条</span>
     </div>
     <table class="table table-border table-bordered table-hover table-bg">
@@ -50,7 +53,11 @@
                 <td><?php echo $key['category_id'];?></td>
                 <td><?php echo $key['category_name'];?></td>
                 <td class="f-14">
-                    <a title="编辑" href="javascript:;" onclick="category_role_edit('类型编辑','product_category_edit?id=<?php echo $key['category_id'];?>','1','350','180')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <?php if (!isset($key['lang'])): ?>
+                        <a title="编辑" href="javascript:;" onclick="category_role_edit('类型编辑','product_category_edit?id=<?php echo $key['category_id'];?>','1','350','180')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <?php else: ?>
+                        <a title="编辑" href="javascript:;" onclick="category_role_edit('类型编辑','product_category_edit?id=<?php echo $key['category_id'];?>&lang=<?php echo $key['lang'];?>','1','350','180')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <?php endif; ?>
                     <a title="删除" href="javascript:;" onclick="category_role_del(this,'<?php echo $key['category_id'];?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
                 </td>
             </tr>

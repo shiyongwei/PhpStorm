@@ -31,11 +31,14 @@
 <body>
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
-            <input type="hidden" name="id" value="<?php echo $explore[0]['explore_id'];?>">
+            <input type="hidden" name="id" value="<?php echo $explore['explore_id'];?>">
+            <?php if (isset($explore['lang'])): ?>
+                <input type="hidden" name="lang" value="<?php echo $explore['lang'];?>">
+            <?php endif; ?>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>探索方式：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="<?php echo $explore[0]['increase_name'];?>" placeholder="" id="" name="increase_name">
+                <input type="text" class="input-text" value="<?php echo $explore['increase_name'];?>" placeholder="" id="" name="increase_name">
             </div>
         </div>
         <div class="row cl">
@@ -43,11 +46,11 @@
                 <span class="c-red">*</span>摩托车租赁：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-1"  name="motorcycle" value="1" <?php echo $explore[0]['motorcycle'] == 1 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-1"  name="motorcycle" value="1" <?php echo $explore['motorcycle'] == 1 ? 'checked' : '';?>>
                             <label for="radio-1">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-2" value="2" name="motorcycle" <?php echo $explore[0]['motorcycle'] == 2 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-2" value="2" name="motorcycle" <?php echo $explore['motorcycle'] == 2 ? 'checked' : '';?>>
                             <label for="radio-1">NO</label>
                         </div>
                 </div>
@@ -58,11 +61,11 @@
                 ：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-3" name="friendly" value="1" <?php echo $explore[0]['friendly'] == 1 ? 'checked' : '1';?>>
+                            <input type="radio" id="radio-3" name="friendly" value="1" <?php echo $explore['friendly'] == 1 ? 'checked' : '1';?>>
                             <label for="radio-3">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-4" name="friendly" value="2" <?php echo $explore[0]['friendly'] == 2 ? 'checked' : '2';?>>
+                            <input type="radio" id="radio-4" name="friendly" value="2" <?php echo $explore['friendly'] == 2 ? 'checked' : '2';?>>
                             <label for="radio-4">NO</label>
                         </div>
                 </div>
@@ -73,11 +76,11 @@
                 ：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-5" name="customize" value="1" <?php echo $explore[0]['customize'] == 1 ? 'checked' : '1';?>>
+                            <input type="radio" id="radio-5" name="customize" value="1" <?php echo $explore['customize'] == 1 ? 'checked' : '1';?>>
                             <label for="radio-5">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-6"  name="customize" value="2" <?php echo $explore[0]['customize'] == 2 ? 'checked' : '2';?>>
+                            <input type="radio" id="radio-6"  name="customize" value="2" <?php echo $explore['customize'] == 2 ? 'checked' : '2';?>>
                             <label for="radio-6">NO</label>
                         </div>
                 </div>
@@ -87,11 +90,11 @@
                 <span class="c-red">*</span>最佳摩托车旅行路线：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-7" name="routes" value="1" <?php echo $explore[0]['routes'] == 1 ? 'checked' : '1';?>>
+                            <input type="radio" id="radio-7" name="routes" value="1" <?php echo $explore['routes'] == 1 ? 'checked' : '1';?>>
                             <label for="radio-7">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-8" name="routes" value="2" <?php echo $explore[0]['routes'] == 2 ? 'checked' : '2';?>>
+                            <input type="radio" id="radio-8" name="routes" value="2" <?php echo $explore['routes'] == 2 ? 'checked' : '2';?>>
                             <label for="radio-8">NO</label>
                         </div>
                 </div>
@@ -101,11 +104,11 @@
                 <span class="c-red">*</span>EagleRider旅行攻略：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-9" name="eaglerider" value="1" <?php echo $explore[0]['eaglerider'] == 1 ? 'checked' : '1';?>>
+                            <input type="radio" id="radio-9" name="eaglerider" value="1" <?php echo $explore['eaglerider'] == 1 ? 'checked' : '1';?>>
                             <label for="radio-9">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-10" name="eaglerider" value="2" <?php echo $explore[0]['eaglerider'] == 2 ? 'checked' : '2';?>>
+                            <input type="radio" id="radio-10" name="eaglerider" value="2" <?php echo $explore['eaglerider'] == 2 ? 'checked' : '2';?>>
                             <label for="radio-10">NO</label>
                         </div>
                 </div>
@@ -115,11 +118,11 @@
                 <span class="c-red">*</span>运送行李的支持车辆：</label>
                 <div class="mt-20 skin-minimal">
                     <div class="radio-box">
-                        <input type="radio" id="radio-11" name="support" value="1" <?php echo $explore[0]['support'] == 1 ? 'checked' : '';?>>
+                        <input type="radio" id="radio-11" name="support" value="1" <?php echo $explore['support'] == 1 ? 'checked' : '';?>>
                         <label for="radio-11">YES</label>
                     </div>
                     <div class="radio-box">
-                        <input type="radio" id="radio-12" name="support" value="2" <?php echo $explore[0]['support'] == 2 ? 'checked' : '';?>>
+                        <input type="radio" id="radio-12" name="support" value="2" <?php echo $explore['support'] == 2 ? 'checked' : '';?>>
                         <label for="radio-12">NO</label>
                     </div>
                 </div>
@@ -129,11 +132,11 @@
                 <span class="c-red">*</span>备用摩托车：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-13" name="spare" value="1" <?php echo $explore[0]['spare'] == 1 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-13" name="spare" value="1" <?php echo $explore['spare'] == 1 ? 'checked' : '';?>>
                             <label for="radio-13">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-14" name="spare" value="2" <?php echo $explore[0]['spare'] == 2 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-14" name="spare" value="2" <?php echo $explore['spare'] == 2 ? 'checked' : '';?>>
                             <label for="radio-14">NO</label>
                         </div>
                 </div>
@@ -143,11 +146,11 @@
                 <span class="c-red">*</span>专业支持车驾驶员：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-15" name="professional" value="1" <?php echo $explore[0]['professional'] == 1 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-15" name="professional" value="1" <?php echo $explore['professional'] == 1 ? 'checked' : '';?>>
                             <label for="radio-15">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-16" name="professional" value="2" <?php echo $explore[0]['professional'] == 2 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-16" name="professional" value="2" <?php echo $explore['professional'] == 2 ? 'checked' : '';?>>
                             <label for="radio-16">NO</label>
                         </div>
                 </div>
@@ -157,11 +160,11 @@
                 <span class="c-red">*</span>专业双语导游：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-17" name="bilingual" value="1" <?php echo $explore[0]['bilingual'] == 1 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-17" name="bilingual" value="1" <?php echo $explore['bilingual'] == 1 ? 'checked' : '';?>>
                             <label for="radio-17">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-18" name="bilingual" value="2" <?php echo $explore[0]['bilingual'] == 2 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-18" name="bilingual" value="2" <?php echo $explore['bilingual'] == 2 ? 'checked' : '';?>>
                             <label for="radio-18">NO</label>
                         </div>
                 </div>
@@ -171,11 +174,11 @@
                 <span class="c-red">*</span>团队旅行体验：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-19" name="experience" value="1" <?php echo $explore[0]['experience'] == 1 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-19" name="experience" value="1" <?php echo $explore['experience'] == 1 ? 'checked' : '';?>>
                             <label for="radio-19">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-20" name="experience" value="2" <?php echo $explore[0]['experience'] == 2 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-20" name="experience" value="2" <?php echo $explore['experience'] == 2 ? 'checked' : '';?>>
                             <label for="radio-20">NO</label>
                         </div>
                 </div>
@@ -185,11 +188,11 @@
                 <span class="c-red">*</span>每天提供丰盛早餐：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-21" name="breakfast" value="1" <?php echo $explore[0]['breakfast'] == 1 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-21" name="breakfast" value="1" <?php echo $explore['breakfast'] == 1 ? 'checked' : '';?>>
                             <label for="radio-21">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-22" name="breakfast" value="2" <?php echo $explore[0]['breakfast'] == 2 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-22" name="breakfast" value="2" <?php echo $explore['breakfast'] == 2 ? 'checked' : '';?>>
                             <label for="radio-22">NO</label>
                         </div>
                 </div>
@@ -199,11 +202,11 @@
                 <span class="c-red">*</span>骑行时所需的汽油：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-23" name="gasolin" value="1" <?php echo $explore[0]['gasolin'] == 1 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-23" name="gasolin" value="1" <?php echo $explore['gasolin'] == 1 ? 'checked' : '';?>>
                             <label for="radio-23">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-24" name="gasolin" value="2" <?php echo $explore[0]['gasolin'] == 2 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-24" name="gasolin" value="2" <?php echo $explore['gasolin'] == 2 ? 'checked' : '';?>>
                             <label for="radio-24">NO</label>
                         </div>
                 </div>
@@ -214,11 +217,11 @@
                 ：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-25" name="banquet" value="1" <?php echo $explore[0]['banquet'] == 1 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-25" name="banquet" value="1" <?php echo $explore['banquet'] == 1 ? 'checked' : '';?>>
                             <label for="radio-25">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-26" name="banquet" value="2" <?php echo $explore[0]['banquet'] == 2 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-26" name="banquet" value="2" <?php echo $explore['banquet'] == 2 ? 'checked' : '';?>>
                             <label for="radio-26">NO</label>
                         </div>
                 </div>
@@ -229,11 +232,11 @@
                 ：</label>
                 <div class="mt-20 skin-minimal">
                         <div class="radio-box">
-                            <input type="radio" id="radio-27" name="farewell" value="1" <?php echo $explore[0]['farewell'] == 1 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-27" name="farewell" value="1" <?php echo $explore['farewell'] == 1 ? 'checked' : '';?>>
                             <label for="radio-27">YES</label>
                         </div>
                         <div class="radio-box">
-                            <input type="radio" id="radio-28" name="farewell" value="2" <?php echo $explore[0]['farewell'] == 2 ? 'checked' : '';?>>
+                            <input type="radio" id="radio-28" name="farewell" value="2" <?php echo $explore['farewell'] == 2 ? 'checked' : '';?>>
                             <label for="radio-28">NO</label>
                         </div>
                 </div>
@@ -241,13 +244,13 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>价格：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="<?php echo $explore[0]['price'];?>" placeholder=""  name="price">
+                <input type="text" class="input-text" value="<?php echo $explore['price'];?>" placeholder=""  name="price">
             </div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">精心绘制：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <script id="editor" type="text/plain" style="width:100%;height:400px;"><?php echo $explore[0]['text'];?></script>
+                <script id="editor" type="text/plain" style="width:100%;height:400px;"><?php echo $explore['text'];?></script>
                 </div>
             </div>
 		<div class="row cl">

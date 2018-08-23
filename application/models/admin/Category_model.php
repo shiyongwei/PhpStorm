@@ -45,22 +45,13 @@ class Category_model extends CI_Model
 
         }
 //更新
-        public function update_category ($id, $data)
+        public function update_category ($data)
         {
-            $this -> db -> set('category_name', $data['category_name']);
+            $this -> db -> set($data);
 
-            $this -> db -> where('category_id', $id);
+            $this -> db -> where('category_id', $data['category_id']);
 
             return $this -> db -> update(self::TBL_USER);
 
         }
-
-
-        public function page ($per_nums,$start_position)
-        {
-            $this->db->order_by('aaddtime','desc');
-
-        }
-
-
     }

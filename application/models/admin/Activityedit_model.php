@@ -26,7 +26,7 @@ class Activityedit_model extends CI_Model
             {
                 $condition['id'] = $data;
 
-                return $this->db->where($condition)->get(self::TBL_NAMR)->result_array();
+                return $this->db->where($condition)->get(self::TBL_NAMR)->row_array();
             }
 
         }

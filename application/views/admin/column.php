@@ -19,7 +19,7 @@
     <script type="text/javascript" src="/public/admin/lib/DD_belatedPNG_0.0.8a-min.js"></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <title>品牌管理</title>
+    <title>活动管理</title>
 </head>
 <body>
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 活动管理
@@ -28,10 +28,12 @@
 </nav>
 <div class="page-container">
     <div class="cl pd-5 bg-1 bk-gray">
+        <?php if (!isset($column[0]['lang'])): ?>
         <span class="l">
             <a class="btn btn-primary radius" href="javascript:;" onclick="column_add('添加栏目','column_add','450','240')">
                 <i class="Hui-iconfont">&#xe600;</i> 添加栏目</a>
         </span>
+        <?php endif; ?>
         <span class="r">共有数据：<strong><?php echo count($column); ?></strong> 条</span>
     </div>
     <table class="table table-border table-bordered table-hover table-bg">
@@ -62,7 +64,11 @@
                     <?php else: ?>
                         <a style="text-decoration:none" onClick="column_stop(this,'<?php echo $value['column_id']; ?>')" href="javascript:;" title="非热门"><i class="Hui-iconfont">&#xe631;</i></a>
                     <?php endif; ?>
+                    <?php if (!isset($value['lang'])): ?>
                         <a title="编辑" href="javascript:;" onclick="column_edit('栏目编辑','column_edit?id=<?php echo $value['column_id']; ?>','1','450','240')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <?php else: ?>
+                        <a title="编辑" href="javascript:;" onclick="column_edit('栏目编辑','column_edit?id=<?php echo $value['column_id']; ?>&lang=<?php echo $value['lang'];?>','1','450','240')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <?php endif; ?>
                         <a title="删除" href="javascript:;" onclick="column_del(this,'<?php echo $value['column_id']; ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
                 </td>
             </tr>

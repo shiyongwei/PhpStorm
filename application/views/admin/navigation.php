@@ -31,10 +31,9 @@
     <table class="table table-border table-bordered table-hover table-bg">
         <thead>
         <tr>
-            <th scope="col" colspan="9">导航管理</th>
+            <th scope="col" colspan="8">导航管理</th>
         </tr>
         <tr class="text-c">
-            <th width="40">ID</th>
             <th width="50">导航1</th>
             <th width="50">导航2</th>
             <th width="50">导航3</th>
@@ -48,7 +47,6 @@
         <tbody>
         <?php foreach ($navigation as $item => $value): ?>
             <tr class="text-c">
-                <td><?php echo $value['navigation_id']; ?></td>
                 <td><?php echo $value['navigation_name']; ?></td>
                 <td><?php echo $value['lease_name']; ?></td>
                 <td><?php echo $value['hotel_name']; ?></td>
@@ -56,9 +54,16 @@
                 <td><?php echo $value['activity_name']; ?></td>
                 <td><?php echo $value['city_name']; ?></td>
                 <td><?php echo $value['online_name']; ?></td>
-                <td class="td-manage">
+                <?php if(!isset($value['lang'])) :?>
+                    <td class="td-manage">
                         <a title="编辑" href="javascript:;" onclick="navigation_edit('导航编辑','navigation_edit?id=<?php echo $value['navigation_id']; ?>','1','550','450')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                </td>
+                    </td>
+                <?php else: ?>
+                    <td class="td-manage">
+                        <a title="编辑" href="javascript:;" onclick="navigation_edit('导航编辑','navigation_edit?id=<?php echo $value['navigation_id']; ?>&lang=<?php echo $value['lang']; ?>','1','550','450')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    </td>
+                <?php endif; ?>
+
             </tr>
         <?php endforeach; ?>
         </tbody>

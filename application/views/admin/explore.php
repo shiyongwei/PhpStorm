@@ -45,9 +45,15 @@
                     <td><?php echo $value['explore_id'];?></td>
                     <td><?php echo $value['increase_name'];?></td>
                     <td><?php echo $value['price'];?></td>
-                    <td class="td-manage">
-                        <a style="text-decoration:none" class="ml-5" onClick="explore_edit('探索方式编辑','explore_add?id=<?php echo $value['explore_id'];?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-                    </td>
+                    <?php if (!isset($value['lang'])): ?>
+                        <td class="td-manage">
+                            <a style="text-decoration:none" class="ml-5" onClick="explore_edit('探索方式编辑','explore_add?id=<?php echo $value['explore_id'];?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                        </td>
+                    <?php else: ?>
+                        <td class="td-manage">
+                            <a style="text-decoration:none" class="ml-5" onClick="explore_edit('探索方式编辑','explore_add?id=<?php echo $value['explore_id'];?>&lang=<?php echo $value['lang'];?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                        </td>
+                    <?php endif; ?>
                 </tr>
             <?php endforeach; ?>
             </tbody>

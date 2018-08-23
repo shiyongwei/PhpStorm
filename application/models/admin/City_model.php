@@ -6,11 +6,6 @@ class City_model extends CI_Model{
 
         const TBL_CITY = 'ci_city';
 
-    /**
-     * @access public
-     * @param $pid 节点的id
-     * @param array 返回该节点的所有后代节点
-     */
         public function list_cate($pid = 0){
             #获取所有的记录
             $query = $this->db->get(self::TBL_CITY);
@@ -19,15 +14,6 @@ class City_model extends CI_Model{
             return $this->_tree($cates,$pid);
         }
 
-
-
-    /**
-     *@access private
-     *@param $arr array 要遍历的数组
-     *@param $pid 节点的pid，默认为0，表示从顶级节点开始
-     *@param $level int 表示层级 默认为0
-     *@param array 排好序的所有后代节点
-     */
         private function _tree($arr,$pid = 0,$level = 0){
             static $tree = array(); #用于保存重组的结果,注意使用静态变量
             foreach ($arr as $v) {
@@ -98,9 +84,10 @@ class City_model extends CI_Model{
         }
 
     #更新
-        public function update_city($data,$cat_id){
-            $condition['cit_id'] = $cat_id;
-            return $this->db->where($condition)->update(self::TBL_CITY,$data);
+        public function update_city($data){
+            $this -> db -> set($data);
+            $this -> db -> where('cit_id', $data['cit_id']);
+            return $this -> db -> update(self::TBL_CITY);
         }
         public function update_status ($data)
         {

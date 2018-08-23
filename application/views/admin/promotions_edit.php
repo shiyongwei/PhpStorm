@@ -32,83 +32,85 @@
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
         <input type="hidden" name="image" value="" id="image">
-        <input type="hidden" name="id" value="<?php echo $promotions[0]['id'];?>">
-		<div class="row cl">
+        <input type="hidden" name="id" value="<?php echo $promotions['id'];?>">
+        <?php if (isset($promotions['lang'])): ?>
+            <input type="hidden" name="lang" value="<?php echo $promotions['lang'];?>">
+        <?php endif; ?>		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $promotions[0]['promtitle'];?>" placeholder="" id="" name="promtitle">
+				<input type="text" class="input-text" value="<?php echo $promotions['promtitle'];?>" placeholder="" id="" name="promtitle">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">价格:</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="price" id="" placeholder="" value="<?php echo $promotions[0]['price'];?>" class="input-text">
+				<input type="text" name="price" id="" placeholder="" value="<?php echo $promotions['price'];?>" class="input-text">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">价值：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="worth" id="" placeholder="" value="<?php echo $promotions[0]['worth'];?>" class="input-text">
+				<input type="text" name="worth" id="" placeholder="" value="<?php echo $promotions['worth'];?>" class="input-text">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">折扣：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="discount" id="" placeholder="" value="<?php echo $promotions[0]['discount'];?>" class="input-text">
+				<input type="text" name="discount" id="" placeholder="" value="<?php echo $promotions['discount'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">你省去了：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="save" id="" placeholder="" value="<?php echo $promotions[0]['save'];?>" class="input-text">
+				<input type="text" name="save" id="" placeholder="" value="<?php echo $promotions['save'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">在此之前预订：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="booking" id="" placeholder="" value="<?php echo $promotions[0]['booking'];?>" class="input-text">
+				<input type="text" name="booking" id="" placeholder="" value="<?php echo $promotions['booking'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">在此期间取车：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="during" id="" placeholder="" value="<?php echo $promotions[0]['during'];?>" class="input-text">
+				<input type="text" name="during" id="" placeholder="" value="<?php echo $promotions['during'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">取车于：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="thecar" id="" placeholder="" value="<?php echo $promotions[0]['thecar'];?>" class="input-text">
+				<input type="text" name="thecar" id="" placeholder="" value="<?php echo $promotions['thecar'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">还车于：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="cartime" id="" placeholder="" value="<?php echo $promotions[0]['cartime'];?>" class="input-text">
+				<input type="text" name="cartime" id="" placeholder="" value="<?php echo $promotions['cartime'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">最少车辆数：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="vehicles" id="" placeholder="" value="<?php echo $promotions[0]['vehicles'];?>" class="input-text">
+				<input type="text" name="vehicles" id="" placeholder="" value="<?php echo $promotions['vehicles'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">最少租赁天数：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="day" id="" placeholder="" value="<?php echo $promotions[0]['day'];?>" class="input-text">
+				<input type="text" name="day" id="" placeholder="" value="<?php echo $promotions['day'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">购买条款：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="terms" id="" placeholder="" value="<?php echo $promotions[0]['terms'];?>" class="input-text">
+				<input type="text" name="terms" id="" placeholder="" value="<?php echo $promotions['terms'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">联系方式：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="city" id="" placeholder="" value="<?php echo $promotions[0]['city'];?>" class="input-text">
+				<input type="text" name="city" id="" placeholder="" value="<?php echo $promotions['city'];?>" class="input-text">
 			</div>
 		</div>
 
@@ -116,7 +118,7 @@
             <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <div class="uploader-thum-container">
-                    <img src="<?php echo $promotions[0]['image'];?>" alt="" style="width: 200px;height: 200px;">
+                    <img src="<?php echo $promotions['image'];?>" alt="" style="width: 200px;height: 200px;">
                 </div>
             </div>
         </div>
@@ -144,7 +146,7 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">产品摘要：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <textarea name="text" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo $promotions[0]['text'];?></textarea>
+                <textarea name="text" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo $promotions['text'];?></textarea>
                 <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
             </div>
         </div>

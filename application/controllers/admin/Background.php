@@ -16,28 +16,54 @@ class Background extends CI_Controller
 
             $data['id'] = $arr['id'];
 
-            if($arr['id'] == 1){
+            if(!isset($arr['lang'])){
+                if($arr['id'] == 1){
 
-                $data['title'] = $arr['title'];
+                    $data['title'] = $arr['title'];
 
-            }elseif ($arr['id'] == 2){
+                }elseif ($arr['id'] == 2){
+                    $data['title'] = $arr['title'];
+                    $data['price'] = $arr['price'];
+                    $data['head'] = $arr['head'];
+                    $data['foot'] = $arr['foot'];
 
-                $data['price'] = $arr['price'];
-                $data['head'] = $arr['head'];
-                $data['foot'] = $arr['foot'];
+                }elseif ($arr['id'] == 3){
 
-            }elseif ($arr['id'] == 3){
+                    $data['head'] = $arr['head'];
+                    $data['foot'] = $arr['foot'];
+                    $data['central'] = $arr['central'];
+                }
 
-                $data['head'] = $arr['head'];
-                $data['foot'] = $arr['foot'];
-                $data['central'] = $arr['central'];
+                if(!empty($arr['image'])){
+
+                    $data['image'] = $arr['image'];
+
+                }
+            }else{
+                if($arr['id'] == 1){
+
+                    $data['title_en'] = $arr['title'];
+
+                }elseif ($arr['id'] == 2){
+                    $data['title_en'] = $arr['title'];
+                    $data['price_en'] = $arr['price'];
+                    $data['head_en'] = $arr['head'];
+                    $data['foot_en'] = $arr['foot'];
+
+                }elseif ($arr['id'] == 3){
+
+                    $data['head_en'] = $arr['head'];
+                    $data['foot_en'] = $arr['foot'];
+                    $data['central_en'] = $arr['central'];
+                }
+
+                if(!empty($arr['image'])){
+
+                    $data['image'] = $arr['image'];
+
+                }
             }
 
-            if(!empty($arr['image'])){
-
-                $data['image'] = $arr['image'];
-
-            }
 
             if($this->Background_model->edit_name($data))
             {

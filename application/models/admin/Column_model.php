@@ -24,7 +24,7 @@ class Column_model extends CI_Model
             {
                 $condition['column_id'] = $data;
 
-                return $this->db->where($condition)->get(self::TBL_NAME)->result_array();
+                return $this->db->where($condition)->get(self::TBL_NAME)->row_array();
             }
 
         }
@@ -42,11 +42,10 @@ class Column_model extends CI_Model
 
         }
 //更新
-        public function update_column ($id, $data)
+        public function update_column ($data)
         {
-            $this -> db -> set('column_name', $data['column_name']);
-            $this -> db -> set('status', $data['status']);
-            $this -> db -> where('column_id', $id);
+            $this -> db -> set($data);
+            $this -> db -> where('column_id', $data['column_id']);
 
             return $this -> db -> update(self::TBL_NAME);
 

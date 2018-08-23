@@ -28,10 +28,12 @@
 </nav>
 <div class="page-container">
     <div class="cl pd-5 bg-1 bk-gray">
+        <?php if (!isset($cites[0]['lang'])): ?>
         <span class="l">
             <a class="btn btn-primary radius" href="javascript:;" onclick="city_add('添加城市','city_add')">
                 <i class="Hui-iconfont">&#xe600;</i> 添加城市</a>
         </span>
+        <?php endif ;?>
         <span class="r">共有数据：<strong><?php echo count($cites); ?></strong> 条</span>
     </div>
     <table class="table table-border table-bordered table-hover table-bg">
@@ -83,13 +85,17 @@
                     <td class="td-status"><span class="label label-success radius">广告</span></td>
                 <?php endif; ?>
                 <td class="td-manage">
-                        <?php if ($item['status'] == 0): ?>
-                            <a style="text-decoration:none" onClick="team_start(this,'<?php echo $item['cit_id'];?>')" href="javascript:;" title="广告"><i class="Hui-iconfont">&#xe603;</i></a>
-                        <?php else: ?>
-                            <a style="text-decoration:none" onClick="team_stop(this,'<?php echo $item['cit_id'];?>')" href="javascript:;" title="普通"><i class="Hui-iconfont">&#xe6de;</i></a>
-                        <?php endif; ?>
+                    <?php if ($item['status'] == 0): ?>
+                        <a style="text-decoration:none" onClick="team_start(this,'<?php echo $item['cit_id'];?>')" href="javascript:;" title="广告"><i class="Hui-iconfont">&#xe603;</i></a>
+                    <?php else: ?>
+                        <a style="text-decoration:none" onClick="team_stop(this,'<?php echo $item['cit_id'];?>')" href="javascript:;" title="普通"><i class="Hui-iconfont">&#xe6de;</i></a>
+                    <?php endif; ?>
+                    <?php if (!isset($item['lang'])): ?>
                         <a title="编辑" href="javascript:;" onclick="city_edit('城市编辑','city_edit?id=<?php echo $item['cit_id']; ?>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                        <a title="删除" href="javascript:;" onclick="city_del(this,'<?php echo $item['cit_id']; ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                    <?php else: ?>
+                        <a title="编辑" href="javascript:;" onclick="city_edit('城市编辑','city_edit?id=<?php echo $item['cit_id']; ?>&lang=<?php echo $item['lang'] ;?>>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <?php endif; ?>
+                    <a title="删除" href="javascript:;" onclick="city_del(this,'<?php echo $item['cit_id']; ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
                 </td>
             </tr>
         <?php endforeach; ?>

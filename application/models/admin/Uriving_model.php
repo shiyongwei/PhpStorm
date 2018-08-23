@@ -24,7 +24,7 @@ class Uriving_model extends CI_Model
             {
                 $condition['id'] = $data;
 
-                return $this->db->where($condition)->get(self::TBL_NAME)->result_array();
+                return $this->db->where($condition)->get(self::TBL_NAME)->row_array();
             }
 
         }

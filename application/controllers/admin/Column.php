@@ -70,13 +70,13 @@ class Column extends CI_Controller
         public function column_edit ()
         {
             parse_str($_POST['str'], $arr);
-
-            $id = $arr['column_id'];
-
-            $data['column_name'] = $arr['column_name'];
-
+            $data['column_id'] = $arr['column_id'];
             $data['status'] = $arr['status'];
-
+            if(!isset($arr['lang'])){
+                $data['column_name'] = $arr['column_name'];
+            }else{
+                $data['column_name_en'] = $arr['column_name'];
+            }
             if ($arr['column_name'] !== '')
             {
                 if ($this -> Column_model -> getAll($data))
@@ -87,7 +87,7 @@ class Column extends CI_Controller
                 else
                 {
 
-                    if ($this -> Column_model -> update_column($id, $data))
+                    if ($this -> Column_model -> update_column($data))
                     {
 
                         echo 200;

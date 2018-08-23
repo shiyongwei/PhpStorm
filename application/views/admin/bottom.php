@@ -45,9 +45,15 @@
                 <td><?php echo $value['bottom_id']; ?></td>
                 <td><?php echo $value['navigation_name']; ?></td>
                 <td><?php echo $value['bottom_text']; ?></td>
+                <?php if (!isset($value['lang'])): ?>
                 <td class="td-manage">
                         <a title="编辑" href="javascript:;" onclick="bottom_edit('导航编辑','bottom_edit?id=<?php echo $value['bottom_id']; ?>','1','1000','800')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
                 </td>
+                <?php else: ?>
+                    <td class="td-manage">
+                        <a title="编辑" href="javascript:;" onclick="bottom_edit('导航编辑','bottom_edit?id=<?php echo $value['bottom_id']; ?>&lang=<?php echo $value['lang'] ;?>','1','1000','800')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    </td>
+                <?php endif; ?>
             </tr>
         <?php endforeach; ?>
         </tbody>

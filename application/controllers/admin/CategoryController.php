@@ -70,11 +70,12 @@ class CategoryController extends CI_Controller
         public function category_edit ()
         {
             parse_str($_POST['str'], $arr);
-
-            $id = $arr['id'];
-
-            $data['category_name'] = $arr['category_name'];
-
+            $data['category_id'] = $arr['id'];
+            if(!isset($arr['lang'])){
+                $data['category_name'] = $arr['category_name'];
+            }else{
+                $data['category_name_en'] = $arr['category_name'];
+            }
             if ($arr['category_name'] !== '')
             {
                 if ($this -> Category_model -> getAll($data))
@@ -85,7 +86,7 @@ class CategoryController extends CI_Controller
                 else
                 {
 
-                    if ($this -> Category_model -> update_category($id, $data))
+                    if ($this -> Category_model -> update_category($data))
                     {
 
                         echo 200;

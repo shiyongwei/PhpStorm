@@ -30,7 +30,7 @@ class List_model extends CI_Model
                 return $this->db->where($condition)
                     ->join('product_category_add','product_list_add.category=product_category_add.category_id')
                     ->join('product_brand_add','product_list_add.brand=product_brand_add.brand_id')
-                    ->get(self::TBL_LIST)->result_array();
+                    ->get(self::TBL_LIST)->row_array();
             }
 
         }

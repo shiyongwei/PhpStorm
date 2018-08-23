@@ -55,9 +55,15 @@
                         <a href="javascript:;"></a>
                     <?php endif; ?>
                 </td>
-                <td class="td-manage">
+                <?php if (!isset($value['lang'])): ?>
+                    <td class="td-manage">
                         <a title="编辑" href="javascript:;" onclick="name_edit('导航编辑','side_edit?id=<?php echo $value['id']; ?>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                </td>
+                    </td>
+                <?php else: ?>
+                    <td class="td-manage">
+                        <a title="编辑" href="javascript:;" onclick="name_edit('导航编辑','side_edit?id=<?php echo $value['id']; ?>&lang=<?php echo $value['lang'];?>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    </td>
+                <?php endif; ?>
             </tr>
         <?php endforeach; ?>
         </tbody>

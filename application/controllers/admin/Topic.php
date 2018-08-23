@@ -59,11 +59,16 @@ class Topic extends CI_Controller
             parse_str($_POST['str'], $arr);
 
             $data['topic_id'] = $arr['id'];
-            $data['topictitle'] = $arr['topictitle'];
-            $data['text'] = $arr['text'];
-            $data['galleryimage'] = $arr['editorValue'];
             $data['time'] = date('Y-m-d H:i:s');
-
+            if(!isset($arr['lang'])){
+                $data['topictitle'] = $arr['topictitle'];
+                $data['text'] = $arr['text'];
+                $data['galleryimage'] = $arr['editorValue'];
+            }else{
+                $data['topictitle_en'] = $arr['topictitle'];
+                $data['text_en'] = $arr['text'];
+                $data['galleryimage_en'] = $arr['editorValue'];
+            }
             if(!empty($arr['image'])){
                 $data['image'] = $arr['image'];
             }

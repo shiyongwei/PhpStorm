@@ -19,15 +19,13 @@
 <script type="text/javascript" src="/public/admin/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-
-<title>图片展示</title>
 <link href="/public/admin/lib/lightbox2/2.8.1/css/lightbox.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
 <div class="page-container">
-    <?php if (!empty($list[0]['image'])): ?>
+    <?php if (!empty($list['image'])): ?>
 
-        <img src="<?php echo $list[0]['image'];?>" style="margin-left: 100px">
+        <img src="<?php echo $list['image'];?>" style="margin-left: 100px">
 
     <?php endif; ?>
     <table class="table table-border table-bordered table-hover">
@@ -38,93 +36,93 @@
         </tr>
         </thead>
         <tbody>
-        <?php if (!empty($list[0]['product_brand'])): ?>
+        <?php if (!empty($list['product_brand'])): ?>
             <tr>
                 <th>所属品牌</th>
-                <td><?php echo $list[0]['product_brand'];?></td>
+                <td><?php echo $list['product_brand'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['category_name'])): ?>
+        <?php if (!empty($list['category_name'])): ?>
             <tr>
                 <th>所属类型</th>
-                <td><?php echo $list[0]['category_name'];?></td>
+                <td><?php echo $list['category_name'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['stroke'])): ?>
+        <?php if (!empty($list['stroke'])): ?>
             <tr>
                 <th>内径×行程</th>
-                <td><?php echo $list[0]['stroke'];?></td>
+                <td><?php echo $list['stroke'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['displacement'])): ?>
+        <?php if (!empty($list['displacement'])): ?>
             <tr>
                 <th>排量</th>
-                <td><?php echo $list[0]['displacement'];?></td>
+                <td><?php echo $list['displacement'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['reartyre'])): ?>
+        <?php if (!empty($list['reartyre'])): ?>
             <tr>
                 <th>后轮胎</th>
-                <td><?php echo $list[0]['reartyre'];?></td>
+                <td><?php echo $list['reartyre'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['fronttire'])): ?>
+        <?php if (!empty($list['fronttire'])): ?>
             <tr>
                 <th>前轮胎</th>
-                <td><?php echo $list[0]['fronttire'];?></td>
+                <td><?php echo $list['fronttire'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['rearbrake'])): ?>
+        <?php if (!empty($list['rearbrake'])): ?>
             <tr>
                 <th>后制动器</th>
-                <td><?php echo $list[0]['rearbrake'];?></td>
+                <td><?php echo $list['rearbrake'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['frontbrake'])): ?>
+        <?php if (!empty($list['frontbrake'])): ?>
             <tr>
                 <th>前刹车</th>
-                <td><?php echo $list[0]['frontbrake'];?></td>
+                <td><?php echo $list['frontbrake'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['seatheight'])): ?>
+        <?php if (!empty($list['seatheight'])): ?>
             <tr>
                 <th>座位高度</th>
-                <td><?php echo $list[0]['seatheight'];?></td>
+                <td><?php echo $list['seatheight'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['compression'])): ?>
+        <?php if (!empty($list['compression'])): ?>
             <tr>
                 <th>压缩比</th>
-                <td><?php echo $list[0]['compression'];?></td>
+                <td><?php echo $list['compression'];?></td>
             </tr>
         <?php endif; ?>
-        <?php if (!empty($list[0]['capacity'])): ?>
+        <?php if (!empty($list['capacity'])): ?>
             <tr>
                 <th>油箱容量</th>
-                <td><?php echo $list[0]['capacity'];?></td>
+                <td><?php echo $list['capacity'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['windshield'])): ?>
+        <?php if (!empty($list['windshield'])): ?>
             <tr>
                 <th>挡风玻璃</th>
-                <td><?php echo $list[0]['windshield'];?></td>
+                <td><?php echo $list['windshield'];?></td>
             </tr>
         <?php endif; ?>
 
-        <?php if (!empty($list[0]['text'])): ?>
+        <?php if (!empty($list['text'])): ?>
             <tr>
                 <th>产品摘要</th>
-                <td><?php echo $list[0]['text'];?></td>
+                <td><?php echo $list['text'];?></td>
             </tr>
         <?php endif; ?>
 

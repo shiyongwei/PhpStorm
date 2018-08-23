@@ -70,22 +70,22 @@ class BrandController extends CI_Controller
         public function product_edit ()
         {
             parse_str($_POST['str'], $arr);
-
-            $id = $arr['id'];
-
-            $data['product_brand'] = $arr['product_brand'];
-
+            $data['brand_id'] = $arr['brand_id'];
+            if(!isset($arr['lang'])){
+                $data['product_brand'] = $arr['product_brand'];
+            }else{
+                $data['product_brand_en'] = $arr['product_brand'];
+            }
             if ($arr['product_brand'] !== '')
             {
                 if ($this -> Product_model -> getAll($data))
                 {
                     echo 404;
-
                 }
                 else
                 {
 
-                    if ($this -> Product_model -> update_product($id, $data))
+                    if ($this -> Product_model -> update_product($data))
                     {
 
                         echo 200;

@@ -15,11 +15,15 @@ class Side extends CI_Controller
             parse_str($_POST['str'], $arr);
 
             $data['id'] = $arr['id'];
-            $data['title'] = $arr['title'];
-            $data['head'] = $arr['head'];
-            $data['foot'] = $arr['foot'];
-
-
+            if(!isset($arr['lang'])){
+                $data['title'] = $arr['title'];
+                $data['head'] = $arr['head'];
+                $data['foot'] = $arr['foot'];
+            }else{
+                $data['title_en'] = $arr['title'];
+                $data['head_en'] = $arr['head'];
+                $data['foot_en'] = $arr['foot'];
+            }
             if(!empty($arr['image'])){
 
                 $data['image'] = $arr['image'];

@@ -77,20 +77,29 @@ class Uriving extends CI_Controller
         public function uriving_edit()
         {
             parse_str($_POST['str'], $arr);
-
             $data['id'] = $arr['id'];
-            $data['urivingtitle'] = $arr['urivingtitle'];
-            $data['day'] = $arr['day'];
-            $data['price'] = $arr['price'];
             $data['cit_id'] = $arr['cit_id'];
-            $data['text'] = $arr['text'];
-            $data['season'] = $arr['season'];
-            $data['temperature'] = $arr['temperature'];
-            $data['schedule'] = $arr['editorValue'];
-            $data['kilometers'] = $arr['kilometers'];
             $data['status'] = $arr['status'];
             $data['time'] = date('Y-m-d H:i:s');
-
+            $data['price'] = $arr['price'];
+            if(!isset($arr['lang'])){
+                $data['urivingtitle'] = $arr['urivingtitle'];
+                $data['day'] = $arr['day'];
+                $data['price'] = $arr['price'];
+                $data['text'] = $arr['text'];
+                $data['season'] = $arr['season'];
+                $data['temperature'] = $arr['temperature'];
+                $data['schedule'] = $arr['editorValue'];
+                $data['kilometers'] = $arr['kilometers'];
+            }else{
+                $data['urivingtitle_en'] = $arr['urivingtitle'];
+                $data['day_en'] = $arr['day'];
+                $data['text_en'] = $arr['text'];
+                $data['season_en'] = $arr['season'];
+                $data['temperature_en'] = $arr['temperature'];
+                $data['schedule_en'] = $arr['editorValue'];
+                $data['kilometers_en'] = $arr['kilometers'];
+            }
             if(!empty($arr['image'])){
                 $data['image'] = $arr['image'];
             }

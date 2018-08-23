@@ -28,6 +28,9 @@
 <article class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-admin-role-add" onsubmit="return false">
         <input type="hidden" name="bottom_id" value="<?php echo $bottom['bottom_id'];?>">
+        <?php if (isset($bottom['lang'])): ?>
+            <input type="hidden" name="lang" value="<?php echo $bottom['lang'];?>">
+        <?php endif; ?>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>所属底部：</label>
             <div class="formControls col-xs-8 col-sm-9">
@@ -71,30 +74,14 @@
         $.post('/index.php/admin/bottom/bottom_edit',{'str':str},function(data) {
 
             if(data == 200){
-
-                layer.msg('添加成功!',{icon:1,time:2000},function() {
+                layer.msg('修改成功!',{icon:1,time:2000},function() {
                     location.reload();
                 });
-
-            }else if(data == 500){
-
-                layer.msg('内容不能为空!',{icon:3,time:2000});
-
-            }else if(data == 404){
-
-                layer.msg('不能重复添加',{icon:4,time:2000});
-
             }else{
 
-
-                layer.msg('添加失败',{icon:6,time:2000});
-
+                layer.msg('修改失败',{icon:6,time:2000});
             }
-
-
         });
-
-
     })
 
 </script>

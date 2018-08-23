@@ -32,29 +32,32 @@
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
         <input type="hidden" name="image" value="" id="image">
-        <input type="hidden" name="id" value="<?php echo $activityedit[0]['id'];?>">
+        <input type="hidden" name="id" value="<?php echo $activityedit['id'];?>">
+        <?php if (isset($activityedit['lang'])): ?>
+            <input type="hidden" name="lang" value="<?php echo $activityedit['lang'];?>">
+        <?php endif; ?>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $activityedit[0]['activititle'];?>" placeholder="" id="" name="activititle">
+				<input type="text" class="input-text" value="<?php echo $activityedit['activititle'];?>" placeholder="" id="" name="activititle">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">活动开始时间:</label>
 			<div class="formControls col-xs-8 col-sm-9">
-                <input type="text" value="<?php echo $activityedit[0]['starttime'];?>" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}' })" id="logmin" class="input-text Wdate" style="width:120px;" name="starttime">
+                <input type="text" value="<?php echo $activityedit['starttime'];?>" onfocus="WdatePicker({ maxDate:'#F{$dp.$D(\'logmax\')||\'%y-%M-%d\'}' })" id="logmin" class="input-text Wdate" style="width:120px;" name="starttime">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">活动结束时间：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" value="<?php echo $activityedit[0]['endtime'];?>" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;" name="endtime">
+				<input type="text" value="<?php echo $activityedit['endtime'];?>" onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'logmin\')}',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;" name="endtime">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">联系方式：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="contact" id="" placeholder="" value="<?php echo $activityedit[0]['contact'];?>" class="input-text">
+				<input type="text" name="contact" id="" placeholder="" value="<?php echo $activityedit['contact'];?>" class="input-text">
 			</div>
 		</div>
         <div class="row cl">
@@ -68,7 +71,7 @@
                     <span class="select-box">
                       <select name="column_id" class="select">
                          <?php foreach ($column as $value) :?>
-                             <option value="<?php echo $value['column_id'];?>"><?php echo $value['column_name'];?></option>
+                             <option value="<?php echo $value['column_id'];?>"<?php echo $value['column_id'] == $activityedit['id'] ? 'selected' : '';?>><?php echo $value['column_name'];?></option>
                          <?php endforeach; ?>
                       </select>
                     </span>
@@ -79,7 +82,7 @@
             <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <div class="uploader-thum-container">
-                    <img src="<?php echo $activityedit[0]['image'];?>" alt="" style="width: 200px;height: 200px;">
+                    <img src="<?php echo $activityedit['image'];?>" alt="" style="width: 200px;height: 200px;">
                 </div>
             </div>
         </div>
@@ -107,7 +110,7 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">描述：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <textarea name="text" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo $activityedit[0]['text'];?></textarea>
+                <textarea name="text" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo $activityedit['text'];?></textarea>
                 <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
             </div>
         </div>

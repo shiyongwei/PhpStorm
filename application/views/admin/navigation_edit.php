@@ -28,6 +28,9 @@
 <article class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-admin-role-add" onsubmit="return false">
         <input type="hidden" name="navigation_id" value="<?php echo $navigation['navigation_id'];?>">
+        <?php if (isset($navigation['lang'])): ?>
+            <input type="hidden" name="lang" value="<?php echo $navigation['lang'];?>">
+        <?php endif; ?>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>导航1：</label>
 			<div class="formControls col-xs-8 col-sm-9">

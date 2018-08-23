@@ -29,7 +29,9 @@
 </nav>
 <div class="page-container">
     <div class="cl pd-5 bg-1 bk-gray mt-20">
+        <?php if (!isset($promotions[0]['lang'])): ?>
         <span class="l"><a class="btn btn-primary radius" onclick="promotions_add('添加特惠','promotions_add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加特惠</a></span>
+        <?php endif; ?>
         <span class="r">共有数据：<strong><?php echo count($promotions);?></strong> 条</span></div>
     <div class="mt-20">
         <table class="table table-border table-bordered table-bg table-hover table-sort">
@@ -72,7 +74,13 @@
                         <?php else: ?>
                             <a style="text-decoration:none" onClick="promotions_stop(this,'<?php echo $value['id'];?>')" href="javascript:;" title="普通"><i class="Hui-iconfont">&#xe6de;</i></a>
                         <?php endif; ?>
-                        <a style="text-decoration:none" class="ml-5" onClick="promotions_edit('广告编辑','promotions_edit?id=<?php echo $value['id'];?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                        <?php if (!isset($value['lang'])): ?>
+                            <a style="text-decoration:none" class="ml-5" onClick="promotions_edit('广告编辑','promotions_edit?id=<?php echo $value['id'];?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+
+                        <?php else: ?>
+                            <a style="text-decoration:none" class="ml-5" onClick="promotions_edit('广告编辑','promotions_edit?id=<?php echo $value['id'];?>&lang=<?php echo $value['lang'];?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+
+                        <?php endif; ?>
                         <a style="text-decoration:none" class="ml-5" onClick="promotions_del(this,'<?php echo $value['id'];?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
                     </td>
                 </tr>

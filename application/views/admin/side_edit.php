@@ -32,6 +32,9 @@
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
         <input type="hidden" name="image" value="" id="image">
         <input type="hidden" name="id" value="<?php echo $side['id']; ?>" >
+        <?php if (isset($side['lang'])): ?>
+            <input type="hidden" name="lang" value="<?php echo $side['lang'];?>">
+        <?php endif; ?>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">

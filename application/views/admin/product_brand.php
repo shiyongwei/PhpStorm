@@ -29,8 +29,10 @@
 <div class="page-container">
     <div class="cl pd-5 bg-1 bk-gray">
         <span class="l">
+            <?php if (!isset($product[0]['lang'])): ?>
             <a class="btn btn-primary radius" href="javascript:;" onclick="product_brand_add('添加品牌','product_brand_add','350','180')">
-                <i class="Hui-iconfont">&#xe600;</i> 添加品牌</a>
+               <i class="Hui-iconfont">&#xe600;</i> 添加品牌</a>
+            <?php endif; ?>
         </span>
         <span class="r">共有数据：<strong><?php echo count($product); ?></strong> 条</span>
     </div>
@@ -47,7 +49,7 @@
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($product as $item => $value): ?>
+        <?php foreach ($product as  $value): ?>
             <tr class="text-c">
                 <td><?php echo $value['brand_id']; ?></td>
                 <td><?php echo $value['product_brand']; ?></td>
@@ -62,7 +64,11 @@
                     <?php else: ?>
                         <a style="text-decoration:none" onClick="product_brand_stop(this,'<?php echo $value['brand_id']; ?>')" href="javascript:;" title="非热门"><i class="Hui-iconfont">&#xe631;</i></a>
                     <?php endif; ?>
+                    <?php if (!isset($value['lang'])): ?>
                         <a title="编辑" href="javascript:;" onclick="product_brand_edit('角色编辑','product_brand_edit?id=<?php echo $value['brand_id']; ?>','1','350','200')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <?php else: ?>
+                        <a title="编辑" href="javascript:;" onclick="product_brand_edit('角色编辑','product_brand_edit?id=<?php echo $value['brand_id']; ?>&lang=<?php echo $value['lang'];?>','1','350','200')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    <?php endif; ?>
                         <a title="删除" href="javascript:;" onclick="product_brand_del(this,'<?php echo $value['brand_id']; ?>')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a>
                 </td>
             </tr>

@@ -23,8 +23,6 @@ class CityController extends CI_Controller
             $data['status'] = $arr['status'];
             $data['valder'] = $arr['editorValue'];
             $data['text'] = $arr['text'];
-
-
             if ($arr['cit_name'] !== '')
             {
                 if ($this -> City_model -> getAll($data))
@@ -61,16 +59,23 @@ class CityController extends CI_Controller
         {
             parse_str($_POST['str'],$arr);
 
-            $cit_id = $arr['id'];
-
-            $data['cit_name'] = $arr['cit_name'];
-            $data['address'] = $arr['address'];
-            $data['information'] = $arr['information'];
-            $data['time'] = $arr['time'];
+            $data['cit_id'] = $arr['id'];
             $data['status'] = $arr['status'];
-            $data['valder'] = $arr['editorValue'];
-            $data['text'] = $arr['text'];
-
+            if(!isset($arr['lang'])){
+                $data['cit_name'] = $arr['cit_name'];
+                $data['address'] = $arr['address'];
+                $data['information'] = $arr['information'];
+                $data['time'] = $arr['time'];
+                $data['valder'] = $arr['editorValue'];
+                $data['text'] = $arr['text'];
+            }else{
+                $data['cit_name_en'] = $arr['cit_name'];
+                $data['address_en'] = $arr['address'];
+                $data['information_en'] = $arr['information'];
+                $data['time_en'] = $arr['time'];
+                $data['valder_en'] = $arr['editorValue'];
+                $data['text_en'] = $arr['text'];
+            }
             if(!empty($arr['image'])){
                 $data['logo'] = $arr['image'];
             }
@@ -78,9 +83,7 @@ class CityController extends CI_Controller
             # 进行更新
             if ($arr['cit_name'] !== '')
             {
-                $data['cit_name'] = $arr['cit_name'];
-
-                if ($this -> City_model -> update_city($data, $cit_id))
+                if ($this -> City_model -> update_city($data))
                 {
                     echo 200;
                 }

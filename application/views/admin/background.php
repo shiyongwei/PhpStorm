@@ -49,11 +49,11 @@
             <tr class="text-c">
                 <td><?php echo $value['id']; ?></td>
                 <td><?php echo $value['belongs']; ?></td>
-                <td><?php echo $value['price']; ?></td>
                 <td><?php echo $value['title']; ?></td>
                 <td><?php echo $value['head']; ?></td>
                 <td><?php echo $value['central']; ?></td>
                 <td><?php echo $value['foot']; ?></td>
+                <td><?php echo $value['price']; ?></td>
                 <td>
                     <?php if (!empty($value['image'])): ?>
                         <a onClick="product_list_show('<?php echo $value['title'];?>','product_list_show?image=<?php echo $value['image'];?>','10001','1200','800')" href="javascript:;"><img width="60" class="product-thumb" src="<?php echo $value['image'];?>"></a>
@@ -61,9 +61,15 @@
                         <a href="javascript:;"></a>
                     <?php endif; ?>
                 </td>
-                <td class="td-manage">
+                <?php if (!isset($value['lang'])): ?>
+                    <td class="td-manage">
                         <a title="编辑" href="javascript:;" onclick="name_edit('导航编辑','background_edit?id=<?php echo $value['id']; ?>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
-                </td>
+                    </td>
+                <?php else: ?>
+                    <td class="td-manage">
+                        <a title="编辑" href="javascript:;" onclick="name_edit('导航编辑','background_edit?id=<?php echo $value['id']; ?>&lang=<?php echo $value['lang'];?>')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                    </td>
+                <?php endif; ?>
             </tr>
         <?php endforeach; ?>
         </tbody>

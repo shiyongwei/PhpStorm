@@ -79,23 +79,39 @@ class Promotions extends CI_Controller
         public function promotions_edit()
         {
             parse_str($_POST['str'], $arr);
-
-            $data['id'] = $arr['id'];
-            $data['promtitle'] = $arr['promtitle'];
-            $data['price'] = $arr['price'];
-            $data['worth'] = $arr['worth'];
-            $data['discount'] = $arr['discount'];
-            $data['save'] = $arr['save'];
-            $data['booking'] = $arr['booking'];
-            $data['during'] = $arr['during'];
-            $data['thecar'] = $arr['thecar'];
-            $data['vehicles'] = $arr['vehicles'];
-            $data['cartime'] = $arr['cartime'];
-            $data['day'] = $arr['day'];
-            $data['terms'] = $arr['terms'];
-            $data['city'] = $arr['city'];
-            $data['text'] = $arr['text'];
             $data['time'] = date('Y-m-d H:i:s');
+            $data['id'] = $arr['id'];
+            if(!isset($arr['lang'])){
+                $data['promtitle'] = $arr['promtitle'];
+                $data['price'] = $arr['price'];
+                $data['worth'] = $arr['worth'];
+                $data['discount'] = $arr['discount'];
+                $data['save'] = $arr['save'];
+                $data['booking'] = $arr['booking'];
+                $data['during'] = $arr['during'];
+                $data['thecar'] = $arr['thecar'];
+                $data['vehicles'] = $arr['vehicles'];
+                $data['cartime'] = $arr['cartime'];
+                $data['day'] = $arr['day'];
+                $data['terms'] = $arr['terms'];
+                $data['city'] = $arr['city'];
+                $data['text'] = $arr['text'];
+            }else{
+                $data['promtitle_en'] = $arr['promtitle'];
+                $data['price_en'] = $arr['price'];
+                $data['worth_en'] = $arr['worth'];
+                $data['discount_en'] = $arr['discount'];
+                $data['save_en'] = $arr['save'];
+                $data['booking_en'] = $arr['booking'];
+                $data['during_en'] = $arr['during'];
+                $data['thecar_en'] = $arr['thecar'];
+                $data['vehicles_en'] = $arr['vehicles'];
+                $data['cartime_en'] = $arr['cartime'];
+                $data['day_en'] = $arr['day'];
+                $data['terms_en'] = $arr['terms'];
+                $data['city_en'] = $arr['city'];
+                $data['text_en'] = $arr['text'];
+            }
             if(!empty($arr['image'])){
                 $data['image'] = $arr['image'];
             }

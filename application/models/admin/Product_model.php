@@ -46,14 +46,15 @@ class product_model extends CI_Model
 
         }
 //更新
-        public function update_product ($id, $data)
+        public function update_product ($data)
         {
-            $this -> db -> set('product_brand', $data['product_brand']);
-            $this -> db -> where('brand_id', $id);
+            $this -> db -> set($data);
+            $this -> db -> where('brand_id', $data['brand_id']);
 
             return $this -> db -> update(self::TBL_USER);
 
         }
+
         public function update_status ($data)
         {
             if($data['status'] == 0){
@@ -68,5 +69,4 @@ class product_model extends CI_Model
             return $this -> db -> update(self::TBL_USER);
 
         }
-
     }

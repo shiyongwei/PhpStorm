@@ -32,17 +32,20 @@
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
         <input type="hidden" name="image" value="" id="image">
-        <input type="hidden" name="id" value="<?php echo $topic[0]['topic_id'];?>">
+        <input type="hidden" name="id" value="<?php echo $topic['topic_id'];?>">
+        <?php if (isset($topic['lang'])): ?>
+            <input type="hidden" name="lang" value="<?php echo $topic['lang'];?>">
+        <?php endif; ?>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>主题名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $topic[0]['topictitle'];?>" placeholder="" id="" name="topictitle">
+				<input type="text" class="input-text" value="<?php echo $topic['topictitle'];?>" placeholder="" id="" name="topictitle">
 			</div>
 		</div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">主题介绍：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <textarea name="text" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo $topic[0]['text'];?></textarea>
+                <textarea name="text" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)"><?php echo $topic['text'];?></textarea>
                 <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
             </div>
         </div>
@@ -50,7 +53,7 @@
             <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <div class="uploader-thum-container">
-                    <img src="<?php echo $topic[0]['image'];?>" alt="" style="width: 200px;height: 200px;">
+                    <img src="<?php echo $topic['image'];?>" alt="" style="width: 200px;height: 200px;">
                 </div>
             </div>
         </div>
@@ -78,7 +81,7 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">图片集锦：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <script id="editor" type="text/plain" style="width:100%;height:400px;"><?php echo $topic[0]['galleryimage'];?></script>
+                <script id="editor" type="text/plain" style="width:100%;height:400px;"><?php echo $topic['galleryimage'];?></script>
                 </div>
          </div>
 		<div class="row cl">
