@@ -13,34 +13,55 @@ class Team extends CI_Controller
         public function team_add()
         {
             parse_str($_POST['str'], $arr);
+            $config['upload_path']      = './public/uploads/';
+            $config['allowed_types']    = 'gif|jpg|png';
+            $config['max_size']     = 100;
+            $config['max_width']        = 1024;
+            $config['max_height']       = 768;
 
-            $data['teamtitle'] = $arr['teamtitle'];
-            $data['day'] = $arr['day'];
-            $data['cit_id'] = $arr['cit_id'];
-            $data['season'] = $arr['season'];
-            $data['price'] = $arr['price'];
-            $data['text'] = $arr['text'];
-            $data['temperature'] = $arr['temperature'];
-            $data['schedule'] = $arr['editorValue'];
-            $data['kilometers'] = $arr['kilometers'];
-            $data['status'] = $arr['status'];
-            $data['image'] = $arr['image'];
-            $data['time'] = date('Y-m-d H:i:s');
+            $this->load->library('upload', $config);
 
-            if($arr['teamtitle'] !== '' && $arr['image'] !==''){
-
-                if($this->Team_model->add_team($data))
-                {
-                    echo 200;
-
-                }else{
-
-                    echo 300;
-
-                }
-            }else{
-                echo 300;
+            if ( ! $this->upload->do_upload('userfile'))
+            {
+                echo 1;
+//                $error = array('error' => $this->upload->display_errors());
+//
+//                $this->load->view('upload_form', $error);
             }
+            else
+            {
+                echo 2;
+//                $data = array('upload_data' => $this->upload->data());
+//
+//                $this->load->view('upload_success', $data);
+            }
+//            $data['teamtitle'] = $arr['teamtitle'];
+//            $data['day'] = $arr['day'];
+//            $data['cit_id'] = $arr['cit_id'];
+//            $data['season'] = $arr['season'];
+//            $data['price'] = $arr['price'];
+//            $data['text'] = $arr['text'];
+//            $data['temperature'] = $arr['temperature'];
+//            $data['schedule'] = $arr['editorValue'];
+//            $data['kilometers'] = $arr['kilometers'];
+//            $data['status'] = $arr['status'];
+//            $data['image'] = $arr['image'];
+//            $data['time'] = date('Y-m-d H:i:s');
+//
+//            if($arr['teamtitle'] !== '' && $arr['image'] !==''){
+//
+//                if($this->Team_model->add_team($data))
+//                {
+//                    echo 200;
+//
+//                }else{
+//
+//                    echo 300;
+//
+//                }
+//            }else{
+//                echo 300;
+//            }
 
         }
 

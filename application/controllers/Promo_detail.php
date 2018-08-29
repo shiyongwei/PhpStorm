@@ -33,7 +33,7 @@
 
 
 				$data['rent_list'] = $rent_list;
-				$data['promotion'] = $promotion;
+				$data['promotions'] = $promotion;
 				$data['promotiont'] = $promotiont;
 				$data['navigation'] = $navigation;
 				$data['get_limit'] = $get_limit;

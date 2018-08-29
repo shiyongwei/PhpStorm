@@ -102,6 +102,40 @@
                 <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
             </div>
         </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">地图上传：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <?php echo form_open_multipart('upload/do_upload');?>
+                <input type="file" onchange="preImg(this)" name="file">
+                <script>
+                    function preImg(_this){
+                        var formdata = new FormData();
+                        var file = $(_this)[0].files[0];
+                        //限制图片的大小
+                        var size = parseInt(file.size)/1024;
+                        if(size > 500){
+                            alert("图片不能大于500K");
+                            return false;
+                        }
+                        formdata.append('file',file);
+                        $.ajax({
+                            method: "post",
+                            dataType:"json",
+                            url:url,
+                            data:formdata,
+                            processData: false,
+                            contentType: false,
+                            success:function(data){
+                                console.log(data);
+                            },
+                            error:function(data){
+                                console.log(data);
+                            }
+                        })
+                    };
+                </script>
+            </div>
+        </div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">背景图上传：</label>
 			<div class="formControls col-xs-8 col-sm-9">

@@ -1,6 +1,5 @@
 <link href="/public/css/promo_detail.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="/public/js/jquery-1.9.1.min.js"></script>
-<?php foreach ($promotion as $key=>$promotions): ?>
 <div class="js-page">
 	<div class="container container_one">
 		<div class="row hdl_content row_one">
@@ -221,4 +220,3 @@
 
 
 </div>
-<?php endforeach; ?>

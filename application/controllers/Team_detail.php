@@ -22,7 +22,7 @@
 				$bottom_info = $this->Text_model->get_name('');
 				$bottom_info_all = $this->Text_model->get_name_all('');
 				$side = $this->Side_model->get_name('');
-				$text = $team[0]['schedule'];
+				$text = $team['schedule'];
 
 
                 $text =  str_replace('<br/>','',$text);
@@ -77,7 +77,7 @@
 				$bottom_info = $this->Text_model->get_name('');
 				$bottom_info_all = $this->Text_model->get_name_all('');
 				$side = $this->Side_model->get_name('');
-				$text = $team[0]['schedule'];
+				$text = $team['schedule'];
 
 
 				$text =  str_replace('<br/>','',$text);

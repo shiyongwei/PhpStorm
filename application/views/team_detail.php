@@ -35,19 +35,18 @@
 </script>
 <link href="/public/css/classify.css" type="text/css" rel="stylesheet" />
 <link href="/public/css/classify_one.css" type="text/css" rel="stylesheet" />
-<?php foreach ($team as $key =>$teams): ?>
 	<div class="js-page">
 		<div class="header" style="background-color: transparent;">
 			<div class="container">
 				<div class="tour_meta">
 					<div class="row row_one">
 						<div class="tour_title span10" style="float: left">
-							<h1 style="font-size: 25px;margin-top: 15px !important;border-right: 1px solid #555;padding: 0 30px;text-transform: none;"><?php echo $teams['teamtitle']?></h1>
+							<h1 style="font-size: 25px;margin-top: 15px !important;border-right: 1px solid #555;padding: 0 30px;text-transform: none;"><?php echo $team['teamtitle']?></h1>
 						</div>
 
 						<div class="type_duration span2 pull-right span_two">
 							<span class="type" style="display: block;">团队游 旅游</span>
-							<span class="duration durone"><?php echo $teams['day']?></span>
+							<span class="duration durone"><?php echo $team['day']?></span>
 						</div>
 					</div>
 
@@ -64,15 +63,15 @@
 						<ul style="    list-style: none;margin: 0;">
 
 							<li class="wind_speed textt" dir="ltr">
-								<?php echo $teams['kilometers']?>
+								<?php echo $team['kilometers']?>
 							</li>
 
 							<li class="season textt">
-								<?php echo $teams['season']?>
+								<?php echo $team['season']?>
 							</li>
 
 							<li class="temp textt" >
-								<?php echo $teams['temperature']?>
+								<?php echo $team['temperature']?>
 							</li>
 						</ul>
 
@@ -341,7 +340,7 @@
 					<div class="about_tour" style="padding-top: 30px;">
 
 						<div class="">
-							<p style="font-size: 1.1em;"> <?php echo $teams['text']?>  </p>
+							<p style="font-size: 1.1em;"> <?php echo $team['text']?>  </p>
 							<div class="clearfix"></div>
 						</div>
 
@@ -613,4 +612,3 @@
 
 
 	</div>
-<?php endforeach; ?>
