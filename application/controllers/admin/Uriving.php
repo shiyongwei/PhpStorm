@@ -25,6 +25,7 @@ class Uriving extends CI_Controller
             $data['kilometers'] = $arr['kilometers'];
             $data['status'] = $arr['status'];
             $data['image'] = $arr['image'];
+            $data['image_two'] = $arr['image_two'];
             $data['time'] = date('Y-m-d H:i:s');
 
             if($arr['urivingtitle'] !== '' && $arr['image'] !==''){
@@ -102,6 +103,9 @@ class Uriving extends CI_Controller
             }
             if(!empty($arr['image'])){
                 $data['image'] = $arr['image'];
+            }
+            if(!empty($arr['image_two'])){
+                $data['image_two'] = $arr['image_two'];
             }
             if($this->Uriving_model->update_edit($data))
             {

@@ -32,6 +32,7 @@
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
         <input type="hidden" name="image" value="" id="image">
+        <input type="hidden" name="image_two" value="" id="image_two">
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>自驾游标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">
@@ -103,13 +104,13 @@
             </div>
         </div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">背景图上传：</label>
+			<label class="form-label col-xs-4 col-sm-2">图片上传：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<div class="uploader-list-container">
 					<div class="queueList">
 						<div id="dndArea" class="placeholder">
 							<div id="filePicker-2"></div>
-							<p>注意:只读取第一张</p>
+							<p>第一张:背景图,第二张:地图</p>
 						</div>
 					</div>
 					<div class="statusBar" style="display:none;">
@@ -803,6 +804,10 @@ function article_save_submit()
     var img =   $('#WU_FILE_0 .title').text();
 
     $('#image').val(img);
+
+    var img_two =   $('#WU_FILE_1 .title').text();
+
+    $('#image_two').val(img_two);
 
     var   str = $("#form-article-add").serialize();
 

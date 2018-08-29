@@ -76,28 +76,28 @@
 						</ul>
 
 						<div class="media_actions" style="padding-top: 0;">
-							<div class="top_btns" style="display: block;">
-								<a href="Javascript:;" class="btn-highlight js-itineraryTrigger textone">
-									行程
-									<span class="iten_icon icon_decor iconone"></span>
-								</a>
-								<a href="Javascript:;" class="btn-highlight js-reviewsTrigger textone" style="border-left: 1px solid rgba(0,0,0,0.2);">
-									评论
-									<span class="rev_icon icon_decor"></span>
-								</a>
-								<div class="clearfix"></div>
-							</div>
+<!--							<div class="top_btns" style="display: block;">-->
+<!--								<a href="Javascript:;" class="btn-highlight js-itineraryTrigger textone">-->
+<!--									行程-->
+<!--									<span class="iten_icon icon_decor iconone"></span>-->
+<!--								</a>-->
+<!--								<a href="Javascript:;" class="btn-highlight js-reviewsTrigger textone" style="border-left: 1px solid rgba(0,0,0,0.2);">-->
+<!--									评论-->
+<!--									<span class="rev_icon icon_decor"></span>-->
+<!--								</a>-->
+<!--								<div class="clearfix"></div>-->
+<!--							</div>-->
 						</div>
-						<div class="promotion-box">
-							<span class="icons-orange-star"></span>
-							<span class="icons-orange-star"></span>
-							<h4>
-								<a href="javascript:;" class="js-tourInclusions">
-									<span class="icons-exclamation-mark"></span>
-									立即告诉我怎么节省¥12,734每人吧！
-								</a>
-							</h4>
-						</div>
+<!--						<div class="promotion-box">-->
+<!--							<span class="icons-orange-star"></span>-->
+<!--							<span class="icons-orange-star"></span>-->
+<!--							<h4>-->
+<!--								<a href="javascript:;" class="js-tourInclusions">-->
+<!--									<span class="icons-exclamation-mark"></span>-->
+<!--									立即告诉我怎么节省¥12,734每人吧！-->
+<!--								</a>-->
+<!--							</h4>-->
+<!--						</div>-->
 
 					</div>
 
@@ -608,7 +608,4 @@
 				</div>
 			</div>
 		</div>
-
-
-
 	</div>

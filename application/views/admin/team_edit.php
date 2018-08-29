@@ -32,6 +32,7 @@
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
         <input type="hidden" name="image" value="" id="image">
+        <input type="hidden" name="image_two" value="" id="image_two">
         <input type="hidden" name="id" value="<?php echo $team['id'];?>">
         <?php if (isset($team['lang'])): ?>
             <input type="hidden" name="lang" value="<?php echo $team['lang'];?>">
@@ -815,6 +816,10 @@ function article_save_submit()
     var img =   $('#WU_FILE_0 .title').text();
 
     $('#image').val(img);
+
+    var img_two =   $('#WU_FILE_1 .title').text();
+
+    $('#image_two').val(img_two);
 
     var   str = $("#form-article-add").serialize();
 

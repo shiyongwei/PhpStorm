@@ -81,13 +81,6 @@
 						Team
                         Existing tourism projects
 					</strong>
-
-					<form action="" method="get" class="search-form tour_search_form">
-						<input type="text" name="q" class="input-medium js-queryField" placeholder="Search for travel items..." value="">
-
-						<input type="submit" value="Search">
-					</form>
-
 					<div class="clearfix"></div>
 				</div>
 
@@ -101,7 +94,7 @@
 							<div class="tour span4  js-tourContainer" data-duration="19" style="width: 31%;margin-left: 15px!important;margin-top: 15px;">
 								<a href="team_detail?id=<?php echo $teams['id']?>">
 									<div class="img_cont">
-										<img alt="115th Anniversary Route 66 - 19 Day Tour" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/tours/406/maps/size368c/hd_route66_19_days-1.jpg?1519582492">
+                                        <img alt="<?php echo $teams['teamtitle']?>" class="tour_image" src="<?php echo $teams['image_two']?>">
 										<span class="tour_name">
                                     <span><?php echo $teams['teamtitle_en']?></span>
                                         <span class="tour_type">team tour</span>
@@ -172,13 +165,6 @@
                             团队
                             现有旅游项目
                         </strong>
-
-                        <form action="/%E6%91%A9%E6%89%98%E8%BD%A6%E5%9B%A2%E9%98%9F%E6%B8%B8" method="get" class="search-form tour_search_form">
-                            <input type="text" name="q" class="input-medium js-queryField" placeholder="搜索旅行项目..." value="">
-
-                            <input type="submit" value="Search">
-                        </form>
-
                         <div class="clearfix"></div>
                     </div>
 
@@ -192,7 +178,7 @@
                                 <div class="tour span4  js-tourContainer" data-duration="19" style="width: 31%;margin-left: 15px!important;margin-top: 15px;">
                                     <a href="team_detail?id=<?php echo $teams['id']?>">
                                         <div class="img_cont">
-                                            <img alt="115th Anniversary Route 66 - 19 Day Tour" class="tour_image" src="https://d56b293rhv8dp.cloudfront.net/tours/406/maps/size368c/hd_route66_19_days-1.jpg?1519582492">
+                                            <img alt="<?php echo $teams['teamtitle']?>" class="tour_image" src="<?php echo $teams['image_two']?>">
                                             <span class="tour_name">
                                     <span><?php echo $teams['teamtitle']?></span>
                                         <span class="tour_type">团队游</span>

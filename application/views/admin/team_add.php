@@ -32,6 +32,7 @@
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
         <input type="hidden" name="image" value="" id="image">
+        <input type="hidden" name="image_two" value="" id="image_two">
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>自驾游标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">
@@ -102,48 +103,14 @@
                 <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
             </div>
         </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">地图上传：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <?php echo form_open_multipart('upload/do_upload');?>
-                <input type="file" onchange="preImg(this)" name="file">
-                <script>
-                    function preImg(_this){
-                        var formdata = new FormData();
-                        var file = $(_this)[0].files[0];
-                        //限制图片的大小
-                        var size = parseInt(file.size)/1024;
-                        if(size > 500){
-                            alert("图片不能大于500K");
-                            return false;
-                        }
-                        formdata.append('file',file);
-                        $.ajax({
-                            method: "post",
-                            dataType:"json",
-                            url:url,
-                            data:formdata,
-                            processData: false,
-                            contentType: false,
-                            success:function(data){
-                                console.log(data);
-                            },
-                            error:function(data){
-                                console.log(data);
-                            }
-                        })
-                    };
-                </script>
-            </div>
-        </div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">背景图上传：</label>
+			<label class="form-label col-xs-4 col-sm-2">图片上传：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<div class="uploader-list-container">
 					<div class="queueList">
 						<div id="dndArea" class="placeholder">
 							<div id="filePicker-2"></div>
-							<p>注意:只读取第一张</p>
+							<p>第一张:背景图,第二张:地图</p>
 						</div>
 					</div>
 					<div class="statusBar" style="display:none;">
@@ -160,7 +127,7 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">旅游行程：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <script id="editor" type="text/plain" style="width:100%;height:400px;"><p style="white-space: normal;">按照下列格式填写,否则页面显示失效</p><p style="white-space: normal;">第一天</p><p style="white-space: normal;">兴宁<br/></p><p style="white-space: normal;">0.0英里/0.0英里<br/></p><p style="white-space: normal;"><img src="http://yxbt.local/public/uploads/20180625/1529894373831784.jpg" title="1529894373831784.jpg" alt="Day_1.jpg"/></p><p style="white-space: normal;"><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Welcome to Milwaukee, the birthplace of Harley-Davidson, and one of our favorite Great Lakes cities. Head over to your Hotel, and once you are settled, you could head over to the House of Harley-Davidson to do a little shopping and some fun.</span></p><p><br/></p></script>
+                <script id="editor" type="text/plain" style="width:100%;height:400px;"><p style="white-space: normal;">第一天</p><p style="white-space: normal;">兴宁<br/></p><p style="white-space: normal;">0.0英里/0.0英里<br/></p><p style="white-space: normal;"><img src="http://yxbt.local/public/uploads/20180625/1529894373831784.jpg" title="1529894373831784.jpg" alt="Day_1.jpg"/></p><p style="white-space: normal;"><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Welcome to Milwaukee, the birthplace of Harley-Davidson, and one of our favorite Great Lakes cities. Head over to your Hotel, and once you are settled, you could head over to the House of Harley-Davidson to do a little shopping and some fun.</span></p><p><br/></p><p style="white-space: normal;">第二天</p><p style="white-space: normal;">兴宁<br/></p><p style="white-space: normal;">0.0英里/0.0英里<br/></p><p style="white-space: normal;"><img src="http://yxbt.local/public/uploads/20180625/1529894373831784.jpg" title="1529894373831784.jpg" alt="Day_1.jpg"/></p><p style="white-space: normal;"><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Welcome to Milwaukee, the birthplace of Harley-Davidson, and one of our favorite Great Lakes cities. Head over to your Hotel, and once you are settled, you could head over to the House of Harley-Davidson to do a little shopping and some fun.</span></p><p><br/></p></script>
                 </div>
          </div>
 		<div class="row cl">
@@ -837,6 +804,10 @@ function article_save_submit()
     var img =   $('#WU_FILE_0 .title').text();
 
     $('#image').val(img);
+
+    var img_two =   $('#WU_FILE_1 .title').text();
+
+    $('#image_two').val(img_two);
 
     var   str = $("#form-article-add").serialize();
 
