@@ -19,26 +19,7 @@
 
 
 
-	<link rel="apple-touch-icon-precomposed" href="https://d1y9jrrtx2baf.cloudfront.net/assets/mobile/layout/apple-touch-b9d999e737c2ba20ade90f87e9736b04.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://d1y9jrrtx2baf.cloudfront.net/assets/mobile/layout/apple-touch-ipad-9167fc8643f9544d0f5c1c8f96572b2c.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://d1y9jrrtx2baf.cloudfront.net/assets/mobile/layout/apple-touch-iphone-retina-dbffe5fb309015502e9a644e23ec66c1.png">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://d1y9jrrtx2baf.cloudfront.net/assets/mobile/layout/apple-touch-ipad-retina-586f2370047a97235e450fc62047ea83.png">
 
-	<link rel="alternate" href="https://www.eaglerider.com/harley-rentals" hreflang="en">
-	<link rel="alternate" href="https://www.eaglerider.com/motorrad-mieten/harley-mieten" hreflang="de">
-	<link rel="alternate" href="https://www.eaglerider.com/location-moto/location-harley" hreflang="fr">
-	<link rel="alternate" href="https://www.eaglerider.com/alquiler-de-motos/alquiler-harley-davidson" hreflang="es">
-	<link rel="alternate" href="https://www.eaglerider.com/motorverhuur/harley-davidson-huren" hreflang="nl">
-	<link rel="alternate" href="https://www.eaglerider.com/noleggio-moto/noleggio-harley-davidson" hreflang="it">
-	<link rel="alternate" href="https://www.eaglerider.com/aluguel-de-motos/aluguel-de-harley-davidson" hreflang="pt">
-	<link rel="alternate" href="https://www.eaglerider.cn/harley-rentals" hreflang="zh">
-	<link rel="alternate" href="https://www.eaglerider.com/ru/harley-rentals" hreflang="ru">
-	<link rel="alternate" href="https://www.eaglerider.com/ar/harley-%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1%D8%A7%D8%AA" hreflang="ar">
-	<link rel="alternate" href="https://www.eaglerider.com/ko/harley-rentals" hreflang="ko">
-	<link rel="alternate" href="https://www.eaglerider.com/sv/harley-rentals" hreflang="sv">
-	<link rel="alternate" href="https://www.eaglerider.com/motorsykkelleie/harley-rentals" hreflang="no">
-	<link rel="alternate" href="https://www.eaglerider.com/motorcykeludlejninger/harley-rentals" hreflang="da">
-	<link rel="alternate" href="https://www.eaglerider.com/ja/harley-rentals" hreflang="ja">
 
 	<link href="/public/css/mobile.manifest-973d9a8a05059422a934f5851bf4c381.css" media="all" rel="stylesheet" type="text/css">
 
@@ -110,100 +91,191 @@
 <div class="main-content">
 	<div class="off-canvas-wrapper">
 		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-			<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas="j54tkk-off-canvas" aria-hidden="true">
-				<div class="title-bar">
-					<div class="title-bar-left">
-						<button class="" aria-label="Close menu" type="button" data-close="">
-							<svg></svg>
-						</button>
+			<?php if(isset($_GET["lang"])): ?>
+                <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas="clvo2e-off-canvas" aria-hidden="true">
+                    <div class="title-bar">
+                        <div class="title-bar-left">
+                            <button class="" aria-label="Close menu" type="button" data-close="">
+                                <svg></svg>
+                            </button>
 
-						<span class="title-bar-title er-logo"><a href="">EagleRider</a></span>
-					</div>
-				</div>
+                            <span class="title-bar-title er-logo"><a href="">EagleRider</a></span>
 
-				<!-- Menu -->
-				<ul class="vertical menu" data-accordion-menu="b05z7j-accordion-menu" role="tablist" aria-multiselectable="true">
-					<li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="租赁" aria-controls="tjrs76-acc-menu" id="tlfyjn-acc-menu-link">
-						<a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>" tabindex="0">租赁</a>
+                        </div>
+                    </div>
 
-						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="tlfyjn-acc-menu-link" id="tjrs76-acc-menu" style="display: none;">
-							<?php foreach ($rent_list as $key=>$rent_lists): ?>
-                            <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>"><?php echo $rent_lists['product_brand']?></a>
-							</li>
-							<?php endforeach; ?>
+                    <!-- Menu -->
+                    <ul class="vertical menu" data-accordion-menu="iy92vw-accordion-menu" role="tablist" aria-multiselectable="true">
+                        <li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="租赁" aria-controls="rbq2e2-acc-menu" id="xpom0a-acc-menu-link">
+                            <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>" tabindex="0">Rent</a>
 
-							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">所有车型</a></li>
-						</ul>
-					</li>
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="xpom0a-acc-menu-link" id="rbq2e2-acc-menu" style="display: none;">
+								<?php foreach ($rent_list as $key=>$rent_lists): ?>
+                                    <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                        <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>"><?php echo $rent_lists['product_brand_en']?></a>
+                                    </li>
+								<?php endforeach; ?>
 
-					<li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="摩托车旅游" aria-controls="selwdg-acc-menu" id="mpz58k-acc-menu-link">
-						<a href="/index.php/Trave/mobile_Trave">摩托车旅游</a>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">All the models</a></li>
+                            </ul>
+                        </li>
 
-						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="mpz58k-acc-menu-link" id="selwdg-acc-menu" style="display: none;">
-							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">团队旅行</li>
+                        <li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="摩托车旅游" aria-controls="uoxvpk-acc-menu" id="exqiwo-acc-menu-link">
+                            <a href="/index.php/trave/mobile_Trave">Motorcycle tour</a>
 
-							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/Team/mobile_Team">
-									摩托车团队游
-								</a>
-							</li>
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">The team travel</li>
 
-						</ul>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/team/mobile_Team">
+                                        Motorcycle tour
+                                    </a>
+                                </li>
 
-						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="mpz58k-acc-menu-link" id="selwdg-acc-menu" style="display: none;">
-							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">自驾旅行</li>
+                            </ul>
 
-							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/Classify/mobile_Classify">
-									摩托车自驾游
-								</a>
-							</li>
-						</ul>
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">Road trip</li>
 
-						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="mpz58k-acc-menu-link" id="selwdg-acc-menu" style="display: none;">
-							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">热门路线</li>
-							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/hot_trave/mobile_hot_trave">
-									热门摩托车旅行
-								</a>
-							</li>
-						</ul>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/classify/mobile_Classify">
+                                        Motorcycle trip
+                                    </a>
+                                </li>
+                            </ul>
 
-						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="mpz58k-acc-menu-link" id="selwdg-acc-menu" style="display: none;">
-							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">所有旅行项目</li>
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">Hot line</li>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/hot_trave/mobile_hot_trave">
+                                        Popular motorcycle Tours
+                                    </a>
+                                </li>
+                            </ul>
 
-							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/Trave/mobile_Trave">
-									摩托车旅游
-								</a>
-							</li>
-						</ul>
-					</li>
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">All travel items</li>
 
-					<li role="menuitem"><a href="/index.php/Discounts/mobile_Discount">促销特惠</a></li>
-					<li role="menuitem"><a href="/index.php/Artivity/mobile_Artivity">摩托车活动</a></li>
-					<li role="menuitem"><a href="/index.php/City/mobile_City">城市</a></li>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/trave/mobile_Trave">
+                                        Motorcycle tour
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li role="menuitem"><a href="/index.php/Discounts/mobile_Discount">Privilege</a></li>
+                        <li role="menuitem"><a href="/index.php/Artivity/mobile_Artivity">Motorcycle event</a></li>
+                        <li role="menuitem"><a href="/index.php/City/mobile_City">City</a></li>
 
 
-					<li role="menuitem">
-						<a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
-					</li>
-				</ul>
-				<div class="row">
-					<div class="small-6 columns">
-						<a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
-							¥ CNY
-						</a>
-					</div>
+                        <li role="menuitem">
+                            <a href="/index.php/Reg/mobile_Reg">Check in online</a>
+                        </li>
+                    </ul>
+                    <div class="row">
+                        <div class="small-6 columns">
+                            <a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
+                                ¥ US
+                            </a>
+                        </div>
 
-					<div class="small-6 columns">
-						<button class="hollow dark secondary button expanded  js-current text-center" type="button" data-toggle="localizations" aria-controls="localizations" aria-haspopup="true" tabindex="0">
-							<span class="icons-zh"></span>
-						</button>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+			<?php endif; ?>
+			<?php if(empty($_GET["lang"])): ?>
+                <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas="clvo2e-off-canvas" aria-hidden="true">
+                    <div class="title-bar">
+                        <div class="title-bar-left">
+                            <button class="" aria-label="Close menu" type="button" data-close="">
+                                <svg></svg>
+                            </button>
+
+                            <span class="title-bar-title er-logo"><a href="">飞鹰骑士</a></span>
+
+                        </div>
+                    </div>
+
+                    <!-- Menu -->
+                    <ul class="vertical menu" data-accordion-menu="iy92vw-accordion-menu" role="tablist" aria-multiselectable="true">
+                        <li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="租赁" aria-controls="rbq2e2-acc-menu" id="xpom0a-acc-menu-link">
+                            <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>" tabindex="0">租赁</a>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="xpom0a-acc-menu-link" id="rbq2e2-acc-menu" style="display: none;">
+								<?php foreach ($rent_list as $key=>$rent_lists): ?>
+                                    <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                        <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>"><?php echo $rent_lists['product_brand']?></a>
+                                    </li>
+								<?php endforeach; ?>
+
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">所有车型</a></li>
+                            </ul>
+                        </li>
+
+                        <li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="摩托车旅游" aria-controls="uoxvpk-acc-menu" id="exqiwo-acc-menu-link">
+                            <a href="/index.php/trave/mobile_Trave">摩托车旅游</a>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">团队旅行</li>
+
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/team/mobile_Team">
+                                        摩托车团队游
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">自驾旅行</li>
+
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/classify/mobile_Classify">
+                                        摩托车自驾游
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">热门路线</li>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/hot_trave/mobile_hot_trave">
+                                        热门摩托车旅行
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">所有旅行项目</li>
+
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/trave/mobile_Trave">
+                                        摩托车旅游
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li role="menuitem"><a href="/index.php/Discounts/mobile_Discount">促销特惠</a></li>
+                        <li role="menuitem"><a href="/index.php/Artivity/mobile_Artivity">摩托车活动</a></li>
+                        <li role="menuitem"><a href="/index.php/City/mobile_City">城市</a></li>
+
+
+                        <li role="menuitem">
+                            <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
+                        </li>
+                    </ul>
+                    <div class="row">
+                        <div class="small-6 columns">
+                            <a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
+                                ¥ CNY
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+			<?php endif; ?>
 
 
 
@@ -211,7 +283,13 @@
 				<div class="title-bar sticky er-bar">
 					<div class="title-bar-left">
 						<button class="menu-icon" type="button" data-open="offCanvasLeft" aria-expanded="false" aria-controls="offCanvasLeft"></button>
-						<a href="" class="title-bar-title er-logo">EagleRider</a>
+						<?php if(isset($_GET["lang"])): ?>
+						    <a href="" class="title-bar-title er-logo">EagleRider</a>
+						<?php endif; ?>
+						<?php if(empty($_GET["lang"])): ?>
+                            <a href="" class="title-bar-title er-logo">飞鹰骑士</a>
+						<?php endif; ?>
+
 					</div>
 
 					<div class="title-bar-right">
@@ -225,12 +303,21 @@
 
 					<div class="reservation  have-small-hd  ">
 						<header class="page-header sticky is-stuck" style="width:100%;">
-
+							<?php if(isset($_GET["lang"])): ?>
 							<ul class="vertical menu" data-accordion-menu="xju952-accordion-menu" role="tablist" aria-multiselectable="true">
 								<li style="text-align: right;padding-right: 20px;" role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="" aria-controls="1h25nj-acc-menu" id="7wi5c6-acc-menu-link">
-									<b><?php echo count($list);?></b> 现有摩托车车型
+									<b><?php echo count($list);?></b> Existing motorcycle models
 								</li>
 							</ul>
+							<?php endif; ?>
+							<?php if(empty($_GET["lang"])): ?>
+                                <ul class="vertical menu" data-accordion-menu="xju952-accordion-menu" role="tablist" aria-multiselectable="true">
+                                    <li style="text-align: right;padding-right: 20px;" role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="" aria-controls="1h25nj-acc-menu" id="7wi5c6-acc-menu-link">
+                                        <b><?php echo count($list);?></b> 现有摩托车车型
+                                    </li>
+                                </ul>
+							<?php endif; ?>
+
 						</header>
 
 						<div class="clearfix"></div>
@@ -238,96 +325,188 @@
 
 						<div class="row">
 							<div class="small-12 columns">
+								<?php if(isset($_GET["lang"])): ?>
+                                    <?php foreach ($list as $key=>$lists): ?>
+                                    <div class="card vehicle-card ">
+                                        <div class="row js-vehicle-info-container">
+                                            <div class="small-10 columns">
+                                                <input type="hidden" value="277" class="js-vehicle-id">
+                                                <h4 class="js-vehicle-name"><?php echo $lists['productitle_en']?></h4>
+                                                <span class="js-vehicle-class-name">Travel brand</span>
+                                            </div>
+                                            <div class="small-2 columns">
+                                                <a class="activator reveal-triger js-reveal-triger">
+                                                    <svg></svg>
+                                                </a>
+                                            </div>
+                                        </div>
 
-								<?php foreach ($list as $key=>$lists): ?>
-                                <div class="card vehicle-card ">
-									<div class="row js-vehicle-info-container">
-										<div class="small-10 columns">
-											<input type="hidden" value="277" class="js-vehicle-id">
-											<h4 class="js-vehicle-name"><?php echo $lists['productitle']?></h4>
-											<span class="js-vehicle-class-name">旅行车系</span>
-										</div>
-										<div class="small-2 columns">
-											<a class="activator reveal-triger js-reveal-triger">
-												<svg></svg>
-											</a>
-										</div>
-									</div>
-
-									<div class="card-image js-vehicle-image-container">
-										<a href="https://www.eaglerider.cn/%E7%A7%9F%E8%B5%81/harley-davidson-electra-glide-ultra-classic">
-											<img class="activator js-vehicle-image" src="<?php echo $lists['image']?>">
-										</a>
-									</div>
+                                        <div class="card-image js-vehicle-image-container">
+                                            <a href="">
+                                                <img class="activator js-vehicle-image" src="<?php echo $lists['image']?>">
+                                            </a>
+                                        </div>
 
 
-									<div class="card-content">
-										<ul class="menu align-left">
-										</ul>
-									</div>
-									<a class="button expanded js-reveal-widget" data-toggle="widget-modal" aria-controls="widget-modal" aria-haspopup="true" tabindex="0">
-										立即预订
-									</a>
-									<div class="vehicle-reveal js-card-reveal fast">
-										<div class="row">
-											<div class="small-10 columns">
-												<h4 class="card-title"><?php echo $lists['productitle']?></h4>
-												<span class="class-mame">旅行车系</span>
-											</div>
+                                        <div class="card-content">
+                                            <ul class="menu align-left">
+                                            </ul>
+                                        </div>
+                                        <a class="button expanded js-reveal-widget" data-toggle="widget-modal" aria-controls="widget-modal" aria-haspopup="true" tabindex="0">
+                                            Book now
+                                        </a>
+                                        <div class="vehicle-reveal js-card-reveal fast">
+                                            <div class="row">
+                                                <div class="small-10 columns">
+                                                    <h4 class="card-title"><?php echo $lists['productitle_en']?></h4>
+                                                    <span class="class-mame">Travel brand</span>
+                                                </div>
 
-											<div class="small-2 columns">
-												<a class="activator reveal-triger close js-revealClose-triger">
-													<svg></svg>
-												</a>
-											</div>
-										</div>
-										<hr>
-										<div class="card-content">
-											<ul class="menu vertical">
-												<li>
-													发动机
-													<span class="float-right"><?php echo $lists['productitle']?></span>
-												</li>
-												<li>
-													内径×行程
-													<span class="float-right"><?php echo $lists['stroke']?></span>
-												</li>
-												<li>
-													排量
-													<span class="float-right"><?php echo $lists['displacement']?></span>
-												</li>
-												<li>
-													制动器（前）
-													<span class="float-right"><?php echo $lists['fronttire']?></span>
-												</li>
-												<li>
-													制动器（后）
-													<span class="float-right"><?php echo $lists['rearbrake']?></span>
-												</li>
-												<li>
-													长度
-													<span class="float-right"><?php echo $lists['seatheight']?></span>
-												</li>
-												<li>
-													轮胎（后）
-													<span class="float-right"><?php echo $lists['reartyre']?></span>
-												</li>
-												<li>
-													油箱容量
-													<span class="float-right"><?php echo $lists['capacity']?></span>
-												</li>
-												<li>
-													挡风玻璃
-													<span class="float-right"><?php echo $lists['windshield']?></span>
-												</li>
-											</ul>
-										</div>
-										<div class="card-footer"><a class="button expanded js-reserveTrigger">
-												立即预订
-											</a></div>
-									</div>
-								</div>
-								<?php endforeach; ?>
+                                                <div class="small-2 columns">
+                                                    <a class="activator reveal-triger close js-revealClose-triger">
+                                                        <svg></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="card-content">
+                                                <ul class="menu vertical">
+                                                    <li>
+                                                        Engine
+                                                        <span class="float-right"><?php echo $lists['productitle_en']?></span>
+                                                    </li>
+                                                    <li>
+                                                        Bore×Route
+                                                        <span class="float-right"><?php echo $lists['stroke_en']?></span>
+                                                    </li>
+                                                    <li>
+                                                        Displacement
+                                                        <span class="float-right"><?php echo $lists['displacement_en']?></span>
+                                                    </li>
+                                                    <li>
+                                                        Brake（front）
+                                                        <span class="float-right"><?php echo $lists['fronttire_en']?></span>
+                                                    </li>
+                                                    <li>
+                                                        Brake（rear）
+                                                        <span class="float-right"><?php echo $lists['rearbrake_en']?></span>
+                                                    </li>
+                                                    <li>
+                                                        Length
+                                                        <span class="float-right"><?php echo $lists['seatheight_en']?></span>
+                                                    </li>
+                                                    <li>
+                                                        Tyre（rear）
+                                                        <span class="float-right"><?php echo $lists['reartyre_en']?></span>
+                                                    </li>
+                                                    <li>
+                                                        Fuel tank volume
+                                                        <span class="float-right"><?php echo $lists['capacity_en']?></span>
+                                                    </li>
+                                                    <li>
+                                                        Windscreen
+                                                        <span class="float-right"><?php echo $lists['windshield_en']?></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="card-footer"><a class="button expanded js-reserveTrigger">
+                                                    Book now
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+								<?php endif; ?>
+								<?php if(empty($_GET["lang"])): ?>
+									<?php foreach ($list as $key=>$lists): ?>
+                                        <div class="card vehicle-card ">
+                                            <div class="row js-vehicle-info-container">
+                                                <div class="small-10 columns">
+                                                    <input type="hidden" value="277" class="js-vehicle-id">
+                                                    <h4 class="js-vehicle-name"><?php echo $lists['productitle']?></h4>
+                                                    <span class="js-vehicle-class-name">旅行车系</span>
+                                                </div>
+                                                <div class="small-2 columns">
+                                                    <a class="activator reveal-triger js-reveal-triger">
+                                                        <svg></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-image js-vehicle-image-container">
+                                                <a href="">
+                                                    <img class="activator js-vehicle-image" src="<?php echo $lists['image']?>">
+                                                </a>
+                                            </div>
+
+
+                                            <div class="card-content">
+                                                <ul class="menu align-left">
+                                                </ul>
+                                            </div>
+                                            <a class="button expanded js-reveal-widget" data-toggle="widget-modal" aria-controls="widget-modal" aria-haspopup="true" tabindex="0">
+                                                立即预订
+                                            </a>
+                                            <div class="vehicle-reveal js-card-reveal fast">
+                                                <div class="row">
+                                                    <div class="small-10 columns">
+                                                        <h4 class="card-title"><?php echo $lists['productitle']?></h4>
+                                                        <span class="class-mame">旅行车系</span>
+                                                    </div>
+
+                                                    <div class="small-2 columns">
+                                                        <a class="activator reveal-triger close js-revealClose-triger">
+                                                            <svg></svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="card-content">
+                                                    <ul class="menu vertical">
+                                                        <li>
+                                                            发动机
+                                                            <span class="float-right"><?php echo $lists['productitle']?></span>
+                                                        </li>
+                                                        <li>
+                                                            内径×行程
+                                                            <span class="float-right"><?php echo $lists['stroke']?></span>
+                                                        </li>
+                                                        <li>
+                                                            排量
+                                                            <span class="float-right"><?php echo $lists['displacement']?></span>
+                                                        </li>
+                                                        <li>
+                                                            制动器（前）
+                                                            <span class="float-right"><?php echo $lists['fronttire']?></span>
+                                                        </li>
+                                                        <li>
+                                                            制动器（后）
+                                                            <span class="float-right"><?php echo $lists['rearbrake']?></span>
+                                                        </li>
+                                                        <li>
+                                                            长度
+                                                            <span class="float-right"><?php echo $lists['seatheight']?></span>
+                                                        </li>
+                                                        <li>
+                                                            轮胎（后）
+                                                            <span class="float-right"><?php echo $lists['reartyre']?></span>
+                                                        </li>
+                                                        <li>
+                                                            油箱容量
+                                                            <span class="float-right"><?php echo $lists['capacity']?></span>
+                                                        </li>
+                                                        <li>
+                                                            挡风玻璃
+                                                            <span class="float-right"><?php echo $lists['windshield']?></span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-footer"><a class="button expanded js-reserveTrigger">
+                                                        立即预订
+                                                    </a></div>
+                                            </div>
+                                        </div>
+									<?php endforeach; ?>
+								<?php endif; ?>
 
 							</div>
 						</div>
@@ -375,50 +554,78 @@
 					</script>
 				</div>
 
-				<footer class="footer-container js-footer">
+                <footer class="footer-container js-footer">
 
 
 
 
-					<div class="js-dealsSubscriptionContainer">
-						<!-- .subscribe-box -->
 
 
-					</div>
+                    <div class="row">
+                        <div class="small-6 columns">
+							<?php if(isset($_GET["lang"])): ?>
+                                <a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
+                                    ¥ US
+                                </a>
+							<?php endif; ?>
+							<?php if(empty($_GET["lang"])): ?>
+                                <a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
+                                    ¥ CNY
+                                </a>
+							<?php endif; ?>
+                        </div>
 
-					<div class="row">
-						<div class="small-6 columns">
-							<a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
-								¥ CNY
-							</a>
-						</div>
+                        <div class="small-6 columns">
+                            <button class="hollow dark secondary button expanded dropdown js-current text-center" type="button" data-toggle="localizations" aria-controls="localizations" aria-haspopup="true" tabindex="0">
+								<?php if(isset($_GET["lang"])): ?>
+                                    <span>US</span>
+								<?php endif; ?>
+								<?php if(empty($_GET["lang"])): ?>
+                                    <span>CNY</span>
+								<?php endif; ?>
 
-						<div class="small-6 columns">
-							<button class="hollow dark secondary button expanded dropdown js-current text-center" type="button" data-toggle="localizations" aria-controls="localizations" aria-haspopup="true" tabindex="0">
-								<span class="icons-zh"></span>
-							</button>
-						</div>
-					</div>
+                            </button>
+                        </div>
+                    </div>
 
+                    <div class="row">
 
+                    </div>
 
-					<div class="row">
-						<div class="small-12 columns text-center">
-							<a class="footer-logo" href="https://www.eaglerider.cn/">
-								<img class="logo" src="<?php echo $bottom_info_all[7]['image']?>" alt="ER logo">
-							</a>
-                            <p class="copyright"><?php echo $bottom_info_all[7]['title']?> </p>
-						</div>
-					</div>
+                    <div class="row">
+                        <div class="small-12 columns text-center">
+                            <a class="footer-logo" href="">
+                                <img class="logo" src="<?php echo $bottom_info_all[7]['image']?>" alt="ER logo">
+                            </a>
+							<?php if(isset($_GET["lang"])): ?>
+                                <p class="copyright"> <?php echo $bottom_info_all[7]['title_en']?></p>
+							<?php endif; ?>
+							<?php if(empty($_GET["lang"])): ?>
+                                <p class="copyright"> <?php echo $bottom_info_all[7]['title']?></p>
+							<?php endif; ?>
+                        </div>
+                    </div>
 
-					<div class="sub-footer text-center">
-						<h5>Information</h5>
-						<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
-                            <a href="">
-								<?php echo $bottom_infos['title']?></a>
-						<?php endforeach; ?>
-					</div>
-				</footer>
+					<?php if(isset($_GET["lang"])): ?>
+                        <div class="sub-footer text-center">
+                            <h5>Information</h5>
+							<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
+                                <a href=""><?php echo $bottom_infos['title_en']?></a>
+							<?php endforeach; ?>
+
+                        </div>
+					<?php endif; ?>
+					<?php if(empty($_GET["lang"])): ?>
+                        <div class="sub-footer text-center">
+                            <h5>Information</h5>
+							<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
+                                <a href=""><?php echo $bottom_infos['title']?></a>
+							<?php endforeach; ?>
+
+                        </div>
+					<?php endif; ?>
+
+                </footer>
 
 
 
@@ -428,14 +635,7 @@
 	</div>
 </div>
 
-<div style="display:none;" class="js-routes">
-	<a rel="nofollow" class="js-changeLayoutUrl" href="https://www.eaglerider.cn/layouts/change"></a>
-	<a rel="nofollow" class="js-changeCurrencyPath" href="https://www.eaglerider.cn/currencies/change"></a>
-	<a rel="nofollow" class="js-changeCountryPath" href="https://www.eaglerider.cn/countries/change"></a>
-	<a rel="nofollow" class="js-currenciesPath" href="https://www.eaglerider.cn/currencies"></a>
-	<a rel="nofollow" class="js-authenticationPath" href="https://www.eaglerider.cn/authentication"></a>
-	<a rel="nofollow" class="js-review_vote_path" href="https://www.eaglerider.cn/reviews/:id/vote"></a>
-</div>
+
 
 <div class="spinner-page-container js-spinner hide">
 	<div class="spinner-logo">
@@ -1762,96 +1962,42 @@
 		</div>
 	</header>
 
-	<ul class="countries-list  js-custom js-countriesSelect">
-		<li>
-			<a href="https://www.eaglerider.com/" data-countryid="233" class="js-changeCountryTrigger" data-languagecode="en">
-				<span class="icons-us js-flag"></span> United States of America
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/" data-countryid="77" class="js-changeCountryTrigger" data-languagecode="en">
-				<span class="icons-uk js-flag"></span> United Kingdom
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/motorrad-mieten" data-countryid="57" class="js-changeCountryTrigger" data-languagecode="de">
-				<span class="icons-de js-flag"></span> Deutschland
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/location-moto" data-countryid="75" class="js-changeCountryTrigger" data-languagecode="fr">
-				<span class="icons-fr js-flag"></span> France
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/" data-countryid="13" class="js-changeCountryTrigger" data-languagecode="en">
-				<span class="icons-au js-flag"></span> Australia
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/motorverhuur" data-countryid="166" class="js-changeCountryTrigger" data-languagecode="nl">
-				<span class="icons-nl js-flag"></span> Nederland
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/noleggio-moto" data-countryid="110" class="js-changeCountryTrigger" data-languagecode="it">
-				<span class="icons-it js-flag"></span> Italia
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/aluguel-de-motos" data-countryid="31" class="js-changeCountryTrigger" data-languagecode="pt">
-				<span class="icons-br js-flag"></span> Brasil
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/" data-countryid="38" class="js-changeCountryTrigger" data-languagecode="en">
-				<span class="icons-ca js-flag"></span> Canada
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/alquiler-de-motos" data-countryid="68" class="js-changeCountryTrigger" data-languagecode="es">
-				<span class="icons-es js-flag"></span> España
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.cn/" data-countryid="48" class="js-changeCountryTrigger" data-languagecode="zh">
-				<span class="icons-zh js-flag"></span> 中国
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/motorcykeludlejninger" data-countryid="59" class="js-changeCountryTrigger" data-languagecode="da">
-				<span class="icons-dk js-flag"></span> Denmark
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/ja" data-countryid="114" class="js-changeCountryTrigger" data-languagecode="ja">
-				<span class="icons-jp js-flag"></span> 日本
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/ko" data-countryid="122" class="js-changeCountryTrigger" data-languagecode="ko">
-				<span class="icons-ko js-flag"></span> 한국
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/motorsykkelleie" data-countryid="167" class="js-changeCountryTrigger" data-languagecode="no">
-				<span class="icons-no js-flag"></span> Norge
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/ru" data-countryid="191" class="js-changeCountryTrigger" data-languagecode="ru">
-				<span class="icons-ru js-flag"></span> Россия Федерация
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/ar" data-countryid="193" class="js-changeCountryTrigger" data-languagecode="ar">
-				<span class="icons-ksa js-flag"></span> اللغة العربية
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/sv" data-countryid="197" class="js-changeCountryTrigger" data-languagecode="sv">
-				<span class="icons-se js-flag"></span> Sverige
-			</a>
-		</li>
-	</ul>
+    <ul class="countries-list  js-custom js-countriesSelect">
+        <li class="en" style="line-height: 45px;">English</li>
+        <li class="cn" style="line-height: 45px;">Chinese</li>
+
+    </ul>
 </div></body></html>
+<script>
+	//paraName 等找参数的名称
+	function GetUrlParam(paraName) {
+		var url = document.location.toString();
+		var arrObj = url.split("?");
+
+		if (arrObj.length > 1) {
+			var arrPara = arrObj[1].split("&");
+			var arr;
+
+			for (var i = 0; i < arrPara.length; i++) {
+				arr = arrPara[i].split("=");
+
+				if (arr != null && arr[0] == paraName) {
+					return arr[1];
+				}
+			}
+			return "";
+		}
+		else {
+			return "";
+		}
+	}
+	var id = GetUrlParam('id');
+
+	$('.en').click(function() {
+		window.location.href='/index.php/Rent/mobile_Rent?id='+id+'&&lang=en';
+	});
+
+	$('.cn').click(function() {
+		window.location.href='/index.php/Rent/mobile_Rent?id='+id;
+	});
+</script>

@@ -106,11 +106,11 @@
 						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="xpom0a-acc-menu-link" id="rbq2e2-acc-menu" style="display: none;">
 							<?php foreach ($rent_list as $key=>$rent_lists): ?>
                                 <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-                                    <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>"><?php echo $rent_lists['product_brand_en']?></a>
+                                    <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>&&lang=en"><?php echo $rent_lists['product_brand_en']?></a>
                                 </li>
 							<?php endforeach; ?>
 
-                            <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">All the models</a></li>
+                            <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>&&lang=en">All the models</a></li>
 						</ul>
 					</li>
 
@@ -121,7 +121,7 @@
 							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">The team travel</li>
 
 							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/team/mobile_Team">
+								<a href="/index.php/team/mobile_Team?lang=en">
                                     Motorcycle tour
 								</a>
 							</li>
@@ -132,7 +132,7 @@
 							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">Road trip</li>
 
 							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/classify/mobile_Classify">
+								<a href="/index.php/classify/mobile_Classify?lang=en">
                                     Motorcycle trip
 								</a>
 							</li>
@@ -141,7 +141,7 @@
 						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
 							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">Hot line</li>
 							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/hot_trave/mobile_hot_trave">
+								<a href="/index.php/hot_trave/mobile_hot_trave?lang=en">
                                     Popular motorcycle Tours
 								</a>
 							</li>
@@ -151,20 +151,20 @@
 							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">All travel items</li>
 
 							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/trave/mobile_Trave">
+								<a href="/index.php/trave/mobile_Trave?lang=en">
                                     Motorcycle tour
 								</a>
 							</li>
 						</ul>
 					</li>
 
-					<li role="menuitem"><a href="/index.php/Discounts/mobile_Discount">Privilege</a></li>
-					<li role="menuitem"><a href="/index.php/Artivity/mobile_Artivity">Motorcycle event</a></li>
-					<li role="menuitem"><a href="/index.php/City/mobile_City">City</a></li>
+					<li role="menuitem"><a href="/index.php/Discounts/mobile_Discount?lang=en">Privilege</a></li>
+					<li role="menuitem"><a href="/index.php/Artivity/mobile_Artivity?lang=en">Motorcycle event</a></li>
+					<li role="menuitem"><a href="/index.php/City/mobile_City?lang=en">City</a></li>
 
 
 					<li role="menuitem">
-						<a href="/index.php/Reg/mobile_Reg">Check in online</a>
+						<a href="/index.php/Reg/mobile_Reg?lang=en">Check in online</a>
 					</li>
 				</ul>
 				<div class="row">

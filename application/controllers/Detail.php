@@ -72,7 +72,13 @@
 				$navigation = $this->Navigation_model->get_name('');
 				$bottom_info_all = $this->Text_model->get_name_all('');
 				$side = $this->Side_model->get_name('');
-				$text = $uriving[0]['schedule'];
+				$url = $_SERVER["QUERY_STRING"];
+				if(strpos($url,'&&') !==false){
+					$text = $uriving['schedule_en'];
+				}else{
+					$text = $uriving['schedule'];
+				}
+
 
 
 				$text =  str_replace('<br/>','',$text);

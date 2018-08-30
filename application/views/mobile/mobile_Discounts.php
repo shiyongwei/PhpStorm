@@ -32,57 +32,93 @@
 </header>
 
 <nav class="site-nav js-global-nav js-navigation" id="js-site-nav">
+
     <ul>
-        <li class="language">
-            <a href="javascript:;">
-                <span>国家</span>
-                <span class="customSelectInner" style="width: 100px; display: inline-block;">
-          <span class="flag-zh"></span>
-        </span>
-                <select class="languageList styled js-custom js-countriesSelect hasCustomSelect" style="width: 100px; position: absolute; opacity: 0; height: 23px; font-size: 12px;">
-                    <option value="233" data-languagecode="en">
-                        United States of America
-                    </option>
-                </select><span class="customSelect languageList styled js-custom js-countriesSelect" style="display: inline-block;"><span class="customSelectInner" style="width: 100px; display: inline-block;">
-              中国
-            </span></span>
-            </a>
-        </li>
+		<?php if(isset($_GET["lang"])): ?>
+            <li>
+                <a style="color: #ed7b19">Change language</a>
+            </li>
+            <li class="en">
+                <a style="color: #ed7b19">English</a>
+            </li>
+            <li class="cn">
+                <a style="color: #ed7b19">China</a>
+            </li>
+
+            <li>
+                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">Rent
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Trave/mobile_Trave">Travel
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Discounts/mobile_Discount">Privilege
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Artivity/mobile_Artivity">Motorcycle event
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/City/mobile_City">City
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Reg/mobile_Reg">Reg</a>
+            </li>
+		<?php endif; ?>
+		<?php if(empty($_GET["lang"])): ?>
+            <li>
+                <a style="color: #ed7b19">切换语言</a>
+            </li>
+            <li class="en">
+                <a style="color: #ed7b19">英文</a>
+            </li>
+            <li class="cn">
+                <a style="color: #ed7b19">中文</a>
+            </li>
+            <li>
+                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">租赁
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Trave/mobile_Trave">旅游
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Discounts/mobile_Discount">促销特惠
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Artivity/mobile_Artivity">摩托车活动
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/City/mobile_City">城市
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
+            </li>
+		<?php endif; ?>
     </ul>
-    <ul>
-        <li>
-            <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">租赁
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Trave/mobile_Trave">旅游
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Discounts/mobile_Discount">促销特惠
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Artivity/mobile_Artivity">摩托车活动
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/City/mobile_City">城市
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
-        </li>
-    </ul>
-</nav><!-- // site nav -->
+
+</nav>
+<!-- // site nav -->
 
 <!-- global content -->
 <div class="global-content">
     <!-- main content -->
     <div class="main-content">
         <div class="js-page">
-
-            <h1>热门折扣</h1>
+			<?php if(isset($_GET["lang"])): ?>
+            <h1>Popular discount</h1>
+			<?php endif; ?>
+			<?php if(empty($_GET["lang"])): ?>
+                <h1>热门折扣</h1>
+			<?php endif; ?>
 
             <!-- Guided Motorcycle Tours List -->
             <form action="">
@@ -90,36 +126,37 @@
                 <div class="wrap-large">
                     <ul>
                         <li>
+							<?php if(isset($_GET["lang"])): ?>
                             <div class="media-opposite hot_deal_dropdown_container">
                                 <div class="media-left halfWidth">
-                                    <label>折扣类型</label>
+                                    <label>Discount type</label>
 
                                     <div class="btn-group">
                                         <button data-toggle="dropdown" class="btn-highlight dropdown-toggle">
-                                            所有的
+                                            ALL
                                         </button>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="javascript:;">所有的</a>
+                                                <a href="javascript:;">ALL</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div class="media-left halfWidth">
-                                    <label>参与城市</label>
+                                    <label>Participate in the city</label>
                                     <div class="btn-group">
                                         <button data-toggle="dropdown" class="btn-highlight dropdown-toggle">
-                                            所有
+                                            ALL
                                         </button>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="javascript:;">所有</a>
+                                                <a href="javascript:;">ALL</a>
                                             </li>
                                             <?php foreach ($city as $key=>$citys): ?>
                                                 <li>
                                                     <a href="javasctipt:;">
-                                                       <?php echo $citys['cit_name']?>
+                                                       <?php echo $citys['cit_name_en']?>
                                                     </a>
                                                 </li>
                                             <?php endforeach; ?>
@@ -127,39 +164,112 @@
                                     </div>
                                 </div>
                             </div>
+							<?php endif; ?>
+							<?php if(empty($_GET["lang"])): ?>
+                                <div class="media-opposite hot_deal_dropdown_container">
+                                    <div class="media-left halfWidth">
+                                        <label>折扣类型</label>
+
+                                        <div class="btn-group">
+                                            <button data-toggle="dropdown" class="btn-highlight dropdown-toggle">
+                                                所有的
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="javascript:;">所有的</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="media-left halfWidth">
+                                        <label>参与城市</label>
+                                        <div class="btn-group">
+                                            <button data-toggle="dropdown" class="btn-highlight dropdown-toggle">
+                                                所有
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="javascript:;">所有</a>
+                                                </li>
+												<?php foreach ($city as $key=>$citys): ?>
+                                                    <li>
+                                                        <a href="javasctipt:;">
+															<?php echo $citys['cit_name']?>
+                                                        </a>
+                                                    </li>
+												<?php endforeach; ?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+							<?php endif; ?>
+
                         </li>
                     </ul>
                 </div>
                 <div class="wrap-fullWidth hot_deal_products_container">
                     <ul class="list-links-2">
                         <?php foreach ($promotion as $value=>$key): ?>
+						<?php if(isset($_GET["lang"])): ?>
                             <li class="">
                                 <a href="/index.php/Discounts/mobile_Discount_info?id=<?php echo $key['id'];?>">
                                     <div class="media-opposite ">
                                         <!-- tour image-->
                                         <div class="media-left tourImg">
                                             <div class="imageContainer">
-                                                <img src="<?php echo $key['image'];?>" alt="<?php echo $key['promtitle'];?>">
-                                                <span class="align-center"><?php echo $key['booking'];?></span>
+                                                <img src="<?php echo $key['image'];?>" alt="<?php echo $key['promtitle_en'];?>">
+                                                <span class="align-center"><?php echo $key['booking_en'];?></span>
                                             </div>
                                         </div>
                                         <!--tour title -->
                                         <div class="media-left tourInfo">
-                                            <strong class="orange"><?php echo $key['promtitle'];?></strong>
+                                            <strong class="orange"><?php echo $key['promtitle_en'];?></strong>
                                             <p class="dealDetails">
-                                                联系方式:
-                                                <span class="dark_gray"><?php echo $key['city'];?></span>
+                                                Contact way:
+                                                <span class="dark_gray"><?php echo $key['city_en'];?></span>
                                             </p>
 
                                             <div class="row price">
                                                 <div class="discount_container">
-                                                    <span class="discount_before" dir="ltr"><?php echo $key['worth'];?></span>
-                                                    <span class="discount_after"><?php echo $key['price'];?><small>/天</small></span></div>
+                                                    <span class="discount_before" dir="ltr"><?php echo $key['worth_en'];?></span>
+                                                    <span class="discount_after"><?php echo $key['price_en'];?><small></small></span></div>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </li>
+						<?php endif; ?>
+						<?php if(empty($_GET["lang"])): ?>
+                                <li class="">
+                                    <a href="/index.php/Discounts/mobile_Discount_info?id=<?php echo $key['id'];?>">
+                                        <div class="media-opposite ">
+                                            <!-- tour image-->
+                                            <div class="media-left tourImg">
+                                                <div class="imageContainer">
+                                                    <img src="<?php echo $key['image'];?>" alt="<?php echo $key['promtitle'];?>">
+                                                    <span class="align-center"><?php echo $key['booking'];?></span>
+                                                </div>
+                                            </div>
+                                            <!--tour title -->
+                                            <div class="media-left tourInfo">
+                                                <strong class="orange"><?php echo $key['promtitle'];?></strong>
+                                                <p class="dealDetails">
+                                                    联系方式:
+                                                    <span class="dark_gray"><?php echo $key['city'];?></span>
+                                                </p>
+
+                                                <div class="row price">
+                                                    <div class="discount_container">
+                                                        <span class="discount_before" dir="ltr"><?php echo $key['worth'];?></span>
+                                                        <span class="discount_after"><?php echo $key['price'];?><small>/天</small></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+							<?php endif; ?>
+
                         <?php endforeach; ?>
                     </ul>
                 </div>
@@ -174,15 +284,28 @@
     </div>
 </div>
         <!-- global footer -->
-        <footer class="global-footer">
-            <div class="txt1"><a href="javascript:;">联系我们</a></div>
-            <div>|</div>
-            <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">常见问题</a>
-            </div>
-            <div>|</div>
-            <div class="txt1"><a href="javascript:;">整个网站
+<?php if(isset($_GET["lang"])): ?>
+    <footer class="global-footer">
+        <div class="txt1"><a href="javascript:;">Contact Us</a></div>
+        <div>|</div>
+        <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">FAQ</a>
+        </div>
+        <div>|</div>
+        <div class="txt1"><a href="javascript:;">The entire site
             </a></div>
-        </footer>
+    </footer>
+<?php endif; ?>
+<?php if(empty($_GET["lang"])): ?>
+    <footer class="global-footer">
+        <div class="txt1"><a href="javascript:;">联系我们</a></div>
+        <div>|</div>
+        <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">常见问题</a>
+        </div>
+        <div>|</div>
+        <div class="txt1"><a href="javascript:;">整个网站
+            </a></div>
+    </footer>
+<?php endif; ?>
         <script src="/public/js/mobile.js" type="text/javascript"></script>
 
         <script src="/public/js/combined_widget.js" type="text/javascript"></script>
@@ -217,6 +340,14 @@
                 new ER.Subscribe(dealsSubscriptionContainer);
 
 
+            });
+        </script>
+        <script>
+            $('.en').click(function() {
+                window.location.href='/index.php/Discounts/mobile_Discount?lang=en';
+            });
+            $('.cn').click(function() {
+                window.location.href='/index.php/Discounts/mobile_Discount';
             });
         </script>
         <style id="service-icons-0"></style>

@@ -77,7 +77,12 @@
 				$bottom_info = $this->Text_model->get_name('');
 				$bottom_info_all = $this->Text_model->get_name_all('');
 				$side = $this->Side_model->get_name('');
-				$text = $team['schedule'];
+				$url = $_SERVER["QUERY_STRING"];
+				if(strpos($url,'&&') !==false){
+					$text = $team['schedule_en'];
+				}else{
+					$text = $team['schedule'];
+				}
 
 
 				$text =  str_replace('<br/>','',$text);
