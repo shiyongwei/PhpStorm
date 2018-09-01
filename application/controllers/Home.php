@@ -24,6 +24,19 @@ class Home extends CI_Controller
             $rent_list = $this->Product_model->get('');
             $promotiom = $this->Promotions_model->get_status('');
             $navigation = $this->Navigation_model->get_name('');
+            for ($i=0;$i<count($navigation);$i++){
+				$navigation_limit['navigation_id'] = $navigation[0]['navigation_id'];
+				$navigation_limit['navigation_name'] = $navigation[0]['navigation_name'];
+				$navigation_limit['lease_name'] = $navigation[0]['lease_name'];
+				$navigation_limit['hotel_name'] = $navigation[0]['hotel_name'];
+				$navigation_limit['promotions_name'] = $navigation[0]['promotions_name'];
+				$navigation_limit['navigation_name_en'] = $navigation[0]['navigation_name_en'];
+				$navigation_limit['lease_name_en'] = $navigation[0]['lease_name_en'];
+				$navigation_limit['hotel_name_en'] = $navigation[0]['hotel_name_en'];
+				$navigation_limit['promotions_name_en'] = $navigation[0]['promotions_name_en'];
+			}
+//			echo '<pre>';
+//            var_dump($navigation_limit);exit;
 			$bottom = $this->Bottom_model->get_name('');
 			$city = $this->City_model->get();
 			$get_limit = $this->City_model->get_limit();
@@ -50,6 +63,7 @@ class Home extends CI_Controller
 			$data['side'] = $side;
 			$data['bottom_info'] = $bottom_info;
 			$data['bottom_info_all'] = $bottom_info_all;
+			$data['navigation_limit'] = $navigation_limit;
 
 
 

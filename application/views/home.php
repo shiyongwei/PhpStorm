@@ -56,19 +56,19 @@
 
                 <ul class="optionsblk widgetTabs">
                     <li class="selected js-rentalTrigger">
-                        <a href="Javascript:;">租赁</a>
+                        <a href="Javascript:;"><?php echo $navigation_limit['navigation_name']?></a>
                     </li>
 
                     <li class="packages ">
-                        <a href="/index.php/Hotels">摩托车 &amp; 酒店</a>
+                        <a href="/index.php/Hotels"><?php echo $navigation_limit['lease_name']?></a>
                     </li>
 
                     <li class=" js-toursTrigger">
-                        <a href="/index.php/Trave">旅游</a>
+                        <a href="/index.php/Trave"><?php echo $navigation_limit['hotel_name']?></a>
                     </li>
 
                     <li class="deals">
-                        <a href="/index.php/Discounts">促销特惠</a>
+                        <a href="/index.php/Discounts"><?php echo $navigation_limit['promotions_name']?></a>
                     </li>
                  
                 </ul>
@@ -669,19 +669,19 @@
                 <div class="options js-options">
                         <ul class="optionsblk widgetTabs">
                             <li class="selected js-rentalTrigger">
-                                <a href="Javascript:;">Lease</a>
+                                <a href="Javascript:;"><?php echo $navigation_limit['navigation_name_en']?></a>
                             </li>
 
                             <li class="packages ">
-                                <a href="/index.php/Hotels">Motorcycle &amp; Hotel</a>
+                                <a href="/index.php/Hotels"><?php echo $navigation_limit['lease_name_en']?></a>
                             </li>
 
                             <li class=" js-toursTrigger">
-                                <a href="/index.php/Trave">Travel</a>
+                                <a href="/index.php/Trave"><?php echo $navigation_limit['hotel_name_en']?></a>
                             </li>
 
                             <li class="deals">
-                                <a href="/index.php/Discounts">Privilege</a>
+                                <a href="/index.php/Discounts"><?php echo $navigation_limit['promotions_name_en']?></a>
                             </li>
 
                         </ul>

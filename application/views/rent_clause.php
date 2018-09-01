@@ -17,19 +17,15 @@
                     <div class="options js-options">
                         <ul class="optionsblk widgetTabs">
                             <li class="selected js-rentalTrigger">
-                                <a href="Javascript:;">rent</a>
+                                <a href="Javascript:;"><?php echo $navigation_limit['navigation_name_en']?></a>
                             </li>
 
                             <li class="packages  js-packagesTrigger">
-                                <a href="Hotels">moto &amp; hotels</a>
+                                <a href="Hotels"><?php echo $navigation_limit['lease_name_en']?></a>
                             </li>
 
                             <li class=" js-toursTrigger">
-                                <a href="Trave">travel</a>
-                            </li>
-
-                            <li class="deals">
-                                <a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E7%89%B9%E6%83%A0">Privilege</a>
+                                <a href="Trave"><?php echo $navigation_limit['hotel_name_en']?></a>
                             </li>
 
                         </ul>
@@ -806,19 +802,15 @@
                     <div class="options js-options">
                         <ul class="optionsblk widgetTabs">
                             <li class="selected js-rentalTrigger">
-                                <a href="Javascript:;">租赁</a>
+                                <a href="Javascript:;"><?php echo $navigation_limit['navigation_name']?></a>
                             </li>
 
                             <li class="packages  js-packagesTrigger">
-                                <a href="Hotels">摩托车 &amp; 酒店</a>
+                                <a href="Hotels"><?php echo $navigation_limit['lease_name']?></a>
                             </li>
 
                             <li class=" js-toursTrigger">
-                                <a href="Trave">旅游</a>
-                            </li>
-
-                            <li class="deals">
-                                <a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E7%89%B9%E6%83%A0">促销特惠</a>
+                                <a href="Trave"><?php echo $navigation_limit['hotel_name']?></a>
                             </li>
 
                         </ul>
