@@ -28,49 +28,77 @@
 
 <nav class="site-nav js-global-nav js-navigation" id="js-site-nav">
     <ul>
-        <li class="language">
-            <a href="javascript:;">
-                <span>国家</span>
-                <span class="customSelectInner" style="width: 100px; display: inline-block;">
-          <span class="flag-zh"></span>
-        </span>
-                <select class="languageList styled js-custom js-countriesSelect hasCustomSelect" style="width: 100px; position: absolute; opacity: 0; height: 23px; font-size: 12px;">
-                    <option value="233" data-languagecode="en">
-                        United States of America
-                    </option>
-                </select><span class="customSelect languageList styled js-custom js-countriesSelect" style="display: inline-block;"><span class="customSelectInner" style="width: 100px; display: inline-block;">
-              中国
-            </span></span>
-            </a>
-        </li>
-    </ul>
+		<?php if(isset($_GET["lang"])): ?>
+            <li>
+                <a style="color: #ed7b19">Change language</a>
+            </li>
+            <li class="en">
+                <a style="color: #ed7b19">English</a>
+            </li>
+            <li class="cn">
+                <a style="color: #ed7b19">China</a>
+            </li>
 
-    <ul>
-        <li>
-            <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">租赁
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Trave/mobile_Trave">旅游
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Discounts/mobile_Discount">促销特惠
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Artivity/mobile_Artivity">摩托车活动
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/City/mobile_city">城市
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
-        </li>
+            <li>
+                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>&&lang=en">Rent
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Trave/mobile_Trave?lang=en">Travel
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Discounts/mobile_Discount?lang=en">Privilege
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Artivity/mobile_Artivity?lang=en">Motorcycle event
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/City/mobile_City?lang=en">City
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Reg/mobile_Reg?lang=en">Reg</a>
+            </li>
+		<?php endif; ?>
+		<?php if(empty($_GET["lang"])): ?>
+            <li>
+                <a style="color: #ed7b19">切换语言</a>
+            </li>
+            <li class="en">
+                <a style="color: #ed7b19">英文</a>
+            </li>
+            <li class="cn">
+                <a style="color: #ed7b19">中文</a>
+            </li>
+            <li>
+                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">租赁
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Trave/mobile_Trave">旅游
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Discounts/mobile_Discount">促销特惠
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Artivity/mobile_Artivity">摩托车活动
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/City/mobile_City">城市
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
+            </li>
+		<?php endif; ?>
     </ul>
-</nav><!-- // site nav -->
+</nav>
 
 
 <!-- global content -->
@@ -79,25 +107,50 @@
     <div class="main-content">
         <div class="js-page">
             <?php foreach ($text as $value=>$key): ?>
+			<?php if(isset($_GET["lang"])): ?>
             <div class="link-container">
-                    <a href="/index.php/Bottom_info/mobile_Bottom?id=<?php echo $key['id'];?>">
-                        <i class="icn-stuff"><img src="<?php echo $key['image'];?>" alt=""></i><?php echo $key['title'];?>
+                    <a href="/index.php/Bottom_info/mobile_Bottom?id=<?php echo $key['id'];?>&&lang=en">
+                        <i class="icn-stuff"><img src="<?php echo $key['image'];?>" alt=""></i><?php echo $key['title_en'];?>
                     </a>
             </div>
+			<?php endif; ?>
+			<?php if(empty($_GET["lang"])): ?>
+                    <div class="link-container">
+                        <a href="/index.php/Bottom_info/mobile_Bottom?id=<?php echo $key['id'];?>">
+                            <i class="icn-stuff"><img src="<?php echo $key['image'];?>" alt=""></i><?php echo $key['title'];?>
+                        </a>
+                    </div>
+				<?php endif; ?>
+
             <?php endforeach; ?>
         </div>
     </div>
 </div>
 <!-- global footer -->
-<footer class="global-footer">
-    <div class="txt1"><a href="javascript:;">联系我们</a></div>
-    <div>|</div>
-    <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">常见问题</a>
-    </div>
-    <div>|</div>
-    <div class="txt1"><a href="javascript:;">整个网站
-    </a></div>
-</footer>
+
+<?php if(isset($_GET["lang"])): ?>
+    <footer class="global-footer">
+        <div class="txt1"><a href="javascript:;">Contact Us</a></div>
+        <div>|</div>
+        <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">FAQ</a>
+        </div>
+        <div>|</div>
+        <div class="txt1"><a href="javascript:;">The entire site
+            </a></div>
+    </footer>
+<?php endif; ?>
+<?php if(empty($_GET["lang"])): ?>
+    <footer class="global-footer">
+        <div class="txt1"><a href="javascript:;">联系我们</a></div>
+        <div>|</div>
+        <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">常见问题</a>
+        </div>
+        <div>|</div>
+        <div class="txt1"><a href="javascript:;">整个网站
+            </a></div>
+    </footer>
+<?php endif; ?>
+
 <script src="/public/js/mobile.js" type="text/javascript"></script>
 <script src="/public/js/combined_widget.js" type="text/javascript"></script>
 <script src="/public/js/motorcycle_tour_reservation.js" type="text/javascript"></script>
@@ -130,6 +183,14 @@
         var dealsSubscriptionContainer = $('.js-dealsSubscriptionContainer');
         new ER.Subscribe(dealsSubscriptionContainer);
     });
+</script>
+<script>
+	$('.en').click(function() {
+		window.location.href='/index.php/Bottom_info/mobile_Bottom_info?lang=en';
+	});
+	$('.cn').click(function() {
+		window.location.href='/index.php/Bottom_info/mobile_Bottom_info';
+	});
 </script>
 <style id="service-icons-0"></style>
 </body>

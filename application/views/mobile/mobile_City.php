@@ -27,48 +27,47 @@
 
 <!-- global header and navigations -->
 <header class="global-header">
-    <a href="javascript:;" class="site-logo">摩托车&lt;br&gt;租赁与旅游</a>
+    <a href="javascript:;" class="site-logo" style="background-image: url("")">摩托车&lt;br&gt;租赁与旅游</a>
     <a href="#js-site-nav" class="site-nav-toggle js-global-nav-toggle"></a>
     <a href="#" class="user-nav-toggle js-global-nav-toggle"></a>
 </header>
 
 <nav class="site-nav js-global-nav js-navigation" id="js-site-nav">
-
     <ul>
 		<?php if(isset($_GET["lang"])): ?>
-        <li>
-            <a style="color: #ed7b19">Change language</a>
-        </li>
-        <li class="en">
-            <a style="color: #ed7b19">English</a>
-        </li>
-        <li class="cn">
-            <a style="color: #ed7b19">China</a>
-        </li>
+            <li>
+                <a style="color: #ed7b19">Change language</a>
+            </li>
+            <li class="en">
+                <a style="color: #ed7b19">English</a>
+            </li>
+            <li class="cn">
+                <a style="color: #ed7b19">China</a>
+            </li>
 
-        <li>
-            <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">Rent
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Trave/mobile_Trave">Travel
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Discounts/mobile_Discount">Privilege
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Artivity/mobile_Artivity">Motorcycle event
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/City/mobile_City">City
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Reg/mobile_Reg">Reg</a>
-        </li>
+            <li>
+                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>&&lang=en">Rent
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Trave/mobile_Trave?lang=en">Travel
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Discounts/mobile_Discount?lang=en">Privilege
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Artivity/mobile_Artivity?lang=en">Motorcycle event
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/City/mobile_City?lang=en">City
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Reg/mobile_Reg?lang=en">Reg</a>
+            </li>
 		<?php endif; ?>
 		<?php if(empty($_GET["lang"])): ?>
             <li>
@@ -105,7 +104,6 @@
             </li>
 		<?php endif; ?>
     </ul>
-
 </nav>
 <!-- // site nav -->
 
@@ -121,18 +119,7 @@
                     <h1>选择城市查看详情</h1>
 				<?php endif; ?>
 
-                <!-- location List -->
-                <div class="wrap-large">
-                    <form>
-						<?php if(isset($_GET["lang"])): ?>
-                        <input placeholder="Enter the city" class="searchField js-searchField" type="text">
-						<?php endif; ?>
-						<?php if(empty($_GET["lang"])): ?>
-                            <input placeholder="输入城市" class="searchField js-searchField" type="text">
-						<?php endif; ?>
 
-                    </form>
-                </div>
 
                 <div class="location-listing-container">
                     <div class="wrap-fullWidth">
@@ -161,6 +148,7 @@
             </div>
             <!-- global footer -->
 			<?php if(isset($_GET["lang"])): ?>
+                <a href="/index.php/Bottom_info/mobile_Bottom_info">
             <footer class="global-footer">
                 <div class="txt1"><a href="javascript:;">Contact Us</a></div>
                 <div>|</div>
@@ -170,17 +158,20 @@
                 <div class="txt1"><a href="javascript:;">The entire site
                 </a></div>
             </footer>
+            </a>
 			<?php endif; ?>
 			<?php if(empty($_GET["lang"])): ?>
+            <a href="/index.php/Bottom_info/mobile_Bottom_info">
                 <footer class="global-footer">
                     <div class="txt1"><a href="javascript:;">联系我们</a></div>
                     <div>|</div>
-                    <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">常见问题</a>
+                    <div class="txt2">常见问题
                     </div>
                     <div>|</div>
                     <div class="txt1"><a href="javascript:;">整个网站
                         </a></div>
                 </footer>
+            </a>
 			<?php endif; ?>
 
             <script src="/public/js/mobile.js" type="text/javascript"></script>

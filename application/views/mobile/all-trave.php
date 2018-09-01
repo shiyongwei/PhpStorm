@@ -143,11 +143,11 @@
                             <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="xpom0a-acc-menu-link" id="rbq2e2-acc-menu" style="display: none;">
 								<?php foreach ($rent_list as $key=>$rent_lists): ?>
                                     <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-                                        <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>"><?php echo $rent_lists['product_brand_en']?></a>
+                                        <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>&&lang=en"><?php echo $rent_lists['product_brand_en']?></a>
                                     </li>
 								<?php endforeach; ?>
 
-                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">All the models</a></li>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>&&lang=en">All the models</a></li>
                             </ul>
                         </li>
 
@@ -158,7 +158,7 @@
                                 <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">The team travel</li>
 
                                 <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-                                    <a href="/index.php/team/mobile_Team">
+                                    <a href="/index.php/team/mobile_Team?lang=en">
                                         Motorcycle tour
                                     </a>
                                 </li>
@@ -169,7 +169,7 @@
                                 <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">Road trip</li>
 
                                 <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-                                    <a href="/index.php/classify/mobile_Classify">
+                                    <a href="/index.php/classify/mobile_Classify?lang=en">
                                         Motorcycle trip
                                     </a>
                                 </li>
@@ -178,7 +178,7 @@
                             <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
                                 <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">Hot line</li>
                                 <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-                                    <a href="/index.php/hot_trave/mobile_hot_trave">
+                                    <a href="/index.php/hot_trave/mobile_hot_trave?lang=en">
                                         Popular motorcycle Tours
                                     </a>
                                 </li>
@@ -188,20 +188,20 @@
                                 <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">All travel items</li>
 
                                 <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-                                    <a href="/index.php/trave/mobile_Trave">
+                                    <a href="/index.php/trave/mobile_Trave?lang=en">
                                         Motorcycle tour
                                     </a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li role="menuitem"><a href="/index.php/Discounts/mobile_Discount">Privilege</a></li>
-                        <li role="menuitem"><a href="/index.php/Artivity/mobile_Artivity">Motorcycle event</a></li>
-                        <li role="menuitem"><a href="/index.php/City/mobile_City">City</a></li>
+                        <li role="menuitem"><a href="/index.php/Discounts/mobile_Discount?lang=en">Privilege</a></li>
+                        <li role="menuitem"><a href="/index.php/Artivity/mobile_Artivity?lang=en">Motorcycle event</a></li>
+                        <li role="menuitem"><a href="/index.php/City/mobile_City?lang=en">City</a></li>
 
 
                         <li role="menuitem">
-                            <a href="/index.php/Reg/mobile_Reg">Check in online</a>
+                            <a href="/index.php/Reg/mobile_Reg?lang=en">Check in online</a>
                         </li>
                     </ul>
                     <div class="row">
@@ -403,358 +403,9 @@
 														</div>
 													</div>
 												</div>
-												<div class="widget-dt row">
-													<div class="widget-dt_date small-6  columns">
-														<div class="dropdown-container">
-															<div class="input-field small-height">
-																<i class="material-icons prefix">
-																	<svg></svg>
-																</i>
-																<div class="">
-																	<input name="reservation[pickup_date]" class="js-pickupDate datepicker picker__input" placeholder="出发日期/时间" value="2018/07/03" readonly="" id="P2136390765" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="P2136390765_root"><div class="picker" id="P2136390765_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">星期二</div><div class="picker__month-display"><div>七</div></div><div class="picker__day-display"><div>3</div></div><div class="picker__year-display"><div>2018</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="P2136390765_table" title="Select a month"><option value="0" disabled="">一月</option><option value="1" disabled="">二月</option><option value="2" disabled="">三月</option><option value="3" disabled="">四月</option><option value="4" disabled="">五月</option><option value="5" disabled="">六月</option><option value="6" selected="">七月</option><option value="7">八月</option><option value="8">九月</option><option value="9">十月</option><option value="10">十一月</option><option value="11">十二月</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="P2136390765_table" title="Select a year"><option value="2018" selected="">2018</option><option value="2019">2019</option><option value="2020">2020</option></select><div class="picker__nav--prev picker__nav--disabled" data-nav="-1" role="button" aria-controls="P2136390765_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="P2136390765_table" title="Next month"> </div></div><table class="picker__table" id="P2136390765_table" role="grid" aria-controls="P2136390765" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="星期一">M</th><th class="picker__weekday" scope="col" title="星期二">T</th><th class="picker__weekday" scope="col" title="星期三">W</th><th class="picker__weekday" scope="col" title="星期四">T</th><th class="picker__weekday" scope="col" title="星期五">F</th><th class="picker__weekday" scope="col" title="星期六">S</th><th class="picker__weekday" scope="col" title="星期日">S</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1529856000000" role="gridcell" aria-label="2018/06/25" aria-disabled="true">25</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1529942400000" role="gridcell" aria-label="2018/06/26" aria-disabled="true">26</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530028800000" role="gridcell" aria-label="2018/06/27" aria-disabled="true">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530115200000" role="gridcell" aria-label="2018/06/28" aria-disabled="true">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530201600000" role="gridcell" aria-label="2018/06/29" aria-disabled="true">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530288000000" role="gridcell" aria-label="2018/06/30" aria-disabled="true">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--disabled" data-pick="1530374400000" role="gridcell" aria-label="2018/07/01" aria-disabled="true">1</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus picker__day--disabled" data-pick="1530460800000" role="gridcell" aria-label="2018/07/02" aria-disabled="true">2</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--selected picker__day--highlighted" data-pick="1530547200000" role="gridcell" aria-label="2018/07/03" aria-selected="true" aria-activedescendant="true">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today" data-pick="1530633600000" role="gridcell" aria-label="2018/07/04">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530720000000" role="gridcell" aria-label="2018/07/05">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530806400000" role="gridcell" aria-label="2018/07/06">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530892800000" role="gridcell" aria-label="2018/07/07">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530979200000" role="gridcell" aria-label="2018/07/08">8</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531065600000" role="gridcell" aria-label="2018/07/09">9</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531152000000" role="gridcell" aria-label="2018/07/10">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531238400000" role="gridcell" aria-label="2018/07/11">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531324800000" role="gridcell" aria-label="2018/07/12">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531411200000" role="gridcell" aria-label="2018/07/13">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531497600000" role="gridcell" aria-label="2018/07/14">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531584000000" role="gridcell" aria-label="2018/07/15">15</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531670400000" role="gridcell" aria-label="2018/07/16">16</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531756800000" role="gridcell" aria-label="2018/07/17">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531843200000" role="gridcell" aria-label="2018/07/18">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531929600000" role="gridcell" aria-label="2018/07/19">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532016000000" role="gridcell" aria-label="2018/07/20">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532102400000" role="gridcell" aria-label="2018/07/21">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532188800000" role="gridcell" aria-label="2018/07/22">22</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532275200000" role="gridcell" aria-label="2018/07/23">23</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532361600000" role="gridcell" aria-label="2018/07/24">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532448000000" role="gridcell" aria-label="2018/07/25">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532534400000" role="gridcell" aria-label="2018/07/26">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532620800000" role="gridcell" aria-label="2018/07/27">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532707200000" role="gridcell" aria-label="2018/07/28">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532793600000" role="gridcell" aria-label="2018/07/29">29</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532880000000" role="gridcell" aria-label="2018/07/30">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532966400000" role="gridcell" aria-label="2018/07/31">31</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533052800000" role="gridcell" aria-label="2018/08/01">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533139200000" role="gridcell" aria-label="2018/08/02">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533225600000" role="gridcell" aria-label="2018/08/03">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533312000000" role="gridcell" aria-label="2018/08/04">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533398400000" role="gridcell" aria-label="2018/08/05">5</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1530633600000" disabled="" aria-controls="P2136390765">今日</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="P2136390765">清除</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="P2136390765">关闭</button></div></div></div></div></div></div>
-																</div>            </div>
-														</div>        </div>
 
-													<div class="widget-dt_time small-6  columns ">
-														<div class="dropdown-container">
-															<div class="input-field activated">
-																<i class="dropdown icon"></i>
-																<div class="ui dropdown js-skip selection" tabindex="0"><select name="reservation[pickup_time_slot]" data-fieldtype="pickup_time_slot">
-																		<option value=" 8:00 am">
-																			8:00 am
-																		</option>
-																		<option value=" 8:30 am">
-																			8:30 am
-																		</option>
-																		<option value=" 9:00 am">
-																			9:00 am
-																		</option>
-																		<option value=" 9:30 am">
-																			9:30 am
-																		</option>
-																		<option value="10:00 am">
-																			10:00 am
-																		</option>
-																		<option value="10:30 am">
-																			10:30 am
-																		</option>
-																		<option value="11:00 am">
-																			11:00 am
-																		</option>
-																		<option value="11:30 am">
-																			11:30 am
-																		</option>
-																		<option value="12:00 pm" selected="&quot;selected&quot;">
-																			12:00 pm
-																		</option>
-																		<option value="12:30 pm">
-																			12:30 pm
-																		</option>
-																		<option value=" 1:00 pm">
-																			1:00 pm
-																		</option>
-																		<option value=" 1:30 pm">
-																			1:30 pm
-																		</option>
-																		<option value=" 2:00 pm">
-																			2:00 pm
-																		</option>
-																		<option value=" 2:30 pm">
-																			2:30 pm
-																		</option>
-																		<option value=" 3:00 pm">
-																			3:00 pm
-																		</option>
-																		<option value=" 3:30 pm">
-																			3:30 pm
-																		</option>
-																		<option value=" 4:00 pm">
-																			4:00 pm
-																		</option>
-																		<option value=" 4:30 pm">
-																			4:30 pm
-																		</option>
-																		<option value=" 5:00 pm">
-																			5:00 pm
-																		</option>
-																		<option value=" 5:30 pm">
-																			5:30 pm
-																		</option>
-																		<option value=" 6:00 pm">
-																			6:00 pm
-																		</option>
-																		<option value=" 6:30 pm">
-																			6:30 pm
-																		</option>
-																		<option value=" 7:00 pm">
-																			7:00 pm
-																		</option>
-																		<option value=" 7:30 pm">
-																			7:30 pm
-																		</option>
-																		<option value=" 8:00 pm">
-																			8:00 pm
-																		</option>
-																		<option value=" 8:30 pm">
-																			8:30 pm
-																		</option>
-																		<option value=" 9:00 pm">
-																			9:00 pm
-																		</option>
-																		<option value=" 9:30 pm">
-																			9:30 pm
-																		</option>
-																		<option value="10:00 pm">
-																			10:00 pm
-																		</option>
-																		<option value="10:30 pm">
-																			10:30 pm
-																		</option>
-																		<option value="11:00 pm">
-																			11:00 pm
-																		</option>
-																	</select><i class="dropdown icon"></i><div class="text">12:00 pm</div><div class="menu" tabindex="-1"><div class="item" data-value=" 8:00 am">
-																			8:00 am
-																		</div><div class="item" data-value=" 8:30 am">
-																			8:30 am
-																		</div><div class="item" data-value=" 9:00 am">
-																			9:00 am
-																		</div><div class="item" data-value=" 9:30 am">
-																			9:30 am
-																		</div><div class="item" data-value="10:00 am">
-																			10:00 am
-																		</div><div class="item" data-value="10:30 am">
-																			10:30 am
-																		</div><div class="item" data-value="11:00 am">
-																			11:00 am
-																		</div><div class="item" data-value="11:30 am">
-																			11:30 am
-																		</div><div class="item active selected" data-value="12:00 pm">
-																			12:00 pm
-																		</div><div class="item" data-value="12:30 pm">
-																			12:30 pm
-																		</div><div class="item" data-value=" 1:00 pm">
-																			1:00 pm
-																		</div><div class="item" data-value=" 1:30 pm">
-																			1:30 pm
-																		</div><div class="item" data-value=" 2:00 pm">
-																			2:00 pm
-																		</div><div class="item" data-value=" 2:30 pm">
-																			2:30 pm
-																		</div><div class="item" data-value=" 3:00 pm">
-																			3:00 pm
-																		</div><div class="item" data-value=" 3:30 pm">
-																			3:30 pm
-																		</div><div class="item" data-value=" 4:00 pm">
-																			4:00 pm
-																		</div><div class="item" data-value=" 4:30 pm">
-																			4:30 pm
-																		</div><div class="item" data-value=" 5:00 pm">
-																			5:00 pm
-																		</div><div class="item" data-value=" 5:30 pm">
-																			5:30 pm
-																		</div><div class="item" data-value=" 6:00 pm">
-																			6:00 pm
-																		</div><div class="item" data-value=" 6:30 pm">
-																			6:30 pm
-																		</div><div class="item" data-value=" 7:00 pm">
-																			7:00 pm
-																		</div><div class="item" data-value=" 7:30 pm">
-																			7:30 pm
-																		</div><div class="item" data-value=" 8:00 pm">
-																			8:00 pm
-																		</div><div class="item" data-value=" 8:30 pm">
-																			8:30 pm
-																		</div><div class="item" data-value=" 9:00 pm">
-																			9:00 pm
-																		</div><div class="item" data-value=" 9:30 pm">
-																			9:30 pm
-																		</div><div class="item" data-value="10:00 pm">
-																			10:00 pm
-																		</div><div class="item" data-value="10:30 pm">
-																			10:30 pm
-																		</div><div class="item" data-value="11:00 pm">
-																			11:00 pm
-																		</div></div></div>
-															</div>
-														</div>        </div>
-												</div>
 
-												<div class="widget-dt row">
-													<div class="widget-dt_date small-6  columns">
-														<div class="dropdown-container">
-															<div class="input-field small-height">
-																<i class="material-icons prefix">
-																	<svg></svg>
-																</i>
-																<input name="reservation[dropoff_date]" class="js-dropoffDate datepicker picker__input" placeholder="返还日期/时间" value="2018/07/04" readonly="" id="P1352170294" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="P1352170294_root"><div class="picker" id="P1352170294_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">星期三</div><div class="picker__month-display"><div>七</div></div><div class="picker__day-display"><div>4</div></div><div class="picker__year-display"><div>2018</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="P1352170294_table" title="Select a month"><option value="0" disabled="">一月</option><option value="1" disabled="">二月</option><option value="2" disabled="">三月</option><option value="3" disabled="">四月</option><option value="4" disabled="">五月</option><option value="5" disabled="">六月</option><option value="6" selected="">七月</option><option value="7">八月</option><option value="8">九月</option><option value="9">十月</option><option value="10">十一月</option><option value="11">十二月</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="P1352170294_table" title="Select a year"><option value="2018" selected="">2018</option><option value="2019">2019</option><option value="2020">2020</option></select><div class="picker__nav--prev picker__nav--disabled" data-nav="-1" role="button" aria-controls="P1352170294_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="P1352170294_table" title="Next month"> </div></div><table class="picker__table" id="P1352170294_table" role="grid" aria-controls="P1352170294" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="星期一">M</th><th class="picker__weekday" scope="col" title="星期二">T</th><th class="picker__weekday" scope="col" title="星期三">W</th><th class="picker__weekday" scope="col" title="星期四">T</th><th class="picker__weekday" scope="col" title="星期五">F</th><th class="picker__weekday" scope="col" title="星期六">S</th><th class="picker__weekday" scope="col" title="星期日">S</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1529856000000" role="gridcell" aria-label="2018/06/25" aria-disabled="true">25</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1529942400000" role="gridcell" aria-label="2018/06/26" aria-disabled="true">26</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530028800000" role="gridcell" aria-label="2018/06/27" aria-disabled="true">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530115200000" role="gridcell" aria-label="2018/06/28" aria-disabled="true">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530201600000" role="gridcell" aria-label="2018/06/29" aria-disabled="true">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530288000000" role="gridcell" aria-label="2018/06/30" aria-disabled="true">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--disabled" data-pick="1530374400000" role="gridcell" aria-label="2018/07/01" aria-disabled="true">1</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus picker__day--disabled" data-pick="1530460800000" role="gridcell" aria-label="2018/07/02" aria-disabled="true">2</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530547200000" role="gridcell" aria-label="2018/07/03">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--selected picker__day--highlighted" data-pick="1530633600000" role="gridcell" aria-label="2018/07/04" aria-selected="true" aria-activedescendant="true">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530720000000" role="gridcell" aria-label="2018/07/05">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530806400000" role="gridcell" aria-label="2018/07/06">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530892800000" role="gridcell" aria-label="2018/07/07">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530979200000" role="gridcell" aria-label="2018/07/08">8</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531065600000" role="gridcell" aria-label="2018/07/09">9</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531152000000" role="gridcell" aria-label="2018/07/10">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531238400000" role="gridcell" aria-label="2018/07/11">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531324800000" role="gridcell" aria-label="2018/07/12">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531411200000" role="gridcell" aria-label="2018/07/13">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531497600000" role="gridcell" aria-label="2018/07/14">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531584000000" role="gridcell" aria-label="2018/07/15">15</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531670400000" role="gridcell" aria-label="2018/07/16">16</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531756800000" role="gridcell" aria-label="2018/07/17">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531843200000" role="gridcell" aria-label="2018/07/18">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531929600000" role="gridcell" aria-label="2018/07/19">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532016000000" role="gridcell" aria-label="2018/07/20">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532102400000" role="gridcell" aria-label="2018/07/21">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532188800000" role="gridcell" aria-label="2018/07/22">22</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532275200000" role="gridcell" aria-label="2018/07/23">23</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532361600000" role="gridcell" aria-label="2018/07/24">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532448000000" role="gridcell" aria-label="2018/07/25">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532534400000" role="gridcell" aria-label="2018/07/26">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532620800000" role="gridcell" aria-label="2018/07/27">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532707200000" role="gridcell" aria-label="2018/07/28">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532793600000" role="gridcell" aria-label="2018/07/29">29</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532880000000" role="gridcell" aria-label="2018/07/30">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532966400000" role="gridcell" aria-label="2018/07/31">31</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533052800000" role="gridcell" aria-label="2018/08/01">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533139200000" role="gridcell" aria-label="2018/08/02">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533225600000" role="gridcell" aria-label="2018/08/03">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533312000000" role="gridcell" aria-label="2018/08/04">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533398400000" role="gridcell" aria-label="2018/08/05">5</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1530633600000" disabled="" aria-controls="P1352170294">今日</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="P1352170294">清除</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="P1352170294">关闭</button></div></div></div></div></div></div>
-															</div>
-														</div>        </div>
 
-													<div class="widget-dt_time small-6  columns ">
-														<div class="dropdown-container">
-															<div class="input-field activated">
-																<i class="dropdown icon"></i>
-																<div class="ui dropdown js-skip selection" tabindex="0"><select name="reservation[dropoff_time_slot]" data-fieldtype="dropoff_time_slot">
-																		<option value=" 8:00 am">
-																			8:00 am
-																		</option>
-																		<option value=" 8:30 am">
-																			8:30 am
-																		</option>
-																		<option value=" 9:00 am">
-																			9:00 am
-																		</option>
-																		<option value=" 9:30 am">
-																			9:30 am
-																		</option>
-																		<option value="10:00 am">
-																			10:00 am
-																		</option>
-																		<option value="10:30 am">
-																			10:30 am
-																		</option>
-																		<option value="11:00 am">
-																			11:00 am
-																		</option>
-																		<option value="11:30 am">
-																			11:30 am
-																		</option>
-																		<option value="12:00 pm" selected="&quot;selected&quot;">
-																			12:00 pm
-																		</option>
-																		<option value="12:30 pm">
-																			12:30 pm
-																		</option>
-																		<option value=" 1:00 pm">
-																			1:00 pm
-																		</option>
-																		<option value=" 1:30 pm">
-																			1:30 pm
-																		</option>
-																		<option value=" 2:00 pm">
-																			2:00 pm
-																		</option>
-																		<option value=" 2:30 pm">
-																			2:30 pm
-																		</option>
-																		<option value=" 3:00 pm">
-																			3:00 pm
-																		</option>
-																		<option value=" 3:30 pm">
-																			3:30 pm
-																		</option>
-																		<option value=" 4:00 pm">
-																			4:00 pm
-																		</option>
-																		<option value=" 4:30 pm">
-																			4:30 pm
-																		</option>
-																		<option value=" 5:00 pm">
-																			5:00 pm
-																		</option>
-																		<option value=" 5:30 pm">
-																			5:30 pm
-																		</option>
-																		<option value=" 6:00 pm">
-																			6:00 pm
-																		</option>
-																		<option value=" 6:30 pm">
-																			6:30 pm
-																		</option>
-																		<option value=" 7:00 pm">
-																			7:00 pm
-																		</option>
-																		<option value=" 7:30 pm">
-																			7:30 pm
-																		</option>
-																		<option value=" 8:00 pm">
-																			8:00 pm
-																		</option>
-																		<option value=" 8:30 pm">
-																			8:30 pm
-																		</option>
-																		<option value=" 9:00 pm">
-																			9:00 pm
-																		</option>
-																		<option value=" 9:30 pm">
-																			9:30 pm
-																		</option>
-																		<option value="10:00 pm">
-																			10:00 pm
-																		</option>
-																		<option value="10:30 pm">
-																			10:30 pm
-																		</option>
-																		<option value="11:00 pm">
-																			11:00 pm
-																		</option>
-																	</select><i class="dropdown icon"></i><div class="text">12:00 pm</div><div class="menu" tabindex="-1"><div class="item" data-value=" 8:00 am">
-																			8:00 am
-																		</div><div class="item" data-value=" 8:30 am">
-																			8:30 am
-																		</div><div class="item" data-value=" 9:00 am">
-																			9:00 am
-																		</div><div class="item" data-value=" 9:30 am">
-																			9:30 am
-																		</div><div class="item" data-value="10:00 am">
-																			10:00 am
-																		</div><div class="item" data-value="10:30 am">
-																			10:30 am
-																		</div><div class="item" data-value="11:00 am">
-																			11:00 am
-																		</div><div class="item" data-value="11:30 am">
-																			11:30 am
-																		</div><div class="item active selected" data-value="12:00 pm">
-																			12:00 pm
-																		</div><div class="item" data-value="12:30 pm">
-																			12:30 pm
-																		</div><div class="item" data-value=" 1:00 pm">
-																			1:00 pm
-																		</div><div class="item" data-value=" 1:30 pm">
-																			1:30 pm
-																		</div><div class="item" data-value=" 2:00 pm">
-																			2:00 pm
-																		</div><div class="item" data-value=" 2:30 pm">
-																			2:30 pm
-																		</div><div class="item" data-value=" 3:00 pm">
-																			3:00 pm
-																		</div><div class="item" data-value=" 3:30 pm">
-																			3:30 pm
-																		</div><div class="item" data-value=" 4:00 pm">
-																			4:00 pm
-																		</div><div class="item" data-value=" 4:30 pm">
-																			4:30 pm
-																		</div><div class="item" data-value=" 5:00 pm">
-																			5:00 pm
-																		</div><div class="item" data-value=" 5:30 pm">
-																			5:30 pm
-																		</div><div class="item" data-value=" 6:00 pm">
-																			6:00 pm
-																		</div><div class="item" data-value=" 6:30 pm">
-																			6:30 pm
-																		</div><div class="item" data-value=" 7:00 pm">
-																			7:00 pm
-																		</div><div class="item" data-value=" 7:30 pm">
-																			7:30 pm
-																		</div><div class="item" data-value=" 8:00 pm">
-																			8:00 pm
-																		</div><div class="item" data-value=" 8:30 pm">
-																			8:30 pm
-																		</div><div class="item" data-value=" 9:00 pm">
-																			9:00 pm
-																		</div><div class="item" data-value=" 9:30 pm">
-																			9:30 pm
-																		</div><div class="item" data-value="10:00 pm">
-																			10:00 pm
-																		</div><div class="item" data-value="10:30 pm">
-																			10:30 pm
-																		</div><div class="item" data-value="11:00 pm">
-																			11:00 pm
-																		</div></div></div>
-															</div>
-														</div>        </div>
-												</div>
 
 												<div class="widget-motorcycles row">
 													<div class="small-12  columns  js-dropdown">

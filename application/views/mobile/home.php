@@ -737,7 +737,7 @@
 					<div class="sub-footer text-center">
 						<h5>Information</h5>
 						<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
-                            <a href=""><?php echo $bottom_infos['title_en']?></a>
+                            <a href="/index.php/Bottom_info/mobile_Bottom_info?lang=en"><?php echo $bottom_infos['title_en']?></a>
 						<?php endforeach; ?>
 
 					</div>
@@ -746,7 +746,7 @@
                         <div class="sub-footer text-center">
                             <h5>Information</h5>
 							<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
-                                <a href=""><?php echo $bottom_infos['title']?></a>
+                                <a href="/index.php/Bottom_info/mobile_Bottom_info"><?php echo $bottom_infos['title']?></a>
 							<?php endforeach; ?>
 
                         </div>

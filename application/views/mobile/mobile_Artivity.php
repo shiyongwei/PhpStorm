@@ -32,7 +32,6 @@
 </header>
 
 <nav class="site-nav js-global-nav js-navigation" id="js-site-nav">
-
     <ul>
 		<?php if(isset($_GET["lang"])): ?>
             <li>
@@ -46,27 +45,27 @@
             </li>
 
             <li>
-                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">Rent
+                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>&&lang=en">Rent
                 </a>
             </li>
             <li>
-                <a href="/index.php/Trave/mobile_Trave">Travel
+                <a href="/index.php/Trave/mobile_Trave?lang=en">Travel
                 </a>
             </li>
             <li>
-                <a href="/index.php/Discounts/mobile_Discount">Privilege
+                <a href="/index.php/Discounts/mobile_Discount?lang=en">Privilege
                 </a>
             </li>
             <li>
-                <a href="/index.php/Artivity/mobile_Artivity">Motorcycle event
+                <a href="/index.php/Artivity/mobile_Artivity?lang=en">Motorcycle event
                 </a>
             </li>
             <li>
-                <a href="/index.php/City/mobile_City">City
+                <a href="/index.php/City/mobile_City?lang=en">City
                 </a>
             </li>
             <li>
-                <a href="/index.php/Reg/mobile_Reg">Reg</a>
+                <a href="/index.php/Reg/mobile_Reg?lang=en">Reg</a>
             </li>
 		<?php endif; ?>
 		<?php if(empty($_GET["lang"])): ?>
@@ -104,7 +103,6 @@
             </li>
 		<?php endif; ?>
     </ul>
-
 </nav>
 <!-- // site nav -->
 

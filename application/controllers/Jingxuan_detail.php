@@ -81,7 +81,7 @@
 				$data['promotion'] = $promotion;
 				$data['side'] = $side;
 
-				$this -> load -> view('mobile/jingxuan-detail',$data);
+				$this -> load -> view('mobile/jingxuan_detail',$data);
 			}
 
 

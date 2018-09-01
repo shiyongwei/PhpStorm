@@ -115,11 +115,11 @@
                             <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="xpom0a-acc-menu-link" id="rbq2e2-acc-menu" style="display: none;">
 								<?php foreach ($rent_list as $key=>$rent_lists): ?>
                                     <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-                                        <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>.'&&lang=en"><?php echo $rent_lists['product_brand_en']?></a>
+                                        <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>&&lang=en"><?php echo $rent_lists['product_brand_en']?></a>
                                     </li>
 								<?php endforeach; ?>
 
-                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>.'&&lang=en"">All the models</a></li>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>&&lang=en">All the models</a></li>
                             </ul>
                         </li>
 
