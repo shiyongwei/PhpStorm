@@ -217,7 +217,7 @@
                                 </li>
 
                                 <li class="dropdown">
-                                    <a href="<?php echo site_url('Reg'); ?>">
+                                    <a href="<?php echo site_url('News'); ?>?lang=en">
 										<?php echo $navigations['news_en'] ?>
                                     </a>
                                 </li>
@@ -357,7 +357,7 @@
                             </li>
 
                                 <li class="dropdown">
-                                    <a href="<?php echo site_url('Reg'); ?>">
+                                    <a href="<?php echo site_url('News'); ?>">
 										<?php echo $navigations['news'] ?>
                                     </a>
                                 </li>
