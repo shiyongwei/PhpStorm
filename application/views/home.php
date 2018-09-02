@@ -958,7 +958,8 @@
 <script>
 	$(".optionsblk li").click(function(){
 		$(this).find('.iradio_square-blue').addClass("checked");
-		$(this).find('.js-numberCheckbox').attr("checked","checked");
 		$(this).siblings().find('.iradio_square-blue').removeClass("checked");
+		// $('.js-numberCheckbox').prop('checked','checked');
 	});
+
 </script>

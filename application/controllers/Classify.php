@@ -24,8 +24,8 @@
 				$side = $this->Side_model->get_name('');
 
 //				echo '<pre>';
-//				print_r($uriving);
-//				echo '</pre>';
+//				print_r($city);
+//				echo '</pre>';exit;
 
 				$data['rent_list'] = $rent_list;
 				$data['uriving'] = $uriving;
@@ -34,6 +34,7 @@
 				$data['bottom_info'] = $bottom_info;
 				$data['bottom_info_all'] = $bottom_info_all;
 				$data['side'] = $side;
+				$data['city'] = $city;
 
 
 

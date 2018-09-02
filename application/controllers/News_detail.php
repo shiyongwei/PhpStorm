@@ -1,6 +1,6 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
-	class News extends CI_Controller{
+	class News_detail extends CI_Controller{
 			public function __construct ()
 			{
 				parent ::__construct();
@@ -31,12 +31,14 @@
 				$bottom_info = $this->Text_model->get_name('');
 				$bottom_info_all = $this->Text_model->get_name_all('');
 				$side = $this->Side_model->get_name('');
-				$news = $this->Tidings_model->get_desc('');
+
+				$news_id['id'] = $_GET['id'];
+				$news_detail = $this->Tidings_model->get_name($news_id);
 
 
-//												echo '<pre>';
-//												print_r($news);
-//												echo '</pre>';
+//																echo '<pre>';
+//																print_r($news_detail);
+//																echo '</pre>';
 
 
 
@@ -47,10 +49,11 @@
 				$data['bottom_info_all'] = $bottom_info_all;
 				$data['side'] = $side;
 				$data['navigation_limit'] = $navigation_limit;
-				$data['news'] = $news;
+				$data['news_detail'] = $news_detail;
+
 
 				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
-				$this -> load -> view('news',$bottom_info);
+				$this -> load -> view('news_detail',$bottom_info);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
 			}
 		}
