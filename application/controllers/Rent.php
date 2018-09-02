@@ -27,6 +27,17 @@
 					$list = $this->List_model->getInfo($id);
 				}
 				$navigation = $this->Navigation_model->get_name('');
+				for ($i=0;$i<count($navigation);$i++){
+					$navigation_limit['navigation_id'] = $navigation[0]['navigation_id'];
+					$navigation_limit['navigation_name'] = $navigation[0]['navigation_name'];
+					$navigation_limit['lease_name'] = $navigation[0]['lease_name'];
+					$navigation_limit['hotel_name'] = $navigation[0]['hotel_name'];
+					$navigation_limit['promotions_name'] = $navigation[0]['promotions_name'];
+					$navigation_limit['navigation_name_en'] = $navigation[0]['navigation_name_en'];
+					$navigation_limit['lease_name_en'] = $navigation[0]['lease_name_en'];
+					$navigation_limit['hotel_name_en'] = $navigation[0]['hotel_name_en'];
+					$navigation_limit['promotions_name_en'] = $navigation[0]['promotions_name_en'];
+				}
 
 //				echo '<pre>';
 //				print_r($list);exit;
@@ -39,6 +50,7 @@
 				$data['bottom_info'] = $bottom_info;
 				$data['bottom_info_all'] = $bottom_info_all;
 				$data['side'] = $side;
+				$data['navigation_limit'] = $navigation_limit;
 
 
 				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);

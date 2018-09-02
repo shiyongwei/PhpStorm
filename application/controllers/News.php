@@ -1,6 +1,6 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
-	class Rent_clause extends CI_Controller{
+	class News extends CI_Controller{
 			public function __construct ()
 			{
 				parent ::__construct();
@@ -46,7 +46,7 @@
 				$data['navigation_limit'] = $navigation_limit;
 
 				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
-				$this -> load -> view('rent_clause',$bottom_info);
+				$this -> load -> view('news',$bottom_info);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
 			}
 		}

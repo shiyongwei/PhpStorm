@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if IE 7]>
 <html lang="en" class="ie ie7"><![endif]-->
@@ -26,87 +27,119 @@
 
 <!-- global header and navigations -->
 <header class="global-header">
-    <a href="javascript:;" class="site-logo">摩托车&lt;br&gt;租赁与旅游</a>
+    <a href="javascript:;" class="site-logo" style="background-image: url("")">摩托车&lt;br&gt;租赁与旅游</a>
     <a href="#js-site-nav" class="site-nav-toggle js-global-nav-toggle"></a>
     <a href="#" class="user-nav-toggle js-global-nav-toggle"></a>
 </header>
 
 <nav class="site-nav js-global-nav js-navigation" id="js-site-nav">
     <ul>
-        <li class="language">
-            <a href="javascript:;">
-                <span>国家</span>
-                <span class="customSelectInner" style="width: 100px; display: inline-block;">
-          <span class="flag-zh"></span>
-        </span>
-                <select class="languageList styled js-custom js-countriesSelect hasCustomSelect" style="width: 100px; position: absolute; opacity: 0; height: 23px; font-size: 12px;">
+		<?php if(isset($_GET["lang"])): ?>
+            <li>
+                <a style="color: #ed7b19">Change language</a>
+            </li>
+            <li class="en">
+                <a style="color: #ed7b19">English</a>
+            </li>
+            <li class="cn">
+                <a style="color: #ed7b19">China</a>
+            </li>
 
-                    <option value="233" data-languagecode="en" class="en">
-                        English
-                    </option>
-                    <option value="233" data-languagecode="en" class="cn">
-                        China
-                    </option>
-
-                </select>
-
-                <span class="customSelect languageList styled js-custom js-countriesSelect" style="display: inline-block;"><span class="customSelectInner" style="width: 100px; display: inline-block;">
-              中国
-            </span></span>
-            </a>
-        </li>
+            <li>
+                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>&&lang=en">Rent
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Trave/mobile_Trave?lang=en">Travel
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Discounts/mobile_Discount?lang=en">Privilege
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Artivity/mobile_Artivity?lang=en">Motorcycle event
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/City/mobile_City?lang=en">City
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Reg/mobile_Reg?lang=en">Reg</a>
+            </li>
+		<?php endif; ?>
+		<?php if(empty($_GET["lang"])): ?>
+            <li>
+                <a style="color: #ed7b19">切换语言</a>
+            </li>
+            <li class="en">
+                <a style="color: #ed7b19">英文</a>
+            </li>
+            <li class="cn">
+                <a style="color: #ed7b19">中文</a>
+            </li>
+            <li>
+                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">租赁
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Trave/mobile_Trave">旅游
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Discounts/mobile_Discount">促销特惠
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Artivity/mobile_Artivity">摩托车活动
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/City/mobile_City">城市
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
+            </li>
+		<?php endif; ?>
     </ul>
-
-    <ul>
-        <li>
-            <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">租赁
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Trave/mobile_Trave">旅游
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Discounts/mobile_Discount">促销特惠
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Artivity/mobile_Artivity">摩托车活动
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/City/mobile_City">城市
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
-        </li>
-    </ul>
-</nav><!-- // site nav -->
+</nav>
+<!-- // site nav -->
 
 <div class="global-content">
     <!-- main content -->
     <div class="main-content">
         <div class="js-page">
             <div class="js-filteredList">
-                <h1>选择城市查看详情</h1>
+				<?php if(isset($_GET["lang"])): ?>
+                <h1>Select the city for details</h1>
+				<?php endif; ?>
+				<?php if(empty($_GET["lang"])): ?>
+                    <h1>选择城市查看详情</h1>
+				<?php endif; ?>
 
-                <!-- location List -->
-                <div class="wrap-large">
-                    <form>
-                        <input placeholder="输入州或城市" class="searchField js-searchField" type="text">
-                    </form>
-                </div>
+
 
                 <div class="location-listing-container">
                     <div class="wrap-fullWidth">
                         <ul class="list-links js-locations">
                             <?php foreach ($city as $key=>$citys): ?>
+							<?php if(isset($_GET["lang"])): ?>
                                 <li>
                                     <a href="/index.php/jingxuan_detail/mobile_jingxuan_detail?id=<?php echo $citys['cit_id']?>" class="linkTitleHeader">
-                                        <strong><?php echo $citys['cit_name']?></strong>
+                                        <strong><?php echo $citys['cit_name_en']?></strong>
                                     </a>
                                 </li>
+							<?php endif; ?>
+							<?php if(empty($_GET["lang"])): ?>
+                                    <li>
+                                        <a href="/index.php/jingxuan_detail/mobile_jingxuan_detail?id=<?php echo $citys['cit_id']?>" class="linkTitleHeader">
+                                            <strong><?php echo $citys['cit_name']?></strong>
+                                        </a>
+                                    </li>
+								<?php endif; ?>
+
                             <?php endforeach; ?>
                         </ul>
                     </div>
@@ -114,15 +147,33 @@
                 </div>
             </div>
             <!-- global footer -->
+			<?php if(isset($_GET["lang"])): ?>
+                <a href="/index.php/Bottom_info/mobile_Bottom_info">
             <footer class="global-footer">
-                <div class="txt1"><a href="javascript:;">联系我们</a></div>
+                <div class="txt1"><a href="javascript:;">Contact Us</a></div>
                 <div>|</div>
-                <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">常见问题</a>
+                <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">FAQ</a>
                 </div>
                 <div>|</div>
-                <div class="txt1"><a href="javascript:;">整个网站
+                <div class="txt1"><a href="javascript:;">The entire site
                 </a></div>
             </footer>
+            </a>
+			<?php endif; ?>
+			<?php if(empty($_GET["lang"])): ?>
+            <a href="/index.php/Bottom_info/mobile_Bottom_info">
+                <footer class="global-footer">
+                    <div class="txt1"><a href="javascript:;">联系我们</a></div>
+                    <div>|</div>
+                    <div class="txt2">常见问题
+                    </div>
+                    <div>|</div>
+                    <div class="txt1"><a href="javascript:;">整个网站
+                        </a></div>
+                </footer>
+            </a>
+			<?php endif; ?>
+
             <script src="/public/js/mobile.js" type="text/javascript"></script>
             <script src="/public/js/combined_widget.js" type="text/javascript"></script>
             <script src="/public/js/motorcycle_tour_reservation.js" type="text/javascript"></script>
@@ -155,6 +206,15 @@
                     var dealsSubscriptionContainer = $('.js-dealsSubscriptionContainer');
                     new ER.Subscribe(dealsSubscriptionContainer);
                 });
+            </script>
+
+            <script>
+				$('.en').click(function() {
+					window.location.href='/index.php/City/mobile_City?lang=en';
+				});
+				$('.cn').click(function() {
+					window.location.href='/index.php/City/mobile_City';
+				});
             </script>
         </div>
     </div>

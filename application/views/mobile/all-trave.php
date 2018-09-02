@@ -122,100 +122,191 @@
 <div class="main-content">
 	<div class="off-canvas-wrapper">
 		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-			<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas="y89sbf-off-canvas" aria-hidden="true">
-				<div class="title-bar">
-					<div class="title-bar-left">
-						<button class="" aria-label="Close menu" type="button" data-close="">
-							<svg></svg>
-						</button>
+			<?php if(isset($_GET["lang"])): ?>
+                <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas="clvo2e-off-canvas" aria-hidden="true">
+                    <div class="title-bar">
+                        <div class="title-bar-left">
+                            <button class="" aria-label="Close menu" type="button" data-close="">
+                                <svg></svg>
+                            </button>
 
-						<span class="title-bar-title er-logo"><a href="">EagleRider</a></span>
-					</div>
-				</div>
+                            <span class="title-bar-title er-logo"><a href="">EagleRider</a></span>
 
-				<!-- Menu -->
-				<ul class="vertical menu" data-accordion-menu="xbvxic-accordion-menu" role="tablist" aria-multiselectable="true">
-					<li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="租赁" aria-controls="3ibcuh-acc-menu" id="6rvd4u-acc-menu-link">
-						<a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>" tabindex="0">租赁</a>
+                        </div>
+                    </div>
 
-						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="6rvd4u-acc-menu-link" id="3ibcuh-acc-menu" style="display: none;">
-							<?php foreach ($rent_list as $key=>$rent_lists): ?>
+                    <!-- Menu -->
+                    <ul class="vertical menu" data-accordion-menu="iy92vw-accordion-menu" role="tablist" aria-multiselectable="true">
+                        <li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="租赁" aria-controls="rbq2e2-acc-menu" id="xpom0a-acc-menu-link">
+                            <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>" tabindex="0">Rent</a>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="xpom0a-acc-menu-link" id="rbq2e2-acc-menu" style="display: none;">
+								<?php foreach ($rent_list as $key=>$rent_lists): ?>
+                                    <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                        <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>&&lang=en"><?php echo $rent_lists['product_brand_en']?></a>
+                                    </li>
+								<?php endforeach; ?>
+
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>&&lang=en">All the models</a></li>
+                            </ul>
+                        </li>
+
+                        <li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="摩托车旅游" aria-controls="uoxvpk-acc-menu" id="exqiwo-acc-menu-link">
+                            <a href="/index.php/trave/mobile_Trave">Motorcycle tour</a>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">The team travel</li>
+
                                 <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-                                    <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>"><?php echo $rent_lists['product_brand']?></a>
+                                    <a href="/index.php/team/mobile_Team?lang=en">
+                                        Motorcycle tour
+                                    </a>
                                 </li>
-							<?php endforeach; ?>
 
-                            <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">所有车型</a></li>
-						</ul>
-					</li>
+                            </ul>
 
-					<li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="摩托车旅游" aria-controls="2q1epg-acc-menu" id="6rgqc3-acc-menu-link">
-						<a href="/index.php/Trave/mobile_Trave">摩托车旅游</a>
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">Road trip</li>
 
-						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="6rgqc3-acc-menu-link" id="2q1epg-acc-menu" style="display: none;">
-							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">团队旅行</li>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/classify/mobile_Classify?lang=en">
+                                        Motorcycle trip
+                                    </a>
+                                </li>
+                            </ul>
 
-							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/Team/mobile_Team">
-									摩托车团队游
-								</a>
-							</li>
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">Hot line</li>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/hot_trave/mobile_hot_trave?lang=en">
+                                        Popular motorcycle Tours
+                                    </a>
+                                </li>
+                            </ul>
 
-						</ul>
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">All travel items</li>
 
-						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="6rgqc3-acc-menu-link" id="2q1epg-acc-menu" style="display: none;">
-							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">自驾旅行</li>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/trave/mobile_Trave?lang=en">
+                                        Motorcycle tour
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
-							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/Classify/mobile_Classify">
-									摩托车自驾游
-								</a>
-							</li>
-						</ul>
-
-						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="6rgqc3-acc-menu-link" id="2q1epg-acc-menu" style="display: none;">
-							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">热门路线</li>
-							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/hot_trave/mobile_hot_trave">
-									热门摩托车旅行
-								</a>
-							</li>
-						</ul>
-
-						<ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="6rgqc3-acc-menu-link" id="2q1epg-acc-menu" style="display: none;">
-							<li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">所有旅行项目</li>
-
-							<li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
-								<a href="/index.php/Trave/mobile_Trave">
-									摩托车旅游
-								</a>
-							</li>
-						</ul>
-					</li>
-
-					<li role="menuitem"><a href="/index.php/Discounts/mobile_Discount">促销特惠</a></li>
-					<li role="menuitem"><a href="/index.php/Artivity/mobile_Artivity">摩托车活动</a></li>
-					<li role="menuitem"><a href="/index.php/City/mobile_City">城市</a></li>
+                        <li role="menuitem"><a href="/index.php/Discounts/mobile_Discount?lang=en">Privilege</a></li>
+                        <li role="menuitem"><a href="/index.php/Artivity/mobile_Artivity?lang=en">Motorcycle event</a></li>
+                        <li role="menuitem"><a href="/index.php/City/mobile_City?lang=en">City</a></li>
 
 
-					<li role="menuitem">
-						<a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
-					</li>
-				</ul>
-				<div class="row">
-					<div class="small-6 columns">
-						<a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
-							¥ CNY
-						</a>
-					</div>
+                        <li role="menuitem">
+                            <a href="/index.php/Reg/mobile_Reg?lang=en">Check in online</a>
+                        </li>
+                    </ul>
+                    <div class="row">
+                        <div class="small-6 columns">
+                            <a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
+                                ¥ US
+                            </a>
+                        </div>
 
-					<div class="small-6 columns">
-						<button class="hollow dark secondary button expanded  js-current text-center" type="button" data-toggle="localizations" aria-controls="localizations" aria-haspopup="true" tabindex="0">
-							<span class="icons-zh"></span>
-						</button>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+			<?php endif; ?>
+			<?php if(empty($_GET["lang"])): ?>
+                <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas="clvo2e-off-canvas" aria-hidden="true">
+                    <div class="title-bar">
+                        <div class="title-bar-left">
+                            <button class="" aria-label="Close menu" type="button" data-close="">
+                                <svg></svg>
+                            </button>
+
+                            <span class="title-bar-title er-logo"><a href="">飞鹰骑士</a></span>
+
+                        </div>
+                    </div>
+
+                    <!-- Menu -->
+                    <ul class="vertical menu" data-accordion-menu="iy92vw-accordion-menu" role="tablist" aria-multiselectable="true">
+                        <li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="租赁" aria-controls="rbq2e2-acc-menu" id="xpom0a-acc-menu-link">
+                            <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>" tabindex="0">租赁</a>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="xpom0a-acc-menu-link" id="rbq2e2-acc-menu" style="display: none;">
+								<?php foreach ($rent_list as $key=>$rent_lists): ?>
+                                    <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                        <a href="/index.php/Rent/mobile_Rent?id=<?php echo $rent_lists['brand_id']?>"><?php echo $rent_lists['product_brand']?></a>
+                                    </li>
+								<?php endforeach; ?>
+
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item"><a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">所有车型</a></li>
+                            </ul>
+                        </li>
+
+                        <li role="tab" class="is-accordion-submenu-parent" aria-haspopup="true" aria-expanded="false" aria-label="摩托车旅游" aria-controls="uoxvpk-acc-menu" id="exqiwo-acc-menu-link">
+                            <a href="/index.php/trave/mobile_Trave">摩托车旅游</a>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">团队旅行</li>
+
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/team/mobile_Team">
+                                        摩托车团队游
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">自驾旅行</li>
+
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/classify/mobile_Classify">
+                                        摩托车自驾游
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">热门路线</li>
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/hot_trave/mobile_hot_trave">
+                                        热门摩托车旅行
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="menu vertical nested submenu is-accordion-submenu" data-submenu="" aria-hidden="true" role="tabpanel" aria-labelledby="exqiwo-acc-menu-link" id="uoxvpk-acc-menu" style="display: none;">
+                                <li class="list-title is-submenu-item is-accordion-submenu-item" role="menuitem">所有旅行项目</li>
+
+                                <li role="menuitem" class="is-submenu-item is-accordion-submenu-item">
+                                    <a href="/index.php/trave/mobile_Trave">
+                                        摩托车旅游
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li role="menuitem"><a href="/index.php/Discounts/mobile_Discount">促销特惠</a></li>
+                        <li role="menuitem"><a href="/index.php/Artivity/mobile_Artivity">摩托车活动</a></li>
+                        <li role="menuitem"><a href="/index.php/City/mobile_City">城市</a></li>
+
+
+                        <li role="menuitem">
+                            <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
+                        </li>
+                    </ul>
+                    <div class="row">
+                        <div class="small-6 columns">
+                            <a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
+                                ¥ CNY
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+			<?php endif; ?>
 
 
 
@@ -226,7 +317,13 @@
 				<div class="title-bar sticky er-bar">
 					<div class="title-bar-left">
 						<button class="menu-icon" type="button" data-open="offCanvasLeft" aria-expanded="false" aria-controls="offCanvasLeft"></button>
+						<?php if(isset($_GET["lang"])): ?>
 						<a href="" class="title-bar-title er-logo">EagleRider</a>
+						<?php endif; ?>
+						<?php if(empty($_GET["lang"])): ?>
+                            <a href="" class="title-bar-title er-logo">飞鹰骑士</a>
+						<?php endif; ?>
+
 					</div>
 
 					<div class="title-bar-right">
@@ -306,358 +403,9 @@
 														</div>
 													</div>
 												</div>
-												<div class="widget-dt row">
-													<div class="widget-dt_date small-6  columns">
-														<div class="dropdown-container">
-															<div class="input-field small-height">
-																<i class="material-icons prefix">
-																	<svg></svg>
-																</i>
-																<div class="">
-																	<input name="reservation[pickup_date]" class="js-pickupDate datepicker picker__input" placeholder="出发日期/时间" value="2018/07/03" readonly="" id="P2136390765" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="P2136390765_root"><div class="picker" id="P2136390765_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">星期二</div><div class="picker__month-display"><div>七</div></div><div class="picker__day-display"><div>3</div></div><div class="picker__year-display"><div>2018</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="P2136390765_table" title="Select a month"><option value="0" disabled="">一月</option><option value="1" disabled="">二月</option><option value="2" disabled="">三月</option><option value="3" disabled="">四月</option><option value="4" disabled="">五月</option><option value="5" disabled="">六月</option><option value="6" selected="">七月</option><option value="7">八月</option><option value="8">九月</option><option value="9">十月</option><option value="10">十一月</option><option value="11">十二月</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="P2136390765_table" title="Select a year"><option value="2018" selected="">2018</option><option value="2019">2019</option><option value="2020">2020</option></select><div class="picker__nav--prev picker__nav--disabled" data-nav="-1" role="button" aria-controls="P2136390765_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="P2136390765_table" title="Next month"> </div></div><table class="picker__table" id="P2136390765_table" role="grid" aria-controls="P2136390765" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="星期一">M</th><th class="picker__weekday" scope="col" title="星期二">T</th><th class="picker__weekday" scope="col" title="星期三">W</th><th class="picker__weekday" scope="col" title="星期四">T</th><th class="picker__weekday" scope="col" title="星期五">F</th><th class="picker__weekday" scope="col" title="星期六">S</th><th class="picker__weekday" scope="col" title="星期日">S</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1529856000000" role="gridcell" aria-label="2018/06/25" aria-disabled="true">25</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1529942400000" role="gridcell" aria-label="2018/06/26" aria-disabled="true">26</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530028800000" role="gridcell" aria-label="2018/06/27" aria-disabled="true">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530115200000" role="gridcell" aria-label="2018/06/28" aria-disabled="true">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530201600000" role="gridcell" aria-label="2018/06/29" aria-disabled="true">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530288000000" role="gridcell" aria-label="2018/06/30" aria-disabled="true">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--disabled" data-pick="1530374400000" role="gridcell" aria-label="2018/07/01" aria-disabled="true">1</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus picker__day--disabled" data-pick="1530460800000" role="gridcell" aria-label="2018/07/02" aria-disabled="true">2</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--selected picker__day--highlighted" data-pick="1530547200000" role="gridcell" aria-label="2018/07/03" aria-selected="true" aria-activedescendant="true">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today" data-pick="1530633600000" role="gridcell" aria-label="2018/07/04">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530720000000" role="gridcell" aria-label="2018/07/05">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530806400000" role="gridcell" aria-label="2018/07/06">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530892800000" role="gridcell" aria-label="2018/07/07">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530979200000" role="gridcell" aria-label="2018/07/08">8</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531065600000" role="gridcell" aria-label="2018/07/09">9</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531152000000" role="gridcell" aria-label="2018/07/10">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531238400000" role="gridcell" aria-label="2018/07/11">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531324800000" role="gridcell" aria-label="2018/07/12">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531411200000" role="gridcell" aria-label="2018/07/13">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531497600000" role="gridcell" aria-label="2018/07/14">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531584000000" role="gridcell" aria-label="2018/07/15">15</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531670400000" role="gridcell" aria-label="2018/07/16">16</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531756800000" role="gridcell" aria-label="2018/07/17">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531843200000" role="gridcell" aria-label="2018/07/18">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531929600000" role="gridcell" aria-label="2018/07/19">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532016000000" role="gridcell" aria-label="2018/07/20">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532102400000" role="gridcell" aria-label="2018/07/21">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532188800000" role="gridcell" aria-label="2018/07/22">22</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532275200000" role="gridcell" aria-label="2018/07/23">23</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532361600000" role="gridcell" aria-label="2018/07/24">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532448000000" role="gridcell" aria-label="2018/07/25">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532534400000" role="gridcell" aria-label="2018/07/26">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532620800000" role="gridcell" aria-label="2018/07/27">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532707200000" role="gridcell" aria-label="2018/07/28">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532793600000" role="gridcell" aria-label="2018/07/29">29</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532880000000" role="gridcell" aria-label="2018/07/30">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532966400000" role="gridcell" aria-label="2018/07/31">31</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533052800000" role="gridcell" aria-label="2018/08/01">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533139200000" role="gridcell" aria-label="2018/08/02">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533225600000" role="gridcell" aria-label="2018/08/03">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533312000000" role="gridcell" aria-label="2018/08/04">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533398400000" role="gridcell" aria-label="2018/08/05">5</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1530633600000" disabled="" aria-controls="P2136390765">今日</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="P2136390765">清除</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="P2136390765">关闭</button></div></div></div></div></div></div>
-																</div>            </div>
-														</div>        </div>
 
-													<div class="widget-dt_time small-6  columns ">
-														<div class="dropdown-container">
-															<div class="input-field activated">
-																<i class="dropdown icon"></i>
-																<div class="ui dropdown js-skip selection" tabindex="0"><select name="reservation[pickup_time_slot]" data-fieldtype="pickup_time_slot">
-																		<option value=" 8:00 am">
-																			8:00 am
-																		</option>
-																		<option value=" 8:30 am">
-																			8:30 am
-																		</option>
-																		<option value=" 9:00 am">
-																			9:00 am
-																		</option>
-																		<option value=" 9:30 am">
-																			9:30 am
-																		</option>
-																		<option value="10:00 am">
-																			10:00 am
-																		</option>
-																		<option value="10:30 am">
-																			10:30 am
-																		</option>
-																		<option value="11:00 am">
-																			11:00 am
-																		</option>
-																		<option value="11:30 am">
-																			11:30 am
-																		</option>
-																		<option value="12:00 pm" selected="&quot;selected&quot;">
-																			12:00 pm
-																		</option>
-																		<option value="12:30 pm">
-																			12:30 pm
-																		</option>
-																		<option value=" 1:00 pm">
-																			1:00 pm
-																		</option>
-																		<option value=" 1:30 pm">
-																			1:30 pm
-																		</option>
-																		<option value=" 2:00 pm">
-																			2:00 pm
-																		</option>
-																		<option value=" 2:30 pm">
-																			2:30 pm
-																		</option>
-																		<option value=" 3:00 pm">
-																			3:00 pm
-																		</option>
-																		<option value=" 3:30 pm">
-																			3:30 pm
-																		</option>
-																		<option value=" 4:00 pm">
-																			4:00 pm
-																		</option>
-																		<option value=" 4:30 pm">
-																			4:30 pm
-																		</option>
-																		<option value=" 5:00 pm">
-																			5:00 pm
-																		</option>
-																		<option value=" 5:30 pm">
-																			5:30 pm
-																		</option>
-																		<option value=" 6:00 pm">
-																			6:00 pm
-																		</option>
-																		<option value=" 6:30 pm">
-																			6:30 pm
-																		</option>
-																		<option value=" 7:00 pm">
-																			7:00 pm
-																		</option>
-																		<option value=" 7:30 pm">
-																			7:30 pm
-																		</option>
-																		<option value=" 8:00 pm">
-																			8:00 pm
-																		</option>
-																		<option value=" 8:30 pm">
-																			8:30 pm
-																		</option>
-																		<option value=" 9:00 pm">
-																			9:00 pm
-																		</option>
-																		<option value=" 9:30 pm">
-																			9:30 pm
-																		</option>
-																		<option value="10:00 pm">
-																			10:00 pm
-																		</option>
-																		<option value="10:30 pm">
-																			10:30 pm
-																		</option>
-																		<option value="11:00 pm">
-																			11:00 pm
-																		</option>
-																	</select><i class="dropdown icon"></i><div class="text">12:00 pm</div><div class="menu" tabindex="-1"><div class="item" data-value=" 8:00 am">
-																			8:00 am
-																		</div><div class="item" data-value=" 8:30 am">
-																			8:30 am
-																		</div><div class="item" data-value=" 9:00 am">
-																			9:00 am
-																		</div><div class="item" data-value=" 9:30 am">
-																			9:30 am
-																		</div><div class="item" data-value="10:00 am">
-																			10:00 am
-																		</div><div class="item" data-value="10:30 am">
-																			10:30 am
-																		</div><div class="item" data-value="11:00 am">
-																			11:00 am
-																		</div><div class="item" data-value="11:30 am">
-																			11:30 am
-																		</div><div class="item active selected" data-value="12:00 pm">
-																			12:00 pm
-																		</div><div class="item" data-value="12:30 pm">
-																			12:30 pm
-																		</div><div class="item" data-value=" 1:00 pm">
-																			1:00 pm
-																		</div><div class="item" data-value=" 1:30 pm">
-																			1:30 pm
-																		</div><div class="item" data-value=" 2:00 pm">
-																			2:00 pm
-																		</div><div class="item" data-value=" 2:30 pm">
-																			2:30 pm
-																		</div><div class="item" data-value=" 3:00 pm">
-																			3:00 pm
-																		</div><div class="item" data-value=" 3:30 pm">
-																			3:30 pm
-																		</div><div class="item" data-value=" 4:00 pm">
-																			4:00 pm
-																		</div><div class="item" data-value=" 4:30 pm">
-																			4:30 pm
-																		</div><div class="item" data-value=" 5:00 pm">
-																			5:00 pm
-																		</div><div class="item" data-value=" 5:30 pm">
-																			5:30 pm
-																		</div><div class="item" data-value=" 6:00 pm">
-																			6:00 pm
-																		</div><div class="item" data-value=" 6:30 pm">
-																			6:30 pm
-																		</div><div class="item" data-value=" 7:00 pm">
-																			7:00 pm
-																		</div><div class="item" data-value=" 7:30 pm">
-																			7:30 pm
-																		</div><div class="item" data-value=" 8:00 pm">
-																			8:00 pm
-																		</div><div class="item" data-value=" 8:30 pm">
-																			8:30 pm
-																		</div><div class="item" data-value=" 9:00 pm">
-																			9:00 pm
-																		</div><div class="item" data-value=" 9:30 pm">
-																			9:30 pm
-																		</div><div class="item" data-value="10:00 pm">
-																			10:00 pm
-																		</div><div class="item" data-value="10:30 pm">
-																			10:30 pm
-																		</div><div class="item" data-value="11:00 pm">
-																			11:00 pm
-																		</div></div></div>
-															</div>
-														</div>        </div>
-												</div>
 
-												<div class="widget-dt row">
-													<div class="widget-dt_date small-6  columns">
-														<div class="dropdown-container">
-															<div class="input-field small-height">
-																<i class="material-icons prefix">
-																	<svg></svg>
-																</i>
-																<input name="reservation[dropoff_date]" class="js-dropoffDate datepicker picker__input" placeholder="返还日期/时间" value="2018/07/04" readonly="" id="P1352170294" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="P1352170294_root"><div class="picker" id="P1352170294_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">星期三</div><div class="picker__month-display"><div>七</div></div><div class="picker__day-display"><div>4</div></div><div class="picker__year-display"><div>2018</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="P1352170294_table" title="Select a month"><option value="0" disabled="">一月</option><option value="1" disabled="">二月</option><option value="2" disabled="">三月</option><option value="3" disabled="">四月</option><option value="4" disabled="">五月</option><option value="5" disabled="">六月</option><option value="6" selected="">七月</option><option value="7">八月</option><option value="8">九月</option><option value="9">十月</option><option value="10">十一月</option><option value="11">十二月</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="P1352170294_table" title="Select a year"><option value="2018" selected="">2018</option><option value="2019">2019</option><option value="2020">2020</option></select><div class="picker__nav--prev picker__nav--disabled" data-nav="-1" role="button" aria-controls="P1352170294_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="P1352170294_table" title="Next month"> </div></div><table class="picker__table" id="P1352170294_table" role="grid" aria-controls="P1352170294" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="星期一">M</th><th class="picker__weekday" scope="col" title="星期二">T</th><th class="picker__weekday" scope="col" title="星期三">W</th><th class="picker__weekday" scope="col" title="星期四">T</th><th class="picker__weekday" scope="col" title="星期五">F</th><th class="picker__weekday" scope="col" title="星期六">S</th><th class="picker__weekday" scope="col" title="星期日">S</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1529856000000" role="gridcell" aria-label="2018/06/25" aria-disabled="true">25</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1529942400000" role="gridcell" aria-label="2018/06/26" aria-disabled="true">26</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530028800000" role="gridcell" aria-label="2018/06/27" aria-disabled="true">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530115200000" role="gridcell" aria-label="2018/06/28" aria-disabled="true">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530201600000" role="gridcell" aria-label="2018/06/29" aria-disabled="true">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus picker__day--disabled" data-pick="1530288000000" role="gridcell" aria-label="2018/06/30" aria-disabled="true">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--disabled" data-pick="1530374400000" role="gridcell" aria-label="2018/07/01" aria-disabled="true">1</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus picker__day--disabled" data-pick="1530460800000" role="gridcell" aria-label="2018/07/02" aria-disabled="true">2</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530547200000" role="gridcell" aria-label="2018/07/03">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--selected picker__day--highlighted" data-pick="1530633600000" role="gridcell" aria-label="2018/07/04" aria-selected="true" aria-activedescendant="true">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530720000000" role="gridcell" aria-label="2018/07/05">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530806400000" role="gridcell" aria-label="2018/07/06">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530892800000" role="gridcell" aria-label="2018/07/07">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1530979200000" role="gridcell" aria-label="2018/07/08">8</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531065600000" role="gridcell" aria-label="2018/07/09">9</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531152000000" role="gridcell" aria-label="2018/07/10">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531238400000" role="gridcell" aria-label="2018/07/11">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531324800000" role="gridcell" aria-label="2018/07/12">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531411200000" role="gridcell" aria-label="2018/07/13">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531497600000" role="gridcell" aria-label="2018/07/14">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531584000000" role="gridcell" aria-label="2018/07/15">15</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531670400000" role="gridcell" aria-label="2018/07/16">16</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531756800000" role="gridcell" aria-label="2018/07/17">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531843200000" role="gridcell" aria-label="2018/07/18">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1531929600000" role="gridcell" aria-label="2018/07/19">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532016000000" role="gridcell" aria-label="2018/07/20">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532102400000" role="gridcell" aria-label="2018/07/21">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532188800000" role="gridcell" aria-label="2018/07/22">22</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532275200000" role="gridcell" aria-label="2018/07/23">23</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532361600000" role="gridcell" aria-label="2018/07/24">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532448000000" role="gridcell" aria-label="2018/07/25">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532534400000" role="gridcell" aria-label="2018/07/26">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532620800000" role="gridcell" aria-label="2018/07/27">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532707200000" role="gridcell" aria-label="2018/07/28">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532793600000" role="gridcell" aria-label="2018/07/29">29</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532880000000" role="gridcell" aria-label="2018/07/30">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1532966400000" role="gridcell" aria-label="2018/07/31">31</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533052800000" role="gridcell" aria-label="2018/08/01">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533139200000" role="gridcell" aria-label="2018/08/02">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533225600000" role="gridcell" aria-label="2018/08/03">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533312000000" role="gridcell" aria-label="2018/08/04">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1533398400000" role="gridcell" aria-label="2018/08/05">5</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1530633600000" disabled="" aria-controls="P1352170294">今日</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="P1352170294">清除</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="P1352170294">关闭</button></div></div></div></div></div></div>
-															</div>
-														</div>        </div>
 
-													<div class="widget-dt_time small-6  columns ">
-														<div class="dropdown-container">
-															<div class="input-field activated">
-																<i class="dropdown icon"></i>
-																<div class="ui dropdown js-skip selection" tabindex="0"><select name="reservation[dropoff_time_slot]" data-fieldtype="dropoff_time_slot">
-																		<option value=" 8:00 am">
-																			8:00 am
-																		</option>
-																		<option value=" 8:30 am">
-																			8:30 am
-																		</option>
-																		<option value=" 9:00 am">
-																			9:00 am
-																		</option>
-																		<option value=" 9:30 am">
-																			9:30 am
-																		</option>
-																		<option value="10:00 am">
-																			10:00 am
-																		</option>
-																		<option value="10:30 am">
-																			10:30 am
-																		</option>
-																		<option value="11:00 am">
-																			11:00 am
-																		</option>
-																		<option value="11:30 am">
-																			11:30 am
-																		</option>
-																		<option value="12:00 pm" selected="&quot;selected&quot;">
-																			12:00 pm
-																		</option>
-																		<option value="12:30 pm">
-																			12:30 pm
-																		</option>
-																		<option value=" 1:00 pm">
-																			1:00 pm
-																		</option>
-																		<option value=" 1:30 pm">
-																			1:30 pm
-																		</option>
-																		<option value=" 2:00 pm">
-																			2:00 pm
-																		</option>
-																		<option value=" 2:30 pm">
-																			2:30 pm
-																		</option>
-																		<option value=" 3:00 pm">
-																			3:00 pm
-																		</option>
-																		<option value=" 3:30 pm">
-																			3:30 pm
-																		</option>
-																		<option value=" 4:00 pm">
-																			4:00 pm
-																		</option>
-																		<option value=" 4:30 pm">
-																			4:30 pm
-																		</option>
-																		<option value=" 5:00 pm">
-																			5:00 pm
-																		</option>
-																		<option value=" 5:30 pm">
-																			5:30 pm
-																		</option>
-																		<option value=" 6:00 pm">
-																			6:00 pm
-																		</option>
-																		<option value=" 6:30 pm">
-																			6:30 pm
-																		</option>
-																		<option value=" 7:00 pm">
-																			7:00 pm
-																		</option>
-																		<option value=" 7:30 pm">
-																			7:30 pm
-																		</option>
-																		<option value=" 8:00 pm">
-																			8:00 pm
-																		</option>
-																		<option value=" 8:30 pm">
-																			8:30 pm
-																		</option>
-																		<option value=" 9:00 pm">
-																			9:00 pm
-																		</option>
-																		<option value=" 9:30 pm">
-																			9:30 pm
-																		</option>
-																		<option value="10:00 pm">
-																			10:00 pm
-																		</option>
-																		<option value="10:30 pm">
-																			10:30 pm
-																		</option>
-																		<option value="11:00 pm">
-																			11:00 pm
-																		</option>
-																	</select><i class="dropdown icon"></i><div class="text">12:00 pm</div><div class="menu" tabindex="-1"><div class="item" data-value=" 8:00 am">
-																			8:00 am
-																		</div><div class="item" data-value=" 8:30 am">
-																			8:30 am
-																		</div><div class="item" data-value=" 9:00 am">
-																			9:00 am
-																		</div><div class="item" data-value=" 9:30 am">
-																			9:30 am
-																		</div><div class="item" data-value="10:00 am">
-																			10:00 am
-																		</div><div class="item" data-value="10:30 am">
-																			10:30 am
-																		</div><div class="item" data-value="11:00 am">
-																			11:00 am
-																		</div><div class="item" data-value="11:30 am">
-																			11:30 am
-																		</div><div class="item active selected" data-value="12:00 pm">
-																			12:00 pm
-																		</div><div class="item" data-value="12:30 pm">
-																			12:30 pm
-																		</div><div class="item" data-value=" 1:00 pm">
-																			1:00 pm
-																		</div><div class="item" data-value=" 1:30 pm">
-																			1:30 pm
-																		</div><div class="item" data-value=" 2:00 pm">
-																			2:00 pm
-																		</div><div class="item" data-value=" 2:30 pm">
-																			2:30 pm
-																		</div><div class="item" data-value=" 3:00 pm">
-																			3:00 pm
-																		</div><div class="item" data-value=" 3:30 pm">
-																			3:30 pm
-																		</div><div class="item" data-value=" 4:00 pm">
-																			4:00 pm
-																		</div><div class="item" data-value=" 4:30 pm">
-																			4:30 pm
-																		</div><div class="item" data-value=" 5:00 pm">
-																			5:00 pm
-																		</div><div class="item" data-value=" 5:30 pm">
-																			5:30 pm
-																		</div><div class="item" data-value=" 6:00 pm">
-																			6:00 pm
-																		</div><div class="item" data-value=" 6:30 pm">
-																			6:30 pm
-																		</div><div class="item" data-value=" 7:00 pm">
-																			7:00 pm
-																		</div><div class="item" data-value=" 7:30 pm">
-																			7:30 pm
-																		</div><div class="item" data-value=" 8:00 pm">
-																			8:00 pm
-																		</div><div class="item" data-value=" 8:30 pm">
-																			8:30 pm
-																		</div><div class="item" data-value=" 9:00 pm">
-																			9:00 pm
-																		</div><div class="item" data-value=" 9:30 pm">
-																			9:30 pm
-																		</div><div class="item" data-value="10:00 pm">
-																			10:00 pm
-																		</div><div class="item" data-value="10:30 pm">
-																			10:30 pm
-																		</div><div class="item" data-value="11:00 pm">
-																			11:00 pm
-																		</div></div></div>
-															</div>
-														</div>        </div>
-												</div>
 
 												<div class="widget-motorcycles row">
 													<div class="small-12  columns  js-dropdown">
@@ -729,17 +477,33 @@
     </span>
 											<div class="widget-tab_pinned widget-location row">
 												<div class="small-12 columns">
+													<?php if(isset($_GET["lang"])): ?>
 													<div class="js-selection-search input-field">
-														<select data-fieldtype="country" id="country_id" name="country_id" style="display: none;"><option value="">所有城市</option>
+														<select data-fieldtype="country" id="country_id" name="country_id" style="display: none;"><option value="">All City</option>
 															<?php foreach ($city as $key=>$citys): ?>
-                                                            <option value="38"><?php echo $citys['cit_name']?></option>
+                                                            <option value="38"><?php echo $citys['cit_name_en']?></option>
 															<?php endforeach; ?>
 														<input type="text" id="input" readonly="" class="js-input">
-														<label for="input" class="js-label">城市</label>
+														<label for="input" class="js-label">City</label>
 														<i class="material-icons prefix arrow">
 															<svg></svg>
 														</i>
 													</div>
+													<?php endif; ?>
+													<?php if(empty($_GET["lang"])): ?>
+                                                        <div class="js-selection-search input-field">
+                                                            <select data-fieldtype="country" id="country_id" name="country_id" style="display: none;"><option value="">所有城市</option>
+																<?php foreach ($city as $key=>$citys): ?>
+                                                                    <option value="38"><?php echo $citys['cit_name']?></option>
+																<?php endforeach; ?>
+                                                                <input type="text" id="input" readonly="" class="js-input">
+                                                                <label for="input" class="js-label">城市</label>
+                                                                <i class="material-icons prefix arrow">
+                                                                    <svg></svg>
+                                                                </i>
+                                                        </div>
+													<?php endif; ?>
+
 												</div>
 											</div>
 
@@ -758,45 +522,89 @@
 								<h3 class="tours-title">
 <!--									Start Your<span>Dream Adventure</span>-->
 								</h3>
+								<?php if(isset($_GET["lang"])): ?>
 								<a href="" class="button">Start Your Dream Adventure</a>
+								<?php endif; ?>
+								<?php if(empty($_GET["lang"])): ?>
+                                    <a href="" class="button">开始你梦想的冒险</a>
+								<?php endif; ?>
+
 							</div>
 						</div>
-
+						<?php if(isset($_GET["lang"])): ?>
 						<div class="row tours-info">
 							<div class="small-12 columns">
 								<h3 class="text-center">Motorcycle Tours</h3>
 
 								<div class="paragraph">
-									<p>EagleRider Motorcycle Rental offers adventure travel enthusiasts not only motorcycle rentals in top destinations around the world, but also provides the option of packaged motorcycle tours.</p><p></p><p>EagleRider has developed motorcycle tours in the USA, France, Germany, Spain, Australia, and many more locations. These motorcycle tours provide customers with the chance to see and discover the country as it was meant to be seen - on the back of a Harley-Davidson, Honda, and BMW motorcycle, without having to worry about any of the itinerary and accommodation planning.</p>
+									<p>EagleRider Motorcycle Rental offers adventure travel enthusiasts not only motorcycle rentals in top destinations around the world, but also provides the option of packaged motorcycle tours.</p><p></p><p></p>
 								</div>
 							</div>
 						</div>
+						<?php endif; ?>
+						<?php if(empty($_GET["lang"])): ?>
+                            <div class="row tours-info">
+                                <div class="small-12 columns">
+                                    <h3 class="text-center">摩托车旅游</h3>
 
-						<div class="featured-slider-wrapper popular-routes">
-							<h3 class="text-center">Popular Routes</h3>
-							<div class="frame featured-slider js-featured-slider" id="frame" style="overflow: hidden;">
-								<ul class="slides" style="transform: translateZ(0px) translateX(-295px); width: 1932px;">
-									<?php foreach ($topic as $key=>$topics): ?>
-                                    <li>
-										<a href="/index.php/hot_trave/mobile_hot_trave" class="route">
-											<div class="route-data">
-												<h1 class="title"><?php echo $topics['topictitle']?></h1>
-												<span class="discover btn">
+                                    <div class="paragraph">
+                                        <p>EagleRider摩托车租赁提供了冒险旅行的爱好者不仅仅是世界各地的摩托车租赁, 而且也提供了打包摩托车旅游的选择.</p><p></p><p></p>
+                                    </div>
+                                </div>
+                            </div>
+						<?php endif; ?>
+						<?php if(isset($_GET["lang"])): ?>
+                            <div class="featured-slider-wrapper popular-routes">
+                                <h3 class="text-center">Popular Routes</h3>
+                                <div class="frame featured-slider js-featured-slider" id="frame" style="overflow: hidden;">
+                                    <ul class="slides" style="transform: translateZ(0px) translateX(-295px); width: 1932px;">
+										<?php foreach ($topic as $key=>$topics): ?>
+                                            <li>
+                                                <a href="/index.php/hot_trave/mobile_hot_trave" class="route">
+                                                    <div class="route-data">
+                                                        <h1 class="title"><?php echo $topics['topictitle_en']?></h1>
+                                                        <span class="discover btn">
                                                   Discover<span class="icon"></span>
                                                 </span>
-											</div>
-											<div class="img-wrapper">
-												<img class="imgBG" src="<?php echo $topics['image']?>">
-											</div>
-										</a>
-									</li>
-									<?php endforeach; ?>
-								</ul>
-							</div>
-						</div>
+                                                    </div>
+                                                    <div class="img-wrapper">
+                                                        <img class="imgBG" src="<?php echo $topics['image']?>">
+                                                    </div>
+                                                </a>
+                                            </li>
+										<?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            </div>
+						<?php endif; ?>
+						<?php if(empty($_GET["lang"])): ?>
+
+                            <div class="featured-slider-wrapper popular-routes">
+                                <h3 class="text-center">热门旅游</h3>
+                                <div class="frame featured-slider js-featured-slider" id="frame" style="overflow: hidden;">
+                                    <ul class="slides" style="transform: translateZ(0px) translateX(-295px); width: 1932px;">
+										<?php foreach ($topic as $key=>$topics): ?>
+                                            <li>
+                                                <a href="/index.php/hot_trave/mobile_hot_trave" class="route">
+                                                    <div class="route-data">
+                                                        <h1 class="title"><?php echo $topics['topictitle']?></h1>
+                                                        <span class="discover btn">
+                                                  探索<span class="icon"></span>
+                                                </span>
+                                                    </div>
+                                                    <div class="img-wrapper">
+                                                        <img class="imgBG" src="<?php echo $topics['image']?>">
+                                                    </div>
+                                                </a>
+                                            </li>
+										<?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            </div>
+						<?php endif; ?>
 
 
-
+						<?php if(isset($_GET["lang"])): ?>
 						<div class="featured-slider-wrapper location-tours">
 							<h3 class="text-center location-rentals-title">
 								Featured Motorcycle Tours
@@ -811,8 +619,8 @@
 											<div class="card vehicle-card">
 												<div class="row">
 													<div class="">
-														<h4><?php echo $teams['teamtitle']?></h4>
-														<span class="class-mame">团队游</span>
+														<h4><?php echo $teams['teamtitle_en']?></h4>
+														<span class="class-mame">team tour </span>
 													</div>
 												</div>
 												<div class="card-image">
@@ -820,11 +628,11 @@
 												</div>
 												<div class="card-content">
 													<ul class="menu align-left">
-														<li><span class="cost-after-discount"></span><br><span><?php echo $teams['day']?></span></li>
+														<li><span class="cost-after-discount"></span><br><span><?php echo $teams['day_en']?></span></li>
 														<li>
-															<span class="cost-after-discount"><?php echo $teams['price']?></span><br><span>起始价格</span></li>
+															<span class="cost-after-discount"><?php echo $teams['price']?></span><br><span>Price</span></li>
 													</ul>
-													<button type="" class="button expanded" href="/index.php/Team_detail/mobile_Team_detail?id=<?php echo $teams['id']?>">查看旅游线路</button>
+													<button type="" class="button expanded" href="/index.php/Team_detail/mobile_Team_detail?id=<?php echo $teams['id']?>">View tour routes</button>
 												</div>
 											</div>
 										</a>
@@ -836,8 +644,8 @@
                                             <div class="card vehicle-card">
                                                 <div class="row">
                                                     <div class="">
-                                                        <h4><?php echo $urivings['day']?></h4>
-                                                        <span class="class-mame">自驾游</span>
+                                                        <h4><?php echo $urivings['day_en']?></h4>
+                                                        <span class="class-mame">road trip</span>
                                                     </div>
                                                 </div>
                                                 <div class="card-image">
@@ -845,11 +653,11 @@
                                                 </div>
                                                 <div class="card-content">
                                                     <ul class="menu align-left">
-                                                        <li><span class="cost-after-discount"></span><br><span><?php echo $urivings['day']?></span></li>
+                                                        <li><span class="cost-after-discount"></span><br><span><?php echo $urivings['day_en']?></span></li>
                                                         <li>
-                                                            <span class="cost-after-discount"><?php echo $urivings['price']?></span><br><span>起始价格</span></li>
+                                                            <span class="cost-after-discount"><?php echo $urivings['price']?></span><br><span>Price</span></li>
                                                     </ul>
-                                                    <button type="" class="button expanded" href="/index.php/Detail/mobile_Detail?id=<?php echo $urivings['id']?>">查看旅游线路</button>
+                                                    <button type="" class="button expanded" href="/index.php/Detail/mobile_Detail?id=<?php echo $urivings['id']?>">View tour routes</button>
                                                 </div>
                                             </div>
                                         </a>
@@ -860,6 +668,73 @@
 								</ul>
 							</div>
 						</div>
+						<?php endif; ?>
+						<?php if(empty($_GET["lang"])): ?>
+                            <div class="featured-slider-wrapper location-tours">
+                                <h3 class="text-center location-rentals-title">
+                                    摩托车之旅
+                                </h3>
+
+                                <div class="frame featured-slider js-featured-slider" id="frame" style="overflow: hidden;">
+                                    <ul class="slides" style="transform: translateZ(0px) translateX(-219px); width: 2410px;">
+
+										<?php foreach ($team as $key=>$teams): ?>
+                                            <li>
+                                                <a href="/index.php/Team_detail/mobile_Team_detail?id=<?php echo $teams['id']?>">
+                                                    <div class="card vehicle-card">
+                                                        <div class="row">
+                                                            <div class="">
+                                                                <h4><?php echo $teams['teamtitle']?></h4>
+                                                                <span class="class-mame">团队游</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-image">
+                                                            <img class="activator" src="<?php echo $teams['image']?>" style="height: 200px;">
+                                                        </div>
+                                                        <div class="card-content">
+                                                            <ul class="menu align-left">
+                                                                <li><span class="cost-after-discount"></span><br><span><?php echo $teams['day']?></span></li>
+                                                                <li>
+                                                                    <span class="cost-after-discount"><?php echo $teams['price']?></span><br><span>起始价格</span></li>
+                                                            </ul>
+                                                            <button type="" class="button expanded" href="/index.php/Team_detail/mobile_Team_detail?id=<?php echo $teams['id']?>">查看旅游线路</button>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+										<?php endforeach; ?>
+										<?php foreach ($uriving as $key=>$urivings): ?>
+                                            <li>
+                                                <a href="/index.php/detail/mobile_detail?id=<?php echo $urivings['id']?>">
+                                                    <div class="card vehicle-card">
+                                                        <div class="row">
+                                                            <div class="">
+                                                                <h4><?php echo $urivings['day']?></h4>
+                                                                <span class="class-mame">自驾游</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-image">
+                                                            <img class="activator" src="<?php echo $urivings['image']?>" style="height: 200px;">
+                                                        </div>
+                                                        <div class="card-content">
+                                                            <ul class="menu align-left">
+                                                                <li><span class="cost-after-discount"></span><br><span><?php echo $urivings['day']?></span></li>
+                                                                <li>
+                                                                    <span class="cost-after-discount"><?php echo $urivings['price']?></span><br><span>起始价格</span></li>
+                                                            </ul>
+                                                            <button type="" class="button expanded" href="/index.php/Detail/mobile_Detail?id=<?php echo $urivings['id']?>">查看旅游线路</button>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+										<?php endforeach; ?>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+						<?php endif; ?>
+
 					</div>
 
 					<div class="harley-ad callout js-harley-content" data-closable="slide-out-down" style="display: none;">
@@ -952,19 +827,32 @@
 
 
 
-					<div class="row">
-						<div class="small-6 columns">
-							<a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
-								¥ CNY
-							</a>
-						</div>
+                    <div class="row">
+                        <div class="small-6 columns">
+							<?php if(isset($_GET["lang"])): ?>
+                                <a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
+                                    ¥ US
+                                </a>
+							<?php endif; ?>
+							<?php if(empty($_GET["lang"])): ?>
+                                <a class="hollow dark secondary button expanded dropdown currency-btn js-currencies-overlay-trigger">
+                                    ¥ CNY
+                                </a>
+							<?php endif; ?>
+                        </div>
 
-						<div class="small-6 columns">
-							<button class="hollow dark secondary button expanded dropdown js-current text-center" type="button" data-toggle="localizations" aria-controls="localizations" aria-haspopup="true" tabindex="0">
-								<span class="icons-zh"></span>
-							</button>
-						</div>
-					</div>
+                        <div class="small-6 columns">
+                            <button class="hollow dark secondary button expanded dropdown js-current text-center" type="button" data-toggle="localizations" aria-controls="localizations" aria-haspopup="true" tabindex="0">
+								<?php if(isset($_GET["lang"])): ?>
+                                    <span>US</span>
+								<?php endif; ?>
+								<?php if(empty($_GET["lang"])): ?>
+                                    <span>CNY</span>
+								<?php endif; ?>
+
+                            </button>
+                        </div>
+                    </div>
 
 					<div class="row">
 
@@ -975,17 +863,34 @@
 							<a class="footer-logo" href="https://www.eaglerider.cn/">
 								<img class="logo" src="<?php echo $bottom_info_all[7]['image']?>" alt="ER logo">
 							</a>
-							<p class="copyright"> <?php echo $bottom_info_all[7]['title']?> </p>
+							<?php if(isset($_GET["lang"])): ?>
+                                <p class="copyright"> <?php echo $bottom_info_all[7]['title_en']?></p>
+							<?php endif; ?>
+							<?php if(empty($_GET["lang"])): ?>
+                                <p class="copyright"> <?php echo $bottom_info_all[7]['title']?></p>
+							<?php endif; ?>
 						</div>
 					</div>
 
-					<div class="sub-footer text-center">
-						<h5>Information</h5>
-						<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
-                            <a href="">
-								<?php echo $bottom_infos['title']?></a>
-						<?php endforeach; ?>
-					</div>
+					<?php if(isset($_GET["lang"])): ?>
+                        <div class="sub-footer text-center">
+                            <h5>Information</h5>
+							<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
+                                <a href=""><?php echo $bottom_infos['title_en']?></a>
+							<?php endforeach; ?>
+
+                        </div>
+					<?php endif; ?>
+					<?php if(empty($_GET["lang"])): ?>
+                        <div class="sub-footer text-center">
+                            <h5>Information</h5>
+							<?php foreach ($bottom_info as $key=>$bottom_infos): ?>
+                                <a href=""><?php echo $bottom_infos['title']?></a>
+							<?php endforeach; ?>
+
+                        </div>
+					<?php endif; ?>
+
 				</footer>
 
 
@@ -1175,96 +1080,18 @@
 		</div>
 	</header>
 
-	<ul class="countries-list  js-custom js-countriesSelect">
-		<li>
-			<a href="https://www.eaglerider.com/" data-countryid="233" class="js-changeCountryTrigger" data-languagecode="en">
-				<span class="icons-us js-flag"></span> United States of America
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/" data-countryid="77" class="js-changeCountryTrigger" data-languagecode="en">
-				<span class="icons-uk js-flag"></span> United Kingdom
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/motorrad-mieten" data-countryid="57" class="js-changeCountryTrigger" data-languagecode="de">
-				<span class="icons-de js-flag"></span> Deutschland
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/location-moto" data-countryid="75" class="js-changeCountryTrigger" data-languagecode="fr">
-				<span class="icons-fr js-flag"></span> France
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/" data-countryid="13" class="js-changeCountryTrigger" data-languagecode="en">
-				<span class="icons-au js-flag"></span> Australia
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/motorverhuur" data-countryid="166" class="js-changeCountryTrigger" data-languagecode="nl">
-				<span class="icons-nl js-flag"></span> Nederland
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/noleggio-moto" data-countryid="110" class="js-changeCountryTrigger" data-languagecode="it">
-				<span class="icons-it js-flag"></span> Italia
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/aluguel-de-motos" data-countryid="31" class="js-changeCountryTrigger" data-languagecode="pt">
-				<span class="icons-br js-flag"></span> Brasil
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/" data-countryid="38" class="js-changeCountryTrigger" data-languagecode="en">
-				<span class="icons-ca js-flag"></span> Canada
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/alquiler-de-motos" data-countryid="68" class="js-changeCountryTrigger" data-languagecode="es">
-				<span class="icons-es js-flag"></span> España
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.cn/" data-countryid="48" class="js-changeCountryTrigger" data-languagecode="zh">
-				<span class="icons-zh js-flag"></span> 中国
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/motorcykeludlejninger" data-countryid="59" class="js-changeCountryTrigger" data-languagecode="da">
-				<span class="icons-dk js-flag"></span> Denmark
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/ja" data-countryid="114" class="js-changeCountryTrigger" data-languagecode="ja">
-				<span class="icons-jp js-flag"></span> 日本
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/ko" data-countryid="122" class="js-changeCountryTrigger" data-languagecode="ko">
-				<span class="icons-ko js-flag"></span> 한국
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/motorsykkelleie" data-countryid="167" class="js-changeCountryTrigger" data-languagecode="no">
-				<span class="icons-no js-flag"></span> Norge
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/ru" data-countryid="191" class="js-changeCountryTrigger" data-languagecode="ru">
-				<span class="icons-ru js-flag"></span> Россия Федерация
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/ar" data-countryid="193" class="js-changeCountryTrigger" data-languagecode="ar">
-				<span class="icons-ksa js-flag"></span> اللغة العربية
-			</a>
-		</li>
-		<li>
-			<a href="https://www.eaglerider.com/sv" data-countryid="197" class="js-changeCountryTrigger" data-languagecode="sv">
-				<span class="icons-se js-flag"></span> Sverige
-			</a>
-		</li>
-	</ul>
+    <ul class="countries-list  js-custom js-countriesSelect">
+        <li class="en" style="line-height: 45px;">English</li>
+        <li class="cn" style="line-height: 45px;">Chinese</li>
+
+    </ul>
 </div></body></html>
+<script>
+	$('.en').click(function() {
+		var url = window.location.href;
+		window.location.href='/index.php/Trave/mobile_Trave?lang=en';
+	});
+	$('.cn').click(function() {
+		window.location.href='/index.php/Trave/mobile_Trave';
+	});
+</script>

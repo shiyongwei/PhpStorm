@@ -366,7 +366,7 @@
 	                        <?php foreach ($date as $key =>$dates): ?>
                             <div class="accordion-group">
                                 <div class="accordion-heading">
-                                    <a href="#collapse-1" class="accordion-toggle" data-parent="#tour_iten" data-toggle="collapse">
+                                    <a href="" class="accordion-toggle" data-parent="#tour_iten" data-toggle="collapse">
                                         <span class="day"><?php echo $dates['0'];?></span>
                                         <span class="location"><?php echo $dates['1'];?></span>
                                         <span class="miles" dir="ltr">

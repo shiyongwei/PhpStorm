@@ -1096,7 +1096,7 @@
 
                                             <div class="field-block fullWidth headblk js-numberSelection">
                                                 <label for="">需要几辆摩托车</label>
-                                                <ul class="optionsblk motorNum">
+                                                <ul class="optionsblk motorNum" style="width: 300px;">
                                                     <li>
                                                         <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="1" class="js-numberCheckbox" id="vehicles_count_1_2" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                         <label class="radio" for="vehicles_count_1_2">1</label>
@@ -1114,7 +1114,7 @@
                                                         <label class="radio fieldIF js-label" for="vehicles_count_other_2">
                                                             其他
                                                         </label>
-                                                        <input type="text" title="Type number of motorcycles here" name="reservation[vehicles_count]" class="fieldIFinput js-numberField" value="" style="display: none;">
+                                                        <input type="text" title="Type number of motorcycles here" name="reservation[vehicles_count]" class="fieldIFinput js-numberField" value="">
                                                     </li>
                                                 </ul>
 
@@ -1431,4 +1431,10 @@
     </div>
 </div>
 <script type="text/javascript" src="/public/js/style.js"></script>
+<script>
+	$(".optionsblk li").click(function(){
+		$(this).find('.iradio_square-blue').addClass("checked");
+		$(this).siblings().find('.iradio_square-blue').removeClass("checked");
+	});
+</script>
 
