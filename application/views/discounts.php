@@ -71,7 +71,7 @@
 
                     <div class="btn-group withoutArrow" style="width: 220px;margin-right: 10px;border-right: 1px solid #bbbbbb;">
                         <button data-toggle="dropdown" class="btn-highlight dropdown-toggle">
-                            All
+                            NULL
                         </button>
 
                         </ul>
@@ -110,7 +110,7 @@
 
                         <div class="btn-group withoutArrow" style="width: 220px;margin-right: 10px;border-right: 1px solid #bbbbbb;">
                             <button data-toggle="dropdown" class="btn-highlight dropdown-toggle">
-                                所有的
+                                暂无
                             </button>
 
                             </ul>

@@ -33,8 +33,14 @@
 				}
 				$bottom_info_all = $this->Text_model->get_name_all('');
 				$side = $this->Side_model->get_name('');
-				$text = $uriving['schedule'];
 
+				$url = $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+				if(strpos($url,'lang') !== false){
+					$text = $uriving['schedule_en'];
+				}else{
+					$text = $uriving['schedule'];
+				}
+//				var_dump($url);exit;
 
 				$text =  str_replace('<br/>','',$text);
 
