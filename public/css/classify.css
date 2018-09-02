@@ -11040,7 +11040,7 @@ ol.steps_list li:before {border: 2px solid white;-moz-border-radius: 2em;-webkit
     .membershipCheckout .checkoutForm .billingInfo {margin-top: 0}
 }
 
-.icheckbox_square-blue, .iradio_square-blue {display: inline-block;*display: inline;vertical-align: middle;margin: 0;padding: 0;width: 22px;height: 22px;background: url("/assets/plugins/blue-5a82862963dc9ba60ea7fb0039f86fb7.png") no-repeat;border: none;cursor: pointer;margin-left: 1px}
+.icheckbox_square-blue, .iradio_square-blue {display: inline-block;*display: inline;vertical-align: middle;margin: 0;padding: 0;width: 22px;height: 22px;background: url("/public/image/blue-5a82862963dc9ba60ea7fb0039f86fb7.png") no-repeat;border: none;cursor: pointer;margin-left: 1px}
 
 .icheckbox_square-blue {background-position: 0 0}
 
