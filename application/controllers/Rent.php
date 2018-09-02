@@ -15,6 +15,14 @@
 			}
 			//热门租赁分类
 			public function index(){
+				$aa['num'] = $_POST['num'];
+				$aa['num_other'] = $_POST['num_other'];
+				$aa['star_city'] = $_POST['star_city'];
+				$aa['end_city'] = $_POST['end_city'];
+				$aa['star_time'] = $_POST['star_time'];
+				$aa['end_time'] = $_POST['end_time'];
+				echo '<pre>';
+				print_r($aa);exit;
 				$rent_list = $this->Product_model->get('');
 				$get_limit = $this->City_model->get_limit('');
 				$bottom_info = $this->Text_model->get_name('');
