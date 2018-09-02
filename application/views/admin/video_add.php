@@ -31,20 +31,23 @@
 <body>
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add" onsubmit="return false">
-        <input type="hidden" name="id" value="<?php echo $tidings['id'];?>">
-        <?php if (isset($tidings['lang'])): ?>
-            <input type="hidden" name="lang" value="<?php echo $tidings['lang'];?>">
-        <?php endif; ?>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>主题名称：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="<?php echo $tidings['title'];?>" placeholder="" id="" name="title">
-			</div>
-		</div>
+        <input type="hidden" name="image" value="" id="image">
+        <input type="hidden" name="image_two" value="" id="image_two">
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">图片集锦：</label>
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>所属团队游：</label>
+                <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+                  <select name="team_id" class="select">
+				<?php foreach ($team as $key): ?>
+                    <option value="<?php echo $key['id']; ?>"><?php echo $key['teamtitle']; ?></option>
+                <?php endforeach; ?>
+                  </select>
+				</span>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">视频集合：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <script id="editor" type="text/plain" style="width:100%;height:400px;"><?php echo $tidings['text'];?></script>
+                <script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
                 </div>
          </div>
 		<div class="row cl">
@@ -72,7 +75,6 @@
 <script type="text/javascript" src="/public/admin/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
 <script type="text/javascript" src="/public/admin/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript">
-
 $(function(){
     var ue = UE.getEditor('editor');
 });
@@ -80,16 +82,16 @@ function article_save_submit()
 {
     var   str = $("#form-article-add").serialize();
 
-    $.post('/index.php/admin/Tidings/tidings_edit',{'str':str},function(data) {
+    $.post('/index.php/admin/Video/video_add',{'str':str},function(data) {
 
         if(data == 200){
 
-            layer.msg('修改成功!',{icon:1,time:2000});
+            layer.msg('添加成功!',{icon:1,time:2000});
 
         }else{
 
 
-            layer.msg('修改失败',{icon:6,time:2000});
+            layer.msg('添加失败',{icon:6,time:2000});
 
         }
     });

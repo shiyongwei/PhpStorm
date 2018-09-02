@@ -11,6 +11,8 @@
 				$this -> load -> model('admin/Navigation_model');
 				$this -> load -> model('admin/Text_model');
 				$this -> load -> model('admin/Side_model');
+				$this -> load -> model('admin/Video_model');
+				$this -> load -> model('admin/Photo_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
@@ -135,8 +137,23 @@
 
 				$this -> load -> view('mobile/team-detail',$data);
 			}
+            public function team_show(){
+			    $photo['team_id'] = $_GET['id'];
+                $data['photo'] = $this -> Photo_model -> get_name($photo);
+                preg_match_all('/<img(.*?)src=\"(.*?)\"(.*?)>/is', $data['photo']['image'], $matches);
+                $data['image'] = array_combine($matches[2],$matches[0]);
+                $this -> load -> view('picture_show',$data);
 
-		}
+            }
+            public function video_show(){
+			    $photo['team_id'] = $_GET['id'];
+                $video = $this -> Video_model -> get_name($photo);
+                $data['video'] = $video['video'];
+                $this -> load -> view('video_show',$data);
+
+            }
+
+	}
 
             function _regex_select ($html, $selector, $remove = false)
             {
@@ -179,7 +196,4 @@
 
                 return count($result) > 1 ? $result : $result[0];
             }
-
-
-
 ?>

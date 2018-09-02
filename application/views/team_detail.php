@@ -66,6 +66,11 @@
 	});
 
 </script>
+<link rel="stylesheet" type="text/css" href="/public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/public/admin/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/public/admin/static/h-ui.admin/css/style.css" />
 <link href="/public/css/classify.css" type="text/css" rel="stylesheet" />
 <link href="/public/css/classify_one.css" type="text/css" rel="stylesheet" />
 	<div class="js-page">
@@ -119,12 +124,12 @@
 								<div class="clearfix"></div>
 							</div>
 						</div>
-                        <a href="Javascript:;" class="light_btn btn-highlight js-playTrigger" data-youtube-vid="http://www.youtube.com/embed/KC38ELJF-k4?autoplay=1" style="float: none;padding: 3px;background-color: #D13634;margin-top: 5px;text-align: left;color: #fff;">
+                        <a href="Javascript:;" class="light_btn btn-highlight js-playTrigger"  style="float: none;padding: 3px;background-color: #D13634;margin-top: 5px;text-align: left;color: #fff;" onClick="picture_edit('视频展示','Team_detail/video_show?id=<?php echo $team['id']; ?>','10001')">
                             播放旅行视频
                             <span class="play_icon icon_decor"></span>
                         </a>
 
-                        <a href="Javascript:;" data-url="/%E6%91%A9%E6%89%98%E8%BD%A6%E6%97%85%E6%B8%B8/80/gallery" class="light_btn btn-highlight js-galleryTrigger" style="float: none;padding: 3px;background-color: #D13634;margin-top: 5px;text-align: left;color: #fff;">
+                        <a href="Javascript:;"  class="light_btn btn-highlight js-galleryTrigger" style="float: none;padding: 3px;background-color: #D13634;margin-top: 5px;text-align: left;color: #fff;" onClick="picture_edit('图片展示','Team_detail/team_show?id=<?php echo $team['id']; ?>','10001')">
                             查看旅行照片
                             <span class="galery_icon icon_decor"></span>
                         </a>
@@ -134,7 +139,7 @@
 				</div>
 			</div>
 
-			<img class="tourViewBg" src="https://d56b293rhv8dp.cloudfront.net/tours/80/cover_images/original/er-tours-header_0000s_0001_ap-062014-04553.jpg?1407947574" style="position: absolute;z-index: -1;top: 111px;left: 0px;height: 370px !important;width: 100% !important;">
+			<img class="tourViewBg" src="<?php echo $team['image']?>" style="position: absolute;z-index: -1;top: 111px;left: 0px;height: 370px !important;width: 100% !important;">
 		</div>
 
 		<div class="container">
@@ -1845,21 +1850,21 @@
 					</div>
 
 
-					<div class=" reviews js-reviewsSection" id="reviews">
-						<div class="rev_head">
-							<span class="no_reviews">0</span>
-
-							<span>用户评价</span>
-
-							<span class="view_all">(<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E8%87%AA%E9%A9%BE%E6%B8%B8/route-66-motorcycle-tour/reviews">查看所有</a>)</span>
-
-							<a href="Javascript:;" class="btn-highlight js-updateReviewTrigger">
-								添加评论<span class="add_icon"></span>
-							</a>
-
-							<div class="clearfix"></div>
-						</div>
-					</div>
+<!--					<div class=" reviews js-reviewsSection" id="reviews">-->
+<!--						<div class="rev_head">-->
+<!--							<span class="no_reviews">0</span>-->
+<!---->
+<!--							<span>用户评价</span>-->
+<!---->
+<!--							<span class="view_all">(<a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E8%87%AA%E9%A9%BE%E6%B8%B8/route-66-motorcycle-tour/reviews">查看所有</a>)</span>-->
+<!---->
+<!--							<a href="Javascript:;" class="btn-highlight js-updateReviewTrigger">-->
+<!--								添加评论<span class="add_icon"></span>-->
+<!--							</a>-->
+<!---->
+<!--							<div class="clearfix"></div>-->
+<!--						</div>-->
+<!--					</div>-->
 				</div>
 			</div>
 		</div>
@@ -2048,3 +2053,24 @@
         });
 
     </script>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/public/admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/public/admin/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/public/admin/static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/public/admin/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="/public/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/public/admin/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+    /*图片-编辑*/
+    function picture_edit(title,url,id){
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+</script>

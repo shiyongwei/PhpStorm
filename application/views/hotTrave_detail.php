@@ -713,7 +713,7 @@
                     </div>
 
                     <div class="row-fluid">
-                        <a class="span12 light_btn btn-highlight js-gallery-trigger" href="javascript:;" onClick="picture_edit('图片集锦','HotTrave_detail/picture_show?id=<?php echo $hotreave_detail['topic_id']; ?>','10001')">
+                        <a class="span12 light_btn btn-highlight js-gallery-trigger" href="javascript:;" onClick="picture_edit('图片展示','HotTrave_detail/picture_show?id=<?php echo $hotreave_detail['topic_id']; ?>','10001')">
                             <span class="galery_icon icon_decor"></span> 查看全部图片集锦
                         </a>
                     </div>

@@ -16,24 +16,15 @@
     <link rel="stylesheet" type="text/css" href="/public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
     <link rel="stylesheet" type="text/css" href="/public/admin/static/h-ui.admin/css/style.css" />
     <!--[if IE 6]>
-    <script type="text/javascript" src="/public/admin/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script type="text/javascript" src="/public/admin/lib/DD_belatedPNG_0.0.8a-min.js"></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <title>图片展示</title>
     <link href="/public/admin/lib/lightbox2/2.8.1/css/lightbox.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
 <div class="page-container">
     <div class="portfolio-content">
-        <ul class="cl portfolio-area">
-            <?php foreach ($image as $key=>$value): ?>
-                <li class="item">
-                    <div class="portfoliobox">
-                        <div class="picbox"><a href="<?php echo $key;?>" data-lightbox="gallery"><?php echo $value;?></a></div>
-                    </div>
-                </li>
-            <?php endforeach; ?>
-        </ul>
+        <?php echo $video;?>
     </div>
 </div>
 <!--_footer 作为公共模版分离出去-->

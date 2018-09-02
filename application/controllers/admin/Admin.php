@@ -25,6 +25,8 @@ class Admin extends CI_Controller
             $this -> load -> model('admin/Text_model');
             $this -> load -> model('admin/User_info_model');
             $this -> load -> model('admin/Tidings_model');
+            $this -> load -> model('admin/Video_model');
+            $this -> load -> model('admin/Photo_model');
             $this -> load -> helper(array('form', 'url'));
             $this -> load -> library('session');
             $this -> load -> library('pagination');
@@ -1111,6 +1113,56 @@ class Admin extends CI_Controller
                 $data['tidings']['text'] = $tidings['text_en'];
             }
             $this -> load -> view('admin/tidings_edit',$data);
+
+        }
+        public function video ()
+        {
+            $result= '';
+
+            $data['video'] = $this -> Video_model -> get_name($result);
+
+            $this -> load -> view('admin/video',$data);
+        }
+        public function video_add ()
+        {
+            $result= '';
+            $data['team'] = $this -> Team_model -> get($result);
+
+            $this -> load -> view('admin/video_add',$data);
+        }
+        public function video_edit ()
+        {
+            $result['video_id']= $_GET['video_id'];
+            $data['video'] = $this -> Video_model -> get_name($result);
+            $results= '';
+            $data['team'] = $this -> Team_model -> get($results);
+
+            $this -> load -> view('admin/video_edit',$data);
+
+        }
+        public function photo ()
+        {
+            $result= '';
+
+            $data['photo'] = $this -> Photo_model -> get_name($result);
+
+            $this -> load -> view('admin/photo',$data);
+        }
+        public function photo_add ()
+        {
+            $result= '';
+            $data['team'] = $this -> Team_model -> get($result);
+
+            $this -> load -> view('admin/photo_add',$data);
+        }
+        public function photo_edit ()
+        {
+            $result['photo_id']= $_GET['photo_id'];
+            $data['photo'] = $this -> Photo_model -> get_name($result);
+            $results= '';
+            $data['team'] = $this -> Team_model -> get($results);
+
+            $this -> load -> view('admin/photo_edit',$data);
 
         }
     }

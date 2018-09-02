@@ -125,6 +125,8 @@
                         <li><a data-href="explore" data-title="探索方式" href="javascript:void(0)">探索方式编辑</a></li>
                         <li><a data-href="uriving" data-title="自驾游编辑" href="javascript:void(0)">自驾游编辑</a></li>
                         <li><a data-href="team" data-title="团队游编辑" href="javascript:void(0)">团队游编辑</a></li>
+                        <li><a data-href="video" data-title="团队游视频编辑" href="javascript:void(0)">团队游视频编辑</a></li>
+                        <li><a data-href="photo" data-title="团队游图片编辑" href="javascript:void(0)">团队游图片编辑</a></li>
                     </ul>
                 </dd>
             </dl>
@@ -222,6 +224,8 @@
                         <li><a data-href="explore?lang=en" data-title="探索方式" href="javascript:void(0)">探索方式编辑</a></li>
                         <li><a data-href="uriving?lang=en" data-title="自驾游编辑" href="javascript:void(0)">自驾游编辑</a></li>
                         <li><a data-href="team?lang=en" data-title="团队游编辑" href="javascript:void(0)">团队游编辑</a></li>
+                        <li><a data-href="team_video" data-title="团队游视频编辑" href="javascript:void(0)">团队游视频编辑</a></li>
+                        <li><a data-href="team_photo" data-title="团队游图片编辑" href="javascript:void(0)">团队游图片编辑</a></li>
                     </ul>
                 </dd>
             </dl>
