@@ -23,6 +23,8 @@ class Admin extends CI_Controller
             $this -> load -> model('admin/Background_model');
             $this -> load -> model('admin/Side_model');
             $this -> load -> model('admin/Text_model');
+            $this -> load -> model('admin/User_info_model');
+            $this -> load -> model('admin/Tidings_model');
             $this -> load -> helper(array('form', 'url'));
             $this -> load -> library('session');
             $this -> load -> library('pagination');
@@ -165,7 +167,7 @@ class Admin extends CI_Controller
 
         public function product_category_add ()
         {
-            $this -> load -> view('admin/product_category_add',$data);
+            $this -> load -> view('admin/product_category_add');
 
         }
 
@@ -1065,6 +1067,50 @@ class Admin extends CI_Controller
                 $data['text']['time'] = $text['time'];
             }
             $this -> load -> view('admin/text_edit',$data);
+
+        }
+        public function user_info ()
+        {
+            $result= '';
+            $data['userInfo'] = $this -> User_info_model -> get_name($result);
+            $this -> load -> view('admin/user_info',$data);
+        }
+        public function tidings ()
+        {
+            $result= '';
+            if(!isset($_GET['lang'])){
+                $data['tidings'] = $this -> Tidings_model -> get_name($result);
+            }else{
+                $tidings = $this -> Tidings_model -> get_name($result);
+                foreach ($tidings as $k=>$v)
+                {
+                    $data['tidings'][$k]['lang'] = 'en';
+                    $data['tidings'][$k]['id'] = $v['id'];
+                    $data['tidings'][$k]['title'] = $v['title_en'];
+                    $data['tidings'][$k]['text'] = $v['text_en'];
+                }
+
+            }
+
+            $this -> load -> view('admin/tidings',$data);
+        }
+        public function tidings_add ()
+        {
+            $this -> load -> view('admin/tidings_add');
+        }
+        public function tidings_edit ()
+        {
+            $result['id']= $_GET['id'];
+            if(!isset($_GET['lang'])){
+                $data['tidings'] = $this -> Tidings_model -> get_name($result);
+            }else{
+                $tidings = $this -> Tidings_model -> get_name($result);
+                $data['tidings']['lang'] = 'en';
+                $data['tidings']['id'] = $tidings['id'];
+                $data['tidings']['title'] = $tidings['title_en'];
+                $data['tidings']['text'] = $tidings['text_en'];
+            }
+            $this -> load -> view('admin/tidings_edit',$data);
 
         }
     }

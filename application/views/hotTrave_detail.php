@@ -31,6 +31,11 @@
 	});
 
 </script>
+<link rel="stylesheet" type="text/css" href="/public/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/public/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/public/admin/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/public/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/public/admin/static/h-ui.admin/css/style.css" />
 <link href="/public/css/hotTrave_detail.css" type="text/css" rel="stylesheet" />
 <?php if(isset($_GET["lang"])): ?>
 <div class="fullscrn js-fullScreen" style="overflow: visible; height: 789px; max-height: 1280px;">
@@ -138,9 +143,12 @@
 
             <div class="span4 small-images">
                 <div class="row-fluid">
-                    <?php echo $hotreave_detail['galleryimage'] ?>
-                </div>
+                    <?php foreach ($image as $image_two): ?>
 
+                        <?php echo $image_two; ?>
+
+                    <?php endforeach; ?>
+                </div>
                 <div class="row-fluid">
                     <a class="span12 light_btn btn-highlight js-gallery-trigger" href="javascript:;">
                         <span class="galery_icon icon_decor"></span> View all picture highlights
@@ -697,11 +705,15 @@
 
                 <div class="span4 small-images">
                     <div class="row-fluid">
-						<?php echo $hotreave_detail['galleryimage'] ?>
+						<?php foreach ($image as $image_two): ?>
+
+                            <?php echo $image_two; ?>
+
+						<?php endforeach; ?>
                     </div>
 
                     <div class="row-fluid">
-                        <a class="span12 light_btn btn-highlight js-gallery-trigger" href="javascript:;">
+                        <a class="span12 light_btn btn-highlight js-gallery-trigger" href="javascript:;" onClick="picture_edit('图片集锦','HotTrave_detail/picture_show?id=<?php echo $hotreave_detail['topic_id']; ?>','10001')">
                             <span class="galery_icon icon_decor"></span> 查看全部图片集锦
                         </a>
                     </div>
@@ -1407,3 +1419,24 @@
 
     </section>
 <?php endif; ?>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/public/admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/public/admin/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/public/admin/static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/public/admin/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/public/admin/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="/public/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/public/admin/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+    /*图片-编辑*/
+    function picture_edit(title,url,id){
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+</script>
