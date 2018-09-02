@@ -108,21 +108,29 @@
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
+            <label class="form-label col-xs-4 col-sm-2">背景图缩略图：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <div class="uploader-thum-container">
                     <img src="<?php echo $uriving['image'];?>" alt="" style="width: 200px;height: 200px;">
                 </div>
             </div>
         </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">地图缩略图：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <div class="uploader-thum-container">
+                    <img src="<?php echo $uriving['image_two'];?>" alt="" style="width: 200px;height: 200px;">
+                </div>
+            </div>
+        </div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">背景图上传：</label>
+			<label class="form-label col-xs-4 col-sm-2">图片上传：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<div class="uploader-list-container">
 					<div class="queueList">
 						<div id="dndArea" class="placeholder">
 							<div id="filePicker-2"></div>
-							<p>注意:只读取第一张</p>
+                            <p>第一张:背景图,第二张:地图</p>
 						</div>
 					</div>
 					<div class="statusBar" style="display:none;">

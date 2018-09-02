@@ -57,7 +57,7 @@
 			<div class="container conone">
 				<div class="span9 pull-right tourData tourone">
 					<div class="tour_map mapone">
-						<img alt="旅行地图" src="/public/image/hd_route66_19_days-1.jpg" style="width: 100%">
+						<img alt="<?php echo $team['teamtitle']?>" src="<?php echo $team['image_two']?>" style="width: 100%">
 					</div>
 					<div class="xtra_info" style="float: left;width: 42%;float: right;margin-top: 5px;">
 						<ul style="    list-style: none;margin: 0;">

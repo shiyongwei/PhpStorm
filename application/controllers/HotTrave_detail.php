@@ -37,8 +37,8 @@
 				$exone_four['explore_id'] =4;
                 $data['four'] = $this->Explore_model->getAll($exone_four);
 
-
-
+                preg_match_all('/<img(.*?)src=\"(.*?)\"(.*?)>/is', $hotreave_detail['galleryimage'], $matches);
+                $data['image'] = array_slice($matches[0],0,4);
 //				echo "<pre>";
 //				print_r($exone_four);exit();
 //				echo "</pre>";
@@ -58,6 +58,15 @@
 				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
 				$this -> load -> view('hotTrave_detail',$city,$hotreave_detail,$team_limit,$uriving_limit);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
+			}
+            public function picture_show(){
+
+                $id['topic_id'] = $_GET['id'];
+                $data['hotreave_detail'] = $this->Topic_model->getAll($id);
+                preg_match_all('/<img(.*?)src=\"(.*?)\"(.*?)>/is', $data['hotreave_detail']['galleryimage'], $matches);
+                $data['image'] = array_combine($matches[2],$matches[0]);
+                $this -> load -> view('picture_show',$data);
+
 			}
 		}
 
