@@ -91,8 +91,16 @@
                     </ul>
                 </dd>
             </dl>
+            <dl id="menu-bottom">
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 新闻发布<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a data-href="tidings" data-title="新闻" href="javascript:void(0)">新闻编辑</a></li>
+                    </ul>
+                </dd>
+            </dl>
             <dl id="menu-product">
-                <dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="product_brand" data-title="品牌编辑" href="javascript:void(0)">品牌编辑</a></li>
@@ -102,7 +110,7 @@
                 </dd>
             </dl>
             <dl id="menu-city">
-                <dt><i class="Hui-iconfont">&#xe643;</i> 城市管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 城市管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="city" data-title="城市管理" href="javascript:void(0)">城市编辑</a></li>
@@ -110,7 +118,7 @@
                 </dd>
             </dl>
             <dl id="menu-tourism">
-                <dt><i class="Hui-iconfont">&#xe611;</i> 旅游管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 旅游管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="topic" data-title="旅游主题" href="javascript:void(0)">旅游主题编辑</a></li>
@@ -121,7 +129,7 @@
                 </dd>
             </dl>
             <dl id="menu-promotions">
-                <dt><i class="Hui-iconfont">&#xe6c3;</i> 促销管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 促销管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="promotions" data-title="促销编辑" href="javascript:void(0)">促销特惠编辑</a></li>
@@ -129,7 +137,7 @@
                 </dd>
             </dl>
             <dl id="menu-activity">
-                <dt><i class="Hui-iconfont">&#xe72b;</i> 活动管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 活动管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="column" data-title="活动栏目" href="javascript:void(0)">活动栏目</a></li>
@@ -138,16 +146,15 @@
                 </dd>
             </dl>
             <dl id="menu-destination">
-                <dt><i class="Hui-iconfont">&#xe64d;</i> 精选目的地<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 用户信息中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
-                        <li><a data-href="column" data-title="活动栏目" href="javascript:void(0)">活动栏目</a></li>
-                        <li><a data-href="activityedit" data-title="活动编辑" href="javascript:void(0)">活动编辑</a></li>
+                        <li><a data-href="user_info" data-title="用户数据" href="javascript:void(0)">用户登记数据</a></li>
                     </ul>
                 </dd>
             </dl>
             <dl id="menu-admin">
-                <dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="admin_list" data-title="管理员列表" href="javascript:void(0)">管理员编辑</a></li>
@@ -181,8 +188,16 @@
                     </ul>
                 </dd>
             </dl>
+            <dl id="menu-bottom">
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 新闻发布<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a data-href="tidings?lang=en" data-title="新闻" href="javascript:void(0)">新闻编辑</a></li>
+                    </ul>
+                </dd>
+            </dl>
             <dl id="menu-product">
-                <dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="product_brand?lang=en" data-title="品牌编辑" href="javascript:void(0)">品牌编辑</a></li>
@@ -192,7 +207,7 @@
                 </dd>
             </dl>
             <dl id="menu-city">
-                <dt><i class="Hui-iconfont">&#xe643;</i> 城市管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 城市管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="city?lang=en" data-title="城市管理" href="javascript:void(0)">城市编辑</a></li>
@@ -200,7 +215,7 @@
                 </dd>
             </dl>
             <dl id="menu-tourism">
-                <dt><i class="Hui-iconfont">&#xe611;</i> 旅游管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 旅游管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="topic?lang=en" data-title="旅游主题" href="javascript:void(0)">旅游主题编辑</a></li>
@@ -211,7 +226,7 @@
                 </dd>
             </dl>
             <dl id="menu-promotions">
-                <dt><i class="Hui-iconfont">&#xe6c3;</i> 促销管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 促销管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="promotions?lang=en" data-title="促销编辑" href="javascript:void(0)">促销特惠编辑</a></li>
@@ -219,7 +234,7 @@
                 </dd>
             </dl>
             <dl id="menu-activity">
-                <dt><i class="Hui-iconfont">&#xe72b;</i> 活动管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 活动管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="column?lang=en" data-title="活动栏目" href="javascript:void(0)">活动栏目</a></li>
@@ -227,8 +242,16 @@
                     </ul>
                 </dd>
             </dl>
+            <dl id="menu-destination">
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 用户信息中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dd>
+                    <ul>
+                        <li><a data-href="user_info" data-title="用户数据" href="javascript:void(0)">用户登记数据</a></li>
+                    </ul>
+                </dd>
+            </dl>
             <dl id="menu-admin">
-                <dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+                <dt><i class="Hui-iconfont">&#xe72d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
                 <dd>
                     <ul>
                         <li><a data-href="admin_list?lang=en" data-title="管理员列表" href="javascript:void(0)">管理员编辑</a></li>
