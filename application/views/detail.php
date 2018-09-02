@@ -33,6 +33,39 @@
 		}
 	});
 </script>
+<script>
+	//paraName 等找参数的名称
+	function GetUrlParam(paraName) {
+		var url = document.location.toString();
+		var arrObj = url.split("?");
+
+		if (arrObj.length > 1) {
+			var arrPara = arrObj[1].split("&");
+			var arr;
+
+			for (var i = 0; i < arrPara.length; i++) {
+				arr = arrPara[i].split("=");
+
+				if (arr != null && arr[0] == paraName) {
+					return arr[1];
+				}
+			}
+			return "";
+		}
+		else {
+			return "";
+		}
+	}
+	var id = GetUrlParam('id');
+
+	$('.en').click(function() {
+		window.location.href='/index.php/detail?id='+id+'&&lang=en';
+	});
+	$('.cn').click(function() {
+		window.location.href='/index.php/detail?id='+id;
+	});
+
+</script>
 
 <link href="/public/css/classify.css" type="text/css" rel="stylesheet" />
 <link href="/public/css/classify_one.css" type="text/css" rel="stylesheet" />
@@ -85,34 +118,22 @@
                                 行程
                                 <span class="iten_icon icon_decor iconone"></span>
                             </a>
-                            <a href="Javascript:;" class="btn-highlight js-reviewsTrigger textone" style="border-left: 1px solid rgba(0,0,0,0.2);">
-                                评论
-                                <span class="rev_icon icon_decor"></span>
-                            </a>
+
                             <div class="clearfix"></div>
                         </div>
 
-                        <a href="Javascript:;" class="light_btn btn-highlight js-playTrigger" data-youtube-vid="http://www.youtube.com/embed/KC38ELJF-k4?autoplay=1" style="float: none;padding: 3px;background-color: #D13634;margin-top: 5px;text-align: left;color: #fff;">
-                            播放旅行视频
-                            <span class="play_icon icon_decor"></span>
-                        </a>
-
-                        <a href="Javascript:;" data-url="/%E6%91%A9%E6%89%98%E8%BD%A6%E6%97%85%E6%B8%B8/80/gallery" class="light_btn btn-highlight js-galleryTrigger" style="float: none;padding: 3px;background-color: #D13634;margin-top: 5px;text-align: left;color: #fff;">
-                            查看旅行照片
-                            <span class="galery_icon icon_decor"></span>
-                        </a>
+<!--                        <a href="Javascript:;" class="light_btn btn-highlight js-playTrigger" data-youtube-vid="http://www.youtube.com/embed/KC38ELJF-k4?autoplay=1" style="float: none;padding: 3px;background-color: #D13634;margin-top: 5px;text-align: left;color: #fff;">-->
+<!--                            播放旅行视频-->
+<!--                            <span class="play_icon icon_decor"></span>-->
+<!--                        </a>-->
+<!---->
+<!--                        <a href="Javascript:;" data-url="/%E6%91%A9%E6%89%98%E8%BD%A6%E6%97%85%E6%B8%B8/80/gallery" class="light_btn btn-highlight js-galleryTrigger" style="float: none;padding: 3px;background-color: #D13634;margin-top: 5px;text-align: left;color: #fff;">-->
+<!--                            查看旅行照片-->
+<!--                            <span class="galery_icon icon_decor"></span>-->
+<!--                        </a>-->
                     </div>
 
-                    <div class="promotion-box">
-                        <span class="icons-orange-star"></span>
-                        <span class="icons-orange-star"></span>
-                        <h4>
-                            <a href="javascript:;" class="js-tourInclusions">
-                                <span class="icons-exclamation-mark"></span>
-                                立即告诉我怎么节省¥12,734每人吧！
-                            </a>
-                        </h4>
-                    </div>
+
 
                 </div>
 
