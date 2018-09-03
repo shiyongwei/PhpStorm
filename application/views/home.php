@@ -168,7 +168,7 @@
                         </div>
 
                         <div class="widget_btns">
-                            <a href="" class="btn-highlight js-searchTrigger"><button type="submit" style="border: none;background: none;color: white;">立即搜索</button><span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                            <a href="" class="btn-highlight js-searchTrigger"><button type="submit" style="border: none;background: none;color: white;">立即预定</button><span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                         </div>
 
                 </div>
