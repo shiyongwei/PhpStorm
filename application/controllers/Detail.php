@@ -15,6 +15,7 @@
 			}
 			public function index(){
 				$rent_list = $this->Product_model->get('');
+				$city = $this->City_model->get();
 				$get_limit = $this->City_model->get_limit();
 				$id = $_GET['id'];
 				$uriving = $this->Uriving_model->get($id);
@@ -73,6 +74,7 @@
 				$data['bottom_info_all'] = $bottom_info_all;
 				$data['side'] = $side;
 				$data['navigation_limit'] = $navigation_limit;
+				$data['city'] = $city;
 
 
 
