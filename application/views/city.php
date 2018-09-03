@@ -78,14 +78,9 @@
                     </div>
 
                     <div class="js-reservationFormContainer">
-                        <form action="/reservation_widget" method="post" class="res_widget" target="_blank">
+                        <form action="/index.php/Rent?id=0" method="post" class="res_widget" target="_blank">
                             <input type="hidden" name="authenticity_token" value="x/t/BD/WNINoEiboXKiN2DvJ9yB72Lo4kLtPRMHN5tA=">
                             <input type="hidden" name="reservation[reservation_type_id]" value="1">
-
-
-
-
-
 
                             <div class="form_bot">
                                 <div class="loader js-loading" style="display:none;">
@@ -95,24 +90,24 @@
                                 <div class="field-block fullWidth headblk js-numberSelection">
                                     <label for="" class="">Several motorcycles are needed</label>
                                     <ul class="optionsblk motorNum">
-                                        <li>
-                                            <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="1" class="js-numberCheckbox" id="vehicles_count_1_1" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                        <li style="margin-right: 0px !important;">
+                                            <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="num" value="1" class="js-numberCheckbox" id="vehicles_count_1_1" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                             <label class="radio" for="vehicles_count_1_1">1</label>
                                         </li>
-                                        <li>
-                                            <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="2" class="js-numberCheckbox" id="vehicles_count_2_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                        <li style="margin-right: 0px !important;">
+                                            <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="2" class="js-numberCheckbox" id="vehicles_count_2_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                             <label class="radio" for="vehicles_count_2_1">2</label>
                                         </li>
-                                        <li>
-                                            <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="3" class="js-numberCheckbox" id="vehicles_count_3_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                        <li style="margin-right: 0px !important;">
+                                            <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="3" class="js-numberCheckbox" id="vehicles_count_3_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                             <label class="radio" for="vehicles_count_3_1">3</label>
                                         </li>
-                                        <li>
-                                            <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="" class="js-numberCheckbox" id="vehicles_count_other_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                        <li style="margin-right: 0px !important;">
+                                            <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="" class="js-numberCheckbox" id="vehicles_count_other_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                             <label class="radio fieldIF js-label" for="vehicles_count_other_1">
                                                 Other
                                             </label>
-                                            <input type="text" title="Type number of motorcycles here" name="reservation[vehicles_count]" class="fieldIFinput js-numberField" value="" style="display: none;">
+                                            <input type="text" title="Type number of motorcycles here" name="num_other" class="fieldIFinput js-numberField" value="">
                                         </li>
                                     </ul>
 
@@ -123,12 +118,12 @@
                                 <div class="field-block pickup-location">
                                     <label for="">Departure city</label>
 
-                                    <select name="reservation[pickup_location_id]" data-fieldtype="pickup_location" class="selectWithSearch js-locationsSelect">
+                                    <select name="star_city" data-fieldtype="pickup_location" class="selectWithSearch js-locationsSelect">
                                         <option value="" selected="&quot;selected&quot;">
                                             Take car city
                                         </option>
 										<?php foreach ($city as $key=>$citys): ?>
-                                            <option value="">
+                                            <option value="<?php echo $citys['cit_name_en']?>">
 												<?php echo $citys['cit_name_en']?>
                                             </option>
 										<?php endforeach; ?>
@@ -137,13 +132,13 @@
                                 </div>
                                 <div class="field-block pickup-location">
                                     <label for="">Destination city</label>
-                                    <select name="reservation[pickup_location_id]" data-fieldType="pickup_location"
+                                    <select name="end_city" data-fieldType="pickup_location"
                                             class="selectWithSearch js-locationsSelect">
                                         <option value="" selected=&quot;selected&quot;>
                                             Same as the pick-up city
                                         </option>
 										<?php foreach ($city as $key=>$citys): ?>
-                                            <option value="">
+                                            <option value="<?php echo $citys['cit_name_en']?>">
 												<?php echo $citys['cit_name_en']?>
                                             </option>
 										<?php endforeach; ?>
@@ -153,21 +148,21 @@
                                 <div class="field-block">
                                     <label for="">date of departure/time</label>
                                     <div class="dateTime">
-                                        <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                                        <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" name="star_time">
                                     </div>
                                 </div>
                                 <div class="field-block returning-date">
                                     <label for="">Return date/time</label>
                                     <div class="dateTime">
 
-                                        <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                                        <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" name="end_time">
 
                                     </div>
                                 </div>
                             </div>
 
                             <div class="widget_btns">
-                                <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">Search Now<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                <a href="" class="btn-highlight js-searchTrigger"><button type="submit" style="border: none;background: none;color: white;height: 36px;">Search Now</button><span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                             </div>
                         </form>
                     </div>
@@ -199,277 +194,7 @@
                             </div>
 
                         </form>
-                        <script type="text/html" class="js-comparisonOverlay">
 
-                            <div class="modal hide fade wide-overlay" tabindex="-1" role="dialog"
-                                 aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-header ">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h3 id="myModalLabel">探索方式</h3>
-                                </div>
-
-                                <div class="clearfix"></div>
-
-                                <div class="modal-body">
-                                    <table dir="rtl" class="table table-bordered experience_table">
-                                        <thead>
-                                        <tr>
-                                            <td dir="ltr">
-                                                <b>团队旅行</b>
-                                            </td>
-                                            <td dir="ltr">
-                                                <b>公路旅行</b>
-                                            </td>
-                                            <td dir="ltr">
-                                                <b>自驾旅行</b>
-                                            </td>
-                                            <td dir="ltr">
-                                                <b>摩托车＋酒店</b>
-                                            </td>
-                                            <td dir="ltr">
-                                                <b>只有摩托车</b>
-                                            </td>
-
-                                            <td></td>
-                                        </tr>
-                                        </thead>
-
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-
-                                            <td>最新型的摩托车租赁</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-
-                                            <td>摩托车友好酒店</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-
-                                            <td>可以定制属于自己的旅行路线</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>最佳摩托车旅行路线</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>EagleRider旅行攻略</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>运送行李的支持车辆</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>备用摩托车</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>专业支持车驾驶员</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>专业双语导游</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>团队旅行体验</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>每天提供丰盛早餐</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>骑行时所需的汽油</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>欢迎晚宴</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-
-                                            <td>EagleRider欢送派对</td>
-                                        </tr>
-                                        </tbody>
-
-                                        <tfoot>
-                                        <tr>
-                                            <td dir="ltr">
-                                                <span class="starting-at">起始价格</span>
-                                                <span class="price-box">
-            $349/day
-          </span>
-                                            </td>
-                                            <td dir="ltr">
-                                                <span class="starting-at">起始价格</span>
-                                                <span class="price-box">
-            $249/day
-          </span>
-                                            </td>
-                                            <td dir="ltr">
-                                                <span class="starting-at">起始价格</span>
-                                                <span class="price-box">
-            $229/day
-          </span>
-                                            </td>
-                                            <td dir="ltr">
-                                                <span class="starting-at">起始价格</span>
-                                                <span class="price-box">
-            $179/天
-          </span>
-                                            </td>
-                                            <td dir="ltr">
-                                                <span class="starting-at">起始价格</span>
-                                                <span class="price-box">
-            $149/day
-          </span>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                            </div>
-                        </script>
                     </div>
 
 
@@ -499,7 +224,7 @@
                     </div>
 
                     <div class="js-reservationFormContainer">
-                        <form action="/reservation_widget" method="post" class="res_widget" target="_blank">
+
                             <input type="hidden" name="authenticity_token" value="x/t/BD/WNINoEiboXKiN2DvJ9yB72Lo4kLtPRMHN5tA=">
                             <input type="hidden" name="reservation[reservation_type_id]" value="2">
 
@@ -545,7 +270,7 @@
 
                             </div>
 
-                        </form>
+
                     </div>
                 </div>
 
@@ -582,7 +307,7 @@
                         </div>
 
                         <div class="js-reservationFormContainer">
-                            <form action="/reservation_widget" method="post" class="res_widget" target="_blank">
+                            <form action="/index.php/Rent?id=0" method="post" class="res_widget" target="_blank">
                                 <input type="hidden" name="authenticity_token" value="x/t/BD/WNINoEiboXKiN2DvJ9yB72Lo4kLtPRMHN5tA=">
                                 <input type="hidden" name="reservation[reservation_type_id]" value="1">
 
@@ -600,23 +325,23 @@
                                         <label for="">需要几辆摩托车</label>
                                         <ul class="optionsblk motorNum">
                                             <li style="margin-right: 0px !important;">
-                                                <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="1" class="js-numberCheckbox" id="vehicles_count_1_1" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="num" value="1" class="js-numberCheckbox" id="vehicles_count_1_1" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                 <label class="radio" for="vehicles_count_1_1">1</label>
                                             </li>
                                             <li style="margin-right: 0px !important;">
-                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="2" class="js-numberCheckbox" id="vehicles_count_2_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="2" class="js-numberCheckbox" id="vehicles_count_2_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                 <label class="radio" for="vehicles_count_2_1">2</label>
                                             </li>
                                             <li style="margin-right: 0px !important;">
-                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="3" class="js-numberCheckbox" id="vehicles_count_3_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="3" class="js-numberCheckbox" id="vehicles_count_3_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                 <label class="radio" for="vehicles_count_3_1">3</label>
                                             </li>
                                             <li style="margin-right: 0px !important;">
-                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="" class="js-numberCheckbox" id="vehicles_count_other_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="" class="js-numberCheckbox" id="vehicles_count_other_1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                 <label class="radio fieldIF js-label" for="vehicles_count_other_1">
                                                     其他
                                                 </label>
-                                                <input type="text" title="Type number of motorcycles here" name="reservation[vehicles_count]" class="fieldIFinput js-numberField" value="" >
+                                                <input type="text" title="Type number of motorcycles here" name="num_other" class="fieldIFinput js-numberField" value="" >
                                             </li>
                                         </ul>
 
@@ -627,12 +352,12 @@
                                     <div class="field-block pickup-location">
                                         <label for="">行驶出发城市</label>
 
-                                        <select name="reservation[pickup_location_id]" data-fieldtype="pickup_location" class="selectWithSearch js-locationsSelect">
+                                        <select name="star_city" data-fieldtype="pickup_location" class="selectWithSearch js-locationsSelect">
                                             <option value="" selected="&quot;selected&quot;">
                                                 取车城市
                                             </option>
 											<?php foreach ($city as $key=>$citys): ?>
-                                                <option value="">
+                                                <option value="<?php echo $citys['cit_name']?>">
 													<?php echo $citys['cit_name']?>
                                                 </option>
 											<?php endforeach; ?>
@@ -641,13 +366,13 @@
                                     </div>
                                     <div class="field-block pickup-location">
                                         <label for="">行驶终点城市</label>
-                                        <select name="reservation[pickup_location_id]" data-fieldType="pickup_location"
+                                        <select name="end_city" data-fieldType="pickup_location"
                                                 class="selectWithSearch js-locationsSelect">
                                             <option value="" selected=&quot;selected&quot;>
                                                 与取车城市相同
                                             </option>
 											<?php foreach ($city as $key=>$citys): ?>
-                                                <option value="">
+                                                <option value="<?php echo $citys['cit_name']?>">
 													<?php echo $citys['cit_name']?>
                                                 </option>
 											<?php endforeach; ?>
@@ -657,21 +382,21 @@
                                     <div class="field-block">
                                         <label for="">出发日期/时间</label>
                                         <div class="dateTime">
-                                            <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                                            <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" name="star_time">
                                         </div>
                                     </div>
                                     <div class="field-block returning-date">
                                         <label for="">返还日期/时间</label>
                                         <div class="dateTime">
 
-                                            <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                                            <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" name="end_time">
 
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="widget_btns">
-                                    <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                    <a href="" class="btn-highlight js-searchTrigger"><button type="submit" style="border: none;background: none;color: white;height: 36px;">立即预定</button><span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                 </div>
                             </form>
                         </div>
@@ -1055,6 +780,7 @@
 
                 </div>
 			<?php endif; ?>
+
 			<?php if(isset($_GET["lang"])): ?>
             <div class="barblock needHelp ">
                 <img src="<?php echo $side[0]['image'] ?>" alt="鹰骑帮助">
@@ -1153,6 +879,7 @@
 	$(".optionsblk li").click(function(){
 		$(this).find('.iradio_square-blue').addClass("checked");
 		$(this).siblings().find('.iradio_square-blue').removeClass("checked");
+		$(this).find('.js-numberCheckbox').prop('checked','checked');
 	});
 
 </script>

@@ -32,6 +32,7 @@
 				$bottom_info_all = $this->Text_model->get_name_all('');
 				$side = $this->Side_model->get_name('');
 				$news = $this->Tidings_model->get_desc('');
+				$city = $this->City_model->get();
 
 
 //												echo '<pre>';
@@ -48,6 +49,7 @@
 				$data['side'] = $side;
 				$data['navigation_limit'] = $navigation_limit;
 				$data['news'] = $news;
+				$data['city'] = $city;
 
 				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
 				$this -> load -> view('news',$bottom_info);

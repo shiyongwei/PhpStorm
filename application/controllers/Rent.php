@@ -31,6 +31,7 @@
 				$rent_list = $this->Product_model->get('');
 				$get_limit = $this->City_model->get_limit('');
 				$bottom_info = $this->Text_model->get_name('');
+				$city = $this->City_model->get();
 				$bottom_info_all = $this->Text_model->get_name_all('');
 				$side = $this->Side_model->get_name('');
 				$id = $_GET['id'];
@@ -66,6 +67,7 @@
 				$data['navigation_limit'] = $navigation_limit;
 				//影藏信息
 				$data['reg_info'] = $reg_info;
+				$data['city'] = $city;
 
 
 

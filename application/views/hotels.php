@@ -67,7 +67,7 @@
                                 </li>
 
                                 <li class="deals">
-                                    <a href="/%E6%91%A9%E6%89%98%E8%BD%A6%E7%89%B9%E6%83%A0">促销特惠</a>
+                                    <a href="">促销特惠</a>
                                 </li>
 
 
@@ -149,103 +149,7 @@
                                                     <span class="icn-Calendar js-pickupDateTrigger"></span>
                                                 </div>
 
-                                                <div class="dropdown DepTime">
-                                                    <select name="reservation[pickup_time_slot]" data-fieldtype="pickup_time_slot">
-                                                        <option value=" 8:00 am">
-                                                            8:00 am
-                                                        </option>
-                                                        <option value=" 8:30 am">
-                                                            8:30 am
-                                                        </option>
-                                                        <option value=" 9:00 am">
-                                                            9:00 am
-                                                        </option>
-                                                        <option value=" 9:30 am">
-                                                            9:30 am
-                                                        </option>
-                                                        <option value="10:00 am">
-                                                            10:00 am
-                                                        </option>
-                                                        <option value="10:30 am">
-                                                            10:30 am
-                                                        </option>
-                                                        <option value="11:00 am">
-                                                            11:00 am
-                                                        </option>
-                                                        <option value="11:30 am">
-                                                            11:30 am
-                                                        </option>
-                                                        <option value="12:00 pm" selected="&quot;selected&quot;">
-                                                            12:00 pm
-                                                        </option>
-                                                        <option value="12:30 pm">
-                                                            12:30 pm
-                                                        </option>
-                                                        <option value=" 1:00 pm">
-                                                            1:00 pm
-                                                        </option>
-                                                        <option value=" 1:30 pm">
-                                                            1:30 pm
-                                                        </option>
-                                                        <option value=" 2:00 pm">
-                                                            2:00 pm
-                                                        </option>
-                                                        <option value=" 2:30 pm">
-                                                            2:30 pm
-                                                        </option>
-                                                        <option value=" 3:00 pm">
-                                                            3:00 pm
-                                                        </option>
-                                                        <option value=" 3:30 pm">
-                                                            3:30 pm
-                                                        </option>
-                                                        <option value=" 4:00 pm">
-                                                            4:00 pm
-                                                        </option>
-                                                        <option value=" 4:30 pm">
-                                                            4:30 pm
-                                                        </option>
-                                                        <option value=" 5:00 pm">
-                                                            5:00 pm
-                                                        </option>
-                                                        <option value=" 5:30 pm">
-                                                            5:30 pm
-                                                        </option>
-                                                        <option value=" 6:00 pm">
-                                                            6:00 pm
-                                                        </option>
-                                                        <option value=" 6:30 pm">
-                                                            6:30 pm
-                                                        </option>
-                                                        <option value=" 7:00 pm">
-                                                            7:00 pm
-                                                        </option>
-                                                        <option value=" 7:30 pm">
-                                                            7:30 pm
-                                                        </option>
-                                                        <option value=" 8:00 pm">
-                                                            8:00 pm
-                                                        </option>
-                                                        <option value=" 8:30 pm">
-                                                            8:30 pm
-                                                        </option>
-                                                        <option value=" 9:00 pm">
-                                                            9:00 pm
-                                                        </option>
-                                                        <option value=" 9:30 pm">
-                                                            9:30 pm
-                                                        </option>
-                                                        <option value="10:00 pm">
-                                                            10:00 pm
-                                                        </option>
-                                                        <option value="10:30 pm">
-                                                            10:30 pm
-                                                        </option>
-                                                        <option value="11:00 pm">
-                                                            11:00 pm
-                                                        </option>
-                                                    </select>
-                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="field-block returning-date">
@@ -257,103 +161,7 @@
                                                     <span class="icn-Calendar js-dropoffDateTrigger"></span>
                                                 </div>
 
-                                                <div class="dropdown DepTime">
-                                                    <select name="reservation[dropoff_time_slot]" data-fieldtype="dropoff_time_slot">
-                                                        <option value=" 8:00 am">
-                                                            8:00 am
-                                                        </option>
-                                                        <option value=" 8:30 am">
-                                                            8:30 am
-                                                        </option>
-                                                        <option value=" 9:00 am">
-                                                            9:00 am
-                                                        </option>
-                                                        <option value=" 9:30 am">
-                                                            9:30 am
-                                                        </option>
-                                                        <option value="10:00 am">
-                                                            10:00 am
-                                                        </option>
-                                                        <option value="10:30 am">
-                                                            10:30 am
-                                                        </option>
-                                                        <option value="11:00 am">
-                                                            11:00 am
-                                                        </option>
-                                                        <option value="11:30 am">
-                                                            11:30 am
-                                                        </option>
-                                                        <option value="12:00 pm" selected="&quot;selected&quot;">
-                                                            12:00 pm
-                                                        </option>
-                                                        <option value="12:30 pm">
-                                                            12:30 pm
-                                                        </option>
-                                                        <option value=" 1:00 pm">
-                                                            1:00 pm
-                                                        </option>
-                                                        <option value=" 1:30 pm">
-                                                            1:30 pm
-                                                        </option>
-                                                        <option value=" 2:00 pm">
-                                                            2:00 pm
-                                                        </option>
-                                                        <option value=" 2:30 pm">
-                                                            2:30 pm
-                                                        </option>
-                                                        <option value=" 3:00 pm">
-                                                            3:00 pm
-                                                        </option>
-                                                        <option value=" 3:30 pm">
-                                                            3:30 pm
-                                                        </option>
-                                                        <option value=" 4:00 pm">
-                                                            4:00 pm
-                                                        </option>
-                                                        <option value=" 4:30 pm">
-                                                            4:30 pm
-                                                        </option>
-                                                        <option value=" 5:00 pm">
-                                                            5:00 pm
-                                                        </option>
-                                                        <option value=" 5:30 pm">
-                                                            5:30 pm
-                                                        </option>
-                                                        <option value=" 6:00 pm">
-                                                            6:00 pm
-                                                        </option>
-                                                        <option value=" 6:30 pm">
-                                                            6:30 pm
-                                                        </option>
-                                                        <option value=" 7:00 pm">
-                                                            7:00 pm
-                                                        </option>
-                                                        <option value=" 7:30 pm">
-                                                            7:30 pm
-                                                        </option>
-                                                        <option value=" 8:00 pm">
-                                                            8:00 pm
-                                                        </option>
-                                                        <option value=" 8:30 pm">
-                                                            8:30 pm
-                                                        </option>
-                                                        <option value=" 9:00 pm">
-                                                            9:00 pm
-                                                        </option>
-                                                        <option value=" 9:30 pm">
-                                                            9:30 pm
-                                                        </option>
-                                                        <option value="10:00 pm">
-                                                            10:00 pm
-                                                        </option>
-                                                        <option value="10:30 pm">
-                                                            10:30 pm
-                                                        </option>
-                                                        <option value="11:00 pm">
-                                                            11:00 pm
-                                                        </option>
-                                                    </select>
-                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>
@@ -965,14 +773,9 @@
                             </div>
 
                             <div class="js-reservationFormContainer">
-                                <form action="/reservation_widget" method="post" class="res_widget" target="_blank">
+                                <form action="/index.php/Rent?id=0" method="post" class="res_widget" target="_blank">
                                     <input type="hidden" name="authenticity_token" value="x/t/BD/WNINoEiboXKiN2DvJ9yB72Lo4kLtPRMHN5tA=">
                                     <input type="hidden" name="reservation[reservation_type_id]" value="2">
-
-
-
-
-
 
                                     <div class="form_bot">
                                         <div class="loader js-loading" style="display:none;">
@@ -982,25 +785,25 @@
 
                                         <div class="field-block fullWidth headblk js-numberSelection">
                                             <label for="">How many Motorcycles</label>
-                                            <ul class="optionsblk motorNum">
+                                            <ul class="optionsblk motorNum" style="width: 300px;">
                                                 <li>
-                                                    <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="1" class="js-numberCheckbox" id="vehicles_count_1_2" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                    <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="num" value="1" class="js-numberCheckbox" id="vehicles_count_1_2" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                     <label class="radio" for="vehicles_count_1_2">1</label>
                                                 </li>
                                                 <li>
-                                                    <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="2" class="js-numberCheckbox" id="vehicles_count_2_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                    <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="2" class="js-numberCheckbox" id="vehicles_count_2_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                     <label class="radio" for="vehicles_count_2_2">2</label>
                                                 </li>
                                                 <li>
-                                                    <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="3" class="js-numberCheckbox" id="vehicles_count_3_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                    <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="3" class="js-numberCheckbox" id="vehicles_count_3_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                     <label class="radio" for="vehicles_count_3_2">3</label>
                                                 </li>
                                                 <li>
-                                                    <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="" class="js-numberCheckbox" id="vehicles_count_other_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                    <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="" class="js-numberCheckbox" id="vehicles_count_other_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                     <label class="radio fieldIF js-label" for="vehicles_count_other_2">
                                                         Other
                                                     </label>
-                                                    <input type="text" title="Type number of motorcycles here" name="reservation[vehicles_count]" class="fieldIFinput js-numberField" value="" style="display: none;">
+                                                    <input type="text" title="Type number of motorcycles here" name="num_other" class="fieldIFinput js-numberField" value="">
                                                 </li>
                                             </ul>
 
@@ -1011,13 +814,13 @@
 
                                         <div class="field-block pickup-location">
                                             <label for="">Where are you riding from?</label>
-                                            <select name="reservation[pickup_location_id]" data-fieldType="pickup_location"
+                                            <select name="star_city" data-fieldType="pickup_location"
                                                     class="selectWithSearch js-locationsSelect">
                                                 <option value="" selected=&quot;selected&quot;>
                                                     Choose Pickup Location
                                                 </option>
 												<?php foreach ($city as $key=>$citys): ?>
-                                                    <option value="">
+                                                    <option value="<?php echo $citys['cit_name_en']?>">
 														<?php echo $citys['cit_name_en']?>
                                                     </option>
 												<?php endforeach; ?>
@@ -1028,14 +831,14 @@
 
                                         <div class="field-block dropoff-location">
                                             <label>Where are you riding to?</label>
-                                            <select name="reservation[dropoff_location_id]" data-fieldType="dropoff_location"
+                                            <select name="end_city" data-fieldType="dropoff_location"
                                                     class="selectWithSearch js-locationsSelect">
                                                 <option value="similar_to_pl"
                                                         selected=&quot;selected&quot;>
                                                     Same as Pick Up Location
                                                 </option>
 												<?php foreach ($city as $key=>$citys): ?>
-                                                    <option value="">
+                                                    <option value="<?php echo $citys['cit_name_en']?>">
 														<?php echo $citys['cit_name_en']?>
                                                     </option>
 												<?php endforeach; ?>
@@ -1044,14 +847,14 @@
                                         <div class="field-block">
                                             <label for="">Departure Date/Time</label>
                                             <div class="dateTime">
-                                                <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                                                <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" name="star_time">
                                             </div>
                                         </div>
                                         <div class="field-block returning-date">
                                             <label for="">Returning Date/Time</label>
                                             <div class="dateTime">
 
-                                                <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                                                <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" name="end_time">
 
                                             </div>
                                         </div>
@@ -1063,7 +866,7 @@
                                     </div>
 
                                     <div class="widget_btns">
-                                        <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">SEARCH NOW<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                        <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger"><button type="submit" style="border: none;background: none;color: white;height: 36px;">SEARCH NOW</button><span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                     </div>
                                 </form>
                             </div>
@@ -1079,7 +882,7 @@
                                 </div>
 
                                 <div class="js-reservationFormContainer">
-                                    <form action="/reservation_widget" method="post" class="res_widget" target="_blank">
+                                    <form action="/index.php/Rent?id=0" method="post" class="res_widget" target="_blank">
                                         <input type="hidden" name="authenticity_token" value="x/t/BD/WNINoEiboXKiN2DvJ9yB72Lo4kLtPRMHN5tA=">
                                         <input type="hidden" name="reservation[reservation_type_id]" value="2">
 
@@ -1098,23 +901,23 @@
                                                 <label for="">需要几辆摩托车</label>
                                                 <ul class="optionsblk motorNum" style="width: 300px;">
                                                     <li>
-                                                        <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="1" class="js-numberCheckbox" id="vehicles_count_1_2" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                        <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="num" value="1" class="js-numberCheckbox" id="vehicles_count_1_2" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                         <label class="radio" for="vehicles_count_1_2">1</label>
                                                     </li>
                                                     <li>
-                                                        <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="2" class="js-numberCheckbox" id="vehicles_count_2_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                        <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="2" class="js-numberCheckbox" id="vehicles_count_2_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                         <label class="radio" for="vehicles_count_2_2">2</label>
                                                     </li>
                                                     <li>
-                                                        <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="3" class="js-numberCheckbox" id="vehicles_count_3_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                        <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="3" class="js-numberCheckbox" id="vehicles_count_3_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                         <label class="radio" for="vehicles_count_3_2">3</label>
                                                     </li>
                                                     <li>
-                                                        <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="" class="js-numberCheckbox" id="vehicles_count_other_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                        <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="num" value="" class="js-numberCheckbox" id="vehicles_count_other_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
                                                         <label class="radio fieldIF js-label" for="vehicles_count_other_2">
                                                             其他
                                                         </label>
-                                                        <input type="text" title="Type number of motorcycles here" name="reservation[vehicles_count]" class="fieldIFinput js-numberField" value="">
+                                                        <input type="text" title="Type number of motorcycles here" name="num_other" class="fieldIFinput js-numberField" value="">
                                                     </li>
                                                 </ul>
 
@@ -1125,13 +928,13 @@
 
                                             <div class="field-block pickup-location">
                                                 <label for="">行驶出发城市</label>
-                                                <select name="reservation[pickup_location_id]" data-fieldType="pickup_location"
+                                                <select name="star_city" data-fieldType="pickup_location"
                                                         class="selectWithSearch js-locationsSelect">
                                                     <option value="" selected=&quot;selected&quot;>
                                                         取车城市
                                                     </option>
 													<?php foreach ($city as $key=>$citys): ?>
-                                                        <option value="">
+                                                        <option value="<?php echo $citys['cit_name']?>">
 															<?php echo $citys['cit_name']?>
                                                         </option>
 													<?php endforeach; ?>
@@ -1142,14 +945,14 @@
 
                                             <div class="field-block dropoff-location">
                                                 <label>行驶终点城市</label>
-                                                <select name="reservation[dropoff_location_id]" data-fieldType="dropoff_location"
+                                                <select name="end_city" data-fieldType="dropoff_location"
                                                         class="selectWithSearch js-locationsSelect">
                                                     <option value="similar_to_pl"
                                                             selected=&quot;selected&quot;>
                                                         与取车城市相同
                                                     </option>
 													<?php foreach ($city as $key=>$citys): ?>
-                                                        <option value="">
+                                                        <option value="<?php echo $citys['cit_name']?>">
 															<?php echo $citys['cit_name']?>
                                                         </option>
 													<?php endforeach; ?>
@@ -1158,14 +961,14 @@
                                             <div class="field-block">
                                                 <label for="">出发日期/时间</label>
                                                 <div class="dateTime">
-                                                    <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                                                    <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" name="star_time">
                                                 </div>
                                             </div>
                                             <div class="field-block returning-date">
                                                 <label for="">返还日期/时间</label>
                                                 <div class="dateTime">
 
-                                                    <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                                                    <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" name="end_time">
 
                                                 </div>
                                             </div>
@@ -1177,7 +980,7 @@
                                         </div>
 
                                         <div class="widget_btns">
-                                            <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
+                                            <a href="/index.php/Rent?id=0" class="btn-highlight js-searchTrigger"><button type="submit" style="border: none;background: none;color: white;height: 36px;">立即预定</button><span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                         </div>
                                     </form>
                                 </div>
@@ -1432,9 +1235,12 @@
 </div>
 <script type="text/javascript" src="/public/js/style.js"></script>
 <script>
+
 	$(".optionsblk li").click(function(){
 		$(this).find('.iradio_square-blue').addClass("checked");
 		$(this).siblings().find('.iradio_square-blue').removeClass("checked");
+		$(this).find('.js-numberCheckbox').prop('checked','checked');
 	});
+
 </script>
 
