@@ -231,6 +231,10 @@
                             <input value="<?php echo $reg_info['end_city']?>" name="end_city" type="text" required="">
                         </div>
 
+                        <div class="field_half control-group">
+                            <label>旅游套餐 <span class="required">*</span></label>
+                            <input value="<?php echo $reg_info['end_city']?>" name="end_city" type="text" required="">
+                        </div>
 
 
 <!--                        <div class="field_half control-group">-->
@@ -251,6 +255,8 @@
                                 <input name="end_time" class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="<?php echo $reg_info['end_time']?>">
                             </div>
                         </div>
+
+
 
 
 

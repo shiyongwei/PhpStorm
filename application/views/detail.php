@@ -113,7 +113,7 @@
 
                     <div class="media_actions" style="padding-top: 0;">
                         <div class="top_btns" style="display: block;">
-                            <a href="Javascript:;" class="btn-highlight js-itineraryTrigger textone">
+                            <a href="#route" class="btn-highlight js-itineraryTrigger textone">
                                 journey
                                 <span class="iten_icon icon_decor iconone"></span>
                             </a>
@@ -172,7 +172,7 @@
 
                         <div class="media_actions" style="padding-top: 0;">
                             <div class="top_btns" style="display: block;">
-                                <a href="Javascript:;" class="btn-highlight js-itineraryTrigger textone">
+                                <a href="#route" class="btn-highlight js-itineraryTrigger textone">
                                     行程
                                     <span class="iten_icon icon_decor iconone"></span>
                                 </a>
@@ -1000,7 +1000,7 @@
 					<?php if(isset($_GET["lang"])): ?>
                     <h2 class="h2">itinerary</h2>
 
-                    <div class="collapse_btns" style="margin-top: -50px;padding-bottom: 30px;">
+                    <div class="collapse_btns" style="margin-top: -50px;padding-bottom: 30px;" id="route">
                         <a href="Javascript:;" class="coll_all btn-highlight js-collapse">
                             All closed<span class="icn-arrowWhiteDown"></span>
                         </a>          <a href="Javascript:;" class="btn-highlight js-expand">
@@ -1011,7 +1011,7 @@
 					<?php if(empty($_GET["lang"])): ?>
                         <h2 class="h2">旅游行程</h2>
 
-                        <div class="collapse_btns" style="margin-top: -50px;padding-bottom: 30px;">
+                        <div class="collapse_btns" style="margin-top: -50px;padding-bottom: 30px;" id="route">
                             <a href="Javascript:;" class="coll_all btn-highlight js-collapse">
                                 全部关闭<span class="icn-arrowWhiteDown"></span>
                             </a>          <a href="Javascript:;" class="btn-highlight js-expand">

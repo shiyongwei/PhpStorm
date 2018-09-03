@@ -19,6 +19,17 @@ class Trave extends CI_Controller{
     public function index(){
         $rent_list = $this->Product_model->get('');//热门租赁分类
 		$navigation = $this->Navigation_model->get_name('');
+		for ($i=0;$i<count($navigation);$i++){
+			$navigation_limit['navigation_id'] = $navigation[0]['navigation_id'];
+			$navigation_limit['navigation_name'] = $navigation[0]['navigation_name'];
+			$navigation_limit['lease_name'] = $navigation[0]['lease_name'];
+			$navigation_limit['hotel_name'] = $navigation[0]['hotel_name'];
+			$navigation_limit['promotions_name'] = $navigation[0]['promotions_name'];
+			$navigation_limit['navigation_name_en'] = $navigation[0]['navigation_name_en'];
+			$navigation_limit['lease_name_en'] = $navigation[0]['lease_name_en'];
+			$navigation_limit['hotel_name_en'] = $navigation[0]['hotel_name_en'];
+			$navigation_limit['promotions_name_en'] = $navigation[0]['promotions_name_en'];
+		}
 		$city = $this->City_model->get();
 		$get_limit = $this->City_model->get_limit();
 		$bottom_info = $this->Text_model->get_name('');
@@ -47,6 +58,7 @@ class Trave extends CI_Controller{
 		$data['topic'] = $topic;
 		$data['team'] = $team;
 		$data['uriving'] = $uriving;
+		$data['navigation_limit'] = $navigation_limit;
 
 
 
