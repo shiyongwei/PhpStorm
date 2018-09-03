@@ -233,7 +233,7 @@
 
                         <div class="field_half control-group">
                             <label>旅游套餐 <span class="required">*</span></label>
-                            <input value="<?php echo $reg_info['end_city']?>" name="end_city" type="text" required="">
+                            <input value="<?php echo $reg_info['travel']?>" name="travel" type="text" required="">
                         </div>
 
 

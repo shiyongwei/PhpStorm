@@ -26,6 +26,7 @@
 				$reg_info['end_city'] = isset($_POST['end_city']) ? $_POST['end_city'] : null;
 				$reg_info['star_time'] = isset($_POST['star_time']) ? $_POST['star_time'] : null;
 				$reg_info['end_time'] = isset($_POST['end_time']) ? $_POST['end_time'] : null;
+				$reg_info['travel'] = isset($_POST['travel']) ? $_POST['travel'] : null;
 //				echo '<pre>';
 //				print_r($reg_info);exit;
 				$rent_list = $this->Product_model->get('');

@@ -955,6 +955,7 @@
                                 <input type="hidden" value="<?php echo $reg_info['end_city']?>" name="end_city">
                                 <input type="hidden" value="<?php echo $reg_info['star_time']?>" name="star_time">
                                 <input type="hidden" value="<?php echo $reg_info['end_time']?>" name="end_time">
+                                <input type="hidden" value="<?php echo $reg_info['travel']?>" name="travel">
 
                                 <span class="bike-class" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-left: 7px;">
                           <span style="font-size: 14px;color: #000;">Class:</span> <em class="bold bolds"><?php echo $lists['category_name']?></em>
