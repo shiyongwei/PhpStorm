@@ -102,14 +102,6 @@
                         </div>
 
                         <div class="js-reservationFormContainer">
-                            <form action="/reservation_widget" method="post" class="res_widget" target="_blank">
-                                <input type="hidden" name="authenticity_token" value="OAGmrg7Wkum+E07O297c3QOQaMobokqN3waX2R0FIwY=">
-                                <input type="hidden" name="reservation[reservation_type_id]" value="1">
-
-
-
-
-
 
                                 <div class="form_bot">
                                     <div class="loader js-loading" style="display:none;">
@@ -196,460 +188,10 @@
                                 <div class="widget_btns">
                                     <a href="Javascript:;" class="btn-highlight js-searchTrigger">Search Now<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                 </div>
-                            </form>
-                        </div>
-
-
-                        <div class="promo-notifications js-promo" style="display: none; right: -100px; opacity: 0;">
-                            <div class="discounts group-discount">
-                                <span class="arrow"></span>
-                                <div class="body">
-                                    <h4>团队预订可以享受更多优惠！</h4>
-                                    <span class="percent">10%</span>
-                                    <span class="rule">4辆车<i>至少</i></span>
-                                </div>
-                                <div class="body">
-                                    <h3>
-                                        大部分预订只需支付20%的定金哦
-                                    </h3>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
-                    <div class="js-toursSearch" style="display:none;">
-                        <div class="header js-header">
-                            <p class="form_title">搜索摩托车旅游</p>
-                            <a class="max-min-btn visible-tablet js-toggle" href="Javascript:;"><b class="caret"></b></a>
 
-                            <div class="clearfix"></div>
-                        </div>
-
-                        <div class="js-toursFormContainer">
-                            <form accept-charset="UTF-8" action="/tours/search_widget" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="OAGmrg7Wkum+E07O297c3QOQaMobokqN3waX2R0FIwY="></div>
-                                <div class="form_bot tourWidget">
-                                    <div class="loader js-loading" style="display:none;">
-                                        <span><img src="https://d1y9jrrtx2baf.cloudfront.net/assets/rentals/layout/Loading-023da9421c5001dc2879575217b0add0.gif"></span>
-                                    </div>
-
-                                    <div class="field-block fullWidth headblk">
-                                        <ul class="optionsblk motorNum tours-type">
-                                            <li>
-                                                <div class="iradio_line-blue checked"><input checked="checked" class="js-line" id="tour_type_id_" name="tour_type_id" type="radio" value="" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>
-                                                    所有旅行项目
-                                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-
-                                            </li>
-
-                                            <li>
-                                                <div class="iradio_line-blue"><input class="js-line js-tourType-guided" id="tour_type_id_1" name="tour_type_id" type="radio" value="1" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>
-                                                    团队游
-                                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-
-                                                <div class="type-content">
-                                                    <ul>
-                                                        <li><span class="icons-checkmark"></span>骑行期间所需的燃油</li>
-                                                        <li><span class="icons-checkmark"></span>双语导游</li>
-                                                        <li><span class="icons-checkmark"></span>每日早餐</li>
-                                                        <li><span class="icons-checkmark"></span>定制夹克／门票／景点</li>
-                                                        <li><span class="icons-checkmark"></span>门到门行李运送</li>
-                                                        <li><span class="icons-checkmark"></span>摩托车租赁</li>
-                                                        <li><span class="icons-checkmark"></span>还有很多，很多！</li>
-                                                        <li><span class="icons-checkmark"></span>和团队一起骑行</li>
-                                                        <li><span class="icons-checkmark"></span>支持车辆和司机</li>
-                                                        <li><span class="icons-checkmark"></span>3到4星级的酒店</li>
-                                                        <li class="more-link "><a class="js-readMore" href="Javascript:;">
-                                                                查看更多</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-
-                                            <li>
-                                                <div class="iradio_line-blue"><input class="js-line js-tourType-self_drive" id="tour_type_id_2" name="tour_type_id" type="radio" value="2" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>
-                                                    自驾游
-                                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-
-                                                <div class="type-content">
-                                                    <ul>
-                                                        <li><span class="icons-checkmark"></span>专业设计的骑行路线</li>
-                                                        <li><span class="icons-checkmark"></span>电子版骑行路线指引</li>
-                                                        <li><span class="icons-checkmark"></span>提供GPS＊</li>
-                                                        <li><span class="icons-checkmark"></span>详细的旅行计划</li>
-                                                        <li><span class="icons-checkmark"></span>摩托车租赁</li>
-                                                        <li><span class="icons-checkmark"></span>摩托车友好酒店</li>
-                                                        <li class="more-link "><a class="js-readMore" href="Javascript:;">
-                                                                查看更多</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-
-                                    <div class="clearfix"></div>
-                                </div>
-
-                                <div class="widget_btns">
-                                    <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
-                                </div>
-
-                            </form>
-                            <script type="text/html" class="js-comparisonOverlay">
-
-                                <div class="modal hide fade wide-overlay" tabindex="-1" role="dialog"
-                                     aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-header ">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                        <h3 id="myModalLabel">探索方式</h3>
-                                    </div>
-
-                                    <div class="clearfix"></div>
-
-                                    <div class="modal-body">
-                                        <table dir="rtl" class="table table-bordered experience_table">
-                                            <thead>
-                                            <tr>
-                                                <td dir="ltr">
-                                                    <b>团队旅行</b>
-                                                </td>
-                                                <td dir="ltr">
-                                                    <b>公路旅行</b>
-                                                </td>
-                                                <td dir="ltr">
-                                                    <b>自驾旅行</b>
-                                                </td>
-                                                <td dir="ltr">
-                                                    <b>摩托车＋酒店</b>
-                                                </td>
-                                                <td dir="ltr">
-                                                    <b>只有摩托车</b>
-                                                </td>
-
-                                                <td></td>
-                                            </tr>
-                                            </thead>
-
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-
-                                                <td>最新型的摩托车租赁</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-
-                                                <td>摩托车友好酒店</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-
-                                                <td>可以定制属于自己的旅行路线</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>最佳摩托车旅行路线</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>EagleRider旅行攻略</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>运送行李的支持车辆</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>备用摩托车</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>专业支持车驾驶员</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>专业双语导游</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>团队旅行体验</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>每天提供丰盛早餐</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>骑行时所需的汽油</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>欢迎晚宴</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <img class="" src="https://d1y9jrrtx2baf.cloudfront.net/assets/static_pages/ok-244c1473b45f64723154233498465e27.png" />
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-
-                                                <td>EagleRider欢送派对</td>
-                                            </tr>
-                                            </tbody>
-
-                                            <tfoot>
-                                            <tr>
-                                                <td dir="ltr">
-                                                    <span class="starting-at">起始价格</span>
-                                                    <span class="price-box">
-            $349/day
-          </span>
-                                                </td>
-                                                <td dir="ltr">
-                                                    <span class="starting-at">起始价格</span>
-                                                    <span class="price-box">
-            $249/day
-          </span>
-                                                </td>
-                                                <td dir="ltr">
-                                                    <span class="starting-at">起始价格</span>
-                                                    <span class="price-box">
-            $229/day
-          </span>
-                                                </td>
-                                                <td dir="ltr">
-                                                    <span class="starting-at">起始价格</span>
-                                                    <span class="price-box">
-            $179/天
-          </span>
-                                                </td>
-                                                <td dir="ltr">
-                                                    <span class="starting-at">起始价格</span>
-                                                    <span class="price-box">
-            $149/day
-          </span>
-                                                </td>
-                                                <td></td>
-                                            </tr>
-                                            </tfoot>
-                                        </table>
-                                    </div>
-                                </div>
-                            </script>
-                        </div>
-
-
-                        <div class="promo-notifications js-promo" style="display: none; right: -100px; opacity: 0;">
-                            <div class="discounts group-discount">
-                                <span class="arrow"></span>
-                                <div class="body">
-                                    <h4>团队预订可以享受更多优惠！</h4>
-                                    <span class="percent">5%</span>
-                                    <span class="rule">4辆车<i>至少</i></span>
-                                </div>
-                                <div class="body">
-                                    <h3>
-                                        大部分预订只需支付20%的定金哦
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="js-packagesSearch" style="display:none;">
-                        <div class="header js-header">
-                            <p class="form_title">定制个人行程 </p>
-                            <a class="max-min-btn visible-tablet js-toggle" href="Javascript:;"><b class="caret"></b></a>
-
-                            <div class="clearfix"></div>
-                        </div>
-
-                        <div class="js-reservationFormContainer">
-                            <form action="/reservation_widget" method="post" class="res_widget" target="_blank">
-                                <input type="hidden" name="authenticity_token" value="OAGmrg7Wkum+E07O297c3QOQaMobokqN3waX2R0FIwY=">
-                                <input type="hidden" name="reservation[reservation_type_id]" value="2">
-
-
-
-
-
-
-                                <div class="form_bot">
-                                    <div class="loader js-loading" style="display:none;">
-                                        <span><span><img src="https://d1y9jrrtx2baf.cloudfront.net/assets/rentals/layout/Loading-023da9421c5001dc2879575217b0add0.gif"></span></span>
-                                    </div>
-
-
-                                    <div class="field-block fullWidth headblk js-numberSelection">
-                                        <label for="">需要几辆摩托车1</label>
-                                        <ul class="optionsblk motorNum">
-                                            <li>
-                                                <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="1" class="js-numberCheckbox" id="vehicles_count_1_2" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                                <label class="radio" for="vehicles_count_1_2">1</label>
-                                            </li>
-                                            <li>
-                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="2" class="js-numberCheckbox" id="vehicles_count_2_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                                <label class="radio" for="vehicles_count_2_2">2</label>
-                                            </li>
-                                            <li>
-                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="3" class="js-numberCheckbox" id="vehicles_count_3_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                                <label class="radio" for="vehicles_count_3_2">3</label>
-                                            </li>
-                                            <li>
-                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="" class="js-numberCheckbox" id="vehicles_count_other_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                                <label class="radio fieldIF js-label" for="vehicles_count_other_2">
-                                                    其他
-                                                </label>
-                                                <input type="text" title="Type number of motorcycles here" name="reservation[vehicles_count]" class="fieldIFinput js-numberField" value="" style="display: none;">
-                                            </li>
-                                        </ul>
-
-                                    </div>
-
-                                    <input type="hidden" name="reservation[route_id]" value="custom">
-
-
-
-                                    <div class="clearfix"></div>
-                                </div>
-
-                                <div class="widget_btns">
-                                    <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
                 </div>
 			<?php endif; ?>
 			<?php if(empty($_GET["lang"])): ?>
@@ -686,14 +228,6 @@
                         </div>
 
                         <div class="js-reservationFormContainer">
-                            <form action="/reservation_widget" method="post" class="res_widget" target="_blank">
-                                <input type="hidden" name="authenticity_token" value="OAGmrg7Wkum+E07O297c3QOQaMobokqN3waX2R0FIwY=">
-                                <input type="hidden" name="reservation[reservation_type_id]" value="1">
-
-
-
-
-
 
                                 <div class="form_bot">
                                     <div class="loader js-loading" style="display:none;">
@@ -702,7 +236,7 @@
 
 
                                     <div class="field-block fullWidth headblk js-numberSelection">
-                                        <label for="">需要几辆摩托车2</label>
+                                        <label for="">需要几辆摩托车</label>
                                         <ul class="optionsblk motorNum">
                                             <li style="margin-right: 0px;">
                                                 <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="1" class="js-numberCheckbox" id="vehicles_count_1_1" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
@@ -781,191 +315,13 @@
                                 <div class="widget_btns">
                                     <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
                                 </div>
-                            </form>
                         </div>
 
 
-                        <div class="promo-notifications js-promo" style="display: none; right: -100px; opacity: 0;">
-                            <div class="discounts group-discount">
-                                <span class="arrow"></span>
-                                <div class="body">
-                                    <h4>团队预订可以享受更多优惠！</h4>
-                                    <span class="percent">10%</span>
-                                    <span class="rule">4辆车<i>至少</i></span>
-                                </div>
-                                <div class="body">
-                                    <h3>
-                                        大部分预订只需支付20%的定金哦
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
 
-                    <div class="js-toursSearch" style="display:none;">
-                        <div class="header js-header">
-                            <p class="form_title">搜索摩托车旅游</p>
-                            <a class="max-min-btn visible-tablet js-toggle" href="Javascript:;"><b class="caret"></b></a>
 
-                            <div class="clearfix"></div>
-                        </div>
-
-                        <div class="js-toursFormContainer">
-                            <form accept-charset="UTF-8" action="/tours/search_widget" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="OAGmrg7Wkum+E07O297c3QOQaMobokqN3waX2R0FIwY="></div>
-                                <div class="form_bot tourWidget">
-                                    <div class="loader js-loading" style="display:none;">
-                                        <span><img src="https://d1y9jrrtx2baf.cloudfront.net/assets/rentals/layout/Loading-023da9421c5001dc2879575217b0add0.gif"></span>
-                                    </div>
-
-                                    <div class="field-block fullWidth headblk">
-                                        <ul class="optionsblk motorNum tours-type">
-                                            <li>
-                                                <div class="iradio_line-blue checked"><input checked="checked" class="js-line" id="tour_type_id_" name="tour_type_id" type="radio" value="" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>
-                                                    所有旅行项目
-                                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-
-                                            </li>
-
-                                            <li>
-                                                <div class="iradio_line-blue"><input class="js-line js-tourType-guided" id="tour_type_id_1" name="tour_type_id" type="radio" value="1" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>
-                                                    团队游
-                                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-
-                                                <div class="type-content">
-                                                    <ul>
-                                                        <li><span class="icons-checkmark"></span>骑行期间所需的燃油</li>
-                                                        <li><span class="icons-checkmark"></span>双语导游</li>
-                                                        <li><span class="icons-checkmark"></span>每日早餐</li>
-                                                        <li><span class="icons-checkmark"></span>定制夹克／门票／景点</li>
-                                                        <li><span class="icons-checkmark"></span>门到门行李运送</li>
-                                                        <li><span class="icons-checkmark"></span>摩托车租赁</li>
-                                                        <li><span class="icons-checkmark"></span>还有很多，很多！</li>
-                                                        <li><span class="icons-checkmark"></span>和团队一起骑行</li>
-                                                        <li><span class="icons-checkmark"></span>支持车辆和司机</li>
-                                                        <li><span class="icons-checkmark"></span>3到4星级的酒店</li>
-                                                        <li class="more-link "><a class="js-readMore" href="Javascript:;">
-                                                                查看更多</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-
-                                            <li>
-                                                <div class="iradio_line-blue"><input class="js-line js-tourType-self_drive" id="tour_type_id_2" name="tour_type_id" type="radio" value="2" style="position: absolute; opacity: 0;"><div class="icheck_line-icon"></div>
-                                                    自驾游
-                                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-
-                                                <div class="type-content">
-                                                    <ul>
-                                                        <li><span class="icons-checkmark"></span>专业设计的骑行路线</li>
-                                                        <li><span class="icons-checkmark"></span>电子版骑行路线指引</li>
-                                                        <li><span class="icons-checkmark"></span>提供GPS＊</li>
-                                                        <li><span class="icons-checkmark"></span>详细的旅行计划</li>
-                                                        <li><span class="icons-checkmark"></span>摩托车租赁</li>
-                                                        <li><span class="icons-checkmark"></span>摩托车友好酒店</li>
-                                                        <li class="more-link "><a class="js-readMore" href="Javascript:;">
-                                                                查看更多</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-
-                                    <div class="clearfix"></div>
-                                </div>
-
-                                <div class="widget_btns">
-                                    <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
-                                </div>
-
-                            </form>
-
-                        </div>
-
-
-                        <div class="promo-notifications js-promo" style="display: none; right: -100px; opacity: 0;">
-                            <div class="discounts group-discount">
-                                <span class="arrow"></span>
-                                <div class="body">
-                                    <h4>团队预订可以享受更多优惠！</h4>
-                                    <span class="percent">5%</span>
-                                    <span class="rule">4辆车<i>至少</i></span>
-                                </div>
-                                <div class="body">
-                                    <h3>
-                                        大部分预订只需支付20%的定金哦
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="js-packagesSearch" style="display:none;">
-                        <div class="header js-header">
-                            <p class="form_title">定制个人行程 </p>
-                            <a class="max-min-btn visible-tablet js-toggle" href="Javascript:;"><b class="caret"></b></a>
-
-                            <div class="clearfix"></div>
-                        </div>
-
-                        <div class="js-reservationFormContainer">
-                            <form action="/reservation_widget" method="post" class="res_widget" target="_blank">
-                                <input type="hidden" name="authenticity_token" value="OAGmrg7Wkum+E07O297c3QOQaMobokqN3waX2R0FIwY=">
-                                <input type="hidden" name="reservation[reservation_type_id]" value="2">
-
-
-
-
-
-
-                                <div class="form_bot">
-                                    <div class="loader js-loading" style="display:none;">
-                                        <span><span><img src="https://d1y9jrrtx2baf.cloudfront.net/assets/rentals/layout/Loading-023da9421c5001dc2879575217b0add0.gif"></span></span>
-                                    </div>
-
-
-                                    <div class="field-block fullWidth headblk js-numberSelection">
-                                        <label for="">需要几辆摩托车</label>
-                                        <ul class="optionsblk motorNum">
-                                            <li>
-                                                <div class="iradio_square-blue checked" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="1" class="js-numberCheckbox" id="vehicles_count_1_2" checked="&quot;checked&quot;" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                                <label class="radio" for="vehicles_count_1_2">1</label>
-                                            </li>
-                                            <li>
-                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="2" class="js-numberCheckbox" id="vehicles_count_2_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                                <label class="radio" for="vehicles_count_2_2">2</label>
-                                            </li>
-                                            <li>
-                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="3" class="js-numberCheckbox" id="vehicles_count_3_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                                <label class="radio" for="vehicles_count_3_2">3</label>
-                                            </li>
-                                            <li>
-                                                <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="reservation[vehicles_count]" value="" class="js-numberCheckbox" id="vehicles_count_other_2" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-                                                <label class="radio fieldIF js-label" for="vehicles_count_other_2">
-                                                    其他
-                                                </label>
-                                                <input type="text" title="Type number of motorcycles here" name="reservation[vehicles_count]" class="fieldIFinput js-numberField" value="" style="display: none;">
-                                            </li>
-                                        </ul>
-
-
-                                    </div>
-
-                                    <input type="hidden" name="reservation[route_id]" value="custom">
-
-
-
-                                    <div class="clearfix"></div>
-                                </div>
-
-                                <div class="widget_btns">
-                                    <a href="Javascript:;" class="btn-highlight js-searchTrigger">立即搜索<span class="btn-decor"></span><span class="icn-arrowWhiteRight"></span></a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
                 </div>
 			<?php endif; ?>
 
@@ -1040,26 +396,37 @@
             <section class="available_rides" style="display: block;">
                 <div class="row js-vehiclesContainer" data-equalizer="pp556y-equalizer" data-equalize-by-row="true" data-locationid="" data-resize="ybtvek-eq" data-events="resize" style="margin-left: -15px;">
 					<?php foreach ($list as $lists): ?>
-<!--                    one-->
-                    <div class="rideList promotionBox js-motorcycle boxs">
-                        <a class="specification btn-highlight small js-specsTrigger specis" href="Javascript:;" title="<?php echo $lists['productitle_en']?>" onclick="product_list_show('<?php echo $lists['productitle']?>','/index.php/admin/admin/product_list_details?id=<?php echo $lists['id'];?>','800','650')">
-                            <span class="text_one">specification</span>
-                        </a>
-                        <a href="Javascript:;" class="js-bookTrigger bkt" title="Harley-Davidson® Electra Glide® Ultra Classic®">
-                            <div class="imageContainer images">
-                                <img src="<?php echo $lists['image']?>" alt="<?php echo $lists['productitle_en']?>">
-                            </div>
-                        </a>
-                        <a href="Javascript:;" style="text-decoration: none !important;display: block;">
-                            <h3 class="ride_title bold js-name ridetitles"><?php echo $lists['productitle_en']?></h3>
-                        </a>
-                        <span class="bike-class" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-left: 7px;">
-                          <span style="font-size: 14px;color: #000;">Class:</span> <em class="bold bolds"><?php echo $lists['category_name_en']?></em>
+                        <!--                    one-->
+                        <form action="/index.php/Reg" method="post">
+                            <div class="rideList promotionBox js-motorcycle boxs">
+                                <a class="specification btn-highlight small js-specsTrigger specis" href="Javascript:;" title="<?php echo $lists['productitle_en']?>" onclick="product_list_show('<?php echo $lists['productitle_en']?>','/index.php/admin/admin/product_list_details?id=<?php echo $lists['id'];?>','800','650')">
+                                    <span class="text_one">SIZE</span>
+                                </a>
+                                <a href="Javascript:;" class="js-bookTrigger bkt" title="Harley-Davidson® Electra Glide® Ultra Classic®">
+                                    <div class="imageContainer images">
+                                        <img src="<?php echo $lists['image']?>" alt="<?php echo $lists['productitle']?>">
+                                    </div>
+                                </a>
+                                <a href="Javascript:;" style="text-decoration: none !important;display: block;">
+                                    <h3 class="ride_title bold js-name ridetitles"><?php echo $lists['productitle']?></h3>
+                                </a>
+
+                                <input type="hidden" value="<?php echo $lists['productitle_en']?>" name="title">
+                                <input type="hidden" value="<?php echo $reg_info['num']?>" name="num">
+                                <input type="hidden" value="<?php echo $reg_info['star_city']?>" name="star_city">
+                                <input type="hidden" value="<?php echo $reg_info['end_city']?>" name="end_city">
+                                <input type="hidden" value="<?php echo $reg_info['star_time']?>" name="star_time">
+                                <input type="hidden" value="<?php echo $reg_info['end_time']?>" name="end_time">
+
+                                <span class="bike-class" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-left: 7px;">
+                          <span style="font-size: 14px;color: #000;">Class:</span> <em class="bold bolds"><?php echo $lists['category_name']?></em>
                         </span>
-                        <a href="Javascript:;" class="btn-highlight small select js-bookTrigger" title="Book now" style="float: left;width: 166px;line-height: 1.5em;padding: 5px 0 5px 38px;text-align: left;color: #fff;font-family: helvetica, Arial, sans-serif;text-transform: uppercase;font-size: 15px;height: 23px;position: absolute;bottom: 0px;">
-                            Book now<span class="icn-arrowWhiteRight" style="padding: 0;margin: 0.1em 0.5em 0 0;display: inline;"></span>
-                        </a>
-                    </div>
+                                <a href="" class="btn-highlight small select js-bookTrigger" title="立即预订" style="float: left;width: 166px;line-height: 1.5em;padding: 5px 0 5px 38px;text-align: left;color: #fff;font-family: helvetica, Arial, sans-serif;text-transform: uppercase;font-size: 15px;height: 23px;position: absolute;bottom: 0px;">
+                                    <input type="submit" value="立即预订" style="border: none;background: none;color: white;"><span class="icn-arrowWhiteRight" style="padding: 0;margin: 0.1em 0.5em 0 0;display: inline;"></span>
+                                </a>
+                            </div>
+                        </form>
+
 					<?php endforeach; ?>
                 </div>
                 <div class="clearfix"></div>
@@ -1091,6 +458,7 @@
                     <div class="row js-vehiclesContainer" data-equalizer="pp556y-equalizer" data-equalize-by-row="true" data-locationid="" data-resize="ybtvek-eq" data-events="resize" style="margin-left: -15px;">
 						<?php foreach ($list as $lists): ?>
                             <!--                    one-->
+                        <form action="/index.php/Reg" method="post">
                             <div class="rideList promotionBox js-motorcycle boxs">
                                 <a class="specification btn-highlight small js-specsTrigger specis" href="Javascript:;" title="<?php echo $lists['productitle']?>" onclick="product_list_show('<?php echo $lists['productitle']?>','/index.php/admin/admin/product_list_details?id=<?php echo $lists['id'];?>','800','650')">
                                     <span class="text_one">规格</span>
@@ -1103,13 +471,23 @@
                                 <a href="Javascript:;" style="text-decoration: none !important;display: block;">
                                     <h3 class="ride_title bold js-name ridetitles"><?php echo $lists['productitle']?></h3>
                                 </a>
+
+                                <input type="hidden" value="<?php echo $lists['productitle']?>" name="title">
+                                <input type="hidden" value="<?php echo $reg_info['num']?>" name="num">
+                                <input type="hidden" value="<?php echo $reg_info['star_city']?>" name="star_city">
+                                <input type="hidden" value="<?php echo $reg_info['end_city']?>" name="end_city">
+                                <input type="hidden" value="<?php echo $reg_info['star_time']?>" name="star_time">
+                                <input type="hidden" value="<?php echo $reg_info['end_time']?>" name="end_time">
+
                                 <span class="bike-class" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-left: 7px;">
                           <span style="font-size: 14px;color: #000;">Class:</span> <em class="bold bolds"><?php echo $lists['category_name']?></em>
                         </span>
-                                <a href="Javascript:;" class="btn-highlight small select js-bookTrigger" title="立即预订" style="float: left;width: 166px;line-height: 1.5em;padding: 5px 0 5px 38px;text-align: left;color: #fff;font-family: helvetica, Arial, sans-serif;text-transform: uppercase;font-size: 15px;height: 23px;position: absolute;bottom: 0px;">
-                                    立即预订<span class="icn-arrowWhiteRight" style="padding: 0;margin: 0.1em 0.5em 0 0;display: inline;"></span>
+                                <a href="" class="btn-highlight small select js-bookTrigger" title="立即预订" style="float: left;width: 166px;line-height: 1.5em;padding: 5px 0 5px 38px;text-align: left;color: #fff;font-family: helvetica, Arial, sans-serif;text-transform: uppercase;font-size: 15px;height: 23px;position: absolute;bottom: 0px;">
+                                    <input type="submit" value="立即预订" style="border: none;background: none;color: white;"><span class="icn-arrowWhiteRight" style="padding: 0;margin: 0.1em 0.5em 0 0;display: inline;"></span>
                                 </a>
                             </div>
+                        </form>
+
 						<?php endforeach; ?>
                     </div>
                     <div class="clearfix"></div>

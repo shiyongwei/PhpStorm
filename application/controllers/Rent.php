@@ -15,14 +15,19 @@
 			}
 			//热门租赁分类
 			public function index(){
-				$aa['num'] = $_POST['num'];
-				$aa['num_other'] = $_POST['num_other'];
-				$aa['star_city'] = $_POST['star_city'];
-				$aa['end_city'] = $_POST['end_city'];
-				$aa['star_time'] = $_POST['star_time'];
-				$aa['end_time'] = $_POST['end_time'];
-				echo '<pre>';
-				print_r($aa);exit;
+				$num = isset($_POST['num']) ? $_POST['num'] : null;
+				$num_other = isset($_POST['num_other']) ? $_POST['num_other'] : null;
+				if ($num == null){
+					$reg_info['num'] = $num_other;
+				}else{
+					$reg_info['num'] = $num;
+				}
+				$reg_info['star_city'] = isset($_POST['star_city']) ? $_POST['star_city'] : null;
+				$reg_info['end_city'] = isset($_POST['end_city']) ? $_POST['end_city'] : null;
+				$reg_info['star_time'] = isset($_POST['star_time']) ? $_POST['star_time'] : null;
+				$reg_info['end_time'] = isset($_POST['end_time']) ? $_POST['end_time'] : null;
+//				echo '<pre>';
+//				print_r($reg_info);exit;
 				$rent_list = $this->Product_model->get('');
 				$get_limit = $this->City_model->get_limit('');
 				$bottom_info = $this->Text_model->get_name('');
@@ -59,6 +64,10 @@
 				$data['bottom_info_all'] = $bottom_info_all;
 				$data['side'] = $side;
 				$data['navigation_limit'] = $navigation_limit;
+				//影藏信息
+				$data['reg_info'] = $reg_info;
+
+
 
 
 				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
