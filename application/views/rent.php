@@ -929,14 +929,15 @@
                             <p>您将获得最优惠的价格</p>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
+
                 </div>
                 <section class="available_rides" style="display: block;">
-                    <div class="row js-vehiclesContainer" data-equalizer="pp556y-equalizer" data-equalize-by-row="true" data-locationid="" data-resize="ybtvek-eq" data-events="resize" style="margin-left: -15px;">
+
+                    <div id="test" class="row js-vehiclesContainer" data-equalizer="pp556y-equalizer" data-equalize-by-row="true" data-locationid="" data-resize="ybtvek-eq" data-events="resize" style="margin-left: -15px;">
 						<?php foreach ($list as $lists): ?>
                             <!--                    one-->
-                        <form action="/index.php/Reg" method="post">
                             <div class="rideList promotionBox js-motorcycle boxs">
+                                <form action="/index.php/Reg" method="post">
                                 <a class="specification btn-highlight small js-specsTrigger specis" href="Javascript:;" title="<?php echo $lists['productitle']?>" onclick="product_list_show('<?php echo $lists['productitle']?>','/index.php/admin/admin/product_list_details?id=<?php echo $lists['id'];?>','800','650')">
                                     <span class="text_one">规格</span>
                                 </a>
@@ -963,12 +964,12 @@
                                 <a href="" class="btn-highlight small select js-bookTrigger" title="立即预订" style="float: left;width: 166px;line-height: 1.5em;padding: 5px 0 5px 38px;text-align: left;color: #fff;font-family: helvetica, Arial, sans-serif;text-transform: uppercase;font-size: 15px;height: 23px;position: absolute;bottom: 0px;">
                                     <input type="submit" value="立即预订" style="border: none;background: none;color: white;"><span class="icn-arrowWhiteRight" style="padding: 0;margin: 0.1em 0.5em 0 0;display: inline;"></span>
                                 </a>
+                                </form>
                             </div>
-                        </form>
-
 						<?php endforeach; ?>
                     </div>
-                    <div class="clearfix"></div>
+
+
 
                 </section>
             </div>
