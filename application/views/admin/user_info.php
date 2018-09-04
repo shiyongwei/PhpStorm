@@ -34,17 +34,19 @@
     <table class="table table-border table-bordered table-bg">
         <thead>
         <tr>
-            <th scope="col" colspan="9">用户登记列表</th>
+            <th scope="col" colspan="11">用户登记列表</th>
         </tr>
         <tr class="text-c">
             <th width="40">ID</th>
             <th width="150">用户昵称</th>
             <th width="130">联系方式</th>
             <th width="130">人数</th>
-            <th width="130">城市</th>
+            <th width="130">取车城市</th>
+            <th width="130">还车城市</th>
             <th width="130">取车时间</th>
             <th width="130">还车时间</th>
             <th width="130">所选摩托</th>
+            <th width="130">所选摩托套餐</th>
         </tr>
         </thead>
         <tbody>
@@ -54,10 +56,12 @@
                 <td><?php echo $value['name']; ?></td>
                 <td><?php echo $value['phone']; ?></td>
                 <td><?php echo $value['number']; ?></td>
-                <td><?php echo $value['city']; ?></td>
+                <td><?php echo $value['star_city']; ?></td>
+                <td><?php echo $value['end_city']; ?></td>
                 <td><?php echo $value['start_time']; ?></td>
                 <td><?php echo $value['over_time']; ?></td>
                 <td><?php echo $value['motorcycle']; ?></td>
+                <td><?php echo $value['travel']; ?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>
