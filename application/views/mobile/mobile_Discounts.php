@@ -256,28 +256,28 @@
     </div>
 </div>
         <!-- global footer -->
-<?php if(isset($_GET["lang"])): ?>
-    <footer class="global-footer">
-        <div class="txt1"><a href="javascript:;">Contact Us</a></div>
-        <div>|</div>
-        <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">FAQ</a>
-        </div>
-        <div>|</div>
-        <div class="txt1"><a href="javascript:;">The entire site
-            </a></div>
-    </footer>
-<?php endif; ?>
-<?php if(empty($_GET["lang"])): ?>
-    <footer class="global-footer">
-        <div class="txt1"><a href="javascript:;">联系我们</a></div>
-        <div>|</div>
-        <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">常见问题</a>
-        </div>
-        <div>|</div>
-        <div class="txt1"><a href="javascript:;">整个网站
-            </a></div>
-    </footer>
-<?php endif; ?>
+        <?php if(isset($_GET["lang"])): ?>
+            <footer class="global-footer">
+                <div class="txt1"><a href="javascript:;">Contact Us</a></div>
+                <div>|</div>
+                <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">FAQ</a>
+                </div>
+                <div>|</div>
+                <div class="txt1"><a href="javascript:;">The entire site
+                    </a></div>
+            </footer>
+        <?php endif; ?>
+        <?php if(empty($_GET["lang"])): ?>
+            <footer class="global-footer">
+                <div class="txt1"><a href="javascript:;">联系我们</a></div>
+                <div>|</div>
+                <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">常见问题</a>
+                </div>
+                <div>|</div>
+                <div class="txt1"><a href="javascript:;">整个网站
+                    </a></div>
+            </footer>
+        <?php endif; ?>
         <script src="/public/js/mobile.js" type="text/javascript"></script>
 
         <script src="/public/js/combined_widget.js" type="text/javascript"></script>
