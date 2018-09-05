@@ -842,13 +842,14 @@
 
                         <div class="small-12 columns">
                             <div class="input-field">
-                                <input id="last-name" type="text" value="" name="title" required="">
+
 								<?php if(isset($_GET["lang"])): ?>
                                     <label for="last-name">Rent bikes <span class="text-danger">*</span> </label>
 								<?php endif; ?>
 								<?php if(empty($_GET["lang"])): ?>
                                     <label for="last-name">租赁摩托 <span class="text-danger">*</span> </label>
 								<?php endif; ?>
+                                <input id="rent_title" type="text" value="" name="title" required="">
                             </div>
                         </div>
 
@@ -906,7 +907,7 @@
 
                         <div class="small-12 columns">
                             <div class="input-field">
-                                <input id="last-name" type="text" value="" name="star_time" required="">
+                                <input name="star_time" class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="">
 								<?php if(isset($_GET["lang"])): ?>
                                     <label for="last-name">collection time <span class="text-danger">*</span> </label>
 								<?php endif; ?>
@@ -918,7 +919,7 @@
 
                         <div class="small-12 columns">
                             <div class="input-field">
-                                <input id="last-name" type="text" value="" name="end_time" required="">
+                                <input name="end_time" class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="">
 								<?php if(isset($_GET["lang"])): ?>
                                     <label for="last-name">Car time <span class="text-danger">*</span> </label>
 								<?php endif; ?>
@@ -1020,4 +1021,10 @@
 	$('.cn').click(function() {
 		window.location.href='/index.php/Rent/mobile_Rent?id='+id;
 	});
+
+	$('.button').click(function() {
+        var title = $(this).parent().find('.row .small-10 h4').html();
+        $('#rent_title').val(title);
+	});
+
 </script>

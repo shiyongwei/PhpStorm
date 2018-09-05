@@ -29,6 +29,9 @@
 
 
     <link href="/public/css/mobile.manifest-973d9a8a05059422a934f5851bf4c381.css" media="all" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/public/DatePicker/WdatePicker.js"></script>
+    <link href="/public/DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
 
     <style type="text/css">
 
@@ -436,19 +439,19 @@
 
                                             <div class="small-12 columns">
                                                 <div class="input-field">
-                                                    <input id="last-name" type="text" value="" name="star_time" required="">
 													<?php if(isset($_GET["lang"])): ?>
                                                         <label for="last-name">collection time <span class="text-danger">*</span> </label>
 													<?php endif; ?>
 													<?php if(empty($_GET["lang"])): ?>
                                                         <label for="last-name">取车时间 <span class="text-danger">*</span> </label>
+                                                        <input name="star_time" class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="">
 													<?php endif; ?>
                                                 </div>
                                             </div>
 
                                             <div class="small-12 columns">
                                                 <div class="input-field">
-                                                    <input id="last-name" type="text" value="" name="end_time" required="">
+                                                    <input name="end_time" class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="">
 													<?php if(isset($_GET["lang"])): ?>
                                                         <label for="last-name">Car time <span class="text-danger">*</span> </label>
 													<?php endif; ?>
