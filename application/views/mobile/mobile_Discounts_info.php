@@ -33,51 +33,80 @@
 
 <nav class="site-nav js-global-nav js-navigation" id="js-site-nav">
     <ul>
-        <li class="language">
-            <a href="javascript:;">
-                <span>国家</span>
-                <span class="customSelectInner" style="width: 100px; display: inline-block;">
-          <span class="flag-zh"></span>
-        </span>
-                <select class="languageList styled js-custom js-countriesSelect hasCustomSelect" style="width: 100px; position: absolute; opacity: 0; height: 23px; font-size: 12px;">
-                    <option value="233" data-languagecode="en">
-                        United States of America
-                    </option>
-                </select><span class="customSelect languageList styled js-custom js-countriesSelect" style="display: inline-block;"><span class="customSelectInner" style="width: 100px; display: inline-block;">
-              中国
-            </span></span>
-            </a>
-        </li>
-    </ul>
+		<?php if(isset($_GET["lang"])): ?>
+            <li>
+                <a style="color: #ed7b19">Change language</a>
+            </li>
+            <li class="en">
+                <a style="color: #ed7b19">English</a>
+            </li>
+            <li class="cn">
+                <a style="color: #ed7b19">China</a>
+            </li>
 
-    <ul>
-        <li>
-            <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">租赁
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Trave/mobile_Trave">旅游
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Discounts/mobile_Discount">促销特惠
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Artivity/mobile_Artivity">摩托车活动
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/City/mobile_city">城市
-            </a>
-        </li>
-        <li>
-            <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
-        </li>
+            <li>
+                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>&&lang=en">Rent
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Trave/mobile_Trave?lang=en">Travel
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Discounts/mobile_Discount?lang=en">Privilege
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Artivity/mobile_Artivity?lang=en">Motorcycle event
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/City/mobile_City?lang=en">City
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Reg/mobile_Reg?lang=en">Reg</a>
+            </li>
+		<?php endif; ?>
+		<?php if(empty($_GET["lang"])): ?>
+            <li>
+                <a style="color: #ed7b19">切换语言</a>
+            </li>
+            <li class="en">
+                <a style="color: #ed7b19">英文</a>
+            </li>
+            <li class="cn">
+                <a style="color: #ed7b19">中文</a>
+            </li>
+            <li>
+                <a href="/index.php/Rent/mobile_Rent?id=<?php echo 0;?>">租赁
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Trave/mobile_Trave">旅游
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Discounts/mobile_Discount">促销特惠
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Artivity/mobile_Artivity">摩托车活动
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/City/mobile_City">城市
+                </a>
+            </li>
+            <li>
+                <a href="/index.php/Reg/mobile_Reg">网上取车登记</a>
+            </li>
+		<?php endif; ?>
     </ul>
-</nav><!-- // site nav -->
+</nav>
 <!-- global content -->
-<div class="global-content">
+<?php if(isset($_GET["lang"])): ?>
+    <div class="global-content">
     <!-- main content -->
     <div class="main-content">
         <div class="js-page">
@@ -85,7 +114,7 @@
             <div class="hd_content">
                 <div class="deal_body">
                     <div class="deal_header">
-                        <h1 class="secTitle"><span><?php echo $promotion[0]['promtitle'];?></span></h1>
+                        <h1 class="secTitle"><span><?php echo $promotion['promtitle_en'];?></span></h1>
                     </div>
 
                     <div class="align-center">
@@ -97,29 +126,29 @@
                     <div class="wrap">
                         <div>
                             <div class="float_right discount_container">
-                                <div class="dis_price_con"><span class="discount_after"><?php echo $promotion[0]['promtitle'];?><small>/天</small></span>
+                                <div class="dis_price_con"><span class="discount_after"><?php echo $promotion['promtitle_en'];?><small>/day</small></span>
                                 </div>
 
                                 <div class="package_price_con">
 
                                     <div class="package_price">
-                                        <span class="title">价值</span>
-                                        <span class="package_calculations"><?php echo $promotion[0]['worth'];?></span>
+                                        <span class="title">worth</span>
+                                        <span class="package_calculations"><?php echo $promotion['worth_en'];?></span>
                                     </div>
 
                                     <div class="package_price">
-                                        <span class="title">折扣</span>
-                                        <span class="package_calculations"><?php echo $promotion[0]['discount'];?></span>
+                                        <span class="title">discount</span>
+                                        <span class="package_calculations"><?php echo $promotion['discount_en'];?></span>
                                     </div>
 
                                     <div class="package_price">
-                                        <span class="title">你省去了</span>
-                                        <span class="package_calculations"><?php echo $promotion[0]['price'];?></span>
+                                        <span class="title">You save </span>
+                                        <span class="package_calculations"><?php echo $promotion['price_en'];?></span>
                                     </div>
                                 </div>
 
                                 <div class="but_book_now">
-                                    <a href="javascript:;" class="btn-main btn-wide">立即预定</a>
+                                    <a href="/index.php/Reg/mobile_Reg?lang=en" class="btn-main btn-wide">Reservations now</a>
                                 </div>
                             </div>
 
@@ -127,47 +156,47 @@
                         </div>
                     </div>
 
-                    <h2 class="orange">关于这个折扣</h2>
+                    <h2 class="orange">About this discount</h2>
                     <div class="about_deal wrap">
                         <p class="deal_details">
-                            <label>在此之前预订:</label>
-                            <span><?php echo $promotion[0]['booking'];?></span>
+                            <label>Book before then:</label>
+                            <span><?php echo $promotion['booking_en'];?></span>
                         </p>
 
                         <p class="deal_details half">
                             <label>
-                                在此期间取车:
+                                Pick up the car during this time:
                             </label>
-                            <span><?php echo $promotion[0]['during'];?></span>
+                            <span><?php echo $promotion['during_en'];?></span>
                         </p>
 
                         <p class="deal_details half">
                             <label>
-                                取车于:
+                                Take car on:
                             </label>
-                            <span><?php echo $promotion[0]['thecar'];?></span>
+                            <span><?php echo $promotion['thecar_en'];?></span>
                         </p>
                         <p class="deal_details half">
                             <label>
-                                最少租赁天数:
+                                Minimum lease days:
                             </label>
-                            <span><?php echo $promotion[0]['day'];?></span>
+                            <span><?php echo $promotion['day_en'];?></span>
                         </p>
                         <p class="deal_details half">
                             <label>
-                                联系方式:
+                                contact way:
                             </label>
-                            <span><?php echo $promotion[0]['city'];?></span>
+                            <span><?php echo $promotion['city_en'];?></span>
                         </p>
                     </div>
 
-                    <h3 class="orange"><span>购买条款</span></h3>
+                    <h3 class="orange"><span>Purchase terms</span></h3>
                     <div class="wrap">
-                        <p><?php echo $promotion[0]['terms'];?></p>
+                        <p><?php echo $promotion['terms_en'];?></p>
                     </div>
                     <div class="wrap">
                         <p class="deal_details">
-                    <span><?php echo $promotion[0]['text'];?></span>
+                    <span><?php echo $promotion['text_en'];?></span>
                         </p>
                     </div>
                     <div class="clearfix"></div>
@@ -177,16 +206,132 @@
         </div>
     </div>
 </div>
-<!-- global footer -->
-<footer class="global-footer">
-    <div class="txt1"><a href="javascript:;">联系我们</a></div>
-    <div>|</div>
-    <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">常见问题</a>
+<?php endif; ?>
+<?php if(empty($_GET["lang"])): ?>
+    <div class="global-content">
+        <!-- main content -->
+        <div class="main-content">
+            <div class="js-page">
+
+                <div class="hd_content">
+                    <div class="deal_body">
+                        <div class="deal_header">
+                            <h1 class="secTitle"><span><?php echo $promotion['promtitle'];?></span></h1>
+                        </div>
+
+                        <div class="align-center">
+                            <div class="img_container">
+                                <img src="/public/image/Deals-Imagesintosturgis2017.jpg">
+                            </div>
+                        </div>
+
+                        <div class="wrap">
+                            <div>
+                                <div class="float_right discount_container">
+                                    <div class="dis_price_con"><span class="discount_after"><?php echo $promotion['promtitle'];?><small>/天</small></span>
+                                    </div>
+
+                                    <div class="package_price_con">
+
+                                        <div class="package_price">
+                                            <span class="title">价值</span>
+                                            <span class="package_calculations"><?php echo $promotion['worth'];?></span>
+                                        </div>
+
+                                        <div class="package_price">
+                                            <span class="title">折扣</span>
+                                            <span class="package_calculations"><?php echo $promotion['discount'];?></span>
+                                        </div>
+
+                                        <div class="package_price">
+                                            <span class="title">你省去了</span>
+                                            <span class="package_calculations"><?php echo $promotion['price'];?></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="but_book_now">
+                                        <a href="/index.php/Reg" class="btn-main btn-wide">立即预定</a>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                        <h2 class="orange">关于这个折扣</h2>
+                        <div class="about_deal wrap">
+                            <p class="deal_details">
+                                <label>在此之前预订:</label>
+                                <span><?php echo $promotion['booking'];?></span>
+                            </p>
+
+                            <p class="deal_details half">
+                                <label>
+                                    在此期间取车:
+                                </label>
+                                <span><?php echo $promotion['during'];?></span>
+                            </p>
+
+                            <p class="deal_details half">
+                                <label>
+                                    取车于:
+                                </label>
+                                <span><?php echo $promotion['thecar'];?></span>
+                            </p>
+                            <p class="deal_details half">
+                                <label>
+                                    最少租赁天数:
+                                </label>
+                                <span><?php echo $promotion['day'];?></span>
+                            </p>
+                            <p class="deal_details half">
+                                <label>
+                                    联系方式:
+                                </label>
+                                <span><?php echo $promotion['city'];?></span>
+                            </p>
+                        </div>
+
+                        <h3 class="orange"><span>购买条款</span></h3>
+                        <div class="wrap">
+                            <p><?php echo $promotion['terms'];?></p>
+                        </div>
+                        <div class="wrap">
+                            <p class="deal_details">
+                                <span><?php echo $promotion['text'];?></span>
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>|</div>
-    <div class="txt1"><a href="javascript:;">整个网站
-    </a></div>
-</footer>
+<?php endif; ?>
+<!-- global footer -->
+<?php if(isset($_GET["lang"])): ?>
+    <footer class="global-footer">
+        <div class="txt1"><a href="javascript:;">Contact Us</a></div>
+        <div>|</div>
+        <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">FAQ</a>
+        </div>
+        <div>|</div>
+        <div class="txt1"><a href="javascript:;">The entire site
+            </a></div>
+    </footer>
+<?php endif; ?>
+<?php if(empty($_GET["lang"])): ?>
+    <footer class="global-footer">
+        <div class="txt1"><a href="javascript:;">联系我们</a></div>
+        <div>|</div>
+        <div class="txt2"><a href="/index.php/Bottom_info/mobile_Bottom_info">常见问题</a>
+        </div>
+        <div>|</div>
+        <div class="txt1"><a href="javascript:;">整个网站
+            </a></div>
+    </footer>
+<?php endif; ?>
 <script src="/public/js/mobile.js" type="text/javascript"></script>
 <script src="/public/js/combined_widget.js" type="text/javascript"></script>
 <script src="/public/js/motorcycle_tour_reservation.js" type="text/javascript"></script>
@@ -219,6 +364,39 @@
         var dealsSubscriptionContainer = $('.js-dealsSubscriptionContainer');
         new ER.Subscribe(dealsSubscriptionContainer);
     });
+</script>
+<script>
+	//paraName 等找参数的名称
+	function GetUrlParam(paraName) {
+		var url = document.location.toString();
+		var arrObj = url.split("?");
+
+		if (arrObj.length > 1) {
+			var arrPara = arrObj[1].split("&");
+			var arr;
+
+			for (var i = 0; i < arrPara.length; i++) {
+				arr = arrPara[i].split("=");
+
+				if (arr != null && arr[0] == paraName) {
+					return arr[1];
+				}
+			}
+			return "";
+		}
+		else {
+			return "";
+		}
+	}
+	var id = GetUrlParam('id');
+
+	$('.en').click(function() {
+		window.location.href='/index.php/Discounts/mobile_Discount_info?id='+id+'&&lang=en';
+	});
+
+	$('.cn').click(function() {
+		window.location.href='/index.php/Discounts/mobile_Discount_info?id='+id;
+	});
 </script>
 <style id="service-icons-0"></style>
 </body>
