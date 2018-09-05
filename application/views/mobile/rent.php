@@ -906,7 +906,7 @@
 
                         <div class="small-12 columns">
                             <div class="input-field">
-                                <input id="last-name" type="text" value="" name="star_time" required="">
+                                <input name="star_time" class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="">
 								<?php if(isset($_GET["lang"])): ?>
                                     <label for="last-name">collection time <span class="text-danger">*</span> </label>
 								<?php endif; ?>
@@ -918,7 +918,7 @@
 
                         <div class="small-12 columns">
                             <div class="input-field">
-                                <input id="last-name" type="text" value="" name="end_time" required="">
+                                <input name="end_time" class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="">
 								<?php if(isset($_GET["lang"])): ?>
                                     <label for="last-name">Car time <span class="text-danger">*</span> </label>
 								<?php endif; ?>
