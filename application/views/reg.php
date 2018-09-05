@@ -88,60 +88,61 @@
 
         <div class="r_rider_checkin_form L-checkin_form bd">
             <div class="js-lookup">
-                <form action="" method="Post" class="res_form js-lookupTrigger">
+                <form action="/index.php/Reg/add" method="Post" class="res_form js-lookupTrigger">
                     <div class="field_half control-group">
-                        <label>Last Name <span class="required">*</span> </label>
-                        <input value="" name="lookup[first_name]" type="text" required="">
+                        <label>Name <span class="required">*</span> </label>
+                        <input value="" name="name" type="text" required="">
                     </div>
 
                     <div class="field_half control-group">
-                        <label>First Name <span class="required">*</span></label>
-                        <input value="" name="lookup[last_name]" type="text" required="">
+                        <label>Tel <span class="required">*</span></label>
+                        <input value="" name="tel" type="text" required="">
+                    </div>
+                    <div class="field_half control-group">
+                        <label>Rent bikes <span class="required">*</span></label>
+                        <input value="<?php echo $reg_info['title']?>" name="title" type="text" required="">
+                    </div>
+                    <div class="field_half control-group">
+                        <label>Rent number <span class="required">*</span></label>
+                        <input value="<?php echo $reg_info['num']?>" name="num" type="text" required="">
                     </div>
 
                     <div class="field_half control-group">
-                        <label>Pick-Up City <span class="required">*</span></label>
-                        <div class="dropdown">
+                        <label>Take car city <span class="required">*</span></label>
+                        <input value="<?php echo $reg_info['star_city']?>" name="star_city" type="text" required="">
+                    </div>
 
+                    <div class="field_half control-group">
+                        <label>Car city <span class="required">*</span></label>
+                        <input value="<?php echo $reg_info['end_city']?>" name="end_city" type="text" required="">
+                    </div>
+
+                    <div class="field_half control-group">
+                        <label>Travel packages <span class="required">*</span></label>
+                        <input value="<?php echo $reg_info['travel']?>" name="travel" type="text" required="">
+                    </div>
+
+                    <div class="field_half control-group">
+                        <div class="dateTime">
+                            <label>collection time <span class="required">*</span></label>
+                            <input name="star_time" class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="<?php echo $reg_info['star_time']?>">
                         </div>
                     </div>
                     <div class="field_half control-group">
-                        <div class="dateTime" style="    margin-top: 30px;">
-                            <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                        <div class="dateTime">
+                            <label>Car time <span class="required">*</span></label>
+                            <input name="end_time" class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="<?php echo $reg_info['end_time']?>">
                         </div>
                     </div>
 
-                    <div class="buttons_con">
-                        <button class="btn-highlight btn-bok_now first_button" type="submit">LOOK UP</button>
-                        <span class="smallSpinner js-spinner" style="display: none;">
-        <img src="https://d1y9jrrtx2baf.cloudfront.net/assets/desktop/layout/smallSpinner-0f4bcc8a9d87f60343bc94b247bfbe7d.gif">
-      </span>
-                        <div class="clearfix"></div>
-                    </div>
-                </form>
 
-                <div class="or_con" style="    border-bottom: 2px solid #c7c7c7;clear: both;padding-bottom: 5px;margin-bottom: 25px;">
-                    <p class="or" style="position: relative;top: 16px;left: 366px;font-size: 2em;margin: 0 auto;display: inline-block;background: #fff;padding: 0 10px;font-weight: 700;">OR</p>
-                </div>
 
-                <form action="" method="POST" class="res_form js-lookupTrigger">
 
-                    <div class="field_half control-group">
-                        <label>Booking Confirmation Number <span class="required">*</span></label>
-                        <input value="" type="text" name="lookup[identifier]" required="" class="js-identifierField">
-                    </div>
-
-                    <div class="field_half control-group">
-                        <label>Last Name <span class="required">*</span></label>
-                        <input value="" type="text" name="lookup[last_name]" required="">
-                    </div>
-
-                    <div class="clearfix"></div>
 
                     <div class="buttons_con">
-                        <button class="btn-highlight btn-bok_now first_button" type="submit">LOOK UP</button>
+                        <button class="btn-highlight btn-bok_now first_button" type="submit" style="margin-top: 100px;">Set the register</button>
                         <span class="smallSpinner js-spinner" style="display: none;">
-        <img src="https://d1y9jrrtx2baf.cloudfront.net/assets/desktop/layout/smallSpinner-0f4bcc8a9d87f60343bc94b247bfbe7d.gif">
+        <img src="">
       </span>
                         <div class="clearfix"></div>
                     </div>
@@ -236,13 +237,6 @@
                             <input value="<?php echo $reg_info['travel']?>" name="travel" type="text" required="">
                         </div>
 
-
-<!--                        <div class="field_half control-group">-->
-<!--                            <label>取车城市 <span class="required">*</span></label>-->
-<!--                            <div class="dropdown">-->
-<!--                                -->
-<!--                            </div>-->
-<!--                        </div>-->
                         <div class="field_half control-group">
                             <div class="dateTime">
                                 <label>取车时间 <span class="required">*</span></label>
@@ -261,7 +255,7 @@
 
 
                         <div class="buttons_con">
-                            <button class="btn-highlight btn-bok_now first_button" type="submit">立 即 登 记</button>
+                            <button class="btn-highlight btn-bok_now first_button" type="submit" style="margin-top: 100px;">立 即 登 记</button>
                             <span class="smallSpinner js-spinner" style="display: none;">
         <img src="https://d1y9jrrtx2baf.cloudfront.net/assets/desktop/layout/smallSpinner-0f4bcc8a9d87f60343bc94b247bfbe7d.gif">
       </span>

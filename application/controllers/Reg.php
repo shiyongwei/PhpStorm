@@ -58,6 +58,9 @@
 				$reg_info['start_time'] = isset($_POST['star_time']) ? $_POST['star_time'] : null;
 				$reg_info['over_time'] = isset($_POST['end_time']) ? $_POST['end_time'] : null;
 				$reg_info['travel'] = isset($_POST['travel']) ? $_POST['travel'] : null;
+//				echo '<pre>';
+//				print_r($reg_info);
+//				exit;
 				$this->User_info_model->add_name($reg_info);
 				echo "<script>alert('登记成功!');window.location.href='/index.php/Reg';</script>";
 

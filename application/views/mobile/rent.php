@@ -813,37 +813,24 @@
 
             <div class="js-checkin_form">
                 <div class="js-lookup">
-                    <form class="wrap-large js-lookupTrigger" action="https://www.eaglerider.cn/reservation_lookup" method="get">
+                    <form action="/index.php/Reg/add" method="Post">
 
                         <div class="small-12 columns">
                             <div class="input-field">
-                                <input id="first-name" type="text" value="" name="lookup[first_name]" required="">
+                                <input id="first-name" type="text" value="" name="name" required="">
 								<?php if(isset($_GET["lang"])): ?>
                                     <label for="first-name">name <span class="text-danger">*</span> </label>
 								<?php endif; ?>
 								<?php if(empty($_GET["lang"])): ?>
-                                    <label for="first-name">名 <span class="text-danger">*</span> </label>
+                                    <label for="first-name">姓名 <span class="text-danger">*</span> </label>
 								<?php endif; ?>
 
                             </div>
                         </div>
 
-
                         <div class="small-12 columns">
                             <div class="input-field">
-                                <input id="last-name" type="text" value="" name="lookup[last_name]" required="">
-								<?php if(isset($_GET["lang"])): ?>
-                                    <label for="last-name">surname <span class="text-danger">*</span> </label>
-								<?php endif; ?>
-								<?php if(empty($_GET["lang"])): ?>
-                                    <label for="last-name">姓 <span class="text-danger">*</span> </label>
-								<?php endif; ?>
-                            </div>
-                        </div>
-
-                        <div class="small-12 columns">
-                            <div class="input-field">
-                                <input id="last-name" type="text" value="" name="lookup[last_name]" required="">
+                                <input id="last-name" type="text" value="" name="tel" required="">
 								<?php if(isset($_GET["lang"])): ?>
                                     <label for="last-tel">Tel <span class="text-danger">*</span> </label>
 								<?php endif; ?>
@@ -855,7 +842,43 @@
 
                         <div class="small-12 columns">
                             <div class="input-field">
-                                <input type="text" id="pickup-location" class=" js-pickupLocName" required="">
+                                <input id="last-name" type="text" value="" name="title" required="">
+								<?php if(isset($_GET["lang"])): ?>
+                                    <label for="last-name">Rent bikes <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+								<?php if(empty($_GET["lang"])): ?>
+                                    <label for="last-name">租赁摩托 <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="small-12 columns">
+                            <div class="input-field">
+                                <input id="last-name" type="text" value="" name="num" required="">
+								<?php if(isset($_GET["lang"])): ?>
+                                    <label for="last-name">Rent number <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+								<?php if(empty($_GET["lang"])): ?>
+                                    <label for="last-name">租赁数量 <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="small-12 columns">
+                            <div class="input-field">
+                                <input id="last-name" type="text" value="" name="travel" required="">
+								<?php if(isset($_GET["lang"])): ?>
+                                    <label for="last-name">Travel packages <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+								<?php if(empty($_GET["lang"])): ?>
+                                    <label for="last-name">旅游套餐 <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="small-12 columns">
+                            <div class="input-field">
+                                <input type="text" id="pickup-location" class=" js-pickupLocName" required="" name="star_city">
 								<?php if(isset($_GET["lang"])): ?>
                                     <label for="pickup-location"> Pick-Up City <span class="text-danger">*</span> </label>
 								<?php endif; ?>
@@ -864,6 +887,44 @@
 								<?php endif; ?>
 
                                 <input type="hidden" name="lookup[pickup_location_code]" class="js-pickupLocCode" data-fieldtype="pickup_location">
+                            </div>
+                        </div>
+
+                        <div class="small-12 columns">
+                            <div class="input-field">
+                                <input type="text" id="pickup-location" class=" js-pickupLocName" required="" name="end_city">
+								<?php if(isset($_GET["lang"])): ?>
+                                    <label for="pickup-location"> Car city <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+								<?php if(empty($_GET["lang"])): ?>
+                                    <label for="pickup-location"> 还车城市 <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+
+                                <input type="hidden" name="lookup[pickup_location_code]" class="js-pickupLocCode" data-fieldtype="pickup_location">
+                            </div>
+                        </div>
+
+                        <div class="small-12 columns">
+                            <div class="input-field">
+                                <input id="last-name" type="text" value="" name="star_time" required="">
+								<?php if(isset($_GET["lang"])): ?>
+                                    <label for="last-name">collection time <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+								<?php if(empty($_GET["lang"])): ?>
+                                    <label for="last-name">取车时间 <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="small-12 columns">
+                            <div class="input-field">
+                                <input id="last-name" type="text" value="" name="end_time" required="">
+								<?php if(isset($_GET["lang"])): ?>
+                                    <label for="last-name">Car time <span class="text-danger">*</span> </label>
+								<?php endif; ?>
+								<?php if(empty($_GET["lang"])): ?>
+                                    <label for="last-name">还车时间 <span class="text-danger">*</span> </label>
+								<?php endif; ?>
                             </div>
                         </div>
 
