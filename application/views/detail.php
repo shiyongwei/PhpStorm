@@ -989,7 +989,14 @@
                 <div class="about_tour" style="padding-top: 30px;">
 
                     <div class="">
-                        <p style="font-size: 1.1em;">EagleRider’s Route 66 Self Drive Motorcycle Tour is a 15 day journey riding along the world famous “Mother Road” highway.  You begin your tour in Chicago, IL and ride for 2400 exciting miles to Los Angeles, CA.  Along the way you will pass through 8 states: Illinois, Missouri, Oklahoma, Texas, New Mexico, Arizona, and California, making stops in some of the most beautiful and historic American cities.  You will get a definite sense of the 1950’s Midwest as you ride your Harley into the Ozark Mountains, along the Old West’s Indian country in Oklahoma, across the Great Plains, through the 400 year old city Santa Fe, NM, and into Nevada gambling Mecca, Laughlin.  By the time you make it back to Los Angeles you will have toured the best of the “Mainstream of America”, Route 66!  </p>
+                        <p style="font-size: 1.1em;">
+                            <?php if(isset($_GET["lang"])): ?>
+                                <?php echo $uriving['text_en']?>
+                            <?php endif; ?>
+                            <?php if(empty($_GET["lang"])): ?>
+                                <?php echo $uriving['text']?>
+                            <?php endif; ?>
+                        </p>
                         <div class="clearfix"></div>
                     </div>
 
