@@ -1241,5 +1241,19 @@
 		$(this).siblings().find('.iradio_square-blue').removeClass("checked");
 		$(this).find('.js-numberCheckbox').prop('checked','checked');
 	});
+	$('.accordion-toggle').click(function() {
+
+		if($(this).parent().parent().find('.accordion-inner').is(':hidden')){//如果当前隐藏
+			$(this).parent().parent().find('.accordion-inner').show();//那么就显示div
+		}else{//否则
+			$(this).parent().parent().find('.accordion-inner').hide();//就隐藏div
+		}
+	})
+    $('.js-expand').click(function() {
+		$('.accordion-inner').show()
+	})
+	$('.js-collapse').click(function() {
+		$('.accordion-inner').hide()
+	})
 
 </script>
