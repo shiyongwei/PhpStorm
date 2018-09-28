@@ -96,6 +96,7 @@
                 <dd>
                     <ul>
                         <li><a data-href="tidings" data-title="新闻" href="javascript:void(0)">新闻编辑</a></li>
+                        <li><a data-href="announcement" data-title="公告" href="javascript:void(0)">公告编辑</a></li>
                     </ul>
                 </dd>
             </dl>
@@ -195,6 +196,7 @@
                 <dd>
                     <ul>
                         <li><a data-href="tidings?lang=en" data-title="新闻" href="javascript:void(0)">新闻编辑</a></li>
+                        <li><a data-href="announcement?lang=en" data-title="公告" href="javascript:void(0)">公告编辑</a></li>
                     </ul>
                 </dd>
             </dl>

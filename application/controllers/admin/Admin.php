@@ -27,6 +27,7 @@ class Admin extends CI_Controller
             $this -> load -> model('admin/Tidings_model');
             $this -> load -> model('admin/Video_model');
             $this -> load -> model('admin/Photo_model');
+            $this -> load -> model('admin/Announcement_model');
             $this -> load -> helper(array('form', 'url'));
             $this -> load -> library('session');
             $this -> load -> library('pagination');
@@ -1163,6 +1164,44 @@ class Admin extends CI_Controller
             $data['team'] = $this -> Team_model -> get($results);
 
             $this -> load -> view('admin/photo_edit',$data);
+
+        }
+        public function announcement ()
+        {
+            $result= '';
+            if(!isset($_GET['lang'])){
+                $data['announcement'] = $this -> Announcement_model -> get_name($result);
+            }else{
+                $announcement = $this -> Announcement_model -> get_name($result);
+                foreach ($announcement as $k=>$v)
+                {
+                    $data['announcement'][$k]['lang'] = 'en';
+                    $data['announcement'][$k]['id'] = $v['id'];
+                    $data['announcement'][$k]['text'] = $v['text_en'];
+                }
+
+            }
+
+
+            $this -> load -> view('admin/announcement',$data);
+        }
+        public function announcement_add ()
+        {
+            $this -> load -> view('admin/announcement_add');
+        }
+        public function announcement_edit ()
+        {
+            $result['id']= $_GET['id'];
+            if(!isset($_GET['lang'])){
+                $data['announcement'] = $this -> Announcement_model -> get_name($result);
+            }else{
+                $announcement = $this -> Announcement_model -> get_name($result);
+                $data['tidings']['lang'] = 'en';
+                $data['tidings']['id'] = $tidings['id'];
+                $data['tidings']['text'] = $tidings['text_en'];
+            }
+
+            $this -> load -> view('admin/announcement_edit',$data);
 
         }
     }

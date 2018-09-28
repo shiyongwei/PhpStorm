@@ -19,45 +19,43 @@
     <script type="text/javascript" src="/public/admin/lib/DD_belatedPNG_0.0.8a-min.js"></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <title>新闻列表</title>
+    <title>公告列表</title>
     <link rel="stylesheet" href="/public/admin/lib/zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
 </head>
 <body class="pos-r">
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 新闻发布
-    <span class="c-gray en">&gt;</span> 新闻列表
+    <span class="c-gray en">&gt;</span> 公告列表
     <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
 </nav>
 <div class="page-container">
     <div class="cl pd-5 bg-1 bk-gray mt-20">
-        <?php if( !isset($tidings[0]['lang'])): ?>
-            <span class="l"><a class="btn btn-primary radius" onclick="tidings_add('添加新闻','tidings_add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加新闻</a></span>
+        <?php if( !isset($announcement[0]['lang'])): ?>
+            <span class="l"><a class="btn btn-primary radius" onclick="_add('添加新闻','announcement_add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加公告</a></span>
         <?php endif; ?>
-        <span class="r">共有数据：<strong><?php echo count($tidings); ?></strong> 条</span></div>
+        <span class="r">共有数据：<strong><?php echo count($announcement); ?></strong> 条</span></div>
     <div class="mt-20">
         <table class="table table-border table-bordered table-bg table-hover table-sort">
             <thead>
             <tr class="text-c">
                 <th width="40">ID</th>
-                <th width="60">标题</th>
                 <th width="100">内容</th>
                 <th width="100">操作</th>
             </tr>
             </thead>
             <tbody>
-            <?php foreach($tidings as $key=>$value): ?>
+            <?php foreach($announcement as $key=>$value): ?>
                 <tr class="text-c va-m">
                     <td><?php echo $value['id']; ?></td>
-                    <td class="text-l"><?php echo $value['title']; ?></td>
                     <td class="text-l"><?php echo $value['text']; ?></td>
                     <td class="td-manage">
                         <?php if( !isset($value['lang'])): ?>
-                            <a style="text-decoration:none" class="ml-5" onClick="tidings_edit('新闻编辑','tidings_edit?id=<?php echo $value['id']; ?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                            <a style="text-decoration:none" class="ml-5" onClick="_edit('新闻编辑','announcement_edit?id=<?php echo $value['id']; ?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
 
                         <?php else: ?>
-                            <a style="text-decoration:none" class="ml-5" onClick="tidings_edit('新闻编辑','tidings_edit?id=<?php echo $value['id']; ?>&lang=<?php echo $value['lang']; ?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                            <a style="text-decoration:none" class="ml-5" onClick="_edit('新闻编辑','announcement_edit?id=<?php echo $value['id']; ?>&lang=<?php echo $value['lang']; ?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
 
                         <?php endif; ?>
-                        <a style="text-decoration:none" class="ml-5" onClick="tidings_del(this,'<?php echo $value['id']; ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                        <a style="text-decoration:none" class="ml-5" onClick="_del(this,'<?php echo $value['id']; ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -80,7 +78,7 @@
 <script type="text/javascript" src="/public/admin/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 	/*产品-添加*/
-	function tidings_add (title, url) {
+	function _add (title, url) {
 		var index = layer.open({
 			type: 2,
 			title: title,
@@ -91,7 +89,7 @@
 
 
 	/*产品-编辑*/
-	function tidings_edit (title, url, id) {
+	function _edit (title, url, id) {
 		var index = layer.open({
 			type: 2,
 			title: title,
@@ -101,11 +99,11 @@
 	}
 
 	/*产品-删除*/
-	function tidings_del (obj, id) {
+	function _del (obj, id) {
 		layer.confirm('确认要删除吗？', function(index) {
 			$.ajax({
 				type: 'POST',
-				url: '/index.php/admin/tidings/tidings_del',
+				url: '/index.php/admin/Announcement/announcement_del',
 				data: {id: id},
 
 				dataType: 'json',
