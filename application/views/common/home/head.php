@@ -75,6 +75,17 @@
                 <a class="brand top-brand" href="#"><img src="<?php echo $bottom_info_all[7]['image'] ?>" style="width: 90px;margin-top: -11px;"></a>
 			<?php endif; ?>
         </div>
+        <div style="width: 500px;height: 40%;margin-left: 617px;margin-top: 15px;color: #ed7b19">
+            <BODY>
+                <MARQUEE behavior="scroll" contenteditable="true" onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="3" width="500" >
+                    <SPAN unselectable="on" style="margin-top: 50px;">这里是要滚动的内容这里是要滚动的内容1这里是要滚动的内容2这里是要滚动的内容3这里是要滚动的内容4这里是要滚动的内容5这里是要滚动的内容6这里是要滚动的内容7这里是要滚动的内容8这里是要滚动的内容9</SPAN>
+                </MARQUEE>
+                <DIV id="scrollobj" style="white-space:nowrap;overflow:hidden;width:500px;"><span></span>
+                </DIV>
+                <script language="javascript" type="text/javascript">function scroll(obj) {var tmp = (obj.scrollLeft)++;
+                </script>
+            </BODY>
+        </div>
     </div>
 
     <div class="navbar">
@@ -435,3 +446,8 @@
         </div>
     </div>
 </div>
+<script>
+    $('.btn-highlight').click(function() {
+        alert(111);
+	})
+</script>
