@@ -174,7 +174,7 @@
                     </h2>
 
                     <p class="faqs_link" style="color: #555;">
-                        <a href="">
+                        <a href="/index.php/Bottom_info">
                             请查看我们的租赁常见问题
                         </a>
                     </p>

@@ -19,6 +19,7 @@
 				$get_limit = $this->City_model->get_limit();
 				$id = $_GET['id'];
 				$uriving = $this->Uriving_model->get($id);
+//				var_dump($uriving);exit;
 				$bottom_info = $this->Text_model->get_name('');
 				$navigation = $this->Navigation_model->get_name('');
 				for ($i=0;$i<count($navigation);$i++){
