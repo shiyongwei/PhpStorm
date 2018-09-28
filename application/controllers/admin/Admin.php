@@ -1196,9 +1196,9 @@ class Admin extends CI_Controller
                 $data['announcement'] = $this -> Announcement_model -> get_name($result);
             }else{
                 $announcement = $this -> Announcement_model -> get_name($result);
-                $data['tidings']['lang'] = 'en';
-                $data['tidings']['id'] = $tidings['id'];
-                $data['tidings']['text'] = $tidings['text_en'];
+                $data['announcement']['lang'] = 'en';
+                $data['announcement']['id'] = $announcement['id'];
+                $data['announcement']['text'] = $announcement['text_en'];
             }
 
             $this -> load -> view('admin/announcement_edit',$data);

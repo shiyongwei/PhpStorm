@@ -784,7 +784,7 @@ function article_save_submit()
 
     var   str = $("#form-article-add").serialize();
 
-    $.post('/index.php/admin/background/background_edit',{'str':str},function(data) {
+    $.post('/index.php/admin/Background/background_edit',{'str':str},function(data) {
 
         if(data == 200){
 

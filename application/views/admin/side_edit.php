@@ -757,7 +757,7 @@ function article_save_submit()
 
     var   str = $("#form-article-add").serialize();
 
-    $.post('/index.php/admin/side/side_edit',{'str':str},function(data) {
+    $.post('/index.php/admin/Side/side_edit',{'str':str},function(data) {
 
         if(data == 200){
 

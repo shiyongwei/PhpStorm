@@ -47,6 +47,7 @@
             <th width="130">还车时间</th>
             <th width="130">所选摩托</th>
             <th width="130">所选摩托套餐</th>
+            <th width="100">操作</th>
         </tr>
         </thead>
         <tbody>
@@ -62,6 +63,7 @@
                 <td><?php echo $value['over_time']; ?></td>
                 <td><?php echo $value['motorcycle']; ?></td>
                 <td><?php echo $value['travel']; ?></td>
+                <td><a style="text-decoration:none" class="ml-5" onClick="_del(this,'<?php echo $value['id']; ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
             </tr>
         <?php endforeach; ?>
         </tbody>
@@ -77,6 +79,33 @@
 <script type="text/javascript" src="/public/admin/lib/My97DatePicker/4.8/WdatePicker.js"></script>
 <script type="text/javascript" src="/public/admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="/public/admin/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+	/*产品-删除*/
+	function _del (obj, id) {
+		layer.confirm('确认要删除吗？', function(index) {
+			$.ajax({
+				type: 'POST',
+				url: '/index.php/admin/User_info/user_info__del',
+				data: {id: id},
 
+				dataType: 'json',
+				success: function(data) {
+					if(data == 200)
+					{
+						$(obj).parents("tr").remove();
+						layer.msg('已删除!', {icon: 1, time: 1000});
+					}
+					else
+					{
+						layer.msg('删除失败!', {icon: 5, time: 1000});
+					}
+				},
+				error: function(data) {
+					layer.msg('系统级错误!', {icon: 5, time: 1000});
+				},
+			});
+		});
+	}
+</script>
 </body>
 </html>
