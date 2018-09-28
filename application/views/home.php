@@ -172,21 +172,21 @@
                         </div>
 
                 </div>
-                <div class="promo-notifications js-promo">
-                    <div class="discounts group-discount">
-                        <span class="arrow"></span>
-                        <div class="body">
-                            <h4>团队预订可以享受更多优惠！</h4>
-                            <span class="percent">10%</span>
-                            <span class="rule">3辆车<i>至少</i></span>
-                        </div>
-                        <div class="body">
-                            <h3>
-                                大部分预订只需支付20%的定金哦
-                            </h3>
-                        </div>
-                    </div>
-                </div>
+<!--                <div class="promo-notifications js-promo">-->
+<!--                    <div class="discounts group-discount">-->
+<!--                        <span class="arrow"></span>-->
+<!--                        <div class="body">-->
+<!--                            <h4>团队预订可以享受更多优惠！</h4>-->
+<!--                            <span class="percent">10%</span>-->
+<!--                            <span class="rule">3辆车<i>至少</i></span>-->
+<!--                        </div>-->
+<!--                        <div class="body">-->
+<!--                            <h3>-->
+<!--                                大部分预订只需支付20%的定金哦-->
+<!--                            </h3>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
 
         </div>
@@ -315,21 +315,21 @@
                             </div>
 
                         </div>
-                        <div class="promo-notifications js-promo">
-                            <div class="discounts group-discount">
-                                <span class="arrow"></span>
-                                <div class="body">
-                                    <h4>Team booking can enjoy more discounts!</h4>
-                                    <span class="percent">10%</span>
-                                    <span class="rule">three vehicles minimum</span>
-                                </div>
-                                <div class="body">
-                                    <h3>
-                                        Most bookings only require a 20% down payment
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="promo-notifications js-promo">-->
+<!--                            <div class="discounts group-discount">-->
+<!--                                <span class="arrow"></span>-->
+<!--                                <div class="body">-->
+<!--                                    <h4>Team booking can enjoy more discounts!</h4>-->
+<!--                                    <span class="percent">10%</span>-->
+<!--                                    <span class="rule">three vehicles minimum</span>-->
+<!--                                </div>-->
+<!--                                <div class="body">-->
+<!--                                    <h3>-->
+<!--                                        Most bookings only require a 20% down payment-->
+<!--                                    </h3>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
 
                 </div>
