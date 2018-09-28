@@ -898,9 +898,10 @@
                                 <span class="bike-class" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-left: 7px;">
                           <span style="font-size: 14px;color: #000;">Class:</span> <em class="bold bolds"><?php echo $lists['category_name']?></em>
                         </span>
-                                <a href="" class="btn-highlight small select js-bookTrigger" title="立即预订" style="float: left;width: 166px;line-height: 1.5em;padding: 5px 0 5px 38px;text-align: left;color: #fff;font-family: helvetica, Arial, sans-serif;text-transform: uppercase;font-size: 15px;height: 23px;position: absolute;bottom: 0px;">
-                                    <input type="submit" value="立即预订" style="border: none;background: none;color: white;"><span class="icn-arrowWhiteRight" style="padding: 0;margin: 0.1em 0.5em 0 0;display: inline;"></span>
-                                </a>
+
+                                    <input type="submit" value="立即预订" style="border: none;background: none;color: white;width: 118%;height: 33px;margin-top: -5px;margin-left: -29px;">
+                                <span class="icn-arrowWhiteRight" style="padding: 0;margin: 0.1em 0.5em 0 0;display: inline;float: right;top: -28px"></span>
+
                             </div>
                         </form>
 
@@ -962,7 +963,8 @@
                           <span style="font-size: 14px;color: #000;">Class:</span> <em class="bold bolds"><?php echo $lists['category_name']?></em>
                         </span>
                                 <a href="" class="btn-highlight small select js-bookTrigger" title="立即预订" style="float: left;width: 166px;line-height: 1.5em;padding: 5px 0 5px 38px;text-align: left;color: #fff;font-family: helvetica, Arial, sans-serif;text-transform: uppercase;font-size: 15px;height: 23px;position: absolute;bottom: 0px;">
-                                    <input type="submit" value="立即预订" style="border: none;background: none;color: white;"><span class="icn-arrowWhiteRight" style="padding: 0;margin: 0.1em 0.5em 0 0;display: inline;"></span>
+                                    <input type="submit" value="立即预订" style="border: none;background: none;color: white;width: 118%;height: 33px;margin-top: -5px;margin-left: -29px;">
+                                    <span class="icn-arrowWhiteRight" style="padding: 0;margin: 0.1em 0.5em 0 0;display: inline;float: right;top: -28px"></span>
                                 </a>
                                 </form>
                             </div>
