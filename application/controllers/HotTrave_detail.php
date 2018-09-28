@@ -15,6 +15,7 @@
 				$this -> load -> model('admin/Explore_model');
 				$this -> load -> model('admin/Text_model');
 				$this -> load -> model('admin/Side_model');
+                $this -> load -> model('admin/Announcement_model');
 			}
 			public function index(){
 				$rent_list = $this->Product_model->get('');//热门租赁分类
@@ -36,6 +37,7 @@
                 $data['three'] = $this->Explore_model->getAll($exone_three);
 				$exone_four['explore_id'] =4;
                 $data['four'] = $this->Explore_model->getAll($exone_four);
+                $notice = $this->Announcement_model->get_name('');
 
                 preg_match_all('/<img(.*?)src=\"(.*?)\"(.*?)>/is', $hotreave_detail['galleryimage'], $matches);
                 $data['image'] = array_slice($matches[0],0,4);
@@ -53,9 +55,10 @@
 				$data['bottom_info'] = $bottom_info;
 				$data['bottom_info_all'] = $bottom_info_all;
 				$data['side'] = $side;
+				$data['notice'] = $notice;
 
 
-				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
+				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all,$notice);
 				$this -> load -> view('hotTrave_detail',$city,$hotreave_detail,$team_limit,$uriving_limit);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
 			}

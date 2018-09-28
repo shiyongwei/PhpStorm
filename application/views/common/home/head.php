@@ -78,7 +78,18 @@
         <div style="width: 500px;height: 40%;margin-left: 617px;margin-top: 15px;color: #ed7b19">
             <BODY>
                 <MARQUEE behavior="scroll" contenteditable="true" onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="3" width="500" >
-                    <SPAN unselectable="on" style="margin-top: 50px;">这里是要滚动的内容这里是要滚动的内容1这里是要滚动的内容2这里是要滚动的内容3这里是要滚动的内容4这里是要滚动的内容5这里是要滚动的内容6这里是要滚动的内容7这里是要滚动的内容8这里是要滚动的内容9</SPAN>
+                    <SPAN unselectable="on" style="margin-top: 50px;">
+                        <?php if(isset($_GET["lang"])): ?>
+                            <?php foreach ($notice as $key => $notices): ?>
+                                <?php echo $notices['text_en'] ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                        <?php if(empty($_GET["lang"])): ?>
+                            <?php foreach ($notice as $key => $notices): ?>
+                                <?php echo $notices['text'] ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </SPAN>
                 </MARQUEE>
                 <DIV id="scrollobj" style="white-space:nowrap;overflow:hidden;width:500px;"><span></span>
                 </DIV>

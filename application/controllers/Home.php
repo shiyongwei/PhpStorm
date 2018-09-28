@@ -15,6 +15,7 @@ class Home extends CI_Controller
 		$this -> load -> model('admin/Background_model');
 		$this -> load -> model('admin/Side_model');
 		$this -> load -> model('admin/Text_model');
+		$this -> load -> model('admin/Announcement_model');
         $this -> load -> helper(array('form', 'url'));
     }
 
@@ -45,10 +46,11 @@ class Home extends CI_Controller
 			$side = $this->Side_model->get_name('');
 			$bottom_info = $this->Text_model->get_name('');
 			$bottom_info_all = $this->Text_model->get_name_all('');
+            $notice = $this->Announcement_model->get_name('');
 
-
+//
 //			echo  '<pre>';
-//			print_r($get_limit);
+//			print_r($notice);
 //			echo  '<pre>';
 
 
@@ -64,10 +66,11 @@ class Home extends CI_Controller
 			$data['bottom_info'] = $bottom_info;
 			$data['bottom_info_all'] = $bottom_info_all;
 			$data['navigation_limit'] = $navigation_limit;
+			$data['notice'] = $notice;
 
 
 
-            $this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
+            $this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all,$notice);
             $this -> load -> view('home',$promotiom,$bottom,$city,$text,$side,$get_limits);
             $this -> load -> view('common/home/foot',$rent_list,$city,$get_limit,$bottom_info,$bottom_info_all,$side);
         }

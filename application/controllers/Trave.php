@@ -14,6 +14,7 @@ class Trave extends CI_Controller{
 		$this -> load -> model('admin/Explore_model');
 		$this -> load -> model('admin/Side_model');
 		$this -> load -> model('admin/Topic_model');
+        $this -> load -> model('admin/Announcement_model');
         $this -> load -> helper(array('form', 'url'));
     }
     public function index(){
@@ -39,6 +40,7 @@ class Trave extends CI_Controller{
 		$topic = $this->Topic_model->get('');
 		$team = $this->Team_model->get('');
 		$uriving = $this->Uriving_model->get('');
+        $notice = $this->Announcement_model->get_name('');
 
 		$bottom_info_all = $this->Text_model->get_name_all('');
 
@@ -59,10 +61,11 @@ class Trave extends CI_Controller{
 		$data['team'] = $team;
 		$data['uriving'] = $uriving;
 		$data['navigation_limit'] = $navigation_limit;
+		$data['notice'] = $notice;
 
 
 
-        $this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
+        $this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all,$notice);
         $this -> load -> view('trave',$city,$classifyinfo,$explode,$topic);
         $this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
     }
@@ -79,6 +82,7 @@ class Trave extends CI_Controller{
 			$topic = $this->Topic_model->get('');
 			$team = $this->Team_model->get('');
 			$uriving = $this->Uriving_model->get('');
+
 
 			$bottom_info_all = $this->Text_model->get_name_all('');
 
@@ -98,6 +102,7 @@ class Trave extends CI_Controller{
 			$data['topic'] = $topic;
 			$data['team'] = $team;
 			$data['uriving'] = $uriving;
+
 
 			$this -> load -> view('mobile/all-trave',$data);
 		}

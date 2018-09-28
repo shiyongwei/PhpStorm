@@ -11,6 +11,7 @@
 				$this -> load -> model('admin/Text_model');
 				$this -> load -> model('admin/Side_model');
 				$this -> load -> model('admin/Tidings_model');
+                $this -> load -> model('admin/Announcement_model');
 				$this -> load -> helper(array('form', 'url'));
 			}
 			public function index(){
@@ -33,6 +34,7 @@
 				$side = $this->Side_model->get_name('');
 				$news = $this->Tidings_model->get_desc('');
 				$city = $this->City_model->get();
+                $notice = $this->Announcement_model->get_name('');
 
 
 //												echo '<pre>';
@@ -50,8 +52,9 @@
 				$data['navigation_limit'] = $navigation_limit;
 				$data['news'] = $news;
 				$data['city'] = $city;
+				$data['notice'] = $notice;
 
-				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
+				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all,$notice);
 				$this -> load -> view('news',$bottom_info);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
 			}

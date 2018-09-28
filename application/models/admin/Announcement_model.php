@@ -35,7 +35,7 @@ class Announcement_model extends CI_Model{
 
             if ($data == '')
             {
-                $query = $this -> db ->get(self::TBL_NAME);
+                $query = $this -> db->order_by('id', 'DESC') ->limit(1) ->get(self::TBL_NAME);
 
                 return $query -> result_array();
             }

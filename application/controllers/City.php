@@ -11,6 +11,7 @@
 				$this -> load -> model('admin/Text_model');
 				$this -> load -> model('admin/Navigation_model');
 				$this -> load -> model('admin/Side_model');
+                $this -> load -> model('admin/Announcement_model');
 			}
 			public function index(){
 				$rent_list = $this->Product_model->get('');//热门租赁分类
@@ -31,6 +32,7 @@
 				$bottom_info = $this->Text_model->get_name('');
 				$bottom_info_all = $this->Text_model->get_name_all('');
 				$side = $this->Side_model->get_name('');
+                $notice = $this->Announcement_model->get_name('');
 
 				$data['rent_list'] = $rent_list;
 				$data['city'] = $city;
@@ -40,8 +42,9 @@
 				$data['bottom_info_all'] = $bottom_info_all;
 				$data['side'] = $side;
 				$data['navigation_limit'] = $navigation_limit;
+				$data['notice'] = $notice;
 
-				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all);
+				$this -> load -> view('common/home/head',$data,$navigation,$bottom_info_all,$notice);
 				$this -> load -> view('city',$city,$side);
 				$this -> load -> view('common/home/foot',$rent_list,$get_limit,$bottom_info,$bottom_info_all,$side);
 			}
