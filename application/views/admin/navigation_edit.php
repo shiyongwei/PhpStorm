@@ -96,13 +96,13 @@
 
         var   str = $("#form-admin-role-add").serialize();
 
-        $.post('/index.php/admin/navigation/navigation_edit',{'str':str},function(data) {
+        $.post('/index.php/admin/Navigation/navigation_edit',{'str':str},function(data) {
 
             if(data == 200){
 
-                layer.msg('添加成功!',{icon:1,time:2000},function() {
-                    location.reload();
-                });
+				layer.msg('修改成功!',{icon:1,time:2000},function() {
+					location.reload();
+				});
 
             }else if(data == 500){
 
@@ -115,7 +115,7 @@
             }else{
 
 
-                layer.msg('添加失败',{icon:6,time:2000});
+                layer.msg('修改失败',{icon:6,time:2000});
 
             }
 

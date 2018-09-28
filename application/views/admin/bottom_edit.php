@@ -71,7 +71,7 @@
 
         var   str = $("#form-admin-role-add").serialize();
 
-        $.post('/index.php/admin/bottom/bottom_edit',{'str':str},function(data) {
+        $.post('/index.php/admin/Bottom/bottom_edit',{'str':str},function(data) {
 
             if(data == 200){
                 layer.msg('修改成功!',{icon:1,time:2000},function() {

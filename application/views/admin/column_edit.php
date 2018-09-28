@@ -74,7 +74,7 @@
 
          var   str = $("#form-admin-role-add").serialize();
 
-         $.post('/index.php/admin/column/column_edit',{'str':str},function(data) {
+         $.post('/index.php/admin/Column/column_edit',{'str':str},function(data) {
 
              if(data == 200){
 

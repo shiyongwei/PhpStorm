@@ -49,10 +49,10 @@
                     <td class="text-l"><?php echo $value['text']; ?></td>
                     <td class="td-manage">
                         <?php if( !isset($value['lang'])): ?>
-                            <a style="text-decoration:none" class="ml-5" onClick="_edit('新闻编辑','announcement_edit?id=<?php echo $value['id']; ?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                            <a style="text-decoration:none" class="ml-5" onClick="_edit('公告编辑','announcement_edit?id=<?php echo $value['id']; ?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
 
                         <?php else: ?>
-                            <a style="text-decoration:none" class="ml-5" onClick="_edit('新闻编辑','announcement_edit?id=<?php echo $value['id']; ?>&lang=<?php echo $value['lang']; ?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                            <a style="text-decoration:none" class="ml-5" onClick="_edit('公告编辑','announcement_edit?id=<?php echo $value['id']; ?>&lang=<?php echo $value['lang']; ?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
 
                         <?php endif; ?>
                         <a style="text-decoration:none" class="ml-5" onClick="_del(this,'<?php echo $value['id']; ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>

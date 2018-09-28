@@ -835,7 +835,9 @@ function article_save_submit()
 
         if(data == 200){
 
-            layer.msg('修改成功!',{icon:1,time:2000});
+			layer.msg('修改成功!',{icon:1,time:2000},function() {
+				location.reload();
+			});
 
         }else{
 
